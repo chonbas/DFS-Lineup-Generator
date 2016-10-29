@@ -1,0 +1,2745 @@
+week;year;GID;name;pos;team;h/a;oppt;fd points;fd salary
+1;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;sea;24;5000
+1;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;pit;22;5000
+1;2011;7006;hicago Defense Chicago Defens;Def;chi;h;atl;21;5500
+1;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;dal;18;5500
+1;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;stl;17;5100
+1;2011;7032;ouston Defense Houston Defens;Def;hou;h;ind;17;5000
+1;2011;7031;ashington Defense Washington Defens;Def;was;h;nyg;15;5000
+1;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;kan;12;5000
+1;2011;7022;akland Defense Oakland Defens;Def;oak;a;den;12;5000
+1;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;chi;12;5000
+1;2011;7001;rizona Defense Arizona Defens;Def;ari;h;car;12;5000
+1;2011;7017;innesota Defense Minnesota Defens;Def;min;a;sdg;12;5100
+1;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;nor;10;5100
+1;2011;7010;enver Defense Denver Defens;Def;den;h;oak;9;5000
+1;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;det;8;5000
+1;2011;7009;allas Defense Dallas Defens;Def;dal;a;nyj;8;5000
+1;2011;7011;etroit Defense Detroit Defens;Def;det;a;tam;7;5000
+1;2011;7018;ew England Defense New England Defens;Def;nwe;a;mia;6;5000
+1;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;hou;6;5000
+1;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;cle;5;5000
+1;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ten;5;5000
+1;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;was;5;5300
+1;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;jac;5;5000
+1;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;min;5;5000
+1;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;gnb;4;5000
+1;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;cin;4;5000
+1;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;phi;4;5000
+1;2011;7005;arolina Defense Carolina Defens;Def;car;a;ari;3;5000
+1;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;buf;-1;5000
+1;2011;7028;eattle Defense Seattle Defens;Def;sea;a;sfo;-1;5000
+1;2011;7016;iami Defense Miami Defens;Def;mia;h;nwe;-1;5000
+1;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;bal;-3;5500
+2;2011;7011;etroit Defense Detroit Defens;Def;det;h;kan;21;5000
+2;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;jac;19;5500
+2;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;sea;15;5300
+2;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;stl;13;5300
+2;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;bal;13;5000
+2;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;chi;12;5000
+2;2011;7032;ouston Defense Houston Defens;Def;hou;a;mia;12;5100
+2;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;car;12;5300
+2;2011;7018;ew England Defense New England Defens;Def;nwe;h;sdg;10;5000
+2;2011;7009;allas Defense Dallas Defens;Def;dal;a;sfo;8;5000
+2;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;ind;7;5000
+2;2011;7001;rizona Defense Arizona Defens;Def;ari;a;was;7;5000
+2;2011;7031;ashington Defense Washington Defens;Def;was;h;ari;7;5000
+2;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;den;6;5000
+2;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;min;5;5000
+2;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;dal;5;5100
+2;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;phi;5;5000
+2;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;atl;4;5100
+2;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;nyj;4;5000
+2;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;nyg;4;5000
+2;2011;7017;innesota Defense Minnesota Defens;Def;min;h;tam;4;5100
+2;2011;7016;iami Defense Miami Defens;Def;mia;h;hou;3;5000
+2;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;cle;3;5000
+2;2011;7010;enver Defense Denver Defens;Def;den;h;cin;2;5000
+2;2011;7005;arolina Defense Carolina Defens;Def;car;h;gnb;2;5000
+2;2011;7006;hicago Defense Chicago Defens;Def;chi;a;nor;2;5500
+2;2011;7028;eattle Defense Seattle Defens;Def;sea;a;pit;2;5000
+2;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;ten;2;5000
+2;2011;7022;akland Defense Oakland Defens;Def;oak;a;buf;1;5000
+2;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;oak;0;5000
+2;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;det;-2;5000
+2;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;nwe;-2;5000
+3;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;stl;19;5100
+3;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;pit;15;5000
+3;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;atl;14;5100
+3;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;nwe;13;5100
+3;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;sfo;13;5100
+3;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;cin;11;5200
+3;2011;7028;eattle Defense Seattle Defens;Def;sea;h;ari;11;5000
+3;2011;7005;arolina Defense Carolina Defens;Def;car;h;jac;10;5000
+3;2011;7009;allas Defense Dallas Defens;Def;dal;h;was;10;5100
+3;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;mia;10;5100
+3;2011;7001;rizona Defense Arizona Defens;Def;ari;a;sea;10;5100
+3;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;ind;10;5600
+3;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;phi;9;5300
+3;2011;7022;akland Defense Oakland Defens;Def;oak;h;nyj;8;5000
+3;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;chi;8;5500
+3;2011;7010;enver Defense Denver Defens;Def;den;a;ten;7;5000
+3;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;sdg;7;5000
+3;2011;7006;hicago Defense Chicago Defens;Def;chi;h;gnb;6;5300
+3;2011;7031;ashington Defense Washington Defens;Def;was;a;dal;6;5100
+3;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;den;6;5200
+3;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;tam;5;5100
+3;2011;7017;innesota Defense Minnesota Defens;Def;min;h;det;5;5200
+3;2011;7011;etroit Defense Detroit Defens;Def;det;a;min;4;5300
+3;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;kan;4;5000
+3;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;hou;3;5200
+3;2011;7016;iami Defense Miami Defens;Def;mia;a;cle;3;5000
+3;2011;7018;ew England Defense New England Defens;Def;nwe;a;buf;3;5200
+3;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nyg;2;5200
+3;2011;7032;ouston Defense Houston Defens;Def;hou;a;nor;2;5300
+3;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;car;1;5100
+3;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;oak;0;5700
+3;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;bal;0;5100
+4;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;nyj;29;5400
+4;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;bal;19;5400
+4;2011;7011;etroit Defense Detroit Defens;Def;det;a;dal;18;5200
+4;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;cle;16;5200
+4;2011;7006;hicago Defense Chicago Defens;Def;chi;h;car;15;5400
+4;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;den;15;5600
+4;2011;7032;ouston Defense Houston Defens;Def;hou;h;pit;13;5200
+4;2011;7031;ashington Defense Washington Defens;Def;was;a;stl;13;5000
+4;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;cin;12;5200
+4;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;jac;9;5000
+4;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;phi;8;5400
+4;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;ari;8;5400
+4;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;mia;8;5000
+4;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;ind;7;5200
+4;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;sfo;7;5000
+4;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;nor;7;5000
+4;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;min;5;5000
+4;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;was;5;5000
+4;2011;7018;ew England Defense New England Defens;Def;nwe;a;oak;5;5000
+4;2011;7001;rizona Defense Arizona Defens;Def;ari;h;nyg;4;5200
+4;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;sea;3;5000
+4;2011;7017;innesota Defense Minnesota Defens;Def;min;a;kan;3;5000
+4;2011;7010;enver Defense Denver Defens;Def;den;a;gnb;2;5000
+4;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;buf;2;5200
+4;2011;7005;arolina Defense Carolina Defens;Def;car;a;chi;2;5000
+4;2011;7016;iami Defense Miami Defens;Def;mia;a;sdg;2;5000
+4;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;tam;2;5000
+4;2011;7009;allas Defense Dallas Defens;Def;dal;h;det;1;5000
+4;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;ten;1;5200
+4;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;hou;1;5800
+4;2011;7022;akland Defense Oakland Defens;Def;oak;h;nwe;0;5000
+4;2011;7028;eattle Defense Seattle Defens;Def;sea;h;atl;-1;5000
+5;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;tam;22;5300
+5;2011;7028;eattle Defense Seattle Defens;Def;sea;a;nyg;21;5000
+5;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;phi;17;5300
+5;2011;7017;innesota Defense Minnesota Defens;Def;min;h;ari;16;5000
+5;2011;7010;enver Defense Denver Defens;Def;den;h;sdg;14;5000
+5;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;jac;14;5000
+5;2011;7022;akland Defense Oakland Defens;Def;oak;a;hou;8;5000
+5;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;sea;8;5300
+5;2011;7011;etroit Defense Detroit Defens;Def;det;h;chi;7;5300
+5;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;gnb;6;5000
+5;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;atl;6;5600
+5;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;ten;6;5300
+5;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;car;5;5100
+5;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;nwe;5;5600
+5;2011;7032;ouston Defense Houston Defens;Def;hou;h;oak;5;5300
+5;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;cin;3;5000
+5;2011;7005;arolina Defense Carolina Defens;Def;car;h;nor;3;5000
+5;2011;7006;hicago Defense Chicago Defens;Def;chi;a;det;3;5300
+5;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;buf;2;5000
+5;2011;7001;rizona Defense Arizona Defens;Def;ari;a;min;2;5000
+5;2011;7018;ew England Defense New England Defens;Def;nwe;h;nyj;2;5000
+5;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;den;2;5100
+5;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;pit;1;5300
+5;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;kan;1;5100
+5;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;ind;0;5000
+5;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;sfo;-2;5100
+6;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;mia;23;5500
+6;2011;7006;hicago Defense Chicago Defens;Def;chi;h;min;17;5300
+6;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;ind;16;5100
+6;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;was;14;5000
+6;2011;7009;allas Defense Dallas Defens;Def;dal;a;nwe;12;5000
+6;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;stl;12;5300
+6;2011;7022;akland Defense Oakland Defens;Def;oak;h;cle;11;5100
+6;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;nor;9;5000
+6;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;car;9;5000
+6;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;jac;9;5200
+6;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;det;8;5500
+6;2011;7031;ashington Defense Washington Defens;Def;was;h;phi;7;5200
+6;2011;7018;ew England Defense New England Defens;Def;nwe;h;dal;7;5000
+6;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;buf;7;5300
+6;2011;7011;etroit Defense Detroit Defens;Def;det;h;sfo;6;5300
+6;2011;7032;ouston Defense Houston Defens;Def;hou;a;bal;5;5200
+6;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;hou;5;5900
+6;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;pit;4;5000
+6;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;oak;4;5000
+6;2011;7016;iami Defense Miami Defens;Def;mia;a;nyj;4;5000
+6;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;gnb;3;5000
+6;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;nyg;2;5300
+6;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;tam;0;5200
+6;2011;7005;arolina Defense Carolina Defens;Def;car;a;atl;0;5000
+6;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;cin;0;5000
+6;2011;7017;innesota Defense Minnesota Defens;Def;min;a;chi;-1;5200
+7;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;oak;35;5000
+7;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;ind;17;5000
+7;2011;7028;eattle Defense Seattle Defens;Def;sea;a;cle;17;5200
+7;2011;7032;ouston Defense Houston Defens;Def;hou;a;ten;16;5200
+7;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;sea;15;5000
+7;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;nyj;12;5000
+7;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;bal;11;5000
+7;2011;7005;arolina Defense Carolina Defens;Def;car;h;was;10;5000
+7;2011;7006;hicago Defense Chicago Defens;Def;chi;a;tam;10;5500
+7;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;jac;10;5800
+7;2011;7009;allas Defense Dallas Defens;Def;dal;h;stl;9;5200
+7;2011;7016;iami Defense Miami Defens;Def;mia;h;den;9;5000
+7;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;chi;8;5000
+7;2011;7010;enver Defense Denver Defens;Def;den;a;mia;7;5000
+7;2011;7011;etroit Defense Detroit Defens;Def;det;h;atl;7;5300
+7;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;ari;7;5200
+7;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;det;6;5000
+7;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;min;6;5500
+7;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;sdg;5;5500
+7;2011;7017;innesota Defense Minnesota Defens;Def;min;h;gnb;5;5000
+7;2011;7022;akland Defense Oakland Defens;Def;oak;h;kan;3;5200
+7;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;dal;3;5000
+7;2011;7031;ashington Defense Washington Defens;Def;was;a;car;3;5200
+7;2011;7001;rizona Defense Arizona Defens;Def;ari;h;pit;1;5000
+7;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;nor;-2;5000
+7;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;hou;-4;5200
+8;2011;7011;etroit Defense Detroit Defens;Def;det;a;den;29;5200
+8;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;was;26;5100
+8;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;sea;24;5100
+8;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;nor;18;5000
+8;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;sdg;12;5100
+8;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;cle;12;5400
+8;2011;7001;rizona Defense Arizona Defens;Def;ari;a;bal;12;5000
+8;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;ind;12;5000
+8;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;stl;11;5100
+8;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;kan;11;5000
+8;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;dal;10;5100
+8;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;mia;8;5200
+8;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;ari;8;5700
+8;2011;7017;innesota Defense Minnesota Defens;Def;min;a;car;7;5000
+8;2011;7018;ew England Defense New England Defens;Def;nwe;a;pit;7;5000
+8;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;hou;6;5000
+8;2011;7032;ouston Defense Houston Defens;Def;hou;h;jac;6;5300
+8;2011;7005;arolina Defense Carolina Defens;Def;car;h;min;6;5000
+8;2011;7031;ashington Defense Washington Defens;Def;was;a;buf;6;5000
+8;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;nwe;6;5100
+8;2011;7028;eattle Defense Seattle Defens;Def;sea;h;cin;4;5300
+8;2011;7009;allas Defense Dallas Defens;Def;dal;a;phi;3;5200
+8;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;sfo;2;5000
+8;2011;7016;iami Defense Miami Defens;Def;mia;a;nyg;2;5000
+8;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;ten;1;5000
+8;2011;7010;enver Defense Denver Defens;Def;den;h;det;-2;5000
+9;2011;7001;rizona Defense Arizona Defens;Def;ari;h;stl;18;5000
+9;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;sdg;16;5300
+9;2011;7010;enver Defense Denver Defens;Def;den;a;oak;14;5000
+9;2011;7009;allas Defense Dallas Defens;Def;dal;h;sea;13;5000
+9;2011;7032;ouston Defense Houston Defens;Def;hou;h;cle;12;5300
+9;2011;7016;iami Defense Miami Defens;Def;mia;a;kan;12;5000
+9;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;was;11;5400
+9;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;nwe;11;5200
+9;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;buf;10;5300
+9;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;ind;10;5000
+9;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;chi;9;5200
+9;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;ari;8;5000
+9;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;atl;8;5000
+9;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;pit;6;5700
+9;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;nyj;5;5400
+9;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;ten;5;5400
+9;2011;7006;hicago Defense Chicago Defens;Def;chi;a;phi;5;5400
+9;2011;7031;ashington Defense Washington Defens;Def;was;h;sfo;5;5000
+9;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;bal;5;5000
+9;2011;7018;ew England Defense New England Defens;Def;nwe;h;nyg;4;5000
+9;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nor;2;5000
+9;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;tam;2;5200
+9;2011;7028;eattle Defense Seattle Defens;Def;sea;a;dal;2;5200
+9;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;hou;1;5000
+9;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;cin;1;5200
+9;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;gnb;0;5000
+9;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;mia;-1;5300
+9;2011;7022;akland Defense Oakland Defens;Def;oak;h;den;-3;5000
+10;2011;7006;hicago Defense Chicago Defens;Def;chi;h;det;36;5300
+10;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;car;22;5000
+10;2011;7009;allas Defense Dallas Defens;Def;dal;h;buf;19;5200
+10;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ind;18;5000
+10;2011;7018;ew England Defense New England Defens;Def;nwe;a;nyj;18;5000
+10;2011;7032;ouston Defense Houston Defens;Def;hou;a;tam;16;5500
+10;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;min;15;5500
+10;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;ari;14;5200
+10;2011;7022;akland Defense Oakland Defens;Def;oak;a;sdg;11;5000
+10;2011;7016;iami Defense Miami Defens;Def;mia;h;was;11;5000
+10;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;stl;9;5000
+10;2011;7010;enver Defense Denver Defens;Def;den;a;kan;8;5000
+10;2011;7028;eattle Defense Seattle Defens;Def;sea;h;bal;8;5000
+10;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;cle;8;5200
+10;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;pit;7;5200
+10;2011;7001;rizona Defense Arizona Defens;Def;ari;a;phi;7;5200
+10;2011;7031;ashington Defense Washington Defens;Def;was;a;mia;7;5000
+10;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;nyg;6;5500
+10;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cin;5;5000
+10;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;oak;5;5000
+10;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;jac;5;5000
+10;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;sfo;4;5200
+10;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;atl;3;5000
+10;2011;7005;arolina Defense Carolina Defens;Def;car;h;ten;2;5000
+10;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;den;1;5000
+10;2011;7017;innesota Defense Minnesota Defens;Def;min;a;gnb;1;5000
+10;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;sea;1;5500
+10;2011;7011;etroit Defense Detroit Defens;Def;det;a;chi;0;5300
+10;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;nor;0;5200
+10;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;hou;-1;5000
+10;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;nwe;-2;5500
+10;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;dal;-4;5200
+11;2011;7018;ew England Defense New England Defens;Def;nwe;h;kan;22;5100
+11;2011;7010;enver Defense Denver Defens;Def;den;h;nyj;17;5000
+11;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;ari;16;5400
+11;2011;7022;akland Defense Oakland Defens;Def;oak;a;min;15;5000
+11;2011;7028;eattle Defense Seattle Defens;Def;sea;a;stl;15;5000
+11;2011;7016;iami Defense Miami Defens;Def;mia;h;buf;12;5000
+11;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nyg;11;5400
+11;2011;7005;arolina Defense Carolina Defens;Def;car;a;det;10;5000
+11;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sea;8;5100
+11;2011;7017;innesota Defense Minnesota Defens;Def;min;h;oak;8;5000
+11;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;phi;8;5100
+11;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;cin;8;5300
+11;2011;7009;allas Defense Dallas Defens;Def;dal;a;was;7;5400
+11;2011;7006;hicago Defense Chicago Defens;Def;chi;h;sdg;7;5700
+11;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;tam;6;5400
+11;2011;7001;rizona Defense Arizona Defens;Def;ari;a;sfo;6;5100
+11;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;cle;5;5100
+11;2011;7011;etroit Defense Detroit Defens;Def;det;h;car;5;5300
+11;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;jac;5;5000
+11;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;den;4;5300
+11;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;nwe;4;5000
+11;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;ten;4;5000
+11;2011;7031;ashington Defense Washington Defens;Def;was;h;dal;4;5000
+11;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;bal;2;5100
+11;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;atl;2;5100
+11;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;chi;1;5000
+11;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;gnb;0;5000
+11;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;mia;-1;5000
+12;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;tam;19;5000
+12;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;sfo;18;5200
+12;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;ten;16;5000
+12;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;ari;15;5000
+12;2011;7032;ouston Defense Houston Defens;Def;hou;a;jac;13;5600
+12;2011;7001;rizona Defense Arizona Defens;Def;ari;a;stl;13;5000
+12;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;kan;13;5000
+12;2011;7022;akland Defense Oakland Defens;Def;oak;h;chi;11;5200
+12;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;hou;9;5000
+12;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;pit;9;5000
+12;2011;7028;eattle Defense Seattle Defens;Def;sea;h;was;9;5200
+12;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;det;8;5200
+12;2011;7010;enver Defense Denver Defens;Def;den;a;sdg;7;5200
+12;2011;7005;arolina Defense Carolina Defens;Def;car;a;ind;7;5000
+12;2011;7009;allas Defense Dallas Defens;Def;dal;h;mia;7;5400
+12;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;car;7;5000
+12;2011;7006;hicago Defense Chicago Defens;Def;chi;a;oak;6;5600
+12;2011;7016;iami Defense Miami Defens;Def;mia;a;dal;6;5200
+12;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;nyg;5;5000
+12;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;cle;5;5000
+12;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;min;5;5000
+12;2011;7031;ashington Defense Washington Defens;Def;was;a;sea;5;5000
+12;2011;7018;ew England Defense New England Defens;Def;nwe;a;phi;5;5000
+12;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;cin;4;5000
+12;2011;7017;innesota Defense Minnesota Defens;Def;min;a;atl;4;5000
+12;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;nyj;3;5000
+12;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;buf;3;5200
+12;2011;7011;etroit Defense Detroit Defens;Def;det;h;gnb;2;5200
+12;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;den;2;5000
+12;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;bal;1;5600
+12;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nwe;-3;5600
+12;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;nor;-4;5000
+13;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;chi;20;5100
+13;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cin;19;5300
+13;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;stl;18;5400
+13;2011;7028;eattle Defense Seattle Defens;Def;sea;h;phi;17;5300
+13;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;cle;15;5600
+13;2011;7010;enver Defense Denver Defens;Def;den;a;min;14;5100
+13;2011;7016;iami Defense Miami Defens;Def;mia;h;oak;11;5100
+13;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;was;9;5100
+13;2011;7001;rizona Defense Arizona Defens;Def;ari;h;dal;9;5100
+13;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;det;8;5000
+13;2011;7032;ouston Defense Houston Defens;Def;hou;h;atl;8;5700
+13;2011;7006;hicago Defense Chicago Defens;Def;chi;h;kan;8;5600
+13;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;nyg;7;5300
+13;2011;7009;allas Defense Dallas Defens;Def;dal;a;ari;6;5400
+13;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;hou;6;5000
+13;2011;7018;ew England Defense New England Defens;Def;nwe;h;ind;6;5000
+13;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;buf;6;5300
+13;2011;7005;arolina Defense Carolina Defens;Def;car;a;tam;5;5100
+13;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;jac;5;5000
+13;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sfo;4;5100
+13;2011;7017;innesota Defense Minnesota Defens;Def;min;h;den;4;5000
+13;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;bal;3;5000
+13;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;sea;2;5300
+13;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;ten;1;5000
+13;2011;7011;etroit Defense Detroit Defens;Def;det;a;nor;1;5100
+13;2011;7031;ashington Defense Washington Defens;Def;was;h;nyj;1;5000
+13;2011;7022;akland Defense Oakland Defens;Def;oak;a;mia;0;5300
+13;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;gnb;0;5000
+13;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;nwe;0;5000
+13;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;pit;-1;5000
+13;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;car;-2;5300
+13;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;sdg;-4;5100
+14;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;tam;30;5100
+14;2011;7011;etroit Defense Detroit Defens;Def;det;h;min;27;5000
+14;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;mia;21;5100
+14;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;oak;18;5300
+14;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;buf;17;5000
+14;2011;7006;hicago Defense Chicago Defens;Def;chi;a;den;15;5600
+14;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;hou;14;5000
+14;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cle;14;5600
+14;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;kan;13;5100
+14;2011;7018;ew England Defense New England Defens;Def;nwe;a;was;12;5000
+14;2011;7028;eattle Defense Seattle Defens;Def;sea;h;stl;11;5400
+14;2011;7010;enver Defense Denver Defens;Def;den;h;chi;10;5200
+14;2011;7016;iami Defense Miami Defens;Def;mia;h;phi;10;5100
+14;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;ind;10;5800
+14;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;pit;9;5000
+14;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;sdg;8;5000
+14;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;ari;8;5600
+14;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;dal;8;5000
+14;2011;7022;akland Defense Oakland Defens;Def;oak;a;gnb;6;5000
+14;2011;7032;ouston Defense Houston Defens;Def;hou;a;cin;6;5700
+14;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;car;6;5100
+14;2011;7001;rizona Defense Arizona Defens;Def;ari;h;sfo;6;5100
+14;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;bal;6;5000
+14;2011;7005;arolina Defense Carolina Defens;Def;car;h;atl;4;5100
+14;2011;7017;innesota Defense Minnesota Defens;Def;min;a;det;4;5100
+14;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;ten;3;5100
+14;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sea;3;5000
+14;2011;7031;ashington Defense Washington Defens;Def;was;h;nwe;2;5000
+14;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;nor;2;5200
+14;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;jac;1;5000
+14;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;nyj;1;5300
+14;2011;7009;allas Defense Dallas Defens;Def;dal;h;nyg;-2;5200
+15;2011;7028;eattle Defense Seattle Defens;Def;sea;a;chi;27;5300
+15;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;jac;20;5000
+15;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nyj;19;5300
+15;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;pit;18;5500
+15;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;ten;17;5000
+15;2011;7031;ashington Defense Washington Defens;Def;was;a;nyg;13;5000
+15;2011;7005;arolina Defense Carolina Defens;Def;car;a;hou;12;5000
+15;2011;7026;an Diego Defense San Diego Defens;Def;sdg;h;bal;12;5200
+15;2011;7018;ew England Defense New England Defens;Def;nwe;a;den;10;5200
+15;2011;7022;akland Defense Oakland Defens;Def;oak;h;det;9;5000
+15;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;dal;9;5000
+15;2011;7016;iami Defense Miami Defens;Def;mia;a;buf;9;5200
+15;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;mia;7;5200
+15;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;min;7;5000
+15;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;a;stl;7;5200
+15;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;phi;7;5300
+15;2011;7011;etroit Defense Detroit Defens;Def;det;a;oak;7;5200
+15;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;ari;7;5000
+15;2011;7009;allas Defense Dallas Defens;Def;dal;a;tam;6;5000
+15;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;gnb;5;5000
+15;2011;7006;hicago Defense Chicago Defens;Def;chi;h;sea;5;5800
+15;2011;7001;rizona Defense Arizona Defens;Def;ari;h;cle;5;5000
+15;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;was;5;5000
+15;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;cin;4;5000
+15;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;ind;2;5000
+15;2011;7032;ouston Defense Houston Defens;Def;hou;h;car;1;5500
+15;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;kan;1;5500
+15;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;sfo;1;5800
+15;2011;7017;innesota Defense Minnesota Defens;Def;min;h;nor;0;5000
+15;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;atl;-1;5500
+15;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;sdg;-1;6000
+15;2011;7010;enver Defense Denver Defens;Def;den;h;nwe;-2;5200
+16;2011;7004;uffalo Defense Buffalo Defens;Def;buf;h;den;31;5100
+16;2011;7011;etroit Defense Detroit Defens;Def;det;h;sdg;14;5100
+16;2011;7020;ew York G Defense New York G Defens;Def;nyg;a;nyj;14;5000
+16;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;stl;13;5800
+16;2011;7022;akland Defense Oakland Defens;Def;oak;a;kan;12;5000
+16;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;ari;12;5100
+16;2011;7005;arolina Defense Carolina Defens;Def;car;h;tam;12;5000
+16;2011;7008;leveland Defense Cleveland Defens;Def;cle;a;bal;10;5000
+16;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;atl;9;5000
+16;2011;7018;ew England Defense New England Defens;Def;nwe;h;mia;9;5300
+16;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;dal;7;5600
+16;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ten;7;5100
+16;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;sea;7;5500
+16;2011;7017;innesota Defense Minnesota Defens;Def;min;a;was;7;5000
+16;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;hou;7;5100
+16;2011;7032;ouston Defense Houston Defens;Def;hou;a;ind;6;5300
+16;2011;7001;rizona Defense Arizona Defens;Def;ari;a;cin;6;5000
+16;2011;7009;allas Defense Dallas Defens;Def;dal;h;phi;5;5000
+16;2011;7015;ansas City Defense Kansas City Defens;Def;kan;h;oak;5;5000
+16;2011;7028;eattle Defense Seattle Defens;Def;sea;h;sfo;5;5700
+16;2011;7003;altimore Defense Baltimore Defens;Def;bal;h;cle;5;5800
+16;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;chi;4;5300
+16;2011;7016;iami Defense Miami Defens;Def;mia;a;nwe;4;5100
+16;2011;7030;ennessee Defense Tennessee Defens;Def;ten;h;jac;4;5000
+16;2011;7021;ew York J Defense New York J Defens;Def;nyj;h;nyg;3;5300
+16;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;a;pit;2;5000
+16;2011;7002;tlanta Defense Atlanta Defens;Def;atl;a;nor;1;5300
+16;2011;7031;ashington Defense Washington Defens;Def;was;h;min;1;5000
+16;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;det;-1;5300
+16;2011;7010;enver Defense Denver Defens;Def;den;a;buf;-3;5000
+16;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;car;-3;5000
+16;2011;7006;hicago Defense Chicago Defens;Def;chi;a;gnb;-3;5800
+17;2011;7006;hicago Defense Chicago Defens;Def;chi;a;min;20;5700
+17;2011;7002;tlanta Defense Atlanta Defens;Def;atl;h;tam;16;5300
+17;2011;7018;ew England Defense New England Defens;Def;nwe;h;buf;16;5300
+17;2011;7017;innesota Defense Minnesota Defens;Def;min;h;chi;14;5000
+17;2011;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ind;13;5000
+17;2011;7015;ansas City Defense Kansas City Defens;Def;kan;a;den;13;5000
+17;2011;7020;ew York G Defense New York G Defens;Def;nyg;h;dal;11;5100
+17;2011;7008;leveland Defense Cleveland Defens;Def;cle;h;pit;10;5000
+17;2011;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;was;9;5600
+17;2011;7016;iami Defense Miami Defens;Def;mia;h;nyj;9;5000
+17;2011;7001;rizona Defense Arizona Defens;Def;ari;h;sea;9;5000
+17;2011;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cle;8;5900
+17;2011;7026;an Diego Defense San Diego Defens;Def;sdg;a;oak;8;5000
+17;2011;7010;enver Defense Denver Defens;Def;den;h;kan;7;5000
+17;2011;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;car;7;5000
+17;2011;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;stl;7;5300
+17;2011;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;atl;6;5000
+17;2011;7021;ew York J Defense New York J Defens;Def;nyj;a;mia;6;5000
+17;2011;7028;eattle Defense Seattle Defens;Def;sea;a;ari;6;5600
+17;2011;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;det;6;5300
+17;2011;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;jac;6;5000
+17;2011;7011;etroit Defense Detroit Defens;Def;det;a;gnb;5;5300
+17;2011;7032;ouston Defense Houston Defens;Def;hou;h;ten;5;5100
+17;2011;7031;ashington Defense Washington Defens;Def;was;a;phi;5;5000
+17;2011;7030;ennessee Defense Tennessee Defens;Def;ten;a;hou;5;5000
+17;2011;7003;altimore Defense Baltimore Defens;Def;bal;a;cin;4;5700
+17;2011;7004;uffalo Defense Buffalo Defens;Def;buf;a;nwe;2;5300
+17;2011;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sfo;2;5000
+17;2011;7007;incinnati Defense Cincinnati Defens;Def;cin;h;bal;1;5100
+17;2011;7009;allas Defense Dallas Defens;Def;dal;a;nyg;1;5000
+17;2011;7022;akland Defense Oakland Defens;Def;oak;h;sdg;-2;5100
+17;2011;7005;arolina Defense Carolina Defens;Def;car;a;nor;-2;5100
+1;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;buf;19;5300
+1;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;phi;19;5000
+1;2012;7032;ouston Defense Houston Defens;Def;hou;h;mia;18;5300
+1;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;cin;18;5400
+1;2012;7018;ew England Defense New England Defens;Def;nwe;a;ten;16;5000
+1;2012;7010;enver Defense Denver Defens;Def;den;h;pit;14;5000
+1;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;cle;14;5400
+1;2012;7006;hicago Defense Chicago Defens;Def;chi;h;ind;14;5400
+1;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;car;13;5000
+1;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;det;13;5000
+1;2012;7001;rizona Defense Arizona Defens;Def;ari;h;sea;10;5000
+1;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;kan;9;5000
+1;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;sfo;9;5100
+1;2012;7031;ashington Defense Washington Defens;Def;was;a;nor;8;5000
+1;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;oak;8;5000
+1;2012;7016;iami Defense Miami Defens;Def;mia;a;hou;7;5000
+1;2012;7009;allas Defense Dallas Defens;Def;dal;a;nyg;6;5000
+1;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;gnb;6;5700
+1;2012;7028;eattle Defense Seattle Defens;Def;sea;a;ari;6;5000
+1;2012;7017;innesota Defense Minnesota Defens;Def;min;h;jac;6;5000
+1;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;chi;6;5000
+1;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;min;4;5000
+1;2012;7011;etroit Defense Detroit Defens;Def;det;h;stl;4;5100
+1;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;den;4;5300
+1;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;dal;4;5100
+1;2012;7005;arolina Defense Carolina Defens;Def;car;a;tam;3;5000
+1;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;nyj;1;5000
+1;2012;7022;akland Defense Oakland Defens;Def;oak;h;sdg;1;5000
+1;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;nwe;1;5000
+1;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;was;-1;5000
+1;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;bal;-1;5000
+1;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;atl;-3;5000
+2;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;chi;19;5000
+2;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;kan;18;5000
+2;2012;7031;ashington Defense Washington Defens;Def;was;a;stl;13;5000
+2;2012;7005;arolina Defense Carolina Defens;Def;car;h;nor;11;5000
+2;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;den;11;5000
+2;2012;7028;eattle Defense Seattle Defens;Def;sea;h;dal;11;5000
+2;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;cle;10;5000
+2;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;phi;10;5400
+2;2012;7032;ouston Defense Houston Defens;Def;hou;a;jac;9;5300
+2;2012;7006;hicago Defense Chicago Defens;Def;chi;a;gnb;9;5400
+2;2012;7001;rizona Defense Arizona Defens;Def;ari;a;nwe;9;5000
+2;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nyg;8;5000
+2;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;cin;8;5200
+2;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;nyj;8;5300
+2;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;min;7;5000
+2;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;bal;6;5400
+2;2012;7016;iami Defense Miami Defens;Def;mia;h;oak;6;5000
+2;2012;7018;ew England Defense New England Defens;Def;nwe;h;ari;6;5200
+2;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;tam;6;5000
+2;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;ten;6;5000
+2;2012;7011;etroit Defense Detroit Defens;Def;det;a;sfo;5;5000
+2;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;det;5;5700
+2;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;was;5;5000
+2;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;pit;3;5500
+2;2012;7009;allas Defense Dallas Defens;Def;dal;a;sea;3;5000
+2;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;car;2;5000
+2;2012;7017;innesota Defense Minnesota Defens;Def;min;a;ind;2;5000
+2;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;sdg;2;5000
+2;2012;7010;enver Defense Denver Defens;Def;den;a;atl;1;5000
+2;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;hou;0;5000
+2;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;buf;-1;5000
+2;2012;7022;akland Defense Oakland Defens;Def;oak;a;mia;-3;5000
+3;2012;7001;rizona Defense Arizona Defens;Def;ari;h;phi;24;5000
+3;2012;7006;hicago Defense Chicago Defens;Def;chi;h;stl;23;5400
+3;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;det;17;5000
+3;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;sdg;16;5000
+3;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;car;16;5000
+3;2012;7017;innesota Defense Minnesota Defens;Def;min;h;sfo;15;5000
+3;2012;7028;eattle Defense Seattle Defens;Def;sea;h;gnb;12;5100
+3;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;dal;11;5000
+3;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;mia;11;5400
+3;2012;7009;allas Defense Dallas Defens;Def;dal;h;tam;10;5000
+3;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;cle;9;5100
+3;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;kan;9;5000
+3;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;was;8;5000
+3;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;nor;8;5000
+3;2012;7031;ashington Defense Washington Defens;Def;was;h;cin;8;5100
+3;2012;7010;enver Defense Denver Defens;Def;den;h;hou;6;5000
+3;2012;7016;iami Defense Miami Defens;Def;mia;h;nyj;6;5000
+3;2012;7032;ouston Defense Houston Defens;Def;hou;a;den;5;5200
+3;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;chi;5;5000
+3;2012;7022;akland Defense Oakland Defens;Def;oak;h;pit;4;5000
+3;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;ari;4;5400
+3;2012;7011;etroit Defense Detroit Defens;Def;det;a;ten;4;5000
+3;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;min;4;5400
+3;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;atl;4;5000
+3;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ind;3;5000
+3;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;buf;3;5000
+3;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;sea;2;5100
+3;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;oak;2;5100
+3;2012;7018;ew England Defense New England Defens;Def;nwe;a;bal;1;5100
+3;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;nwe;1;5400
+3;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;jac;1;5000
+3;2012;7005;arolina Defense Carolina Defens;Def;car;h;nyg;-2;5100
+4;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;nyj;29;5200
+4;2012;7006;hicago Defense Chicago Defens;Def;chi;a;dal;24;5600
+4;2012;7032;ouston Defense Houston Defens;Def;hou;h;ten;23;5000
+4;2012;7017;innesota Defense Minnesota Defens;Def;min;a;det;23;5200
+4;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;kan;21;5000
+4;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;jac;14;5000
+4;2012;7018;ew England Defense New England Defens;Def;nwe;a;buf;14;5000
+4;2012;7016;iami Defense Miami Defens;Def;mia;a;ari;12;5000
+4;2012;7001;rizona Defense Arizona Defens;Def;ari;h;mia;12;5200
+4;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sea;12;5000
+4;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;cle;12;5200
+4;2012;7010;enver Defense Denver Defens;Def;den;h;oak;10;5000
+4;2012;7011;etroit Defense Detroit Defens;Def;det;h;min;9;5000
+4;2012;7005;arolina Defense Carolina Defens;Def;car;a;atl;8;5000
+4;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;bal;7;5000
+4;2012;7009;allas Defense Dallas Defens;Def;dal;h;chi;5;5000
+4;2012;7028;eattle Defense Seattle Defens;Def;sea;a;stl;5;5000
+4;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;cin;4;5000
+4;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;sdg;4;5000
+4;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;car;4;5200
+4;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;gnb;3;5000
+4;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nyg;3;5200
+4;2012;7031;ashington Defense Washington Defens;Def;was;a;tam;3;5000
+4;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;phi;3;5200
+4;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;was;2;5000
+4;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;sfo;2;5400
+4;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;nor;2;5000
+4;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;nwe;1;5000
+4;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;hou;0;5200
+4;2012;7022;akland Defense Oakland Defens;Def;oak;a;den;-2;5000
+5;2012;7006;hicago Defense Chicago Defens;Def;chi;a;jac;28;5500
+5;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;ari;18;5200
+5;2012;7005;arolina Defense Carolina Defens;Def;car;h;sea;17;5000
+5;2012;7028;eattle Defense Seattle Defens;Def;sea;a;car;15;5000
+5;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;kan;15;5400
+5;2012;7016;iami Defense Miami Defens;Def;mia;a;cin;13;5200
+5;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;bal;12;5000
+5;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;buf;12;5700
+5;2012;7032;ouston Defense Houston Defens;Def;hou;a;nyj;11;5200
+5;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;was;11;5200
+5;2012;7031;ashington Defense Washington Defens;Def;was;h;atl;11;5000
+5;2012;7017;innesota Defense Minnesota Defens;Def;min;h;ten;10;5400
+5;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;sdg;9;5000
+5;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;hou;8;5200
+5;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;phi;8;5000
+5;2012;7018;ew England Defense New England Defens;Def;nwe;h;den;8;5000
+5;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;mia;7;5200
+5;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;gnb;7;5000
+5;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;cle;6;5200
+5;2012;7010;enver Defense Denver Defens;Def;den;a;nwe;5;5000
+5;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;ind;5;5000
+5;2012;7001;rizona Defense Arizona Defens;Def;ari;a;stl;4;5200
+5;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;min;4;5000
+5;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;nor;4;5200
+5;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;chi;3;5000
+5;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;pit;1;5200
+5;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;nyg;0;5000
+5;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;sfo;-2;5000
+6;2012;7010;enver Defense Denver Defens;Def;den;a;sdg;29;5000
+6;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;sfo;19;5000
+6;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;kan;17;5000
+6;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;ind;16;5200
+6;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;cin;16;5000
+6;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;oak;16;5200
+6;2012;7031;ashington Defense Washington Defens;Def;was;h;min;16;5200
+6;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;ari;12;5000
+6;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;tam;12;5200
+6;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;den;12;5000
+6;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;hou;10;5000
+6;2012;7011;etroit Defense Detroit Defens;Def;det;a;phi;9;5000
+6;2012;7022;akland Defense Oakland Defens;Def;oak;a;atl;8;5000
+6;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;dal;8;5600
+6;2012;7001;rizona Defense Arizona Defens;Def;ari;h;buf;7;5000
+6;2012;7016;iami Defense Miami Defens;Def;mia;h;stl;6;5300
+6;2012;7018;ew England Defense New England Defens;Def;nwe;a;sea;6;5000
+6;2012;7028;eattle Defense Seattle Defens;Def;sea;h;nwe;5;5400
+6;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;ten;5;5000
+6;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;pit;5;5000
+6;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;cle;4;5000
+6;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;mia;3;5400
+6;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;det;2;5000
+6;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;nyg;2;5600
+6;2012;7017;innesota Defense Minnesota Defens;Def;min;a;was;2;5200
+6;2012;7009;allas Defense Dallas Defens;Def;dal;a;bal;1;5000
+6;2012;7032;ouston Defense Houston Defens;Def;hou;h;gnb;0;5200
+6;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;nyj;-3;5000
+7;2012;7032;ouston Defense Houston Defens;Def;hou;h;bal;20;5000
+7;2012;7017;innesota Defense Minnesota Defens;Def;min;h;ari;18;5000
+7;2012;7018;ew England Defense New England Defens;Def;nwe;h;nyj;16;5000
+7;2012;7006;hicago Defense Chicago Defens;Def;chi;h;det;15;5600
+7;2012;7011;etroit Defense Detroit Defens;Def;det;a;chi;11;5000
+7;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;sea;11;5200
+7;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;was;11;5200
+7;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;oak;8;5000
+7;2012;7028;eattle Defense Seattle Defens;Def;sea;a;sfo;8;5200
+7;2012;7001;rizona Defense Arizona Defens;Def;ari;a;min;8;5200
+7;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;pit;7;5000
+7;2012;7009;allas Defense Dallas Defens;Def;dal;a;car;7;5000
+7;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;ind;6;5200
+7;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;stl;6;5000
+7;2012;7022;akland Defense Oakland Defens;Def;oak;h;jac;5;5000
+7;2012;7031;ashington Defense Washington Defens;Def;was;a;nyg;5;5300
+7;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;buf;5;5000
+7;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;ten;4;5200
+7;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;nwe;4;5300
+7;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;cle;4;5000
+7;2012;7005;arolina Defense Carolina Defens;Def;car;h;dal;3;5200
+7;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cin;3;5000
+7;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;gnb;2;5100
+7;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;hou;1;5300
+7;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;tam;0;5000
+7;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;nor;-2;5300
+8;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;dal;22;5400
+8;2012;7016;iami Defense Miami Defens;Def;mia;a;nyj;16;5100
+8;2012;7005;arolina Defense Carolina Defens;Def;car;a;chi;13;5100
+8;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;ari;13;5400
+8;2012;7022;akland Defense Oakland Defens;Def;oak;a;kan;12;5000
+8;2012;7006;hicago Defense Chicago Defens;Def;chi;h;car;12;5600
+8;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;min;10;5100
+8;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;sdg;10;5100
+8;2012;7018;ew England Defense New England Defens;Def;nwe;a;stl;10;5400
+8;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;jac;7;5100
+8;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;was;7;5000
+8;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;ind;7;5000
+8;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;cle;6;5000
+8;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;ten;6;5000
+8;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;gnb;5;5100
+8;2012;7009;allas Defense Dallas Defens;Def;dal;h;nyg;5;5100
+8;2012;7010;enver Defense Denver Defens;Def;den;h;nor;4;5000
+8;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;mia;4;5300
+8;2012;7011;etroit Defense Detroit Defens;Def;det;h;sea;4;5000
+8;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;phi;4;5300
+8;2012;7001;rizona Defense Arizona Defens;Def;ari;h;sfo;4;5300
+8;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;atl;3;5000
+8;2012;7028;eattle Defense Seattle Defens;Def;sea;a;det;3;5300
+8;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;oak;2;5100
+8;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;den;1;5000
+8;2012;7031;ashington Defense Washington Defens;Def;was;a;pit;1;5300
+8;2012;7017;innesota Defense Minnesota Defens;Def;min;h;tam;-3;5400
+8;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;nwe;-4;5100
+9;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;kan;25;5000
+9;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;phi;21;5000
+9;2012;7006;hicago Defense Chicago Defens;Def;chi;a;ten;21;5600
+9;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;pit;14;5600
+9;2012;7010;enver Defense Denver Defens;Def;den;a;cin;13;5000
+9;2012;7032;ouston Defense Houston Defens;Def;hou;h;buf;9;5600
+9;2012;7028;eattle Defense Seattle Defens;Def;sea;h;min;9;5300
+9;2012;7005;arolina Defense Carolina Defens;Def;car;a;was;8;5300
+9;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;nyg;8;5000
+9;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;oak;7;5300
+9;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;ari;7;5100
+9;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nor;6;5000
+9;2012;7011;etroit Defense Detroit Defens;Def;det;a;jac;6;5000
+9;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;sdg;6;5100
+9;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;cle;6;5100
+9;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;dal;5;5300
+9;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;hou;4;5100
+9;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;den;4;5100
+9;2012;7009;allas Defense Dallas Defens;Def;dal;a;atl;4;5100
+9;2012;7016;iami Defense Miami Defens;Def;mia;a;ind;3;5300
+9;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;chi;3;5000
+9;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;mia;3;5000
+9;2012;7001;rizona Defense Arizona Defens;Def;ari;a;gnb;2;5300
+9;2012;7017;innesota Defense Minnesota Defens;Def;min;a;sea;2;5400
+9;2012;7022;akland Defense Oakland Defens;Def;oak;h;tam;1;5200
+9;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;bal;1;5100
+9;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;det;0;5100
+9;2012;7031;ashington Defense Washington Defens;Def;was;h;car;0;5300
+10;2012;7010;enver Defense Denver Defens;Def;den;a;car;26;5000
+10;2012;7009;allas Defense Dallas Defens;Def;dal;a;phi;24;5000
+10;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;mia;23;5000
+10;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;jac;20;5000
+10;2012;7028;eattle Defense Seattle Defens;Def;sea;h;nyj;19;5200
+10;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;nyg;16;5000
+10;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;oak;16;5000
+10;2012;7032;ouston Defense Houston Defens;Def;hou;a;chi;15;5500
+10;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;sdg;14;5200
+10;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;sea;13;5200
+10;2012;7006;hicago Defense Chicago Defens;Def;chi;h;hou;9;5900
+10;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;kan;8;5000
+10;2012;7018;ew England Defense New England Defens;Def;nwe;h;buf;8;5300
+10;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ind;7;5000
+10;2012;7005;arolina Defense Carolina Defens;Def;car;h;den;6;5200
+10;2012;7017;innesota Defense Minnesota Defens;Def;min;h;det;6;5200
+10;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sfo;5;5000
+10;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;dal;4;5000
+10;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;pit;4;5000
+10;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;stl;4;5300
+10;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;atl;3;5000
+10;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;nor;2;5000
+10;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;tam;2;5200
+10;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;cin;1;5700
+10;2012;7011;etroit Defense Detroit Defens;Def;det;a;min;0;5000
+10;2012;7016;iami Defense Miami Defens;Def;mia;h;ten;0;5200
+10;2012;7022;akland Defense Oakland Defens;Def;oak;a;bal;-2;5000
+10;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;nwe;-3;5000
+11;2012;7018;ew England Defense New England Defens;Def;nwe;h;ind;27;5300
+11;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;det;20;5000
+11;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;mia;19;5000
+11;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;pit;19;5300
+11;2012;7031;ashington Defense Washington Defens;Def;was;h;phi;17;5200
+11;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;chi;16;5200
+11;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;oak;14;5000
+11;2012;7001;rizona Defense Arizona Defens;Def;ari;a;atl;14;5000
+11;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;den;14;5000
+11;2012;7010;enver Defense Denver Defens;Def;den;h;sdg;13;5400
+11;2012;7005;arolina Defense Carolina Defens;Def;car;h;tam;13;5200
+11;2012;7016;iami Defense Miami Defens;Def;mia;a;buf;13;5000
+11;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;kan;12;5300
+11;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;ari;12;5000
+11;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;stl;11;5400
+11;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;dal;9;5000
+11;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;bal;9;5000
+11;2012;7011;etroit Defense Detroit Defens;Def;det;h;gnb;6;5000
+11;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;car;5;5500
+11;2012;7009;allas Defense Dallas Defens;Def;dal;h;cle;5;5400
+11;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;nyj;5;5000
+11;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;hou;4;5000
+11;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;was;1;5000
+11;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;cin;1;5000
+11;2012;7006;hicago Defense Chicago Defens;Def;chi;a;sfo;1;5800
+11;2012;7032;ouston Defense Houston Defens;Def;hou;h;jac;0;5600
+11;2012;7022;akland Defense Oakland Defens;Def;oak;h;nor;-1;5000
+11;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;nwe;-4;5400
+12;2012;7018;ew England Defense New England Defens;Def;nwe;a;nyj;25;5600
+12;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;ari;23;5000
+12;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;pit;21;5000
+12;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;nor;21;5200
+12;2012;7006;hicago Defense Chicago Defens;Def;chi;h;min;14;5800
+12;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;buf;14;5000
+12;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cle;13;5000
+12;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;gnb;13;5400
+12;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;ind;12;5200
+12;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;oak;12;5300
+12;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;sdg;10;5500
+12;2012;7028;eattle Defense Seattle Defens;Def;sea;a;mia;9;5500
+12;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;jac;9;5400
+12;2012;7010;enver Defense Denver Defens;Def;den;a;kan;8;5400
+12;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;sfo;7;5200
+12;2012;7005;arolina Defense Carolina Defens;Def;car;a;phi;7;5200
+12;2012;7031;ashington Defense Washington Defens;Def;was;a;dal;7;5300
+12;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ten;6;5000
+12;2012;7017;innesota Defense Minnesota Defens;Def;min;a;chi;6;5200
+12;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;bal;6;5200
+12;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;atl;5;5200
+12;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;den;5;5000
+12;2012;7001;rizona Defense Arizona Defens;Def;ari;h;stl;5;5200
+12;2012;7032;ouston Defense Houston Defens;Def;hou;a;det;4;5300
+12;2012;7011;etroit Defense Detroit Defens;Def;det;h;hou;3;5000
+12;2012;7016;iami Defense Miami Defens;Def;mia;h;sea;3;5200
+12;2012;7009;allas Defense Dallas Defens;Def;dal;h;was;2;5200
+12;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;tam;2;5200
+12;2012;7022;akland Defense Oakland Defens;Def;oak;a;cin;1;5000
+12;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;car;1;5000
+12;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;nwe;0;5400
+12;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;nyg;-3;5300
+13;2012;7032;ouston Defense Houston Defens;Def;hou;a;ten;22;5100
+13;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sfo;17;5300
+13;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;sdg;15;5300
+13;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;nor;15;5200
+13;2012;7001;rizona Defense Arizona Defens;Def;ari;a;nyj;15;5200
+13;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;cin;14;5200
+13;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;ari;11;5200
+13;2012;7010;enver Defense Denver Defens;Def;den;h;tam;9;5400
+13;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;jac;9;5200
+13;2012;7009;allas Defense Dallas Defens;Def;dal;h;phi;9;5200
+13;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;stl;9;5600
+13;2012;7022;akland Defense Oakland Defens;Def;oak;h;cle;8;5000
+13;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;bal;8;5200
+13;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;pit;8;5500
+13;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;dal;7;5000
+13;2012;7016;iami Defense Miami Defens;Def;mia;h;nwe;6;5200
+13;2012;7018;ew England Defense New England Defens;Def;nwe;a;mia;6;5800
+13;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;min;5;5100
+13;2012;7011;etroit Defense Detroit Defens;Def;det;h;ind;4;5000
+13;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;oak;4;5200
+13;2012;7006;hicago Defense Chicago Defens;Def;chi;h;sea;4;5900
+13;2012;7017;innesota Defense Minnesota Defens;Def;min;a;gnb;4;5200
+13;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;atl;3;5200
+13;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;buf;3;5000
+13;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;was;3;5600
+13;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;den;2;5200
+13;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;car;2;5000
+13;2012;7028;eattle Defense Seattle Defens;Def;sea;a;chi;2;5500
+13;2012;7031;ashington Defense Washington Defens;Def;was;h;nyg;2;5300
+13;2012;7005;arolina Defense Carolina Defens;Def;car;a;kan;1;5200
+13;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;det;1;5200
+13;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;hou;0;5400
+14;2012;7028;eattle Defense Seattle Defens;Def;sea;h;ari;41;5300
+14;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;kan;17;5000
+14;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;nor;16;5600
+14;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;ind;15;5200
+14;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;buf;13;5500
+14;2012;7017;innesota Defense Minnesota Defens;Def;min;h;chi;13;5000
+14;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;det;12;5100
+14;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;pit;12;5400
+14;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;ten;12;5000
+14;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;jac;11;5200
+14;2012;7010;enver Defense Denver Defens;Def;den;a;oak;9;5400
+14;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;phi;8;5000
+14;2012;7009;allas Defense Dallas Defens;Def;dal;a;cin;8;5200
+14;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;mia;8;5600
+14;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;nyg;6;5000
+14;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;dal;6;5400
+14;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;nyj;6;5000
+14;2012;7011;etroit Defense Detroit Defens;Def;det;a;gnb;6;5000
+14;2012;7022;akland Defense Oakland Defens;Def;oak;h;den;5;5000
+14;2012;7005;arolina Defense Carolina Defens;Def;car;h;atl;5;5000
+14;2012;7031;ashington Defense Washington Defens;Def;was;h;bal;5;5300
+14;2012;7018;ew England Defense New England Defens;Def;nwe;h;hou;5;5800
+14;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;stl;4;5200
+14;2012;7006;hicago Defense Chicago Defens;Def;chi;a;min;4;5700
+14;2012;7016;iami Defense Miami Defens;Def;mia;a;sfo;4;5100
+14;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;was;4;5500
+14;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;cle;3;5000
+14;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;tam;2;5000
+14;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;sdg;1;5200
+14;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;car;0;5400
+14;2012;7032;ouston Defense Houston Defens;Def;hou;a;nwe;-1;5400
+14;2012;7001;rizona Defense Arizona Defens;Def;ari;a;sea;-1;5400
+15;2012;7001;rizona Defense Arizona Defens;Def;ari;h;det;26;5300
+15;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;phi;23;5400
+15;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;tam;22;5000
+15;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;nyj;18;5300
+15;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;nyg;17;5300
+15;2012;7022;akland Defense Oakland Defens;Def;oak;h;kan;16;5000
+15;2012;7028;eattle Defense Seattle Defens;Def;sea;a;buf;16;6000
+15;2012;7010;enver Defense Denver Defens;Def;den;a;bal;14;5400
+15;2012;7005;arolina Defense Carolina Defens;Def;car;a;sdg;14;5000
+15;2012;7017;innesota Defense Minnesota Defens;Def;min;a;stl;14;5100
+15;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;cin;10;5000
+15;2012;7032;ouston Defense Houston Defens;Def;hou;h;ind;10;5400
+15;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;nwe;10;5600
+15;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;chi;10;5100
+15;2012;7016;iami Defense Miami Defens;Def;mia;h;jac;9;5100
+15;2012;7009;allas Defense Dallas Defens;Def;dal;h;pit;8;5200
+15;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;ten;7;5300
+15;2012;7006;hicago Defense Chicago Defens;Def;chi;h;gnb;7;5500
+15;2012;7031;ashington Defense Washington Defens;Def;was;a;cle;6;5300
+15;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;mia;3;5000
+15;2012;7011;etroit Defense Detroit Defens;Def;det;a;ari;3;5000
+15;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;oak;3;5000
+15;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;dal;3;5000
+15;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;car;3;5500
+15;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;hou;3;5100
+15;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;den;2;5300
+15;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;h;min;1;5700
+15;2012;7018;ew England Defense New England Defens;Def;nwe;h;sfo;1;5800
+15;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;sea;0;5000
+15;2012;7008;leveland Defense Cleveland Defens;Def;cle;h;was;0;5300
+15;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;atl;0;5900
+15;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nor;-3;5000
+16;2012;7006;hicago Defense Chicago Defens;Def;chi;a;ari;29;5500
+16;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;tam;25;5300
+16;2012;7026;an Diego Defense San Diego Defens;Def;sdg;a;nyj;22;5300
+16;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;a;pit;20;5600
+16;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cin;19;5000
+16;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;kan;17;5100
+16;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;ten;15;5100
+16;2012;7017;innesota Defense Minnesota Defens;Def;min;a;hou;15;5300
+16;2012;7016;iami Defense Miami Defens;Def;mia;h;buf;14;5100
+16;2012;7010;enver Defense Denver Defens;Def;den;h;cle;12;5600
+16;2012;7028;eattle Defense Seattle Defens;Def;sea;h;sfo;11;6100
+16;2012;7005;arolina Defense Carolina Defens;Def;car;h;oak;10;5200
+16;2012;7031;ashington Defense Washington Defens;Def;was;a;phi;10;5300
+16;2012;7018;ew England Defense New England Defens;Def;nwe;a;jac;8;5600
+16;2012;7022;akland Defense Oakland Defens;Def;oak;a;car;7;5200
+16;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;h;nwe;7;5000
+16;2012;7015;ansas City Defense Kansas City Defens;Def;kan;h;ind;7;5000
+16;2012;7002;tlanta Defense Atlanta Defens;Def;atl;a;det;7;5400
+16;2012;7001;rizona Defense Arizona Defens;Def;ari;h;chi;6;5600
+16;2012;7021;ew York J Defense New York J Defens;Def;nyj;h;sdg;5;5300
+16;2012;7004;uffalo Defense Buffalo Defens;Def;buf;a;mia;4;5000
+16;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;stl;4;5000
+16;2012;7003;altimore Defense Baltimore Defens;Def;bal;h;nyg;4;5000
+16;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;dal;3;5300
+16;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;was;3;5000
+16;2012;7032;ouston Defense Houston Defens;Def;hou;h;min;3;5400
+16;2012;7011;etroit Defense Detroit Defens;Def;det;h;atl;2;5000
+16;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;den;1;5000
+16;2012;7009;allas Defense Dallas Defens;Def;dal;h;nor;-1;5200
+16;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;sea;-1;5600
+16;2012;7020;ew York G Defense New York G Defens;Def;nyg;a;bal;-1;5600
+16;2012;7030;ennessee Defense Tennessee Defens;Def;ten;a;gnb;-3;5300
+17;2012;7030;ennessee Defense Tennessee Defens;Def;ten;h;jac;38;5000
+17;2012;7018;ew England Defense New England Defens;Def;nwe;h;mia;21;5600
+17;2012;7004;uffalo Defense Buffalo Defens;Def;buf;h;nyj;17;5000
+17;2012;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cle;16;5400
+17;2012;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;hou;15;5500
+17;2012;7007;incinnati Defense Cincinnati Defens;Def;cin;h;bal;13;6000
+17;2012;7010;enver Defense Denver Defens;Def;den;h;kan;11;5600
+17;2012;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;ari;10;5300
+17;2012;7006;hicago Defense Chicago Defens;Def;chi;a;det;9;6000
+17;2012;7031;ashington Defense Washington Defens;Def;was;h;dal;9;5300
+17;2012;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ten;8;5000
+17;2012;7026;an Diego Defense San Diego Defens;Def;sdg;h;oak;8;5700
+17;2012;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sea;7;5700
+17;2012;7020;ew York G Defense New York G Defens;Def;nyg;h;phi;7;5300
+17;2012;7028;eattle Defense Seattle Defens;Def;sea;h;stl;6;6100
+17;2012;7017;innesota Defense Minnesota Defens;Def;min;h;gnb;6;5600
+17;2012;7022;akland Defense Oakland Defens;Def;oak;a;sdg;5;5200
+17;2012;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;atl;5;5000
+17;2012;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;car;5;5100
+17;2012;7005;arolina Defense Carolina Defens;Def;car;a;nor;3;5200
+17;2012;7003;altimore Defense Baltimore Defens;Def;bal;a;cin;3;5000
+17;2012;7021;ew York J Defense New York J Defens;Def;nyj;a;buf;2;5100
+17;2012;7011;etroit Defense Detroit Defens;Def;det;h;chi;2;5000
+17;2012;7008;leveland Defense Cleveland Defens;Def;cle;a;pit;2;5000
+17;2012;7002;tlanta Defense Atlanta Defens;Def;atl;h;tam;2;5400
+17;2012;7032;ouston Defense Houston Defens;Def;hou;a;ind;1;5200
+17;2012;7001;rizona Defense Arizona Defens;Def;ari;a;sfo;1;5600
+17;2012;7009;allas Defense Dallas Defens;Def;dal;a;was;0;5000
+17;2012;7016;iami Defense Miami Defens;Def;mia;a;nwe;0;5400
+17;2012;7015;ansas City Defense Kansas City Defens;Def;kan;a;den;-2;5000
+17;2012;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nyg;-3;5000
+17;2012;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;min;-3;5400
+1;2013;7009;allas Defense Dallas Defens;Def;dal;h;nyg;26;5000
+1;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;jac;26;5000
+1;2013;7016;iami Defense Miami Defens;Def;mia;a;cle;16;5000
+1;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;nwe;14;5000
+1;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;pit;13;5000
+1;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;was;12;5000
+1;2013;7031;ashington Defense Washington Defens;Def;was;h;phi;12;5000
+1;2013;7011;etroit Defense Detroit Defens;Def;det;h;min;11;5000
+1;2013;7010;enver Defense Denver Defens;Def;den;h;bal;10;5300
+1;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nyj;10;5100
+1;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;tam;10;5000
+1;2013;7001;rizona Defense Arizona Defens;Def;ari;a;stl;10;5100
+1;2013;7032;ouston Defense Houston Defens;Def;hou;a;sdg;9;5500
+1;2013;7028;eattle Defense Seattle Defens;Def;sea;a;car;9;5700
+1;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;ari;9;5100
+1;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;atl;8;5000
+1;2013;7005;arolina Defense Carolina Defens;Def;car;h;sea;8;5000
+1;2013;7006;hicago Defense Chicago Defens;Def;chi;h;cin;7;5500
+1;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;mia;6;5000
+1;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;oak;6;5000
+1;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;kan;5;5000
+1;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;gnb;5;5400
+1;2013;7018;ew England Defense New England Defens;Def;nwe;a;buf;5;5400
+1;2013;7022;akland Defense Oakland Defens;Def;oak;a;ind;4;5000
+1;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;nor;4;5000
+1;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;ten;4;5000
+1;2013;7017;innesota Defense Minnesota Defens;Def;min;a;det;4;5000
+1;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;dal;4;5200
+1;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;hou;4;5000
+1;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;den;3;5400
+1;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;chi;2;5300
+1;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;sfo;1;5300
+2;2013;7028;eattle Defense Seattle Defens;Def;sea;h;sfo;22;5700
+2;2013;7017;innesota Defense Minnesota Defens;Def;min;a;chi;21;5000
+2;2013;7018;ew England Defense New England Defens;Def;nwe;h;nyj;16;5400
+2;2013;7010;enver Defense Denver Defens;Def;den;a;nyg;15;5400
+2;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;nor;15;5400
+2;2013;7006;hicago Defense Chicago Defens;Def;chi;h;min;14;5500
+2;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;cle;12;5200
+2;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;hou;11;5100
+2;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;pit;10;5400
+2;2013;7022;akland Defense Oakland Defens;Def;oak;h;jac;9;5200
+2;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;tam;9;5100
+2;2013;7011;etroit Defense Detroit Defens;Def;det;a;ari;9;5200
+2;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;car;8;5000
+2;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;dal;8;5400
+2;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;sea;8;5700
+2;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;stl;8;5000
+2;2013;7032;ouston Defense Houston Defens;Def;hou;h;ten;7;5500
+2;2013;7009;allas Defense Dallas Defens;Def;dal;a;kan;7;5000
+2;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;mia;7;5000
+2;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;oak;6;5000
+2;2013;7016;iami Defense Miami Defens;Def;mia;a;ind;6;5200
+2;2013;7001;rizona Defense Arizona Defens;Def;ari;h;det;6;5100
+2;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;nwe;5;5000
+2;2013;7005;arolina Defense Carolina Defens;Def;car;a;buf;5;5100
+2;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;bal;5;5000
+2;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;sdg;4;5100
+2;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;was;4;5200
+2;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;atl;2;5200
+2;2013;7031;ashington Defense Washington Defens;Def;was;a;gnb;2;5000
+2;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cin;1;5000
+2;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;den;1;5000
+2;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;phi;0;5000
+3;2013;7006;hicago Defense Chicago Defens;Def;chi;a;pit;25;5500
+3;2013;7005;arolina Defense Carolina Defens;Def;car;h;nyg;23;5100
+3;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;phi;23;5300
+3;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;hou;21;5200
+3;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;cin;20;5200
+3;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;gnb;18;5400
+3;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;ari;12;5000
+3;2013;7009;allas Defense Dallas Defens;Def;dal;h;stl;12;5200
+3;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;min;12;5000
+3;2013;7018;ew England Defense New England Defens;Def;nwe;h;tam;12;5400
+3;2013;7028;eattle Defense Seattle Defens;Def;sea;h;jac;11;5700
+3;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;sfo;11;5000
+3;2013;7011;etroit Defense Detroit Defens;Def;det;a;was;10;5200
+3;2013;7017;innesota Defense Minnesota Defens;Def;min;h;cle;10;5200
+3;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;buf;9;5000
+3;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;mia;9;5000
+3;2013;7031;ashington Defense Washington Defens;Def;was;h;det;9;5000
+3;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;sdg;7;5100
+3;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;kan;6;5000
+3;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nwe;5;5400
+3;2013;7001;rizona Defense Arizona Defens;Def;ari;a;nor;5;5100
+3;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;nyj;4;5000
+3;2013;7016;iami Defense Miami Defens;Def;mia;h;atl;4;5200
+3;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;chi;4;5000
+3;2013;7010;enver Defense Denver Defens;Def;den;h;oak;3;5400
+3;2013;7032;ouston Defense Houston Defens;Def;hou;a;bal;3;5500
+3;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;ten;3;5000
+3;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;sea;2;5000
+3;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;dal;2;5000
+3;2013;7022;akland Defense Oakland Defens;Def;oak;a;den;1;5200
+3;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;ind;1;5700
+3;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;car;1;5000
+4;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;nyj;23;5100
+4;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;jac;23;5000
+4;2013;7031;ashington Defense Washington Defens;Def;was;a;oak;21;5000
+4;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;nyg;19;5300
+4;2013;7028;eattle Defense Seattle Defens;Def;sea;a;hou;17;5700
+4;2013;7011;etroit Defense Detroit Defens;Def;det;h;chi;16;5200
+4;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;bal;15;5000
+4;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;mia;13;5000
+4;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;cin;13;5000
+4;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;stl;13;5700
+4;2013;7010;enver Defense Denver Defens;Def;den;h;phi;12;5400
+4;2013;7001;rizona Defense Arizona Defens;Def;ari;a;tam;12;5100
+4;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;ari;11;5400
+4;2013;7032;ouston Defense Houston Defens;Def;hou;h;sea;10;5500
+4;2013;7017;innesota Defense Minnesota Defens;Def;min;h;pit;9;5200
+4;2013;7009;allas Defense Dallas Defens;Def;dal;a;sdg;8;5200
+4;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;buf;8;5200
+4;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;kan;7;5000
+4;2013;7022;akland Defense Oakland Defens;Def;oak;h;was;6;5200
+4;2013;7006;hicago Defense Chicago Defens;Def;chi;a;det;6;5500
+4;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;dal;6;5000
+4;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;cle;4;5400
+4;2013;7018;ew England Defense New England Defens;Def;nwe;a;atl;4;5400
+4;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ind;3;5000
+4;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sfo;2;5000
+4;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;ten;1;5000
+4;2013;7016;iami Defense Miami Defens;Def;mia;a;nor;0;5200
+4;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;min;0;5000
+4;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;nwe;-1;5000
+4;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;den;-3;5000
+5;2013;7001;rizona Defense Arizona Defens;Def;ari;h;car;24;5200
+5;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;hou;22;5600
+5;2013;7022;akland Defense Oakland Defens;Def;oak;h;sdg;21;5000
+5;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;buf;18;5200
+5;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;ten;16;5300
+5;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;nwe;15;5300
+5;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;jac;15;5400
+5;2013;7016;iami Defense Miami Defens;Def;mia;h;bal;12;5200
+5;2013;7018;ew England Defense New England Defens;Def;nwe;a;cin;12;5400
+5;2013;7028;eattle Defense Seattle Defens;Def;sea;a;ind;10;5800
+5;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nyg;9;5000
+5;2013;7005;arolina Defense Carolina Defens;Def;car;a;ari;9;5100
+5;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;det;9;5200
+5;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;sea;8;5000
+5;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;mia;7;5200
+5;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;kan;7;5300
+5;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;chi;6;5000
+5;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;cle;5;5200
+5;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;atl;5;5000
+5;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;oak;5;5200
+5;2013;7010;enver Defense Denver Defens;Def;den;a;dal;4;5400
+5;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;nyj;3;5200
+5;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;stl;2;5000
+5;2013;7006;hicago Defense Chicago Defens;Def;chi;h;nor;2;5300
+5;2013;7011;etroit Defense Detroit Defens;Def;det;a;gnb;1;5200
+5;2013;7032;ouston Defense Houston Defens;Def;hou;a;sfo;1;5500
+5;2013;7009;allas Defense Dallas Defens;Def;dal;h;den;0;5100
+5;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;phi;-3;5000
+6;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;hou;29;5200
+6;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;oak;26;5600
+6;2013;7009;allas Defense Dallas Defens;Def;dal;h;was;14;5100
+6;2013;7028;eattle Defense Seattle Defens;Def;sea;h;ten;14;5800
+6;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;nyj;14;5100
+6;2013;7006;hicago Defense Chicago Defens;Def;chi;h;nyg;13;5500
+6;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;sea;13;5300
+6;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;ari;12;5600
+6;2013;7005;arolina Defense Carolina Defens;Def;car;a;min;11;5100
+6;2013;7010;enver Defense Denver Defens;Def;den;h;jac;10;5900
+6;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;den;8;5000
+6;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;bal;8;5200
+6;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;gnb;8;5200
+6;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;buf;7;5300
+6;2013;7011;etroit Defense Detroit Defens;Def;det;a;cle;7;5000
+6;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;ind;7;5000
+6;2013;7022;akland Defense Oakland Defens;Def;oak;a;kan;6;5000
+6;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;nwe;6;5000
+6;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;cin;5;5200
+6;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;tam;5;5000
+6;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;pit;5;5000
+6;2013;7001;rizona Defense Arizona Defens;Def;ari;a;sfo;5;5300
+6;2013;7018;ew England Defense New England Defens;Def;nwe;h;nor;5;5200
+6;2013;7031;ashington Defense Washington Defens;Def;was;a;dal;3;5000
+6;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;sdg;3;5500
+6;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;phi;2;5100
+6;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;det;2;5300
+6;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;chi;1;5000
+6;2013;7032;ouston Defense Houston Defens;Def;hou;h;stl;0;5500
+6;2013;7017;innesota Defense Minnesota Defens;Def;min;h;car;-3;5200
+7;2013;7005;arolina Defense Carolina Defens;Def;car;h;stl;20;5400
+7;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;min;17;5200
+7;2013;7009;allas Defense Dallas Defens;Def;dal;a;phi;16;5200
+7;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;jac;15;5500
+7;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;mia;14;5100
+7;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;ten;14;5700
+7;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;nwe;13;5100
+7;2013;7018;ew England Defense New England Defens;Def;nwe;a;nyj;12;5200
+7;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;tam;11;5200
+7;2013;7028;eattle Defense Seattle Defens;Def;sea;a;ari;11;6200
+7;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;den;11;5100
+7;2013;7017;innesota Defense Minnesota Defens;Def;min;a;nyg;10;5100
+7;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;cle;9;5200
+7;2013;7031;ashington Defense Washington Defens;Def;was;h;chi;9;5100
+7;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;hou;8;6000
+7;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;dal;7;5000
+7;2013;7032;ouston Defense Houston Defens;Def;hou;a;kan;7;5400
+7;2013;7016;iami Defense Miami Defens;Def;mia;h;buf;7;5200
+7;2013;7001;rizona Defense Arizona Defens;Def;ari;h;sea;6;5000
+7;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;pit;6;5200
+7;2013;7006;hicago Defense Chicago Defens;Def;chi;a;was;5;5500
+7;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;car;4;5500
+7;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;atl;2;5100
+7;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;det;2;5300
+7;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;bal;2;5300
+7;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;sfo;2;5200
+7;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;sdg;1;5100
+7;2013;7011;etroit Defense Detroit Defens;Def;det;h;cin;1;5000
+7;2013;7010;enver Defense Denver Defens;Def;den;a;ind;0;5900
+7;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;gnb;0;5000
+8;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;nyj;24;5300
+8;2013;7010;enver Defense Denver Defens;Def;den;h;was;20;5700
+8;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;phi;20;5100
+8;2013;7001;rizona Defense Arizona Defens;Def;ari;h;atl;16;5100
+8;2013;7018;ew England Defense New England Defens;Def;nwe;h;mia;15;5600
+8;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;jac;12;6500
+8;2013;7031;ashington Defense Washington Defens;Def;was;a;den;12;5000
+8;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;buf;11;5100
+8;2013;7028;eattle Defense Seattle Defens;Def;sea;a;stl;11;6000
+8;2013;7022;akland Defense Oakland Defens;Def;oak;h;pit;10;5000
+8;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nyg;10;5000
+8;2013;7005;arolina Defense Carolina Defens;Def;car;a;tam;9;5600
+8;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;min;9;5500
+8;2013;7009;allas Defense Dallas Defens;Def;dal;a;det;8;5300
+8;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sea;8;5200
+8;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;oak;8;5500
+8;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;kan;6;5000
+8;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;ari;5;5400
+8;2013;7016;iami Defense Miami Defens;Def;mia;a;nwe;5;5100
+8;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;cle;4;5900
+8;2013;7017;innesota Defense Minnesota Defens;Def;min;h;gnb;4;5000
+8;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;car;2;5300
+8;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;nor;0;5000
+8;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;cin;-1;5300
+8;2013;7011;etroit Defense Detroit Defens;Def;det;h;dal;-1;5000
+8;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;sfo;-2;5000
+9;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;buf;22;5800
+9;2013;7016;iami Defense Miami Defens;Def;mia;h;cin;22;5000
+9;2013;7005;arolina Defense Carolina Defens;Def;car;h;atl;19;5600
+9;2013;7009;allas Defense Dallas Defens;Def;dal;h;min;12;5200
+9;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;was;11;6000
+9;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;bal;10;5000
+9;2013;7018;ew England Defense New England Defens;Def;nwe;h;pit;10;5800
+9;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;mia;9;5800
+9;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;oak;8;5200
+9;2013;7006;hicago Defense Chicago Defens;Def;chi;a;gnb;8;5000
+9;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;nor;7;5000
+9;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;ten;7;5200
+9;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;kan;6;5000
+9;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;sea;6;5000
+9;2013;7032;ouston Defense Houston Defens;Def;hou;h;ind;6;5400
+9;2013;7031;ashington Defense Washington Defens;Def;was;h;sdg;6;5400
+9;2013;7017;innesota Defense Minnesota Defens;Def;min;a;dal;6;5000
+9;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;stl;6;5200
+9;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;car;5;5400
+9;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;cle;5;5200
+9;2013;7028;eattle Defense Seattle Defens;Def;sea;h;tam;3;6300
+9;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;chi;3;5500
+9;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;nyj;2;5500
+9;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;nwe;1;5500
+9;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;hou;1;5100
+9;2013;7022;akland Defense Oakland Defens;Def;oak;h;phi;-2;5200
+10;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;ind;29;5200
+10;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ten;17;5000
+10;2013;7022;akland Defense Oakland Defens;Def;oak;a;nyg;16;5000
+10;2013;7005;arolina Defense Carolina Defens;Def;car;a;sfo;14;5500
+10;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;oak;14;5300
+10;2013;7001;rizona Defense Arizona Defens;Def;ari;h;hou;13;5500
+10;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;bal;12;5500
+10;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;car;12;6600
+10;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;cin;12;5200
+10;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;gnb;9;5000
+10;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;buf;9;5300
+10;2013;7032;ouston Defense Houston Defens;Def;hou;a;ari;8;5300
+10;2013;7028;eattle Defense Seattle Defens;Def;sea;a;atl;8;5800
+10;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;jac;8;5800
+10;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;mia;7;5400
+10;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;pit;6;5000
+10;2013;7010;enver Defense Denver Defens;Def;den;a;sdg;5;5700
+10;2013;7011;etroit Defense Detroit Defens;Def;det;a;chi;5;5000
+10;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;phi;5;5500
+10;2013;7016;iami Defense Miami Defens;Def;mia;a;tam;5;5900
+10;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;dal;4;5200
+10;2013;7017;innesota Defense Minnesota Defens;Def;min;h;was;4;5000
+10;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;stl;4;5100
+10;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;den;3;5200
+10;2013;7006;hicago Defense Chicago Defens;Def;chi;h;det;2;5300
+10;2013;7031;ashington Defense Washington Defens;Def;was;a;min;2;5000
+10;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;sea;0;5000
+10;2013;7009;allas Defense Dallas Defens;Def;dal;a;nor;-1;5200
+11;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;cle;24;5600
+11;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;nyj;19;5000
+11;2013;7028;eattle Defense Seattle Defens;Def;sea;h;min;17;5900
+11;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;atl;16;5400
+11;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;gnb;16;5300
+11;2013;7006;hicago Defense Chicago Defens;Def;chi;h;bal;14;5000
+11;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;cin;10;5000
+11;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;was;9;5000
+11;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;det;8;5200
+11;2013;7022;akland Defense Oakland Defens;Def;oak;a;hou;7;5200
+11;2013;7032;ouston Defense Houston Defens;Def;hou;h;oak;7;5000
+11;2013;7005;arolina Defense Carolina Defens;Def;car;h;nwe;7;5700
+11;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;nor;7;6500
+11;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;nyg;7;5400
+11;2013;7001;rizona Defense Arizona Defens;Def;ari;a;jac;7;5700
+11;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;mia;7;5000
+11;2013;7010;enver Defense Denver Defens;Def;den;h;kan;6;5200
+11;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;sfo;6;5200
+11;2013;7016;iami Defense Miami Defens;Def;mia;h;sdg;6;5900
+11;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;ten;4;5000
+11;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ari;3;5200
+11;2013;7031;ashington Defense Washington Defens;Def;was;a;phi;3;5000
+11;2013;7018;ew England Defense New England Defens;Def;nwe;a;car;3;5600
+11;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;chi;3;5300
+11;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;den;2;6500
+11;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;tam;1;5000
+11;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;buf;0;5100
+11;2013;7017;innesota Defense Minnesota Defens;Def;min;a;sea;0;5000
+11;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;ind;0;5400
+11;2013;7011;etroit Defense Detroit Defens;Def;det;a;pit;-3;5000
+12;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cle;23;5000
+12;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;det;20;5600
+12;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;nyj;16;5300
+12;2013;7010;enver Defense Denver Defens;Def;den;a;nwe;14;5200
+12;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;was;13;6100
+12;2013;7001;rizona Defense Arizona Defens;Def;ari;h;ind;13;5400
+12;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;chi;13;5300
+12;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;atl;11;5700
+12;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;hou;11;5000
+12;2013;7032;ouston Defense Houston Defens;Def;hou;h;jac;10;5600
+12;2013;7009;allas Defense Dallas Defens;Def;dal;a;nyg;10;5200
+12;2013;7018;ew England Defense New England Defens;Def;nwe;h;den;10;5100
+12;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;min;8;5000
+12;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;bal;7;5000
+12;2013;7016;iami Defense Miami Defens;Def;mia;h;car;7;5500
+12;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;dal;7;5700
+12;2013;7005;arolina Defense Carolina Defens;Def;car;a;mia;6;5700
+12;2013;7011;etroit Defense Detroit Defens;Def;det;h;tam;5;5000
+12;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;oak;5;5000
+12;2013;7022;akland Defense Oakland Defens;Def;oak;h;ten;4;5000
+12;2013;7031;ashington Defense Washington Defens;Def;was;h;sfo;4;5000
+12;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;ari;4;5000
+12;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;kan;3;5000
+12;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;nor;2;5000
+12;2013;7017;innesota Defense Minnesota Defens;Def;min;a;gnb;2;5000
+12;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;pit;1;5000
+12;2013;7006;hicago Defense Chicago Defens;Def;chi;a;stl;-2;5600
+12;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;sdg;-3;6100
+13;2013;7011;etroit Defense Detroit Defens;Def;det;h;gnb;22;5000
+13;2013;7016;iami Defense Miami Defens;Def;mia;a;nyj;17;5200
+13;2013;7005;arolina Defense Carolina Defens;Def;car;h;tam;16;5300
+13;2013;7028;eattle Defense Seattle Defens;Def;sea;h;nor;13;5800
+13;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;sdg;12;5700
+13;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;ari;11;5300
+13;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;det;11;5000
+13;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;cle;10;5100
+13;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;ten;10;5000
+13;2013;7022;akland Defense Oakland Defens;Def;oak;a;dal;9;5000
+13;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;stl;9;6100
+13;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;was;8;5400
+13;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;atl;7;5700
+13;2013;7006;hicago Defense Chicago Defens;Def;chi;a;min;7;5000
+13;2013;7017;innesota Defense Minnesota Defens;Def;min;h;chi;7;5000
+13;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;ind;7;5000
+13;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;den;6;5800
+13;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sfo;6;5500
+13;2013;7009;allas Defense Dallas Defens;Def;dal;h;oak;5;5500
+13;2013;7001;rizona Defense Arizona Defens;Def;ari;a;phi;5;5600
+13;2013;7031;ashington Defense Washington Defens;Def;was;h;nyg;5;5200
+13;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;cin;5;5000
+13;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;car;4;5700
+13;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;mia;3;5000
+13;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;jac;3;5800
+13;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;buf;3;5000
+13;2013;7010;enver Defense Denver Defens;Def;den;a;kan;2;5200
+13;2013;7032;ouston Defense Houston Defens;Def;hou;h;nwe;2;5200
+13;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;bal;2;5600
+13;2013;7018;ew England Defense New England Defens;Def;nwe;a;hou;2;5100
+13;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;sea;1;5400
+13;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;pit;1;5700
+14;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;was;26;5400
+14;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;buf;24;5300
+14;2013;7001;rizona Defense Arizona Defens;Def;ari;h;stl;20;5500
+14;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;gnb;15;5000
+14;2013;7011;etroit Defense Detroit Defens;Def;det;a;phi;13;5600
+14;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;det;12;5300
+14;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;mia;10;5000
+14;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;car;9;5400
+14;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;nyg;9;5000
+14;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;hou;8;5300
+14;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;nwe;8;5200
+14;2013;7017;innesota Defense Minnesota Defens;Def;min;a;bal;8;5000
+14;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;min;8;5000
+14;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;oak;7;5200
+14;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;sea;7;5800
+14;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;atl;6;5100
+14;2013;7010;enver Defense Denver Defens;Def;den;h;ten;5;5500
+14;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;tam;5;5300
+14;2013;7028;eattle Defense Seattle Defens;Def;sea;a;sfo;5;5800
+14;2013;7016;iami Defense Miami Defens;Def;mia;a;pit;5;5500
+14;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;ari;3;5100
+14;2013;7022;akland Defense Oakland Defens;Def;oak;a;nyj;2;5100
+14;2013;7032;ouston Defense Houston Defens;Def;hou;a;jac;1;5300
+14;2013;7005;arolina Defense Carolina Defens;Def;car;a;nor;1;5700
+14;2013;7006;hicago Defense Chicago Defens;Def;chi;h;dal;1;5000
+14;2013;7031;ashington Defense Washington Defens;Def;was;h;kan;1;5200
+14;2013;7018;ew England Defense New England Defens;Def;nwe;h;cle;1;5200
+14;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;sdg;0;5400
+14;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;ind;-1;5700
+14;2013;7009;allas Defense Dallas Defens;Def;dal;a;chi;-3;5100
+14;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;den;-4;5000
+14;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;cin;-4;5000
+15;2013;7028;eattle Defense Seattle Defens;Def;sea;a;nyg;24;5700
+15;2013;7008;leveland Defense Cleveland Defens;Def;cle;h;chi;19;5400
+15;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;oak;19;6500
+15;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;hou;17;5000
+15;2013;7005;arolina Defense Carolina Defens;Def;car;h;nyj;15;6000
+15;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;tam;15;5600
+15;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;was;15;5300
+15;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;jac;14;5300
+15;2013;7001;rizona Defense Arizona Defens;Def;ari;a;ten;14;6000
+15;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;nor;13;5000
+15;2013;7006;hicago Defense Chicago Defens;Def;chi;a;cle;11;5200
+15;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cin;10;5200
+15;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;buf;8;5100
+15;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;det;8;5100
+15;2013;7031;ashington Defense Washington Defens;Def;was;a;atl;7;5000
+15;2013;7018;ew England Defense New England Defens;Def;nwe;a;mia;6;5400
+15;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;sea;6;5000
+15;2013;7017;innesota Defense Minnesota Defens;Def;min;h;phi;5;5000
+15;2013;7016;iami Defense Miami Defens;Def;mia;h;nwe;4;5700
+15;2013;7026;an Diego Defense San Diego Defens;Def;sdg;a;den;4;5000
+15;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;a;pit;3;5400
+15;2013;7032;ouston Defense Houston Defens;Def;hou;a;ind;3;5000
+15;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;dal;3;5000
+15;2013;7010;enver Defense Denver Defens;Def;den;h;sdg;2;5100
+15;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;sfo;2;5700
+15;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;car;2;5100
+15;2013;7011;etroit Defense Detroit Defens;Def;det;h;bal;2;5700
+15;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;min;1;5400
+15;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;ari;1;5200
+15;2013;7022;akland Defense Oakland Defens;Def;oak;h;kan;0;5000
+15;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;stl;0;5600
+15;2013;7009;allas Defense Dallas Defens;Def;dal;h;gnb;0;5100
+16;2013;7018;ew England Defense New England Defens;Def;nwe;a;bal;28;5200
+16;2013;7004;uffalo Defense Buffalo Defens;Def;buf;h;mia;21;5500
+16;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;chi;21;5100
+16;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;min;19;5600
+16;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;kan;16;5400
+16;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;h;tam;15;5500
+16;2013;7020;ew York G Defense New York G Defens;Def;nyg;a;det;15;5000
+16;2013;7005;arolina Defense Carolina Defens;Def;car;h;nor;14;5700
+16;2013;7001;rizona Defense Arizona Defens;Def;ari;a;sea;12;5700
+16;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;gnb;12;5300
+16;2013;7010;enver Defense Denver Defens;Def;den;a;hou;11;5800
+16;2013;7021;ew York J Defense New York J Defens;Def;nyj;h;cle;11;5100
+16;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;atl;11;5900
+16;2013;7028;eattle Defense Seattle Defens;Def;sea;h;ari;11;6200
+16;2013;7011;etroit Defense Detroit Defens;Def;det;h;nyg;9;5700
+16;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;oak;9;5400
+16;2013;7022;akland Defense Oakland Defens;Def;oak;a;sdg;7;5100
+16;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;car;7;5200
+16;2013;7030;ennessee Defense Tennessee Defens;Def;ten;a;jac;7;5500
+16;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ten;6;5100
+16;2013;7031;ashington Defense Washington Defens;Def;was;h;dal;6;5000
+16;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;stl;5;5400
+16;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;pit;4;5000
+16;2013;7016;iami Defense Miami Defens;Def;mia;a;buf;4;5100
+16;2013;7002;tlanta Defense Atlanta Defens;Def;atl;a;sfo;3;5300
+16;2013;7009;allas Defense Dallas Defens;Def;dal;a;was;2;5300
+16;2013;7003;altimore Defense Baltimore Defens;Def;bal;h;nwe;2;5100
+16;2013;7015;ansas City Defense Kansas City Defens;Def;kan;h;ind;1;6500
+16;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;nyj;0;6000
+16;2013;7006;hicago Defense Chicago Defens;Def;chi;a;phi;0;5200
+16;2013;7017;innesota Defense Minnesota Defens;Def;min;a;cin;0;5000
+16;2013;7032;ouston Defense Houston Defens;Def;hou;h;den;-3;5000
+17;2013;7005;arolina Defense Carolina Defens;Def;car;a;atl;18;6100
+17;2013;7020;ew York G Defense New York G Defens;Def;nyg;h;was;18;5400
+17;2013;7028;eattle Defense Seattle Defens;Def;sea;h;stl;16;6100
+17;2013;7007;incinnati Defense Cincinnati Defens;Def;cin;h;bal;15;6000
+17;2013;7030;ennessee Defense Tennessee Defens;Def;ten;h;hou;13;5500
+17;2013;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cle;11;5400
+17;2013;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;jac;11;5800
+17;2013;7021;ew York J Defense New York J Defens;Def;nyj;a;mia;10;5200
+17;2013;7017;innesota Defense Minnesota Defens;Def;min;h;det;9;5000
+17;2013;7011;etroit Defense Detroit Defens;Def;det;a;min;8;5500
+17;2013;7031;ashington Defense Washington Defens;Def;was;a;nyg;8;5000
+17;2013;7003;altimore Defense Baltimore Defens;Def;bal;a;cin;8;5200
+17;2013;7009;allas Defense Dallas Defens;Def;dal;h;phi;7;5000
+17;2013;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;dal;6;5100
+17;2013;7008;leveland Defense Cleveland Defens;Def;cle;a;pit;6;5200
+17;2013;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;ari;6;6200
+17;2013;7002;tlanta Defense Atlanta Defens;Def;atl;h;car;6;5300
+17;2013;7006;hicago Defense Chicago Defens;Def;chi;h;gnb;6;5200
+17;2013;7010;enver Defense Denver Defens;Def;den;a;oak;5;5800
+17;2013;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;tam;5;5500
+17;2013;7015;ansas City Defense Kansas City Defens;Def;kan;a;sdg;5;5600
+17;2013;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sea;5;5500
+17;2013;7018;ew England Defense New England Defens;Def;nwe;h;buf;5;5200
+17;2013;7022;akland Defense Oakland Defens;Def;oak;h;den;4;5000
+17;2013;7032;ouston Defense Houston Defens;Def;hou;a;ten;4;5000
+17;2013;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;chi;4;5000
+17;2013;7004;uffalo Defense Buffalo Defens;Def;buf;a;nwe;2;5500
+17;2013;7001;rizona Defense Arizona Defens;Def;ari;h;sfo;2;5700
+17;2013;7026;an Diego Defense San Diego Defens;Def;sdg;h;kan;2;5300
+17;2013;7016;iami Defense Miami Defens;Def;mia;h;nyj;1;5000
+17;2013;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ind;0;5000
+17;2013;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nor;-3;5000
+1;2014;7017;innesota Defense Minnesota Defens;Def;min;a;stl;22;5000
+1;2014;7032;ouston Defense Houston Defens;Def;hou;h;was;18;4700
+1;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;dal;18;5600
+1;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;jac;14;5000
+1;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;kan;14;5000
+1;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;phi;11;4500
+1;2014;7016;iami Defense Miami Defens;Def;mia;h;nwe;11;5100
+1;2014;7005;arolina Defense Carolina Defens;Def;car;a;tam;10;5500
+1;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;chi;9;5000
+1;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;ari;9;5200
+1;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;bal;8;5400
+1;2014;7028;eattle Defense Seattle Defens;Def;sea;h;gnb;8;5700
+1;2014;7010;enver Defense Denver Defens;Def;den;h;ind;7;5400
+1;2014;7022;akland Defense Oakland Defens;Def;oak;a;nyj;7;4800
+1;2014;7011;etroit Defense Detroit Defens;Def;det;h;nyg;7;4600
+1;2014;7031;ashington Defense Washington Defens;Def;was;a;hou;6;4700
+1;2014;7018;ew England Defense New England Defens;Def;nwe;a;mia;6;5400
+1;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;pit;4;5100
+1;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;ten;4;5400
+1;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;oak;3;5000
+1;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;nor;3;4900
+1;2014;7006;hicago Defense Chicago Defens;Def;chi;h;buf;3;5300
+1;2014;7001;rizona Defense Arizona Defens;Def;ari;h;sdg;3;5300
+1;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cle;3;5200
+1;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;car;2;4900
+1;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;sea;2;5200
+1;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;cin;2;5200
+1;2014;7009;allas Defense Dallas Defens;Def;dal;h;sfo;1;4800
+1;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;min;0;5400
+1;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;den;0;4800
+1;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;atl;-1;4800
+1;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;det;-3;5200
+2;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;mia;20;4900
+2;2014;7018;ew England Defense New England Defens;Def;nwe;a;min;20;5100
+2;2014;7001;rizona Defense Arizona Defens;Def;ari;a;nyg;17;5300
+2;2014;7031;ashington Defense Washington Defens;Def;was;h;jac;16;4500
+2;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;pit;15;4700
+2;2014;7005;arolina Defense Carolina Defens;Def;car;h;det;14;5600
+2;2014;7006;hicago Defense Chicago Defens;Def;chi;a;sfo;13;4900
+2;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;atl;12;5200
+2;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;nor;12;4700
+2;2014;7009;allas Defense Dallas Defens;Def;dal;a;ten;10;4600
+2;2014;7032;ouston Defense Houston Defens;Def;hou;a;oak;9;5400
+2;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;tam;8;4800
+2;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;dal;6;5200
+2;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;stl;5;4900
+2;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;gnb;5;4700
+2;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;ari;5;5200
+2;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;ind;4;5100
+2;2014;7011;etroit Defense Detroit Defens;Def;det;a;car;4;4600
+2;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;nyj;4;4700
+2;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;sea;4;4900
+2;2014;7010;enver Defense Denver Defens;Def;den;h;kan;3;5400
+2;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;cle;2;4800
+2;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;chi;2;5700
+2;2014;7022;akland Defense Oakland Defens;Def;oak;h;hou;1;4500
+2;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;den;1;4900
+2;2014;7017;innesota Defense Minnesota Defens;Def;min;h;nwe;1;5300
+2;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;phi;1;4800
+2;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;cin;0;4600
+2;2014;7028;eattle Defense Seattle Defens;Def;sea;a;sdg;0;5400
+2;2014;7016;iami Defense Miami Defens;Def;mia;a;buf;0;5000
+2;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;bal;0;4700
+2;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;was;-1;4600
+3;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;tam;29;4600
+3;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;jac;17;5100
+3;2014;7011;etroit Defense Detroit Defens;Def;det;h;gnb;16;4500
+3;2014;7006;hicago Defense Chicago Defens;Def;chi;a;nyj;16;4900
+3;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;car;14;4700
+3;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;ten;12;5300
+3;2014;7009;allas Defense Dallas Defens;Def;dal;a;stl;12;4800
+3;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;det;12;4700
+3;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;atl;11;4800
+3;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;hou;11;4900
+3;2014;7016;iami Defense Miami Defens;Def;mia;h;kan;10;5000
+3;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;dal;10;4800
+3;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;buf;9;4700
+3;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;mia;8;5000
+3;2014;7010;enver Defense Denver Defens;Def;den;a;sea;7;4900
+3;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;was;7;5300
+3;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;chi;7;4600
+3;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;min;6;4600
+3;2014;7028;eattle Defense Seattle Defens;Def;sea;h;den;6;5200
+3;2014;7018;ew England Defense New England Defens;Def;nwe;h;oak;6;5400
+3;2014;7001;rizona Defense Arizona Defens;Def;ari;h;sfo;4;5400
+3;2014;7017;innesota Defense Minnesota Defens;Def;min;a;nor;4;4900
+3;2014;7022;akland Defense Oakland Defens;Def;oak;a;nwe;3;4500
+3;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;cle;3;4900
+3;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;sdg;2;5200
+3;2014;7032;ouston Defense Houston Defens;Def;hou;a;nyg;2;5200
+3;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;bal;2;4700
+3;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;ari;2;5800
+3;2014;7031;ashington Defense Washington Defens;Def;was;a;phi;1;4700
+3;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;cin;1;5000
+3;2014;7005;arolina Defense Carolina Defens;Def;car;h;pit;0;5600
+3;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ind;-2;4500
+4;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;sfo;20;5100
+4;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;phi;19;5500
+4;2014;7016;iami Defense Miami Defens;Def;mia;a;oak;17;5200
+4;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;nwe;16;5100
+4;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;was;15;4900
+4;2014;7032;ouston Defense Houston Defens;Def;hou;h;buf;13;5000
+4;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;jac;10;5300
+4;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;ten;10;5400
+4;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;hou;9;5100
+4;2014;7009;allas Defense Dallas Defens;Def;dal;h;nor;9;4700
+4;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;car;8;5000
+4;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;pit;7;4500
+4;2014;7011;etroit Defense Detroit Defens;Def;det;a;nyj;7;4700
+4;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;chi;6;4600
+4;2014;7022;akland Defense Oakland Defens;Def;oak;h;mia;5;4600
+4;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;det;4;4600
+4;2014;7017;innesota Defense Minnesota Defens;Def;min;h;atl;4;5000
+4;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;tam;3;4900
+4;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;sdg;1;4500
+4;2014;7018;ew England Defense New England Defens;Def;nwe;a;kan;1;5300
+4;2014;7006;hicago Defense Chicago Defens;Def;chi;h;gnb;-1;4900
+4;2014;7031;ashington Defense Washington Defens;Def;was;h;nyg;-1;4500
+4;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;ind;-2;4800
+4;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;dal;-3;4700
+4;2014;7005;arolina Defense Carolina Defens;Def;car;a;bal;-4;5600
+4;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;min;-4;4700
+5;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;min;22;4800
+5;2014;7005;arolina Defense Carolina Defens;Def;car;h;chi;18;5200
+5;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;stl;17;5300
+5;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;nyj;16;5400
+5;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;jac;15;5400
+5;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;det;14;5000
+5;2014;7018;ew England Defense New England Defens;Def;nwe;h;cin;14;5300
+5;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;bal;14;5400
+5;2014;7011;etroit Defense Detroit Defens;Def;det;h;buf;11;4800
+5;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;pit;10;4500
+5;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;ind;10;4900
+5;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nor;8;4600
+5;2014;7032;ouston Defense Houston Defens;Def;hou;a;dal;8;5000
+5;2014;7006;hicago Defense Chicago Defens;Def;chi;a;car;8;4900
+5;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;phi;7;4600
+5;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;ten;6;4800
+5;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;tam;5;5000
+5;2014;7010;enver Defense Denver Defens;Def;den;h;ari;4;5100
+5;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;sdg;4;4600
+5;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;nyg;4;4500
+5;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;atl;4;5100
+5;2014;7009;allas Defense Dallas Defens;Def;dal;h;hou;3;4700
+5;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;sfo;3;5000
+5;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;kan;3;5300
+5;2014;7031;ashington Defense Washington Defens;Def;was;h;sea;3;4500
+5;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;cle;3;4600
+5;2014;7028;eattle Defense Seattle Defens;Def;sea;a;was;2;5500
+5;2014;7001;rizona Defense Arizona Defens;Def;ari;a;den;1;4800
+5;2014;7017;innesota Defense Minnesota Defens;Def;min;a;gnb;0;4900
+5;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;nwe;-3;5300
+6;2014;7011;etroit Defense Detroit Defens;Def;det;a;min;21;5000
+6;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nyg;20;5300
+6;2014;7001;rizona Defense Arizona Defens;Def;ari;h;was;17;5300
+6;2014;7010;enver Defense Denver Defens;Def;den;a;nyj;15;5000
+6;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;stl;14;5300
+6;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;jac;13;5100
+6;2014;7032;ouston Defense Houston Defens;Def;hou;h;ind;12;4900
+6;2014;7018;ew England Defense New England Defens;Def;nwe;a;buf;11;5400
+6;2014;7006;hicago Defense Chicago Defens;Def;chi;a;atl;10;4800
+6;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;hou;9;5500
+6;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;pit;8;4800
+6;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;tam;8;5000
+6;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;mia;7;4800
+6;2014;7028;eattle Defense Seattle Defens;Def;sea;h;dal;6;5400
+6;2014;7009;allas Defense Dallas Defens;Def;dal;a;sea;5;4600
+6;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;chi;5;4700
+6;2014;7016;iami Defense Miami Defens;Def;mia;h;gnb;5;5100
+6;2014;7017;innesota Defense Minnesota Defens;Def;min;h;det;5;4800
+6;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;phi;5;4800
+6;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ten;4;4500
+6;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;den;2;4500
+6;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sfo;2;4700
+6;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cle;2;5000
+6;2014;7005;arolina Defense Carolina Defens;Def;car;a;cin;1;5700
+6;2014;7031;ashington Defense Washington Defens;Def;was;a;ari;1;4500
+6;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;oak;1;5600
+6;2014;7022;akland Defense Oakland Defens;Def;oak;h;sdg;0;4500
+6;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;bal;0;4600
+6;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;nwe;-2;5200
+6;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;car;-2;5500
+7;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;cle;16;4500
+7;2014;7017;innesota Defense Minnesota Defens;Def;min;a;buf;15;4500
+7;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;cin;14;5400
+7;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;atl;13;5000
+7;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;min;10;5000
+7;2014;7016;iami Defense Miami Defens;Def;mia;a;chi;10;4900
+7;2014;7010;enver Defense Denver Defens;Def;den;h;sfo;9;5100
+7;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sea;9;4600
+7;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;jac;8;5200
+7;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;was;8;5000
+7;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;det;7;4700
+7;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;bal;7;4700
+7;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;hou;7;4800
+7;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;ind;6;5000
+7;2014;7006;hicago Defense Chicago Defens;Def;chi;h;mia;6;5100
+7;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;car;6;4900
+7;2014;7031;ashington Defense Washington Defens;Def;was;h;ten;6;5000
+7;2014;7011;etroit Defense Detroit Defens;Def;det;h;nor;5;5300
+7;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;sdg;5;4900
+7;2014;7001;rizona Defense Arizona Defens;Def;ari;a;oak;5;5500
+7;2014;7018;ew England Defense New England Defens;Def;nwe;h;nyj;5;5600
+7;2014;7032;ouston Defense Houston Defens;Def;hou;a;pit;4;5100
+7;2014;7009;allas Defense Dallas Defens;Def;dal;h;nyg;4;4600
+7;2014;7022;akland Defense Oakland Defens;Def;oak;h;ari;3;4500
+7;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;dal;3;4800
+7;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;kan;3;5300
+7;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;nwe;1;4500
+7;2014;7028;eattle Defense Seattle Defens;Def;sea;a;stl;0;5300
+7;2014;7005;arolina Defense Carolina Defens;Def;car;a;gnb;-2;5400
+7;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;den;-2;5200
+8;2014;7016;iami Defense Miami Defens;Def;mia;a;jac;28;5400
+8;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;stl;19;4800
+8;2014;7017;innesota Defense Minnesota Defens;Def;min;a;tam;19;4700
+8;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;nyj;16;5300
+8;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;oak;13;4900
+8;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;ind;13;4800
+8;2014;7018;ew England Defense New England Defens;Def;nwe;h;chi;13;5300
+8;2014;7028;eattle Defense Seattle Defens;Def;sea;a;car;11;5300
+8;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;gnb;10;4500
+8;2014;7031;ashington Defense Washington Defens;Def;was;a;dal;10;4800
+8;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;mia;9;4500
+8;2014;7005;arolina Defense Carolina Defens;Def;car;h;sea;9;4900
+8;2014;7032;ouston Defense Houston Defens;Def;hou;a;ten;7;5100
+8;2014;7001;rizona Defense Arizona Defens;Def;ari;h;phi;7;5300
+8;2014;7010;enver Defense Denver Defens;Def;den;h;sdg;6;5100
+8;2014;7009;allas Defense Dallas Defens;Def;dal;h;was;6;4700
+8;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;cin;6;5200
+8;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;min;5;4800
+8;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;bal;5;4800
+8;2014;7011;etroit Defense Detroit Defens;Def;det;a;atl;4;5200
+8;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;kan;4;4800
+8;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;hou;4;4900
+8;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;ari;2;5200
+8;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;det;2;4600
+8;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;pit;2;5600
+8;2014;7022;akland Defense Oakland Defens;Def;oak;a;cle;1;4500
+8;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;buf;0;4500
+8;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;nor;0;4800
+8;2014;7006;hicago Defense Chicago Defens;Def;chi;a;nwe;-3;5000
+8;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;den;-4;4700
+9;2014;7016;iami Defense Miami Defens;Def;mia;h;sdg;22;5100
+9;2014;7032;ouston Defense Houston Defens;Def;hou;h;phi;17;4800
+9;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sfo;16;4600
+9;2014;7028;eattle Defense Seattle Defens;Def;sea;h;oak;14;5500
+9;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;car;12;4600
+9;2014;7001;rizona Defense Arizona Defens;Def;ari;a;dal;11;5100
+9;2014;7018;ew England Defense New England Defens;Def;nwe;h;den;11;5100
+9;2014;7009;allas Defense Dallas Defens;Def;dal;h;ari;9;4700
+9;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;tam;9;4800
+9;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;stl;9;5200
+9;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;bal;9;4800
+9;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;jac;8;5600
+9;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;cle;7;4800
+9;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;hou;7;5000
+9;2014;7005;arolina Defense Carolina Defens;Def;car;h;nor;7;4600
+9;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;nyj;7;5300
+9;2014;7017;innesota Defense Minnesota Defens;Def;min;h;was;7;4900
+9;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;pit;7;4900
+9;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;cin;5;4500
+9;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;nyg;5;5200
+9;2014;7022;akland Defense Oakland Defens;Def;oak;a;sea;3;4500
+9;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;kan;1;4500
+9;2014;7031;ashington Defense Washington Defens;Def;was;a;min;1;4800
+9;2014;7010;enver Defense Denver Defens;Def;den;a;nwe;-1;4900
+9;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;ind;-3;4600
+9;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;mia;-4;4700
+10;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;car;31;5000
+10;2014;7001;rizona Defense Arizona Defens;Def;ari;h;stl;25;5100
+10;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;chi;20;4500
+10;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;cin;17;4800
+10;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;pit;14;4500
+10;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;ten;13;5300
+10;2014;7009;allas Defense Dallas Defens;Def;dal;a;jac;11;5200
+10;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;tam;11;4500
+10;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;kan;9;5100
+10;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;buf;9;5200
+10;2014;7011;etroit Defense Detroit Defens;Def;det;h;mia;8;5000
+10;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;nor;8;5100
+10;2014;7016;iami Defense Miami Defens;Def;mia;a;det;8;5300
+10;2014;7010;enver Defense Denver Defens;Def;den;a;oak;7;5300
+10;2014;7028;eattle Defense Seattle Defens;Def;sea;h;nyg;7;5400
+10;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;sfo;6;4600
+10;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;ari;6;4600
+10;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;nyj;5;5000
+10;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;dal;4;4500
+10;2014;7006;hicago Defense Chicago Defens;Def;chi;a;gnb;4;4500
+10;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;sea;4;4500
+10;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;cle;2;5100
+10;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;atl;1;4600
+10;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;bal;1;4500
+10;2014;7022;akland Defense Oakland Defens;Def;oak;h;den;0;4500
+10;2014;7005;arolina Defense Carolina Defens;Def;car;a;phi;0;4500
+11;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;phi;30;4800
+11;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;was;22;4500
+11;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;nyg;16;5200
+11;2014;7001;rizona Defense Arizona Defens;Def;ari;h;det;13;5400
+11;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;oak;11;5300
+11;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;mia;10;5000
+11;2014;7032;ouston Defense Houston Defens;Def;hou;a;cle;10;5100
+11;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;den;10;4500
+11;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;car;9;4600
+11;2014;7006;hicago Defense Chicago Defens;Def;chi;h;min;8;4600
+11;2014;7016;iami Defense Miami Defens;Def;mia;h;buf;8;5300
+11;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;ten;8;5300
+11;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;pit;8;4500
+11;2014;7022;akland Defense Oakland Defens;Def;oak;a;sdg;6;4500
+11;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;nor;6;4700
+11;2014;7011;etroit Defense Detroit Defens;Def;det;a;ari;5;5200
+11;2014;7005;arolina Defense Carolina Defens;Def;car;h;atl;5;4500
+11;2014;7031;ashington Defense Washington Defens;Def;was;h;tam;5;5000
+11;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;gnb;4;4700
+11;2014;7028;eattle Defense Seattle Defens;Def;sea;a;kan;4;5200
+11;2014;7017;innesota Defense Minnesota Defens;Def;min;a;chi;4;4900
+11;2014;7018;ew England Defense New England Defens;Def;nwe;a;ind;4;5000
+11;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;sfo;4;4600
+11;2014;7010;enver Defense Denver Defens;Def;den;a;stl;3;5200
+11;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;sea;3;5200
+11;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;hou;2;5200
+11;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;cin;1;4700
+11;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;nwe;0;5000
+12;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;nyj;18;5200
+12;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;ten;17;5100
+12;2014;7006;hicago Defense Chicago Defens;Def;chi;h;tam;17;4900
+12;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sdg;16;4800
+12;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;stl;16;5100
+12;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;jac;15;5600
+12;2014;7028;eattle Defense Seattle Defens;Def;sea;h;ari;14;5000
+12;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;hou;12;4900
+12;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;nor;12;5200
+12;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ind;11;4500
+12;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;was;11;5300
+12;2014;7001;rizona Defense Arizona Defens;Def;ari;a;sea;10;5300
+12;2014;7032;ouston Defense Houston Defens;Def;hou;h;cin;9;5100
+12;2014;7031;ashington Defense Washington Defens;Def;was;a;sfo;9;4700
+12;2014;7018;ew England Defense New England Defens;Def;nwe;h;det;8;5200
+12;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;atl;7;4800
+12;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;cle;7;4700
+12;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;chi;5;4800
+12;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;min;4;5500
+12;2014;7022;akland Defense Oakland Defens;Def;oak;h;kan;3;4500
+12;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;bal;3;4500
+12;2014;7009;allas Defense Dallas Defens;Def;dal;a;nyg;3;4900
+12;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;oak;3;5400
+12;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;dal;3;4500
+12;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;phi;2;4500
+12;2014;7011;etroit Defense Detroit Defens;Def;det;a;nwe;1;5000
+12;2014;7017;innesota Defense Minnesota Defens;Def;min;h;gnb;1;4600
+12;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;buf;0;5000
+12;2014;7010;enver Defense Denver Defens;Def;den;h;mia;-1;4900
+12;2014;7016;iami Defense Miami Defens;Def;mia;a;den;-1;4800
+13;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;oak;32;5200
+13;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;nyg;22;4600
+13;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;cle;18;5100
+13;2014;7028;eattle Defense Seattle Defens;Def;sea;a;sfo;17;5300
+13;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;dal;14;5400
+13;2014;7017;innesota Defense Minnesota Defens;Def;min;h;car;14;4500
+13;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;was;14;5500
+13;2014;7010;enver Defense Denver Defens;Def;den;a;kan;13;4600
+13;2014;7032;ouston Defense Houston Defens;Def;hou;h;ten;12;5100
+13;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;jac;11;4900
+13;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;ari;10;4700
+13;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;cin;9;4700
+13;2014;7011;etroit Defense Detroit Defens;Def;det;h;chi;8;5200
+13;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;buf;8;4900
+13;2014;7016;iami Defense Miami Defens;Def;mia;a;nyj;8;4900
+13;2014;7001;rizona Defense Arizona Defens;Def;ari;a;atl;8;5400
+13;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;tam;7;5000
+13;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;mia;5;4900
+13;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;sea;5;5300
+13;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;sdg;5;5000
+13;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;pit;4;4500
+13;2014;7005;arolina Defense Carolina Defens;Def;car;a;min;4;4700
+13;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;hou;4;4500
+13;2014;7006;hicago Defense Chicago Defens;Def;chi;a;det;3;4900
+13;2014;7031;ashington Defense Washington Defens;Def;was;a;ind;3;4700
+13;2014;7018;ew England Defense New England Defens;Def;nwe;a;gnb;3;5000
+13;2014;7009;allas Defense Dallas Defens;Def;dal;h;phi;2;4800
+13;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;den;2;4700
+13;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;nwe;1;5100
+13;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;bal;-1;5300
+13;2014;7022;akland Defense Oakland Defens;Def;oak;a;stl;-3;4500
+13;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;nor;-3;4900
+14;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;ten;30;5000
+14;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;was;27;5400
+14;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;ind;23;4600
+14;2014;7022;akland Defense Oakland Defens;Def;oak;h;sfo;13;4500
+14;2014;7011;etroit Defense Detroit Defens;Def;det;h;tam;13;5300
+14;2014;7017;innesota Defense Minnesota Defens;Def;min;h;nyj;13;5000
+14;2014;7018;ew England Defense New England Defens;Def;nwe;a;sdg;12;4900
+14;2014;7010;enver Defense Denver Defens;Def;den;h;buf;11;4700
+14;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;nwe;11;4900
+14;2014;7032;ouston Defense Houston Defens;Def;hou;a;jac;10;5300
+14;2014;7005;arolina Defense Carolina Defens;Def;car;a;nor;10;4500
+14;2014;7001;rizona Defense Arizona Defens;Def;ari;h;kan;10;5100
+14;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;mia;10;4800
+14;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;min;9;4800
+14;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;cle;9;5300
+14;2014;7028;eattle Defense Seattle Defens;Def;sea;a;phi;8;5400
+14;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cin;7;4700
+14;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;nyg;7;4500
+14;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;den;6;5000
+14;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;sea;6;5500
+14;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;det;5;4800
+14;2014;7009;allas Defense Dallas Defens;Def;dal;a;chi;5;4600
+14;2014;7031;ashington Defense Washington Defens;Def;was;h;stl;5;4600
+14;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;ari;3;4800
+14;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;hou;2;4800
+14;2014;7016;iami Defense Miami Defens;Def;mia;h;bal;2;5000
+14;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;oak;1;5600
+14;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;atl;1;5100
+14;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;gnb;-1;4500
+14;2014;7006;hicago Defense Chicago Defens;Def;chi;h;dal;-3;4700
+14;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;car;-4;4800
+14;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;pit;-4;4900
+15;2014;7004;uffalo Defense Buffalo Defens;Def;buf;h;gnb;19;4800
+15;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;cle;17;4800
+15;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;oak;16;4900
+15;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;jac;16;5300
+15;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;chi;14;4500
+15;2014;7018;ew England Defense New England Defens;Def;nwe;h;mia;14;5000
+15;2014;7032;ouston Defense Houston Defens;Def;hou;a;ind;13;5200
+15;2014;7001;rizona Defense Arizona Defens;Def;ari;a;stl;13;5200
+15;2014;7009;allas Defense Dallas Defens;Def;dal;a;phi;12;4700
+15;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;hou;12;5200
+15;2014;7011;etroit Defense Detroit Defens;Def;det;h;min;11;5400
+15;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;was;11;5200
+15;2014;7010;enver Defense Denver Defens;Def;den;a;sdg;10;4800
+15;2014;7005;arolina Defense Carolina Defens;Def;car;h;tam;10;4800
+15;2014;7028;eattle Defense Seattle Defens;Def;sea;h;sfo;10;5500
+15;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;buf;9;5200
+15;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;atl;9;4800
+15;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;sea;8;4900
+15;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;ten;7;4900
+15;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;car;6;4800
+15;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;bal;6;4500
+15;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;nyj;6;4700
+15;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;ari;5;5500
+15;2014;7022;akland Defense Oakland Defens;Def;oak;a;kan;3;4600
+15;2014;7008;leveland Defense Cleveland Defens;Def;cle;h;cin;3;4800
+15;2014;7006;hicago Defense Chicago Defens;Def;chi;h;nor;3;4500
+15;2014;7031;ashington Defense Washington Defens;Def;was;a;nyg;3;4500
+15;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;pit;2;4500
+15;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;dal;1;5200
+15;2014;7016;iami Defense Miami Defens;Def;mia;a;nwe;1;4700
+15;2014;7017;innesota Defense Minnesota Defens;Def;min;a;det;1;5100
+15;2014;7026;an Diego Defense San Diego Defens;Def;sdg;h;den;1;4600
+16;2014;7002;tlanta Defense Atlanta Defens;Def;atl;a;nor;20;4500
+16;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;h;den;16;4800
+16;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;tam;16;5100
+16;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;sdg;13;4700
+16;2014;7006;hicago Defense Chicago Defens;Def;chi;h;det;13;4500
+16;2014;7028;eattle Defense Seattle Defens;Def;sea;a;ari;13;5500
+16;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;sfo;13;4500
+16;2014;7032;ouston Defense Houston Defens;Def;hou;h;bal;12;5200
+16;2014;7009;allas Defense Dallas Defens;Def;dal;h;ind;12;4600
+16;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;kan;12;4800
+16;2014;7010;enver Defense Denver Defens;Def;den;a;cin;9;4900
+16;2014;7005;arolina Defense Carolina Defens;Def;car;h;cle;9;4900
+16;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ten;8;4600
+16;2014;7020;ew York G Defense New York G Defens;Def;nyg;a;stl;8;5200
+16;2014;7021;ew York J Defense New York J Defens;Def;nyj;h;nwe;7;4600
+16;2014;7031;ashington Defense Washington Defens;Def;was;h;phi;7;4500
+16;2014;7022;akland Defense Oakland Defens;Def;oak;h;buf;6;4500
+16;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;was;6;5400
+16;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;car;6;4600
+16;2014;7016;iami Defense Miami Defens;Def;mia;h;min;6;4800
+16;2014;7011;etroit Defense Detroit Defens;Def;det;a;chi;5;5200
+16;2014;7018;ew England Defense New England Defens;Def;nwe;a;nyj;5;5600
+16;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;gnb;4;4700
+16;2014;7030;ennessee Defense Tennessee Defens;Def;ten;a;jac;4;5000
+16;2014;7015;ansas City Defense Kansas City Defens;Def;kan;a;pit;2;5000
+16;2014;7017;innesota Defense Minnesota Defens;Def;min;a;mia;2;4800
+16;2014;7003;altimore Defense Baltimore Defens;Def;bal;a;hou;2;5400
+16;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;oak;1;5100
+16;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;atl;0;4500
+16;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;h;nyg;-1;5300
+16;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;dal;-1;5200
+16;2014;7001;rizona Defense Arizona Defens;Def;ari;h;sea;-3;5200
+17;2014;7005;arolina Defense Carolina Defens;Def;car;a;atl;31;4900
+17;2014;7028;eattle Defense Seattle Defens;Def;sea;h;stl;21;5500
+17;2014;7009;allas Defense Dallas Defens;Def;dal;a;was;18;4900
+17;2014;7010;enver Defense Denver Defens;Def;den;h;oak;17;5200
+17;2014;7015;ansas City Defense Kansas City Defens;Def;kan;h;sdg;17;4700
+17;2014;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cin;16;5000
+17;2014;7014;acksonville Defense Jacksonville Defens;Def;jac;a;hou;13;4700
+17;2014;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;det;13;5100
+17;2014;7003;altimore Defense Baltimore Defens;Def;bal;h;cle;12;5200
+17;2014;7032;ouston Defense Houston Defens;Def;hou;h;jac;11;5400
+17;2014;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sea;11;5000
+17;2014;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;ten;10;4900
+17;2014;7021;ew York J Defense New York J Defens;Def;nyj;a;mia;9;4700
+17;2014;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;ari;9;5000
+17;2014;7006;hicago Defense Chicago Defens;Def;chi;a;min;9;4800
+17;2014;7004;uffalo Defense Buffalo Defens;Def;buf;a;nwe;8;4700
+17;2014;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;nor;8;4500
+17;2014;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;tam;8;4500
+17;2014;7007;incinnati Defense Cincinnati Defens;Def;cin;a;pit;7;4500
+17;2014;7011;etroit Defense Detroit Defens;Def;det;a;gnb;7;5000
+17;2014;7017;innesota Defense Minnesota Defens;Def;min;h;chi;6;4800
+17;2014;7020;ew York G Defense New York G Defens;Def;nyg;h;phi;6;4900
+17;2014;7022;akland Defense Oakland Defens;Def;oak;a;den;5;4500
+17;2014;7018;ew England Defense New England Defens;Def;nwe;h;buf;5;5400
+17;2014;7026;an Diego Defense San Diego Defens;Def;sdg;a;kan;5;4800
+17;2014;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nyg;4;5000
+17;2014;7008;leveland Defense Cleveland Defens;Def;cle;a;bal;2;4600
+17;2014;7002;tlanta Defense Atlanta Defens;Def;atl;h;car;2;4700
+17;2014;7001;rizona Defense Arizona Defens;Def;ari;a;sfo;2;5200
+17;2014;7030;ennessee Defense Tennessee Defens;Def;ten;h;ind;1;4600
+17;2014;7016;iami Defense Miami Defens;Def;mia;h;nyj;-1;4900
+17;2014;7031;ashington Defense Washington Defens;Def;was;h;dal;-1;4600
+1;2015;7005;arolina Defense Carolina Defens;Def;car;a;jac;21;4800
+1;2015;7028;eattle Defense Seattle Defens;Def;sea;a;stl;19;5000
+1;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;cle;17;4400
+1;2015;7010;enver Defense Denver Defens;Def;den;h;bal;16;4200
+1;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;den;16;4100
+1;2015;7016;iami Defense Miami Defens;Def;mia;a;was;15;4700
+1;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sea;15;4300
+1;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;tam;15;4500
+1;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;min;14;4600
+1;2015;7011;etroit Defense Detroit Defens;Def;det;a;sdg;13;4300
+1;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;dal;12;4100
+1;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;oak;10;4600
+1;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;hou;10;4300
+1;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;ind;9;4500
+1;2015;7031;ashington Defense Washington Defens;Def;was;h;mia;9;4100
+1;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;car;7;4200
+1;2015;7017;innesota Defense Minnesota Defens;Def;min;a;sfo;6;4400
+1;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;atl;5;4300
+1;2015;7001;rizona Defense Arizona Defens;Def;ari;h;nor;5;4300
+1;2015;7018;ew England Defense New England Defens;Def;nwe;h;pit;5;4300
+1;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;det;5;4200
+1;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;phi;4;4100
+1;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;chi;4;4500
+1;2015;7032;ouston Defense Houston Defens;Def;hou;h;kan;2;4500
+1;2015;7009;allas Defense Dallas Defens;Def;dal;h;nyg;2;4200
+1;2015;7022;akland Defense Oakland Defens;Def;oak;h;cin;1;4000
+1;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;ari;1;4100
+1;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;nyj;1;4600
+1;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;nwe;1;4000
+1;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;ten;0;4500
+1;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;buf;0;4300
+1;2015;7006;hicago Defense Chicago Defens;Def;chi;h;gnb;-1;4000
+2;2015;7010;enver Defense Denver Defens;Def;den;a;kan;21;4200
+2;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;ten;20;4600
+2;2015;7001;rizona Defense Arizona Defens;Def;ari;a;chi;18;4600
+2;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;ind;14;4300
+2;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;nor;13;4000
+2;2015;7009;allas Defense Dallas Defens;Def;dal;a;phi;13;4200
+2;2015;7018;ew England Defense New England Defens;Def;nwe;a;buf;13;4300
+2;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;sdg;11;4600
+2;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;den;11;4400
+2;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;dal;8;4300
+2;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;sfo;8;4200
+2;2015;7017;innesota Defense Minnesota Defens;Def;min;h;det;8;4400
+2;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;tam;7;4500
+2;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;sea;7;4500
+2;2015;7032;ouston Defense Houston Defens;Def;hou;a;car;6;4600
+2;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;nyg;5;4100
+2;2015;7031;ashington Defense Washington Defens;Def;was;h;stl;5;4100
+2;2015;7005;arolina Defense Carolina Defens;Def;car;h;hou;4;4700
+2;2015;7028;eattle Defense Seattle Defens;Def;sea;a;gnb;4;4700
+2;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;was;4;4900
+2;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;cin;4;4300
+2;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;nyj;4;4500
+2;2015;7022;akland Defense Oakland Defens;Def;oak;h;bal;3;4200
+2;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;mia;3;4100
+2;2015;7011;etroit Defense Detroit Defens;Def;det;a;min;3;4300
+2;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;nwe;2;4400
+2;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;atl;2;4100
+2;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;cle;2;4600
+2;2015;7006;hicago Defense Chicago Defens;Def;chi;h;ari;0;4000
+2;2015;7016;iami Defense Miami Defens;Def;mia;a;jac;0;5100
+2;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;oak;-1;5000
+2;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;pit;-4;4300
+3;2015;7001;rizona Defense Arizona Defens;Def;ari;h;sfo;28;4700
+3;2015;7028;eattle Defense Seattle Defens;Def;sea;h;chi;18;5300
+3;2015;7010;enver Defense Denver Defens;Def;den;a;det;16;4600
+3;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nyj;16;4400
+3;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;mia;15;4500
+3;2015;7017;innesota Defense Minnesota Defens;Def;min;h;sdg;15;4400
+3;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;was;15;4200
+3;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;ten;12;4500
+3;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;pit;11;4500
+3;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;stl;11;4400
+3;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;cin;11;4600
+3;2015;7022;akland Defense Oakland Defens;Def;oak;a;cle;10;4300
+3;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;kan;8;4600
+3;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;car;7;4400
+3;2015;7032;ouston Defense Houston Defens;Def;hou;h;tam;6;5000
+3;2015;7005;arolina Defense Carolina Defens;Def;car;h;nor;6;4600
+3;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;ind;6;4200
+3;2015;7011;etroit Defense Detroit Defens;Def;det;h;den;5;4400
+3;2015;7006;hicago Defense Chicago Defens;Def;chi;a;sea;5;4000
+3;2015;7031;ashington Defense Washington Defens;Def;was;a;nyg;5;4100
+3;2015;7018;ew England Defense New England Defens;Def;nwe;h;jac;5;4700
+3;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;hou;4;4100
+3;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;phi;4;4500
+3;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;bal;3;4600
+3;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;dal;3;4300
+3;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;oak;2;4600
+3;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;ari;2;4300
+3;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;min;2;4400
+3;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;nwe;-2;4000
+3;2015;7009;allas Defense Dallas Defens;Def;dal;h;atl;-3;4300
+3;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;gnb;-3;4300
+3;2015;7016;iami Defense Miami Defens;Def;mia;h;buf;-4;4600
+4;2015;7011;etroit Defense Detroit Defens;Def;det;a;sea;22;4300
+4;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;hou;21;4200
+4;2015;7005;arolina Defense Carolina Defens;Def;car;a;tam;18;4800
+4;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;sfo;15;4700
+4;2015;7022;akland Defense Oakland Defens;Def;oak;a;chi;11;4500
+4;2015;7010;enver Defense Denver Defens;Def;den;h;min;10;4700
+4;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;ari;10;4400
+4;2015;7031;ashington Defense Washington Defens;Def;was;h;phi;10;4100
+4;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;buf;10;4200
+4;2015;7028;eattle Defense Seattle Defens;Def;sea;h;det;9;5300
+4;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;bal;9;4500
+4;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ind;8;4000
+4;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;mia;8;4700
+4;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;kan;7;4700
+4;2015;7006;hicago Defense Chicago Defens;Def;chi;h;oak;7;4100
+4;2015;7017;innesota Defense Minnesota Defens;Def;min;a;den;6;4400
+4;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;cle;6;4400
+4;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;pit;5;4300
+4;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;jac;5;4400
+4;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;dal;4;4500
+4;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;gnb;4;4000
+4;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;nyg;3;4800
+4;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;car;3;4000
+4;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;was;3;4500
+4;2015;7009;allas Defense Dallas Defens;Def;dal;a;nor;3;4500
+4;2015;7016;iami Defense Miami Defens;Def;mia;h;nyj;2;4700
+4;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;sdg;1;4600
+4;2015;7001;rizona Defense Arizona Defens;Def;ari;h;stl;1;5000
+4;2015;7032;ouston Defense Houston Defens;Def;hou;a;atl;-2;4900
+4;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;cin;-4;4300
+5;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;stl;23;4800
+5;2015;7010;enver Defense Denver Defens;Def;den;a;oak;22;4900
+5;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;jac;15;4000
+5;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nor;14;4400
+5;2015;7028;eattle Defense Seattle Defens;Def;sea;a;cin;14;5100
+5;2015;7001;rizona Defense Arizona Defens;Def;ari;a;det;14;5200
+5;2015;7018;ew England Defense New England Defens;Def;nwe;a;dal;14;4700
+5;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;sdg;13;4400
+5;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;was;12;4500
+5;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;chi;11;4600
+5;2015;7022;akland Defense Oakland Defens;Def;oak;h;den;10;4400
+5;2015;7031;ashington Defense Washington Defens;Def;was;a;atl;10;4200
+5;2015;7006;hicago Defense Chicago Defens;Def;chi;a;kan;9;4200
+5;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;gnb;9;4300
+5;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;ten;8;4800
+5;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;sea;7;4700
+5;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;buf;7;4100
+5;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;pit;6;4500
+5;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;hou;6;4600
+5;2015;7009;allas Defense Dallas Defens;Def;dal;h;nwe;4;4200
+5;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;cle;3;4500
+5;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;sfo;2;4300
+5;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;tam;1;4300
+5;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;nyg;1;4100
+5;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;phi;0;4200
+5;2015;7032;ouston Defense Houston Defens;Def;hou;h;ind;0;4800
+5;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;bal;0;4600
+5;2015;7011;etroit Defense Detroit Defens;Def;det;h;ari;-2;4200
+6;2015;7016;iami Defense Miami Defens;Def;mia;a;ten;24;4400
+6;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;nyg;19;4500
+6;2015;7010;enver Defense Denver Defens;Def;den;a;cle;17;5000
+6;2015;7032;ouston Defense Houston Defens;Def;hou;a;jac;16;4800
+6;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;atl;13;4000
+6;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;den;13;4400
+6;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;ari;11;4400
+6;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;phi;9;4400
+6;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;nwe;9;4300
+6;2015;7017;innesota Defense Minnesota Defens;Def;min;h;kan;8;4500
+6;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;min;7;4600
+6;2015;7028;eattle Defense Seattle Defens;Def;sea;h;car;7;5000
+6;2015;7031;ashington Defense Washington Defens;Def;was;a;nyj;7;4300
+6;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;was;6;4800
+6;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;sdg;6;4700
+6;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;bal;5;4000
+6;2015;7018;ew England Defense New England Defens;Def;nwe;a;ind;5;4800
+6;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;mia;5;4100
+6;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;buf;4;4700
+6;2015;7005;arolina Defense Carolina Defens;Def;car;a;sea;4;4700
+6;2015;7006;hicago Defense Chicago Defens;Def;chi;a;det;4;4300
+6;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;sfo;3;4700
+6;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;gnb;3;4200
+6;2015;7011;etroit Defense Detroit Defens;Def;det;h;chi;2;4300
+6;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;hou;1;4400
+6;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;nor;1;4600
+6;2015;7001;rizona Defense Arizona Defens;Def;ari;a;pit;1;5000
+6;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;cin;-1;4600
+7;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;cle;25;4500
+7;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;buf;24;4200
+7;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;dal;22;4500
+7;2015;7028;eattle Defense Seattle Defens;Def;sea;a;sfo;13;5200
+7;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;pit;12;4600
+7;2015;7016;iami Defense Miami Defens;Def;mia;h;hou;12;4500
+7;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;jac;10;4700
+7;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;ind;10;4000
+7;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;sea;10;4000
+7;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;ten;9;4700
+7;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;was;8;4000
+7;2015;7005;arolina Defense Carolina Defens;Def;car;h;phi;8;4800
+7;2015;7001;rizona Defense Arizona Defens;Def;ari;h;bal;8;5100
+7;2015;7017;innesota Defense Minnesota Defens;Def;min;a;det;8;4600
+7;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;atl;8;4100
+7;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;car;7;4400
+7;2015;7011;etroit Defense Detroit Defens;Def;det;h;min;7;4400
+7;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;stl;5;4400
+7;2015;7022;akland Defense Oakland Defens;Def;oak;a;sdg;4;4400
+7;2015;7018;ew England Defense New England Defens;Def;nwe;h;nyj;4;4700
+7;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;ari;4;4500
+7;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;nor;4;4100
+7;2015;7009;allas Defense Dallas Defens;Def;dal;a;nyg;3;4400
+7;2015;7031;ashington Defense Washington Defens;Def;was;h;tam;3;4400
+7;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;nwe;2;4400
+7;2015;7032;ouston Defense Houston Defens;Def;hou;a;mia;2;4800
+7;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;kan;2;4600
+7;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;oak;-3;4400
+8;2015;7032;ouston Defense Houston Defens;Def;hou;h;ten;20;4700
+8;2015;7018;ew England Defense New England Defens;Def;nwe;h;mia;15;4700
+8;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;det;14;4700
+8;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;pit;13;4700
+8;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;sfo;12;5100
+8;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;atl;10;4000
+8;2015;7005;arolina Defense Carolina Defens;Def;car;h;ind;10;4800
+8;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cin;10;4600
+8;2015;7010;enver Defense Denver Defens;Def;den;h;gnb;9;4700
+8;2015;7009;allas Defense Dallas Defens;Def;dal;h;sea;8;4500
+8;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;ari;8;4200
+8;2015;7017;innesota Defense Minnesota Defens;Def;min;a;chi;8;4700
+8;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;car;7;4100
+8;2015;7022;akland Defense Oakland Defens;Def;oak;h;nyj;6;4100
+8;2015;7001;rizona Defense Arizona Defens;Def;ari;a;cle;6;5400
+8;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;nor;6;4400
+8;2015;7028;eattle Defense Seattle Defens;Def;sea;a;dal;5;5200
+8;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;stl;4;4000
+8;2015;7006;hicago Defense Chicago Defens;Def;chi;h;min;4;4200
+8;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;hou;4;4500
+8;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;sdg;3;4400
+8;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;tam;2;4800
+8;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;den;2;4800
+8;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;bal;2;4400
+8;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;nyg;1;4200
+8;2015;7016;iami Defense Miami Defens;Def;mia;a;nwe;1;4400
+8;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;oak;-1;4800
+8;2015;7011;etroit Defense Detroit Defens;Def;det;a;kan;-1;4500
+9;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;jac;14;4700
+9;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;tam;13;4500
+9;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;dal;12;4700
+9;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;chi;11;4600
+9;2015;7018;ew England Defense New England Defens;Def;nwe;h;was;9;4900
+9;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;nor;9;4100
+9;2015;7005;arolina Defense Carolina Defens;Def;car;h;gnb;8;4400
+9;2015;7006;hicago Defense Chicago Defens;Def;chi;a;sdg;8;4000
+9;2015;7010;enver Defense Denver Defens;Def;den;a;ind;7;5300
+9;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;mia;7;4700
+9;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;cle;7;5000
+9;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;den;6;4100
+9;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;sfo;5;4900
+9;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;nyg;4;4000
+9;2015;7031;ashington Defense Washington Defens;Def;was;a;nwe;4;4000
+9;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;oak;4;4600
+9;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;cin;3;4100
+9;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;atl;3;4000
+9;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;min;3;5100
+9;2015;7016;iami Defense Miami Defens;Def;mia;a;buf;2;4700
+9;2015;7017;innesota Defense Minnesota Defens;Def;min;h;stl;2;4700
+9;2015;7022;akland Defense Oakland Defens;Def;oak;a;pit;1;4200
+9;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;ten;1;4200
+9;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;nyj;1;4300
+9;2015;7009;allas Defense Dallas Defens;Def;dal;h;phi;1;4500
+9;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;car;-2;4800
+10;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;den;19;4300
+10;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;nyj;16;4800
+10;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cle;16;4600
+10;2015;7032;ouston Defense Houston Defens;Def;hou;a;cin;14;4400
+10;2015;7031;ashington Defense Washington Defens;Def;was;h;nor;13;4000
+10;2015;7017;innesota Defense Minnesota Defens;Def;min;a;oak;13;4500
+10;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;dal;12;4000
+10;2015;7028;eattle Defense Seattle Defens;Def;sea;h;ari;11;4900
+10;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;bal;10;4300
+10;2015;7009;allas Defense Dallas Defens;Def;dal;a;tam;10;4600
+10;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;hou;9;5000
+10;2015;7005;arolina Defense Carolina Defens;Def;car;a;ten;9;4700
+10;2015;7006;hicago Defense Chicago Defens;Def;chi;a;stl;9;4000
+10;2015;7016;iami Defense Miami Defens;Def;mia;a;phi;9;4500
+10;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;mia;7;4700
+10;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;nwe;7;4500
+10;2015;7022;akland Defense Oakland Defens;Def;oak;h;min;6;4300
+10;2015;7001;rizona Defense Arizona Defens;Def;ari;a;sea;6;4700
+10;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;buf;5;4800
+10;2015;7018;ew England Defense New England Defens;Def;nwe;a;nyg;5;4900
+10;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;jac;5;4400
+10;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;car;5;4000
+10;2015;7011;etroit Defense Detroit Defens;Def;det;a;gnb;4;4200
+10;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;pit;4;4200
+10;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;det;3;4900
+10;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;chi;2;5400
+10;2015;7010;enver Defense Denver Defens;Def;den;h;kan;1;5200
+10;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;was;-1;4300
+11;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;sdg;20;4400
+11;2015;7005;arolina Defense Carolina Defens;Def;car;h;was;19;4900
+11;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;phi;18;4000
+11;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;stl;15;4100
+11;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;atl;15;4000
+11;2015;7009;allas Defense Dallas Defens;Def;dal;a;mia;12;4400
+11;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;min;12;4600
+11;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ten;10;4400
+11;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;ind;9;4600
+11;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;jac;9;4300
+11;2015;7032;ouston Defense Houston Defens;Def;hou;h;nyj;8;4500
+11;2015;7018;ew England Defense New England Defens;Def;nwe;h;buf;8;4800
+11;2015;7010;enver Defense Denver Defens;Def;den;a;chi;7;5300
+11;2015;7011;etroit Defense Detroit Defens;Def;det;h;oak;7;4300
+11;2015;7016;iami Defense Miami Defens;Def;mia;h;dal;7;4700
+11;2015;7006;hicago Defense Chicago Defens;Def;chi;h;den;6;4200
+11;2015;7028;eattle Defense Seattle Defens;Def;sea;h;sfo;6;5400
+11;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;bal;6;5000
+11;2015;7031;ashington Defense Washington Defens;Def;was;a;car;6;4000
+11;2015;7022;akland Defense Oakland Defens;Def;oak;a;det;5;4500
+11;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;ari;5;4700
+11;2015;7001;rizona Defense Arizona Defens;Def;ari;h;cin;5;4800
+11;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;nwe;4;4400
+11;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;hou;3;4700
+11;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;sea;3;4000
+11;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;kan;3;4300
+11;2015;7017;innesota Defense Minnesota Defens;Def;min;h;gnb;1;4300
+11;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;tam;-1;4900
+12;2015;7005;arolina Defense Carolina Defens;Def;car;a;dal;21;4700
+12;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;stl;17;4800
+12;2015;7017;innesota Defense Minnesota Defens;Def;min;a;atl;12;4400
+12;2015;7032;ouston Defense Houston Defens;Def;hou;h;nor;11;4700
+12;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;tam;11;4200
+12;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;bal;10;4600
+12;2015;7006;hicago Defense Chicago Defens;Def;chi;a;gnb;10;4000
+12;2015;7001;rizona Defense Arizona Defens;Def;ari;a;sfo;10;5300
+12;2015;7031;ashington Defense Washington Defens;Def;was;h;nyg;10;4000
+12;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;cle;10;4600
+12;2015;7011;etroit Defense Detroit Defens;Def;det;h;phi;9;4400
+12;2015;7028;eattle Defense Seattle Defens;Def;sea;h;pit;9;5200
+12;2015;7022;akland Defense Oakland Defens;Def;oak;a;ten;8;4600
+12;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;mia;8;4500
+12;2015;7010;enver Defense Denver Defens;Def;den;h;nwe;5;4700
+12;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;buf;5;4500
+12;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;oak;5;4300
+12;2015;7018;ew England Defense New England Defens;Def;nwe;a;den;4;4600
+12;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;jac;4;4200
+12;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;ind;3;4300
+12;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;hou;3;4100
+12;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;sdg;3;4300
+12;2015;7009;allas Defense Dallas Defens;Def;dal;h;car;3;4200
+12;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;min;3;4500
+12;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;was;3;4600
+12;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;ari;2;4000
+12;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;chi;2;4900
+12;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;cin;2;4900
+12;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;kan;0;4600
+12;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;sea;0;4600
+12;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;det;-2;4800
+12;2015;7016;iami Defense Miami Defens;Def;mia;a;nyj;-3;4600
+13;2015;7010;enver Defense Denver Defens;Def;den;a;sdg;23;5300
+13;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nwe;21;4500
+13;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;ind;21;4500
+13;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;oak;17;4700
+13;2015;7016;iami Defense Miami Defens;Def;mia;h;bal;17;4500
+13;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;cle;16;5100
+13;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;car;13;4000
+13;2015;7028;eattle Defense Seattle Defens;Def;sea;a;min;13;4800
+13;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;nyj;11;4500
+13;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;chi;10;4000
+13;2015;7001;rizona Defense Arizona Defens;Def;ari;a;stl;9;5400
+13;2015;7022;akland Defense Oakland Defens;Def;oak;h;kan;8;4400
+13;2015;7031;ashington Defense Washington Defens;Def;was;h;dal;8;4400
+13;2015;7006;hicago Defense Chicago Defens;Def;chi;h;sfo;7;4400
+13;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;mia;7;4400
+13;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;den;7;4000
+13;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;atl;6;4200
+13;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;nyg;6;4600
+13;2015;7009;allas Defense Dallas Defens;Def;dal;a;was;6;4300
+13;2015;7017;innesota Defense Minnesota Defens;Def;min;h;sea;6;4500
+13;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;jac;6;4400
+13;2015;7011;etroit Defense Detroit Defens;Def;det;h;gnb;5;4500
+13;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;tam;5;4600
+13;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;det;5;4700
+13;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;hou;4;4500
+13;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;ten;4;4400
+13;2015;7018;ew England Defense New England Defens;Def;nwe;h;phi;4;4800
+13;2015;7005;arolina Defense Carolina Defens;Def;car;a;nor;3;4900
+13;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;ari;2;4600
+13;2015;7032;ouston Defense Houston Defens;Def;hou;a;buf;0;4900
+13;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;pit;0;4100
+13;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;cin;-3;4000
+14;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ind;23;4300
+14;2015;7005;arolina Defense Carolina Defens;Def;car;h;atl;23;5000
+14;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cin;16;4400
+14;2015;7022;akland Defense Oakland Defens;Def;oak;a;den;15;4300
+14;2015;7018;ew England Defense New England Defens;Def;nwe;a;hou;15;4900
+14;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;sdg;14;4800
+14;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;sfo;13;4300
+14;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;det;13;4600
+14;2015;7028;eattle Defense Seattle Defens;Def;sea;a;bal;12;5300
+14;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;ten;11;4800
+14;2015;7001;rizona Defense Arizona Defens;Def;ari;h;min;10;5100
+14;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;kan;10;4100
+14;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;jac;9;4300
+14;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;cle;8;4300
+14;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;dal;8;4800
+14;2015;7010;enver Defense Denver Defens;Def;den;h;oak;7;5400
+14;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;buf;6;4600
+14;2015;7032;ouston Defense Houston Defens;Def;hou;h;nwe;5;4500
+14;2015;7006;hicago Defense Chicago Defens;Def;chi;h;was;5;4500
+14;2015;7031;ashington Defense Washington Defens;Def;was;a;chi;5;4500
+14;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;pit;4;4900
+14;2015;7011;etroit Defense Detroit Defens;Def;det;a;stl;4;4700
+14;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;phi;3;4600
+14;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;mia;3;4600
+14;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;nor;2;4300
+14;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;tam;2;4000
+14;2015;7017;innesota Defense Minnesota Defens;Def;min;a;ari;2;4400
+14;2015;7009;allas Defense Dallas Defens;Def;dal;a;gnb;1;4000
+14;2015;7016;iami Defense Miami Defens;Def;mia;h;nyg;1;4600
+14;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;nyj;0;4200
+14;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;car;-2;4300
+14;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;sea;-2;4100
+15;2015;7015;ansas City Defense Kansas City Defens;Def;kan;a;bal;21;5200
+15;2015;7018;ew England Defense New England Defens;Def;nwe;h;ten;18;5000
+15;2015;7001;rizona Defense Arizona Defens;Def;ari;a;phi;17;5200
+15;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;sfo;15;4900
+15;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;oak;14;4800
+15;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;dal;11;4900
+15;2015;7032;ouston Defense Houston Defens;Def;hou;a;ind;11;4800
+15;2015;7017;innesota Defense Minnesota Defens;Def;min;h;chi;10;4600
+15;2015;7028;eattle Defense Seattle Defens;Def;sea;h;cle;9;5400
+15;2015;7022;akland Defense Oakland Defens;Def;oak;h;gnb;8;4100
+15;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;hou;8;4100
+15;2015;7010;enver Defense Denver Defens;Def;den;a;pit;6;5000
+15;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;cin;6;4400
+15;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;den;6;4600
+15;2015;7026;an Diego Defense San Diego Defens;Def;sdg;h;mia;6;4300
+15;2015;7009;allas Defense Dallas Defens;Def;dal;h;nyj;5;4100
+15;2015;7002;tlanta Defense Atlanta Defens;Def;atl;a;jac;5;4400
+15;2015;7031;ashington Defense Washington Defens;Def;was;h;buf;5;4400
+15;2015;7016;iami Defense Miami Defens;Def;mia;a;sdg;4;4700
+15;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;h;tam;4;4700
+15;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;nwe;4;4000
+15;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;h;atl;3;4400
+15;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;car;3;4200
+15;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;kan;3;4200
+15;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;stl;1;4500
+15;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;det;1;4100
+15;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;ari;1;4500
+15;2015;7011;etroit Defense Detroit Defens;Def;det;a;nor;1;4500
+15;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;sea;1;4100
+15;2015;7005;arolina Defense Carolina Defens;Def;car;a;nyg;0;5100
+15;2015;7004;uffalo Defense Buffalo Defens;Def;buf;a;was;-1;4500
+15;2015;7006;hicago Defense Chicago Defens;Def;chi;a;min;-3;4400
+16;2015;7001;rizona Defense Arizona Defens;Def;ari;h;gnb;33;4700
+16;2015;7032;ouston Defense Houston Defens;Def;hou;a;ten;22;5000
+16;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sea;17;4600
+16;2015;7017;innesota Defense Minnesota Defens;Def;min;h;nyg;17;4700
+16;2015;7031;ashington Defense Washington Defens;Def;was;a;phi;15;4500
+16;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;mia;14;4000
+16;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;dal;11;4600
+16;2015;7018;ew England Defense New England Defens;Def;nwe;a;nyj;9;4700
+16;2015;7009;allas Defense Dallas Defens;Def;dal;a;buf;8;4000
+16;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;cle;8;5400
+16;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;car;8;4100
+16;2015;7003;altimore Defense Baltimore Defens;Def;bal;h;pit;8;4000
+16;2015;7006;hicago Defense Chicago Defens;Def;chi;a;tam;7;4400
+16;2015;7022;akland Defense Oakland Defens;Def;oak;h;sdg;6;4300
+16;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;jac;6;4200
+16;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;a;den;6;4800
+16;2015;7011;etroit Defense Detroit Defens;Def;det;h;sfo;6;4600
+16;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;ari;6;4600
+16;2015;7010;enver Defense Denver Defens;Def;den;h;cin;5;5200
+16;2015;7021;ew York J Defense New York J Defens;Def;nyj;h;nwe;5;4500
+16;2015;7005;arolina Defense Carolina Defens;Def;car;a;atl;5;5200
+16;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;oak;5;4200
+16;2015;7008;leveland Defense Cleveland Defens;Def;cle;a;kan;4;4100
+16;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;chi;3;4600
+16;2015;7016;iami Defense Miami Defens;Def;mia;h;ind;3;4700
+16;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;bal;2;4800
+16;2015;7030;ennessee Defense Tennessee Defens;Def;ten;h;hou;2;4000
+16;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;was;1;4600
+16;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;det;1;4400
+16;2015;7028;eattle Defense Seattle Defens;Def;sea;h;stl;1;5400
+16;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;nor;-1;4300
+16;2015;7020;ew York G Defense New York G Defens;Def;nyg;a;min;-1;4400
+17;2015;7032;ouston Defense Houston Defens;Def;hou;h;jac;29;4800
+17;2015;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;cle;19;4900
+17;2015;7017;innesota Defense Minnesota Defens;Def;min;a;gnb;19;4500
+17;2015;7015;ansas City Defense Kansas City Defens;Def;kan;h;oak;16;5100
+17;2015;7028;eattle Defense Seattle Defens;Def;sea;a;ari;15;5200
+17;2015;7005;arolina Defense Carolina Defens;Def;car;h;tam;12;5200
+17;2015;7031;ashington Defense Washington Defens;Def;was;a;dal;12;4700
+17;2015;7026;an Diego Defense San Diego Defens;Def;sdg;a;den;12;4200
+17;2015;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;ten;12;4200
+17;2015;7022;akland Defense Oakland Defens;Def;oak;a;kan;11;4200
+17;2015;7011;etroit Defense Detroit Defens;Def;det;a;chi;11;4600
+17;2015;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;nyg;9;4600
+17;2015;7004;uffalo Defense Buffalo Defens;Def;buf;h;nyj;8;4500
+17;2015;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;atl;8;4100
+17;2015;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;min;8;4500
+17;2015;7010;enver Defense Denver Defens;Def;den;h;sdg;6;5200
+17;2015;7007;incinnati Defense Cincinnati Defens;Def;cin;h;bal;6;5000
+17;2015;7016;iami Defense Miami Defens;Def;mia;h;nwe;6;4200
+17;2015;7008;leveland Defense Cleveland Defens;Def;cle;h;pit;5;4000
+17;2015;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;car;4;4200
+17;2015;7014;acksonville Defense Jacksonville Defens;Def;jac;a;hou;4;4200
+17;2015;7021;ew York J Defense New York J Defens;Def;nyj;a;buf;4;4700
+17;2015;7006;hicago Defense Chicago Defens;Def;chi;h;det;4;4500
+17;2015;7025;t. Louis Defense St. Louis Defens;Def;stl;a;sfo;4;4600
+17;2015;7020;ew York G Defense New York G Defens;Def;nyg;h;phi;4;4400
+17;2015;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;stl;3;4400
+17;2015;7002;tlanta Defense Atlanta Defens;Def;atl;h;nor;3;4200
+17;2015;7003;altimore Defense Baltimore Defens;Def;bal;a;cin;3;4000
+17;2015;7030;ennessee Defense Tennessee Defens;Def;ten;a;ind;3;4100
+17;2015;7009;allas Defense Dallas Defens;Def;dal;h;was;2;4300
+17;2015;7018;ew England Defense New England Defens;Def;nwe;a;mia;2;4800
+17;2015;7001;rizona Defense Arizona Defens;Def;ari;h;sea;-3;4700
+1;2016;7017;innesota Defense Minnesota Defens;Def;min;a;ten;21;4600
+1;2016;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;lar;16;4400
+1;2016;7016;iami Defense Miami Defens;Def;mia;a;sea;13;4200
+1;2016;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;cle;11;4800
+1;2016;7028;eattle Defense Seattle Defens;Def;sea;h;mia;11;5000
+1;2016;7004;uffalo Defense Buffalo Defens;Def;buf;a;bal;10;4500
+1;2016;7021;ew York J Defense New York J Defens;Def;nyj;h;cin;9;4500
+1;2016;7032;ouston Defense Houston Defens;Def;hou;h;chi;8;4900
+1;2016;7005;arolina Defense Carolina Defens;Def;car;a;den;8;4700
+1;2016;7010;enver Defense Denver Defens;Def;den;h;car;6;4700
+1;2016;7001;rizona Defense Arizona Defens;Def;ari;h;nwe;6;5000
+1;2016;7003;altimore Defense Baltimore Defens;Def;bal;h;buf;6;4300
+1;2016;7007;incinnati Defense Cincinnati Defens;Def;cin;a;nyj;5;4600
+1;2016;7009;allas Defense Dallas Defens;Def;dal;h;nyg;5;4400
+1;2016;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;jac;5;4300
+1;2016;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;was;5;4600
+1;2016;7006;hicago Defense Chicago Defens;Def;chi;a;hou;4;4300
+1;2016;7030;ennessee Defense Tennessee Defens;Def;ten;h;min;4;4100
+1;2016;7026;an Diego Defense San Diego Defens;Def;sdg;a;kan;4;4100
+1;2016;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;atl;3;4200
+1;2016;7018;ew England Defense New England Defens;Def;nwe;a;ari;3;4400
+1;2016;7022;akland Defense Oakland Defens;Def;oak;a;nor;2;4300
+1;2016;7008;leveland Defense Cleveland Defens;Def;cle;a;phi;2;4000
+1;2016;7014;acksonville Defense Jacksonville Defens;Def;jac;h;gnb;1;4100
+1;2016;7015;ansas City Defense Kansas City Defens;Def;kan;h;sdg;1;5100
+1;2016;7002;tlanta Defense Atlanta Defens;Def;atl;h;tam;1;4200
+1;2016;7025;os Angeles Defense Los Angeles Defens;Def;lar;a;sfo;1;4500
+1;2016;7020;ew York G Defense New York G Defens;Def;nyg;a;dal;1;4400
+1;2016;7011;etroit Defense Detroit Defens;Def;det;a;ind;0;4300
+1;2016;7031;ashington Defense Washington Defens;Def;was;h;pit;-1;4200
+1;2016;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;det;-3;4400
+1;2016;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;oak;-4;4000
+2;2016;7001;rizona Defense Arizona Defens;Def;ari;h;tam;23;4800
+2;2016;7010;enver Defense Denver Defens;Def;den;h;ind;22;4700
+2;2016;7032;ouston Defense Houston Defens;Def;hou;h;kan;14;4900
+2;2016;7005;arolina Defense Carolina Defens;Def;car;h;sfo;14;5300
+2;2016;7020;ew York G Defense New York G Defens;Def;nyg;h;nor;14;4300
+2;2016;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;chi;13;4800
+2;2016;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;nyg;12;4200
+2;2016;7017;innesota Defense Minnesota Defens;Def;min;h;gnb;12;4400
+2;2016;7003;altimore Defense Baltimore Defens;Def;bal;a;cle;12;4500
+2;2016;7025;os Angeles Defense Los Angeles Defens;Def;lar;h;sea;11;4300
+2;2016;7030;ennessee Defense Tennessee Defens;Def;ten;a;det;10;4100
+2;2016;7026;an Diego Defense San Diego Defens;Def;sdg;h;jac;9;4000
+2;2016;7011;etroit Defense Detroit Defens;Def;det;h;ten;8;4400
+2;2016;7018;ew England Defense New England Defens;Def;nwe;h;mia;8;4500
+2;2016;7015;ansas City Defense Kansas City Defens;Def;kan;a;hou;7;4700
+2;2016;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;car;7;4000
+2;2016;7006;hicago Defense Chicago Defens;Def;chi;h;phi;7;4400
+2;2016;7028;eattle Defense Seattle Defens;Def;sea;a;lar;7;5200
+2;2016;7012;reen Bay Defense Green Bay Defens;Def;gnb;a;min;7;4400
+2;2016;7031;ashington Defense Washington Defens;Def;was;h;dal;6;4400
+2;2016;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;cin;6;4600
+2;2016;7004;uffalo Defense Buffalo Defens;Def;buf;h;nyj;5;4500
+2;2016;7007;incinnati Defense Cincinnati Defens;Def;cin;a;pit;5;4400
+2;2016;7009;allas Defense Dallas Defens;Def;dal;a;was;4;4500
+2;2016;7008;leveland Defense Cleveland Defens;Def;cle;h;bal;4;4100
+2;2016;7016;iami Defense Miami Defens;Def;mia;a;nwe;3;4300
+2;2016;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;den;3;4300
+2;2016;7021;ew York J Defense New York J Defens;Def;nyj;a;buf;2;4700
+2;2016;7014;acksonville Defense Jacksonville Defens;Def;jac;a;sdg;1;4300
+2;2016;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;ari;0;4300
+2;2016;7002;tlanta Defense Atlanta Defens;Def;atl;a;oak;0;4100
+2;2016;7022;akland Defense Oakland Defens;Def;oak;h;atl;-1;4500
+3;2016;7015;ansas City Defense Kansas City Defens;Def;kan;h;nyj;35;4500
+3;2016;7017;innesota Defense Minnesota Defens;Def;min;a;car;26;4400
+3;2016;7004;uffalo Defense Buffalo Defens;Def;buf;h;ari;22;4300
+3;2016;7018;ew England Defense New England Defens;Def;nwe;h;hou;18;4300
+3;2016;7023;hiladelphia Defense Philadelphia Defens;Def;phi;h;pit;17;4500
+3;2016;7003;altimore Defense Baltimore Defens;Def;bal;a;jac;13;4400
+3;2016;7008;leveland Defense Cleveland Defens;Def;cle;a;mia;12;4300
+3;2016;7025;os Angeles Defense Los Angeles Defens;Def;lar;a;tam;12;4500
+3;2016;7026;an Diego Defense San Diego Defens;Def;sdg;a;ind;12;4300
+3;2016;7022;akland Defense Oakland Defens;Def;oak;a;ten;11;4400
+3;2016;7002;tlanta Defense Atlanta Defens;Def;atl;a;nor;11;4000
+3;2016;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;sdg;11;4400
+3;2016;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;lar;10;4500
+3;2016;7010;enver Defense Denver Defens;Def;den;a;cin;9;4800
+3;2016;7014;acksonville Defense Jacksonville Defens;Def;jac;h;bal;9;4100
+3;2016;7021;ew York J Defense New York J Defens;Def;nyj;a;kan;8;4600
+3;2016;7001;rizona Defense Arizona Defens;Def;ari;a;buf;8;5100
+3;2016;7031;ashington Defense Washington Defens;Def;was;a;nyg;8;4400
+3;2016;7016;iami Defense Miami Defens;Def;mia;h;cle;7;4600
+3;2016;7007;incinnati Defense Cincinnati Defens;Def;cin;h;den;5;4500
+3;2016;7009;allas Defense Dallas Defens;Def;dal;h;chi;5;4600
+3;2016;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;det;5;4400
+3;2016;7030;ennessee Defense Tennessee Defens;Def;ten;h;oak;4;4200
+3;2016;7005;arolina Defense Carolina Defens;Def;car;h;min;3;5000
+3;2016;7028;eattle Defense Seattle Defens;Def;sea;h;sfo;3;5400
+3;2016;7020;ew York G Defense New York G Defens;Def;nyg;h;was;3;4500
+3;2016;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;sea;2;4000
+3;2016;7011;etroit Defense Detroit Defens;Def;det;a;gnb;1;4200
+3;2016;7032;ouston Defense Houston Defens;Def;hou;a;nwe;1;5200
+3;2016;7006;hicago Defense Chicago Defens;Def;chi;a;dal;1;4400
+3;2016;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;phi;-1;4500
+3;2016;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;atl;-2;4100
+4;2016;7025;os Angeles Defense Los Angeles Defens;Def;lar;a;ari;17;4400
+4;2016;7010;enver Defense Denver Defens;Def;den;a;tam;15;5200
+4;2016;7004;uffalo Defense Buffalo Defens;Def;buf;a;nwe;15;4300
+4;2016;7007;incinnati Defense Cincinnati Defens;Def;cin;h;mia;13;4700
+4;2016;7002;tlanta Defense Atlanta Defens;Def;atl;h;car;11;4000
+4;2016;7028;eattle Defense Seattle Defens;Def;sea;a;nyj;11;5000
+4;2016;7032;ouston Defense Houston Defens;Def;hou;h;ten;10;4900
+4;2016;7006;hicago Defense Chicago Defens;Def;chi;h;det;10;4200
+4;2016;7011;etroit Defense Detroit Defens;Def;det;a;chi;9;4500
+4;2016;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;kan;9;4800
+4;2016;7019;ew Orleans Defense New Orleans Defens;Def;nor;a;sdg;8;4000
+4;2016;7014;acksonville Defense Jacksonville Defens;Def;jac;h;ind;8;4000
+4;2016;7031;ashington Defense Washington Defens;Def;was;h;cle;8;4600
+4;2016;7017;innesota Defense Minnesota Defens;Def;min;h;nyg;8;4700
+4;2016;7005;arolina Defense Carolina Defens;Def;car;a;atl;7;4800
+4;2016;7001;rizona Defense Arizona Defens;Def;ari;h;lar;5;5300
+4;2016;7030;ennessee Defense Tennessee Defens;Def;ten;a;hou;5;4100
+4;2016;7022;akland Defense Oakland Defens;Def;oak;a;bal;4;4500
+4;2016;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;h;den;4;4200
+4;2016;7009;allas Defense Dallas Defens;Def;dal;a;sfo;4;4700
+4;2016;7008;leveland Defense Cleveland Defens;Def;cle;a;was;4;4200
+4;2016;7018;ew England Defense New England Defens;Def;nwe;h;buf;3;4500
+4;2016;7021;ew York J Defense New York J Defens;Def;nyj;h;sea;2;4400
+4;2016;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;dal;2;4200
+4;2016;7026;an Diego Defense San Diego Defens;Def;sdg;h;nor;2;4300
+4;2016;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;jac;2;4500
+4;2016;7016;iami Defense Miami Defens;Def;mia;a;cin;1;4300
+4;2016;7003;altimore Defense Baltimore Defens;Def;bal;h;oak;1;4400
+4;2016;7020;ew York G Defense New York G Defens;Def;nyg;a;min;0;4400
+4;2016;7015;ansas City Defense Kansas City Defens;Def;kan;a;pit;-2;4400
+5;2016;7004;uffalo Defense Buffalo Defens;Def;buf;a;lar;17;4600
+5;2016;7017;innesota Defense Minnesota Defens;Def;min;h;hou;16;4800
+5;2016;7001;rizona Defense Arizona Defens;Def;ari;a;sfo;15;5100
+5;2016;7031;ashington Defense Washington Defens;Def;was;a;bal;15;4300
+5;2016;7030;ennessee Defense Tennessee Defens;Def;ten;a;mia;14;4200
+5;2016;7018;ew England Defense New England Defens;Def;nwe;a;cle;10;4800
+5;2016;7022;akland Defense Oakland Defens;Def;oak;h;sdg;9;4500
+5;2016;7029;ampa Bay Defense Tampa Bay Defens;Def;tam;a;car;9;4000
+5;2016;7002;tlanta Defense Atlanta Defens;Def;atl;a;den;9;4200
+5;2016;7003;altimore Defense Baltimore Defens;Def;bal;h;was;9;4400
+5;2016;7011;etroit Defense Detroit Defens;Def;det;h;phi;7;4400
+5;2016;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;nyg;7;4600
+5;2016;7016;iami Defense Miami Defens;Def;mia;h;ten;7;4600
+5;2016;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;h;nyj;7;4900
+5;2016;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;det;6;4600
+5;2016;7009;allas Defense Dallas Defens;Def;dal;h;cin;5;4500
+5;2016;7010;enver Defense Denver Defens;Def;den;h;atl;4;5100
+5;2016;7006;hicago Defense Chicago Defens;Def;chi;a;ind;4;4200
+5;2016;7025;os Angeles Defense Los Angeles Defens;Def;lar;h;buf;4;4700
+5;2016;7020;ew York G Defense New York G Defens;Def;nyg;a;gnb;4;4400
+5;2016;7026;an Diego Defense San Diego Defens;Def;sdg;a;oak;4;4200
+5;2016;7005;arolina Defense Carolina Defens;Def;car;h;tam;3;5000
+5;2016;7007;incinnati Defense Cincinnati Defens;Def;cin;a;dal;2;4700
+5;2016;7021;ew York J Defense New York J Defens;Def;nyj;a;pit;2;4100
+5;2016;7032;ouston Defense Houston Defens;Def;hou;a;min;2;4700
+5;2016;7013;ndianapolis Defense Indianapolis Defens;Def;ind;h;chi;2;4400
+5;2016;7008;leveland Defense Cleveland Defens;Def;cle;h;nwe;0;4000
+5;2016;7027;an Francisco Defense San Francisco Defens;Def;sfo;h;ari;0;4100
+6;2016;7023;hiladelphia Defense Philadelphia Defens;Def;phi;a;was;14;4500
+6;2016;7001;rizona Defense Arizona Defens;Def;ari;h;nyj;12;5400
+6;2016;7026;an Diego Defense San Diego Defens;Def;sdg;h;den;12;4200
+6;2016;7009;allas Defense Dallas Defens;Def;dal;a;gnb;10;4300
+6;2016;7015;ansas City Defense Kansas City Defens;Def;kan;a;oak;10;4600
+6;2016;7031;ashington Defense Washington Defens;Def;was;h;phi;9;4400
+6;2016;7028;eattle Defense Seattle Defens;Def;sea;h;atl;8;4800
+6;2016;7010;enver Defense Denver Defens;Def;den;a;sdg;7;5000
+6;2016;7006;hicago Defense Chicago Defens;Def;chi;h;jac;7;4300
+6;2016;7016;iami Defense Miami Defens;Def;mia;h;pit;7;4000
+6;2016;7003;altimore Defense Baltimore Defens;Def;bal;a;nyg;7;4500
+6;2016;7004;uffalo Defense Buffalo Defens;Def;buf;h;sfo;6;4800
+6;2016;7030;ennessee Defense Tennessee Defens;Def;ten;h;cle;6;4700
+6;2016;7032;ouston Defense Houston Defens;Def;hou;h;ind;5;4400
+6;2016;7012;reen Bay Defense Green Bay Defens;Def;gnb;h;dal;5;4500
+6;2016;7018;ew England Defense New England Defens;Def;nwe;h;cin;5;4700
+6;2016;7008;leveland Defense Cleveland Defens;Def;cle;a;ten;3;4100
+6;2016;7027;an Francisco Defense San Francisco Defens;Def;sfo;a;buf;3;4200
+6;2016;7002;tlanta Defense Atlanta Defens;Def;atl;a;sea;3;4200
+6;2016;7013;ndianapolis Defense Indianapolis Defens;Def;ind;a;hou;3;4400
+6;2016;7019;ew Orleans Defense New Orleans Defens;Def;nor;h;car;2;4000
+6;2016;7007;incinnati Defense Cincinnati Defens;Def;cin;a;nwe;2;4300
+6;2016;7014;acksonville Defense Jacksonville Defens;Def;jac;a;chi;2;4200
+6;2016;7011;etroit Defense Detroit Defens;Def;det;h;lar;2;4500
+6;2016;7020;ew York G Defense New York G Defens;Def;nyg;h;bal;2;4300
+6;2016;7022;akland Defense Oakland Defens;Def;oak;h;kan;1;4500
+6;2016;7024;ittsburgh Defense Pittsburgh Defens;Def;pit;a;mia;1;4800
+6;2016;7025;os Angeles Defense Los Angeles Defens;Def;lar;a;det;0;4600
+6;2016;7021;ew York J Defense New York J Defens;Def;nyj;a;ari;-1;4000
+6;2016;7005;arolina Defense Carolina Defens;Def;car;a;nor;-1;4700
