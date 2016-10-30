@@ -30,6 +30,8 @@ with open('rotoguru.csv','rb') as infile:
         gap = name.find(',')
         fixed_name = name[gap+2:] + ' ' + name[:gap]
         line[NAME_INDEX] = fixed_name
-
         line_write = ';'.join(line)
         writers[pos].write(line_write+'\n')
+
+for pos in writers.keys():
+    writers[pos].close()
