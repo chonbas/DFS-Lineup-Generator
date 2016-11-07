@@ -142,7 +142,7 @@ def scrapeTeamOff():
             table = soup.find_all('tr')
             invalid_ctr = 1
             for row in table:
-                if invalid_ctr <= 3:
+                if invalid_ctr <= 2:
                     invalid_ctr += 1
                     continue
                 new_team = dict((field,0) for field in fieldnames)

@@ -2,7 +2,10 @@ from createTrainDB import FantasyDataDictionary
 
 thing = FantasyDataDictionary()
 
-for k in thing.teams:
-    print k
-    print thing.teams[k]['2011']
-    print '\n'
+x,y = thing.getTrainingExamples('Def',2)
+
+for i in xrange(len(x)):
+    print len(x[i])
+    # if len(x[i]) != 174:
+    #     print 'NOPENOPE'
+    # print y[i]
