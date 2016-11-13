@@ -2773,23 +2773,30 @@ week,year,name,team,opp,score,fg-made,fg-att,xp-made,xp-att,pts
 8,16,Adam Vinatieri,IND,vs KC,L 14-30,0,0,2,2,2
 8,16,Josh Lambo,SD,@ DEN,L 19-27,0,1,1,2,1
 9,16,Matt Bryant,ATL,@ TB,W  43-28,3,3,4,4,13
+9,16,Josh Lambo,SD,vs TEN,W  43-35,3,3,4,5,13
 9,16,Cairo Santos,KC,vs JAX,W  19-14,4,4,1,1,13
+9,16,Sebastian Janikowski,OAK,vs DEN,W  30-20,3,4,3,3,12
+9,16,Phil Dawson,SF,vs NO,L 23-41,3,3,2,2,11
 9,16,Nick Folk,NYJ,@ MIA,L 23-27,3,3,2,2,11
+9,16,Wil Lutz,NO,@ SF,W  41-23,2,3,5,5,11
 9,16,Caleb Sturgis,PHI,@ NYG,L 23-28,3,4,2,2,11
 9,16,Matt Prater,DET,@ MIN,W  22-16,3,3,1,1,10
 9,16,Andrew Franks,MIA,vs NYJ,W  27-23,2,2,3,3,9
+9,16,Mason Crosby,GB,vs IND,L 26-31,2,3,2,2,8
+9,16,Brandon McManus,DEN,@ OAK,L 20-30,2,2,2,2,8
+9,16,Graham Gano,CAR,@ LA,W  13-10,2,3,1,1,7
+9,16,Steven Hauschka,SEA,vs BUF,W  31-25,1,1,4,4,7
 9,16,Justin Tucker,BAL,vs PIT,W  21-14,2,2,1,1,7
+9,16,Adam Vinatieri,IND,@ GB,W  31-26,1,1,4,4,7
 9,16,Dan Bailey,DAL,@ CLE,W  35-10,0,0,5,5,5
+9,16,Dan Carpenter,BUF,@ SEA,L 25-31,1,2,2,2,5
+9,16,Ryan Succop,TEN,@ SD,L 35-43,0,0,5,5,5
 9,16,Robbie Gould,NYG,vs PHI,W  28-23,0,0,4,4,4
 9,16,Cody Parkey,CLE,vs DAL,L 10-35,1,2,1,1,4
 9,16,Blair Walsh,MIN,vs DET,L 16-22,1,2,1,2,4
-9,16,Mason Crosby,GB,vs IND,   3-7      (1st 07:35)                             ,1,2,0,0,3
-9,16,Phil Dawson,SF,vs NO,   3-14      (1st 02:14)                             ,1,1,0,0,3
+9,16,Greg Zuerlein,LA,vs CAR,L 10-13,1,3,1,1,4
 9,16,Roberto Aguayo,TB,vs ATL,L 28-43,0,0,2,2,2
 9,16,Chris Boswell,PIT,@ BAL,L 14-21,0,0,2,2,2
-9,16,Wil Lutz,NO,@ SF,   14-3      (1st 02:14)                             ,0,0,2,2,2
 9,16,Jason Myers,JAX,@ KC,L 14-19,0,1,2,2,2
-9,16,Graham Gano,CAR,@ LA,   7-0         (2nd 15:00)                         ,0,0,1,1,1
-9,16,Adam Vinatieri,IND,@ GB,   7-3      (1st 07:35)                             ,0,0,1,1,1
-9,16,Josh Lambo,SD,vs TEN,   6-0      (1st 07:18)                             ,0,0,0,1,0
-9,16,Greg Zuerlein,LA,vs CAR,   0-7         (2nd 15:00)                         ,0,1,0,0,0
+10,16,Justin Tucker,BAL,vs CLE,W  28-7,2,2,2,2,8
+10,16,Cody Parkey,CLE,@ BAL,L 7-28,0,0,1,1,1

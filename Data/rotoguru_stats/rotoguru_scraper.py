@@ -24,6 +24,77 @@ def scrapeRawData():
                 outfile.write(relevant.prettify())
                 outfile.write("\n")
 
+def standardizeDefenseName(name):
+    if name == 'San Francisco Defense':
+        return 'SF'
+    if name == 'Baltimore Defense':
+        return 'BAL'
+    if name == 'Chicago Defense':
+        return 'CHI'
+    if name == 'New York J Defense':
+        return 'NYJ'
+    if name == 'Philadelphia Defense':
+        return 'PHI'
+    if name == 'Houston Defense':
+        return 'HOU'
+    if name == 'Washington Defense':
+        return 'WAS'
+    if name == 'Buffalo Defense':
+        return 'BUF'
+    if name == 'Oakland Defense':
+        return 'OAK'
+    if name == 'Atlanta Defense':
+        return 'ATL'
+    if name == 'Arizona Defense':
+        return 'ARI'
+    if name == 'Minnesota Defense':
+        return 'MIN'
+    if name == 'Green Bay Defense':
+        return 'GB'
+    if name == 'Denver Defense':
+        return 'DEN'
+    if name == 'Tampa Bay Defense':
+        return 'TB'
+    if name == 'Dallas Defense':
+        return 'DAL'
+    if name == 'Detroit Defense':
+        return 'DET'
+    if name == 'New England Defense':
+        return 'NE'
+    if name == 'Indianapolis Defense':
+        return 'IND'
+    if name == 'Cincinnati Defense':
+        return 'CIN'
+    if name == 'Jacksonville Defense':
+        return 'JAC'
+    if name == 'New York G Defense':
+        return 'NYG'
+    if name == 'Tennessee Defense':
+        return 'TEN'
+    if name == 'San Diego Defense':
+        return 'SD'
+    if name == 'New Orleans Defense':
+        return 'NO'
+    if name == 'Cleveland Defense':
+        return 'CLE'
+    if name == 'St. Louis Defense':
+        return 'LARM'
+    if name == 'Carolina Defense':
+        return 'CAR'
+    if name == 'Kansas City Defense':
+        return 'KC'
+    if name == 'Seattle Defense':
+        return 'SEA'
+    if name == 'Miami Defense':
+        return 'MIA'
+    if name == 'Los Angeles Defense':
+        return 'LARM'
+    if name == 'Pittsburgh Defense':
+        return 'PIT'
+    return ''
+
+
+
 def parseRawData():
     writers = {'QB':None,'WR':None,'RB':None,'TE':None,'PK':None,'Def':None}
     fieldnames = ['week', 'year', 'GID', 'name', 'pos', 'team', 'h/a', 'oppt', 'fd points', 'fd salary']
@@ -52,6 +123,8 @@ def parseRawData():
             gap = name.find(',')
             if pos != 'Def':
                 name = name[gap+2:] + ' ' + name[:gap]
+            if pos == 'Def':
+                name = standardizeDefenseName(name)
             line[NAME_INDEX] = name
             line_write = ';'.join(line)
             writers[pos].write(line_write+'\n')

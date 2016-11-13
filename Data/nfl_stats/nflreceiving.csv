@@ -4991,8 +4991,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 4,12,Tony Moeaki,KC,vs SD,L 20-37,3,18,6.0,0,0
 4,12,Jeff Cumberland,NYJ,vs SF,L 0-34,4,17,4.2,0,0
 4,12,Joel Dreessen,DEN,vs OAK,W  37-6,2,17,8.5,1,0
-4,12,Quinn Johnson,TEN,@ HOU,L 14-38,1,17,17.0,0,0
 4,12,Damaris Johnson,PHI,vs NYG,W  19-17,1,17,17.0,0,0
+4,12,Quinn Johnson,TEN,@ HOU,L 14-38,1,17,17.0,0,0
 4,12,Jacoby Jones,BAL,vs CLE,W  23-16,2,17,8.5,0,0
 4,12,LeSean McCoy,PHI,vs NYG,W  19-17,3,17,5.7,0,0
 4,12,Titus Young,DET,vs MIN,L 13-20,1,17,17.0,0,0
@@ -5047,8 +5047,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 4,12,Dexter McCluster,KC,vs SD,L 20-37,2,6,3.0,0,0
 4,12,Bear Pascoe,NYG,@ PHI,L 17-19,1,6,6.0,1,0
 4,12,William Powell,ARI,vs MIA,W  24-21,2,6,3.0,0,0
-4,12,David Thomas,NO,@ GB,L 27-28,1,6,6.0,0,0
 4,12,Daniel Thomas,MIA,@ ARI,L 21-24,1,6,6.0,0,0
+4,12,David Thomas,NO,@ GB,L 27-28,1,6,6.0,0,0
 4,12,Damian Williams,TEN,@ HOU,L 14-38,1,6,6.0,0,0
 4,12,Kevin Elliott,,vs CIN,L 10-27,1,5,5.0,0,0
 4,12,Lavelle Hawkins,TEN,@ HOU,L 14-38,1,5,5.0,0,0
@@ -12046,8 +12046,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 17,13,Scott Chandler,BUF,@ NE,L 20-34,3,55,18.3,0,0
 17,13,Randall Cobb,GB,@ CHI,W  33-28,2,55,27.5,2,0
 17,13,Lance Kendricks,,@ SEA,L 9-27,5,54,10.8,0,0
-17,13,Steven Jackson,ATL,vs CAR,L 20-21,5,53,10.6,0,0
 17,13,Fred Jackson,BUF,@ NE,L 20-34,3,53,17.7,0,0
+17,13,Steven Jackson,ATL,vs CAR,L 20-21,5,53,10.6,0,0
 17,13,Giovani Bernard,CIN,vs BAL,W  34-17,5,51,10.2,0,0
 17,13,Maurice Jones-Drew,,@ IND,L 10-30,5,51,10.2,0,1
 17,13,Hakeem Nicks,NYG,vs WAS,W  20-6,2,50,25.0,0,0
@@ -12223,8 +12223,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 17,13,Jared Allen,MIN,vs DET,W  14-13,0,0,0.0,0,0
 17,13,Doug Baldwin,SEA,vs ,W  27-9,0,0,0.0,0,0
 17,13,Gary Barnidge,CLE,@ PIT,L 7-20,0,0,0.0,0,0
-17,13,Vincent Brown,SD,vs KC,W  27-24,0,0,0.0,0,0
 17,13,Jaron Brown,ARI,vs SF,L 20-23,0,0,0.0,0,0
+17,13,Vincent Brown,SD,vs KC,W  27-24,0,0,0.0,0,0
 17,13,Garrett Celek,SF,@ ARI,W  23-20,0,0,0.0,0,0
 17,13,John Conner,NYG,vs WAS,W  20-6,0,0,0.0,0,0
 17,13,Tandon Doss,BAL,@ CIN,L 17-34,1,0,0.0,0,0
@@ -16286,8 +16286,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 17,14,Robert Hughes,ARI,@ SF,L 17-20,1,10,10.0,0,0
 17,14,Russell Shepard,TB,vs NO,L 20-23,1,10,10.0,0,0
 17,14,Seyi Ajirotutu,SD,@ KC,L 7-19,1,9,9.0,0,0
-17,14,Travis Benjamin,CLE,@ BAL,L 10-20,1,9,9.0,0,0
 17,14,Kelvin Benjamin,CAR,@ ATL,W  34-3,1,9,9.0,0,0
+17,14,Travis Benjamin,CLE,@ BAL,L 10-20,1,9,9.0,0,0
 17,14,Travaris Cadet,NO,@ TB,W  23-20,2,9,4.5,0,0
 17,14,Vernon Davis,SF,vs ARI,W  20-17,1,9,9.0,0,0
 17,14,Trent Richardson,IND,@ TEN,W  27-10,1,9,9.0,0,0
@@ -16355,8 +16355,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 17,14,Andrew Quarless,GB,vs DET,W  30-20,0,0,0.0,0,0
 17,14,Adrien Robinson,NYG,vs PHI,L 26-34,0,0,0.0,0,0
 17,14,Bishop Sankey,TEN,vs IND,L 10-27,0,0,0.0,0,1
-17,14,Geno Smith,NYJ,@ MIA,W  37-24,0,0,0.0,0,1
 17,14,Rodney Smith,CLE,@ BAL,L 10-20,0,0,0.0,0,0
+17,14,Geno Smith,NYJ,@ MIA,W  37-24,0,0,0.0,0,1
 17,14,Matt Spaeth,PIT,vs CIN,W  27-17,0,0,0.0,0,0
 17,14,Stepfan Taylor,ARI,@ SF,L 17-20,0,0,0.0,0,0
 17,14,Mike Wallace,MIA,vs NYJ,L 24-37,0,0,0.0,0,0
@@ -16842,14 +16842,14 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 2,15,Brandon Bolden,NE,@ BUF,W  40-32,1,2,2.0,0,0
 2,15,Travaris Cadet,NE,@ BUF,W  40-32,1,2,2.0,0,0
 2,15,Jamaal Charles,KC,vs DEN,L 24-31,4,2,0.5,0,2
-2,15,Jeremy Hill,CIN,vs SD,W  24-19,1,2,2.0,0,2
 2,15,Josh Hill,NO,vs TB,L 19-26,1,2,2.0,0,0
+2,15,Jeremy Hill,CIN,vs SD,W  24-19,1,2,2.0,0,2
 2,15,Matthew Mulligan,BUF,vs NE,L 32-40,1,2,2.0,0,0
 2,15,Miles Austin,PHI,vs DAL,L 10-20,0,0,0.0,0,0
 2,15,Stedman Bailey,,@ WAS,L 10-24,1,0,0.0,0,0
 2,15,Dwayne Bowe,CLE,vs TEN,W  28-14,0,0,0.0,0,0
-2,15,Tevin Coleman,ATL,@ NYG,W  24-20,0,0,0.0,0,0
 2,15,Derrick Coleman,SEA,@ GB,L 17-27,1,0,0.0,0,0
+2,15,Tevin Coleman,ATL,@ NYG,W  24-20,0,0,0.0,0,0
 2,15,Riley Cooper,PHI,vs DAL,L 10-20,0,0,0.0,0,0
 2,15,Knile Davis,KC,vs DEN,L 24-31,0,0,0.0,0,0
 2,15,Rhett Ellison,MIN,vs DET,W  26-16,0,0,0.0,0,0
@@ -16860,8 +16860,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 2,15,Ronnie Hillman,DEN,@ KC,W  31-24,0,0,0.0,0,0
 2,15,Greg Jennings,MIA,@ ,L 20-23,0,0,0.0,0,0
 2,15,Malcolm Johnson,CLE,vs TEN,W  28-14,0,0,0.0,0,0
-2,15,Chris Johnson,ARI,@ CHI,W  48-23,0,0,0.0,0,0
 2,15,Austin Johnson,NO,vs TB,L 19-26,0,0,0.0,0,0
+2,15,Chris Johnson,ARI,@ CHI,W  48-23,0,0,0.0,0,0
 2,15,Jermaine Kearse,SEA,@ GB,L 17-27,0,0,0.0,0,0
 2,15,Marcedes Lewis,,vs MIA,W  23-20,0,0,0.0,0,0
 2,15,Vance McDonald,SF,@ PIT,L 18-43,0,0,0.0,0,0
@@ -20342,8 +20342,8 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 17,15,Antonio Gates,SD,@ DEN,L 20-27,3,34,11.3,1,0
 17,15,A.J. Green,CIN,vs BAL,W  24-16,4,34,8.5,1,0
 17,15,Justin Hardy,ATL,vs NO,L 17-20,4,34,8.5,0,0
-17,15,David Johnson,ARI,vs SEA,L 6-36,3,34,11.3,0,0
 17,15,Duke Johnson,CLE,vs PIT,L 12-28,4,34,8.5,0,0
+17,15,David Johnson,ARI,vs SEA,L 6-36,3,34,11.3,0,0
 17,15,Jermaine Kearse,SEA,@ ARI,W  36-6,3,34,11.3,1,0
 17,15,Golden Tate,DET,@ CHI,W  24-20,4,34,8.5,0,0
 17,15,Jerick McKinnon,MIN,@ GB,W  20-13,3,33,11.0,0,0
@@ -22420,149 +22420,239 @@ week,year,name,team,opp,score,rec,yds,avg,td,fum
 8,16,Griff Whalen,SD,@ DEN,L 19-27,0,0,0.0,0,0
 8,16,Aaron Ripkowski,GB,@ ATL,L 32-33,1,-1,-1.0,0,0
 8,16,Jeremy Hill,CIN,vs WAS,   T27-27,1,-3,-3.0,0,0
+9,16,Robert Woods,BUF,@ SEA,L 25-31,10,162,16.2,0,0
 9,16,Mike Evans,TB,vs ATL,L 28-43,11,150,13.6,2,0
 9,16,Jason Witten,DAL,@ CLE,W  35-10,8,134,16.8,1,0
 9,16,Mike Wallace,BAL,vs PIT,W  21-14,4,124,31.0,1,0
 9,16,Julio Jones,ATL,@ TB,W  43-28,8,111,13.9,1,0
+9,16,Quinton Patton,SF,vs NO,L 23-41,6,106,17.7,0,0
+9,16,Jimmy Graham,SEA,vs BUF,W  31-25,8,103,12.9,2,0
 9,16,Eli Rogers,PIT,@ BAL,L 14-21,6,103,17.2,0,0
 9,16,Zach Ertz,PHI,@ NYG,L 23-28,8,97,12.1,0,0
+9,16,Jordy Nelson,GB,vs IND,L 26-31,7,94,13.4,1,0
 9,16,Eric Ebron,DET,@ MIN,W  22-16,7,92,13.1,0,0
+9,16,Lance Kendricks,LA,vs CAR,L 10-13,7,90,12.9,0,0
+9,16,Doug Baldwin,SEA,vs BUF,W  31-25,6,89,14.8,0,0
 9,16,Jordan Matthews,PHI,@ NYG,L 23-28,6,88,14.7,0,0
 9,16,Antonio Brown,PIT,@ BAL,L 14-21,7,85,12.1,1,0
 9,16,Marqise Lee,JAX,@ KC,L 14-19,4,84,21.0,0,0
+9,16,Vance McDonald,SF,vs NO,L 23-41,3,84,28.0,1,0
+9,16,DuJuan Harris,SF,vs NO,L 23-41,5,83,16.6,1,1
+9,16,T.Y. Hilton,IND,@ GB,W  31-26,6,82,13.7,0,0
 9,16,Stefon Diggs,MIN,vs DET,L 16-22,13,80,6.2,0,0
 9,16,Golden Tate,DET,@ MIN,W  22-16,11,79,7.2,1,0
+9,16,Kelvin Benjamin,CAR,@ LA,W  13-10,5,76,15.2,0,0
+9,16,Garrett Celek,SF,vs NO,L 23-41,4,76,19.0,0,0
 9,16,Allen Robinson,JAX,@ KC,L 14-19,7,76,10.9,1,0
+9,16,Antonio Gates,SD,vs TEN,W  43-35,5,75,15.0,1,0
 9,16,Mohamed Sanu,ATL,@ TB,W  43-28,5,74,14.8,0,0
+9,16,Michael Thomas,NO,@ SF,W  41-23,5,73,14.6,2,0
+9,16,Kapri Bibbs,DEN,@ OAK,L 20-30,1,69,69.0,1,0
 9,16,Bryce Treggs,PHI,@ NYG,L 23-28,2,69,34.5,0,0
 9,16,Adam Thielen,MIN,vs DET,L 16-22,4,68,17.0,0,0
+9,16,Brandin Cooks,NO,@ SF,W  41-23,5,66,13.2,0,0
+9,16,Melvin Gordon,SD,vs TEN,W  43-35,4,65,16.2,0,0
+9,16,Tyrell Williams,SD,vs TEN,W  43-35,6,65,10.8,1,0
+9,16,Richard Rodgers,GB,vs IND,L 26-31,6,64,10.7,0,0
+9,16,Kendall Wright,TEN,@ SD,L 35-43,2,64,32.0,0,0
 9,16,Isaiah Crowell,CLE,vs DAL,L 10-35,4,63,15.8,0,0
+9,16,Rishard Matthews,TEN,@ SD,L 35-43,6,63,10.5,2,0
+9,16,Jack Doyle,IND,@ GB,W  31-26,5,61,12.2,0,0
 9,16,Jalin Marshall,NYJ,@ MIA,L 23-27,3,59,19.7,1,0
 9,16,Travis Kelce,KC,vs JAX,W  19-14,5,58,11.6,0,0
+9,16,Tajae Sharpe,TEN,@ SD,L 35-43,4,58,14.5,0,0
 9,16,Cole Beasley,DAL,@ CLE,W  35-10,6,56,9.3,1,0
+9,16,Amari Cooper,OAK,vs DEN,W  30-20,6,56,9.3,0,0
+9,16,Dontrelle Inman,SD,vs TEN,W  43-35,6,56,9.3,0,0
+9,16,Jordan Norwood,DEN,@ OAK,L 20-30,2,56,28.0,1,0
+9,16,Demaryius Thomas,DEN,@ OAK,L 20-30,5,56,11.2,0,0
 9,16,Trey Burton,PHI,@ NYG,L 23-28,3,55,18.3,0,0
+9,16,Donte Moncrief,IND,@ GB,W  31-26,3,55,18.3,1,0
 9,16,Taylor Gabriel,ATL,@ TB,W  43-28,5,52,10.4,0,0
+9,16,Greg Olsen,CAR,@ LA,W  13-10,5,52,10.4,1,0
 9,16,Sterling Shepard,NYG,vs PHI,W  28-23,3,50,16.7,1,0
 9,16,Robby Anderson,NYJ,@ MIA,L 23-27,4,49,12.2,0,0
+9,16,Kenny Britt,LA,vs CAR,L 10-13,4,49,12.2,1,0
+9,16,Harry Douglas,TEN,@ SD,L 35-43,2,48,24.0,0,0
+9,16,Brian Quick,LA,vs CAR,L 10-13,4,48,12.0,0,0
 9,16,Terrelle Pryor,CLE,vs DAL,L 10-35,5,47,9.4,1,0
+9,16,Emmanuel Sanders,DEN,@ OAK,L 20-30,5,47,9.4,0,0
 9,16,Steve Smith,BAL,vs PIT,W  21-14,4,47,11.8,0,0
 9,16,Odell Beckham,NYG,vs PHI,W  28-23,4,46,11.5,2,0
 9,16,Victor Cruz,NYG,vs PHI,W  28-23,1,46,46.0,0,0
 9,16,Austin Hooper,ATL,@ TB,W  43-28,3,46,15.3,1,0
 9,16,Adam Humphries,TB,vs ATL,L 28-43,5,46,9.2,1,0
-9,16,Brandon Marshall,NYJ,@ MIA,L 23-27,6,45,7.5,0,0
+9,16,Brandon Marshall,NYJ,@ MIA,L 23-27,5,46,9.2,0,0
 9,16,Cordarrelle Patterson,MIN,vs DET,L 16-22,6,45,7.5,0,0
 9,16,Cameron Brate,TB,vs ATL,L 28-43,5,43,8.6,1,0
+9,16,Marquise Goodwin,BUF,@ SEA,L 25-31,4,43,10.8,0,0
+9,16,Coby Fleener,NO,@ SF,W  41-23,3,42,14.0,0,0
 9,16,Dominique Jones,MIA,vs NYJ,W  27-23,3,42,14.0,1,0
+9,16,Delanie Walker,TEN,@ SD,L 35-43,5,42,8.4,1,0
 9,16,Albert Wilson,KC,vs JAX,W  19-14,3,42,14.0,1,0
+9,16,Davante Adams,GB,vs IND,L 26-31,4,41,10.2,1,0
 9,16,Nelson Agholor,PHI,@ NYG,L 23-28,4,41,10.2,0,0
 9,16,Corey Coleman,CLE,vs DAL,L 10-35,3,41,13.7,0,0
+9,16,Ted Ginn,CAR,@ LA,W  13-10,5,40,8.0,0,0
+9,16,Josh Hill,NO,@ SF,W  41-23,4,40,10.0,0,0
 9,16,Le'Veon Bell,PIT,@ BAL,L 14-21,6,38,6.3,0,0
+9,16,Ty Montgomery,GB,vs IND,L 26-31,3,38,12.7,0,0
+9,16,Virgil Green,DEN,@ OAK,L 20-30,2,37,18.5,0,0
+9,16,Jermaine Kearse,SEA,vs BUF,W  31-25,2,36,18.0,0,0
+9,16,Willie Snead,NO,@ SF,W  41-23,3,36,12.0,0,0
+9,16,LeSean McCoy,BUF,@ SEA,L 25-31,4,35,8.8,0,0
 9,16,Charcandrick West,KC,vs JAX,W  19-14,3,35,11.7,0,0
-9,16,Richard Rodgers,GB,vs IND,   3-7      (1st 09:08)                             ,2,34,17.0,0,0
 9,16,Jarvis Landry,MIA,vs NYJ,W  27-23,3,33,11.0,0,0
 9,16,Breshad Perriman,BAL,vs PIT,W  21-14,3,33,11.0,0,0
 9,16,Will Tye,NYG,vs PHI,W  28-23,4,33,8.2,0,0
-9,16,Josh Hill,NO,@ SF,   7-3      (1st 02:59)                             ,1,32,32.0,0,0
+9,16,Benny Cunningham,LA,vs CAR,L 10-13,5,32,6.4,0,0
 9,16,Ronnie Hillman,MIN,vs DET,L 16-22,1,32,32.0,0,0
+9,16,Seth Roberts,OAK,vs DEN,W  30-20,3,32,10.7,0,0
 9,16,Levine Toilolo,ATL,@ TB,W  43-28,1,32,32.0,1,0
 9,16,T.J. Yeldon,JAX,@ KC,L 14-19,5,32,6.4,1,1
-9,16,Quinton Patton,SF,vs NO,   3-7      (1st 02:59)                             ,1,31,31.0,0,0
-9,16,Antonio Gates,SD,vs TEN,   6-0      (1st 08:55)                             ,2,30,15.0,1,0
+9,16,Tyler Higbee,LA,vs CAR,L 10-13,1,31,31.0,0,0
 9,16,Roger Lewis,NYG,vs PHI,W  28-23,1,30,30.0,1,0
+9,16,DeMarco Murray,TEN,@ SD,L 35-43,7,29,4.1,0,0
 9,16,Bilal Powell,NYJ,@ MIA,L 23-27,4,29,7.2,0,0
 9,16,Chris Conley,KC,vs JAX,W  19-14,3,28,9.3,0,0
+9,16,Phillip Dorsett,IND,@ GB,W  31-26,2,28,14.0,0,0
 9,16,Devonta Freeman,ATL,@ TB,W  43-28,2,28,14.0,0,0
+9,16,Devin Funchess,CAR,@ LA,W  13-10,1,28,28.0,0,0
+9,16,Michael Crabtree,OAK,vs DEN,W  30-20,2,27,13.5,0,0
+9,16,Andre Holmes,OAK,vs DEN,W  30-20,2,27,13.5,0,0
 9,16,Andre Roberts,DET,@ MIN,W  22-16,1,27,27.0,0,0
 9,16,Antone Smith,TB,vs ATL,L 28-43,3,27,9.0,0,1
+9,16,Todd Gurley,LA,vs CAR,L 10-13,4,26,6.5,0,0
+9,16,Brandon Coleman,NO,@ SF,W  41-23,2,25,12.5,0,0
 9,16,Quincy Enunwa,NYJ,@ MIA,L 23-27,1,25,25.0,0,0
+9,16,Jeff Janis,GB,vs IND,L 26-31,1,25,25.0,0,0
 9,16,Jerell Adams,NYG,vs PHI,W  28-23,3,24,8.0,0,0
 9,16,Peyton Barber,TB,vs ATL,L 28-43,4,24,6.0,0,0
 9,16,Gary Barnidge,CLE,vs DAL,L 10-35,3,23,7.7,0,0
 9,16,Marcedes Lewis,JAX,@ KC,L 14-19,2,23,11.5,0,0
-9,16,Michael Thomas,NO,@ SF,   7-3      (1st 02:59)                             ,1,23,23.0,0,0
+9,16,Reggie Bush,BUF,@ SEA,L 25-31,2,22,11.0,0,0
+9,16,Jeremy Kerley,SF,vs NO,L 23-41,3,22,7.3,0,0
 9,16,Julius Thomas,JAX,@ KC,L 14-19,2,21,10.5,0,0
 9,16,Cecil Shorts,TB,vs ATL,L 28-43,1,20,20.0,0,0
 9,16,Damien Williams,MIA,vs NYJ,W  27-23,2,20,10.0,0,0
 9,16,Jay Ajayi,MIA,vs NYJ,W  27-23,3,19,6.3,0,0
 9,16,Dez Bryant,DAL,@ CLE,W  35-10,1,19,19.0,0,0
 9,16,Terrance Williams,DAL,@ CLE,W  35-10,2,19,9.5,0,0
+9,16,Justin Perillo,GB,vs IND,L 26-31,2,18,9.0,0,0
+9,16,Torrey Smith,SF,vs NO,L 23-41,2,18,9.0,0,0
+9,16,Tavon Austin,LA,vs CAR,L 10-13,1,17,17.0,0,0
+9,16,Ed Dickson,CAR,@ LA,W  13-10,2,17,8.5,0,0
 9,16,Mike James,TB,vs ATL,L 28-43,3,17,5.7,0,0
+9,16,Tyler Lockett,SEA,vs BUF,W  31-25,1,17,17.0,0,0
 9,16,Darren Waller,BAL,vs PIT,W  21-14,2,17,8.5,0,0
 9,16,Arrelious Benn,JAX,@ KC,L 14-19,1,16,16.0,0,0
-9,16,Coby Fleener,NO,@ SF,   7-3      (1st 02:59)                             ,2,16,8.0,0,0
-9,16,Dontrelle Inman,SD,vs TEN,   6-0      (1st 08:55)                             ,2,16,8.0,0,0
 9,16,Duke Johnson,CLE,vs DAL,L 10-35,2,16,8.0,0,0
-9,16,Greg Olsen,CAR,@ LA,   7-0      (1st 00:45)                             ,2,16,8.0,1,0
-9,16,Kenny Britt,LA,vs CAR,   0-7      (1st 00:45)                             ,1,15,15.0,0,0
-9,16,DuJuan Harris,SF,vs NO,   3-7      (1st 02:59)                             ,1,15,15.0,0,0
+9,16,Brandon Williams,SEA,vs BUF,W  31-25,1,16,16.0,0,0
+9,16,Dwayne Allen,IND,@ GB,W  31-26,1,15,15.0,0,0
+9,16,Tim Hightower,NO,@ SF,W  41-23,1,15,15.0,0,0
 9,16,David Johnson,PIT,@ BAL,L 14-21,1,15,15.0,0,0
-9,16,Lance Kendricks,LA,vs CAR,   0-7      (1st 00:45)                             ,1,15,15.0,0,0
 9,16,Paul Perkins,NYG,vs PHI,W  28-23,3,15,5.0,0,0
+9,16,Paul Richardson,SEA,vs BUF,W  31-25,1,15,15.0,0,0
 9,16,Laquon Treadwell,MIN,vs DET,L 16-22,1,15,15.0,0,0
 9,16,Matt Asiata,MIN,vs DET,L 16-22,2,14,7.0,0,0
-9,16,Vance McDonald,SF,vs NO,   3-7      (1st 02:59)                             ,1,14,14.0,0,0
+9,16,Randall Cobb,GB,vs IND,L 26-31,2,14,7.0,1,0
 9,16,Dennis Pitta,BAL,vs PIT,W  21-14,2,14,7.0,0,0
 9,16,Darren Sproles,PHI,@ NYG,L 23-28,3,14,4.7,0,0
 9,16,Andrew Hawkins,CLE,vs DAL,L 10-35,2,13,6.5,0,0
+9,16,Mark Ingram,NO,@ SF,W  41-23,2,13,6.5,1,0
 9,16,Jesse James,PIT,@ BAL,L 14-21,2,13,6.5,0,0
 9,16,Rashad Jennings,NYG,vs PHI,W  28-23,3,13,4.3,0,0
-9,16,Ted Ginn,CAR,@ LA,   7-0      (1st 00:45)                             ,1,12,12.0,0,0
-9,16,Tyrell Williams,SD,vs TEN,   6-0      (1st 08:55)                             ,1,12,12.0,0,0
-9,16,Ed Dickson,CAR,@ LA,   7-0      (1st 00:45)                             ,1,11,11.0,0,0
+9,16,Latavius Murray,OAK,vs DEN,W  30-20,1,13,13.0,0,0
+9,16,Robert Turbin,IND,@ GB,W  31-26,2,13,6.5,0,0
+9,16,Clive Walford,OAK,vs DEN,W  30-20,2,13,6.5,0,0
+9,16,Corey Brown,CAR,@ LA,W  13-10,1,11,11.0,0,0
+9,16,Frank Gore,IND,@ GB,W  31-26,2,11,5.5,0,0
 9,16,Tyreek Hill,KC,vs JAX,W  19-14,3,11,3.7,0,0
 9,16,Kenny Stills,MIA,vs NYJ,W  27-23,1,11,11.0,0,0
 9,16,Geoff Swaim,DAL,@ CLE,W  35-10,2,11,5.5,0,0
 9,16,Anquan Boldin,DET,@ MIN,W  22-16,2,10,5.0,1,0
 9,16,MarQueis Gray,MIA,vs NYJ,W  27-23,2,10,5.0,0,0
 9,16,Xavier Grimble,PIT,@ BAL,L 14-21,1,10,10.0,0,0
+9,16,Jalen Richard,OAK,vs DEN,W  30-20,2,10,5.0,0,0
 9,16,Kamar Aiken,BAL,vs PIT,W  21-14,1,9,9.0,0,0
 9,16,Brice Butler,DAL,@ CLE,W  35-10,1,9,9.0,0,0
+9,16,Charles Clay,BUF,@ SEA,L 25-31,3,9,3.0,0,0
+9,16,Mike Davis,SF,vs NO,L 23-41,1,9,9.0,0,1
+9,16,Anthony Fasano,TEN,@ SD,L 35-43,1,9,9.0,0,0
+9,16,Josh Ferguson,IND,@ GB,W  31-26,1,9,9.0,0,0
 9,16,Charles Johnson,MIN,vs DET,L 16-22,1,9,9.0,0,0
+9,16,John Kuhn,NO,@ SF,W  41-23,2,9,4.5,0,0
 9,16,Freddie Martino,TB,vs ATL,L 28-43,1,9,9.0,0,0
+9,16,Walter Powell,BUF,@ SEA,L 25-31,1,9,9.0,0,0
+9,16,Devontae Booker,DEN,@ OAK,L 20-30,1,8,8.0,0,0
 9,16,DeVante Parker,MIA,vs NYJ,W  27-23,2,8,4.0,0,0
 9,16,Knile Davis,KC,vs JAX,W  19-14,1,7,7.0,0,0
-9,16,Kelvin Benjamin,CAR,@ LA,   7-0      (1st 00:45)                             ,1,6,6.0,0,0
+9,16,Erik Swoope,IND,@ GB,W  31-26,1,7,7.0,0,0
 9,16,Kenyan Drake,MIA,vs NYJ,W  27-23,1,6,6.0,0,0
+9,16,C.J. Prosise,SEA,vs BUF,W  31-25,1,6,6.0,0,0
 9,16,Theo Riddick,DET,@ MIN,W  22-16,1,6,6.0,0,0
+9,16,Mychal Rivera,OAK,vs DEN,W  30-20,1,6,6.0,0,0
 9,16,Anthony Sherman,KC,vs JAX,W  19-14,1,6,6.0,0,0
+9,16,Jordan Taylor,DEN,@ OAK,L 20-30,1,6,6.0,0,0
 9,16,Terrance West,BAL,vs PIT,W  21-14,1,6,6.0,0,0
-9,16,Travis Benjamin,SD,vs TEN,   6-0      (1st 08:55)                             ,1,5,5.0,0,0
+9,16,Travis Benjamin,SD,vs TEN,W  43-35,1,5,5.0,0,0
 9,16,Sam Bradford,MIN,vs DET,L 16-22,1,5,5.0,0,0
+9,16,Jeremy Butler,SD,vs TEN,W  43-35,1,5,5.0,0,0
 9,16,Ezekiel Elliott,DAL,@ CLE,W  35-10,1,5,5.0,0,0
 9,16,Matt Forte,NYJ,@ MIA,L 23-27,1,5,5.0,0,0
+9,16,Justin Hunter,BUF,@ SEA,L 25-31,1,5,5.0,1,0
 9,16,Marvin Jones,DET,@ MIN,W  22-16,1,5,5.0,0,0
-9,16,Jeremy Kerley,SF,vs NO,   3-7      (1st 02:59)                             ,1,5,5.0,0,0
+9,16,Travaris Cadet,NO,@ SF,W  41-23,1,4,4.0,0,0
 9,16,Rhett Ellison,MIN,vs DET,L 16-22,1,4,4.0,0,0
-9,16,Davante Adams,GB,vs IND,   3-7      (1st 09:08)                             ,1,2,2.0,0,0
+9,16,Kenneth Farrow,SD,vs TEN,W  43-35,1,4,4.0,0,0
+9,16,Bennie Fowler,DEN,@ OAK,L 20-30,1,4,4.0,0,0
+9,16,Mike Gillislee,BUF,@ SEA,L 25-31,2,4,2.0,0,0
+9,16,Pharoh Cooper,LA,vs CAR,L 10-13,1,3,3.0,0,0
+9,16,Aaron Ripkowski,GB,vs IND,L 26-31,1,3,3.0,0,0
 9,16,Gavin Escobar,DAL,@ CLE,W  35-10,1,2,2.0,1,0
 9,16,Patrick DiMarco,ATL,@ TB,W  43-28,1,1,1.0,1,0
 9,16,Kyle Rudolph,MIN,vs DET,L 16-22,1,1,1.0,1,0
+9,16,Fozzy Whittaker,CAR,@ LA,W  13-10,1,1,1.0,0,0
+9,16,Geronimo Allison,GB,vs IND,L 26-31,0,0,0.0,0,0
+9,16,Aaron Burbridge,SF,vs NO,L 23-41,0,0,0.0,0,0
 9,16,Michael Burton,DET,@ MIN,W  22-16,0,0,0.0,0,0
 9,16,Leonte Carroo,MIA,vs NYJ,W  27-23,0,0,0.0,0,0
 9,16,Sammie Coates,PIT,@ BAL,L 14-21,0,0,0.0,0,0
-9,16,Benny Cunningham,LA,vs CAR,   0-7      (1st 00:45)                             ,0,0,0.0,0,0
+9,16,A.J. Derby,DEN,@ OAK,L 20-30,0,0,0.0,0,0
 9,16,Kenneth Dixon,BAL,vs PIT,W  21-14,2,0,0.0,0,0
-9,16,Phillip Dorsett,IND,@ GB,   7-3      (1st 09:08)                             ,0,0,0.0,0,0
-9,16,Devin Funchess,CAR,@ LA,   7-0      (1st 00:45)                             ,0,0,0.0,0,0
+9,16,Jerome Felton,BUF,@ SEA,L 25-31,0,0,0.0,0,0
 9,16,Jakeem Grant,MIA,vs NYJ,W  27-23,0,0,0.0,0,0
 9,16,Dorial Green-Beckham,PHI,@ NYG,L 23-28,0,0,0.0,0,0
 9,16,Cobi Hamilton,PIT,@ BAL,L 14-21,0,0,0.0,0,0
 9,16,Demetrius Harris,KC,vs JAX,W  19-14,0,0,0.0,0,0
 9,16,Darrius Heyward-Bey,PIT,@ BAL,L 14-21,0,0,0.0,0,0
-9,16,Tyler Higbee,LA,vs CAR,   0-7      (1st 00:45)                             ,0,0,0.0,0,0
 9,16,Allen Hurns,JAX,@ KC,L 14-19,0,0,0.0,0,0
 9,16,Chris Ivory,JAX,@ KC,L 14-19,1,0,0.0,0,1
 9,16,Jeremy Maclin,KC,vs JAX,W  19-14,0,0,0.0,0,0
+9,16,Bradley Marquez,LA,vs CAR,L 10-13,0,0,0.0,0,0
 9,16,Ryan Mathews,PHI,@ NYG,L 23-28,1,0,0.0,0,0
 9,16,Brandon Myers,TB,vs ATL,L 28-43,0,0,0.0,0,0
-9,16,Jordy Nelson,GB,vs IND,   3-7      (1st 09:08)                             ,0,0,0.0,0,0
 9,16,James O'Shaughnessy,KC,vs JAX,W  19-14,1,0,0.0,0,0
+9,16,Jamize Olawale,OAK,vs DEN,W  30-20,0,0,0.0,0,0
 9,16,Joshua Perkins,ATL,@ TB,W  43-28,0,0,0.0,0,0
 9,16,Austin Seferian-Jenkins,NYJ,@ MIA,L 23-27,0,0,0.0,0,0
-9,16,Willie Snead,NO,@ SF,   7-3      (1st 02:59)                             ,0,0,0.0,0,0
-9,16,Matthew Stafford,DET,@ MIN,W  22-16,0,0,0.0,0,0
-9,16,Delanie Walker,TEN,@ SD,   0-6      (1st 08:55)                             ,0,0,0.0,0,0
 9,16,Bryan Walters,JAX,@ KC,L 14-19,0,0,0.0,0,1
+9,16,DeAndre Washington,OAK,vs DEN,W  30-20,1,0,0.0,0,0
 9,16,Dwayne Washington,DET,@ MIN,W  22-16,0,0,0.0,0,0
-9,16,Brandin Cooks,NO,@ SF,   7-3      (1st 02:59)                             ,1,-2,-2.0,0,0
+10,16,Breshad Perriman,BAL,vs CLE,W  28-7,3,64,21.3,1,0
+10,16,Steve Smith,BAL,vs CLE,W  28-7,5,60,12.0,1,0
+10,16,Mike Wallace,BAL,vs CLE,W  28-7,4,59,14.8,0,0
+10,16,Terrelle Pryor,CLE,@ BAL,L 7-28,5,48,9.6,0,0
+10,16,Kenneth Dixon,BAL,vs CLE,W  28-7,5,42,8.4,0,0
+10,16,Isaiah Crowell,CLE,@ BAL,L 7-28,3,30,10.0,0,0
+10,16,Dennis Pitta,BAL,vs CLE,W  28-7,6,26,4.3,0,0
+10,16,Seth DeValve,CLE,@ BAL,L 7-28,1,25,25.0,1,0
+10,16,Duke Johnson,CLE,@ BAL,L 7-28,3,25,8.3,0,0
+10,16,Corey Coleman,CLE,@ BAL,L 7-28,3,17,5.7,0,0
+10,16,Kamar Aiken,BAL,vs CLE,W  28-7,2,15,7.5,0,0
+10,16,Darren Waller,BAL,vs CLE,W  28-7,2,14,7.0,1,0
+10,16,Terrance West,BAL,vs CLE,W  28-7,1,12,12.0,0,0
+10,16,Gary Barnidge,CLE,@ BAL,L 7-28,1,8,8.0,0,0
+10,16,Kyle Juszczyk,BAL,vs CLE,W  28-7,2,4,2.0,0,0
+10,16,Andrew Hawkins,CLE,@ BAL,L 7-28,0,0,0.0,0,0
+10,16,Randall Telfer,CLE,@ BAL,L 7-28,1,-3,-3.0,0,0
