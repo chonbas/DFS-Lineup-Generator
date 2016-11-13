@@ -20,8 +20,6 @@ class FantasyDB:
         self.defs = self.loadDefenses()
         self.teams = self.loadTeams()
 
-
-# "Id","Position","First Name","Nickname","Last Name","FPPG","Played","Salary","Game","Team","Opponent"
     def getPredictionPoints(self, pos, game_lead, year, week):
         data = []
         keys = self.getKeys(pos)
@@ -31,7 +29,11 @@ class FantasyDB:
             fdreader = csv.reader(fd_list, delimiter=',', quotechar='"')
             for line in fdreader:
                 position = line[1].replace('"','')
-                if position != pos and not (pos == 'Def' and position == 'D'):
+                if position == 'D':
+                    position = 'Def'
+                if position == 'K':
+                    position = 'PK'
+                if position != pos:
                     continue
                 name = line[2].replace('"','') + ' ' + line[4].replace('"','')
                 salary = int(line[7].replace('"',''))
@@ -185,9 +187,64 @@ class FantasyDB:
                 data.append(float(team_data['Pass'][key].strip('%')))
         for key in self.getKeys('TEAM_' + side_of_ball):
             data.append(float(team_data['Team'][key].strip('%')))
-        data += self.getTeamEfficiencyData(team, year)
+        if pos == 'PK':
+            data += self.getTeamEfficiencyData(team, year)
         return data
-                
+
+    def getFeatureNames(self, pos):
+            keys = self.getKeys(pos)
+
+            run_keys = self.getKeys('RUN')
+            pass_keys = self.getKeys('PASS')
+            off_keys = self.getKeys('TEAM_OFF')
+            def_keys = self.getKeys('TEAM_DEF')
+            eff_keys = self.getKeys('TEAM_EFF')
+
+            team_run_keys = ['Team_' + x for x in run_keys]
+            team_pass_keys = ['Team_' + x for x in pass_keys]
+
+            opp_run_keys = ['Opp_' + x for x in run_keys]
+            opp_pass_keys = ['Opp_' + x for x in pass_keys]
+
+            team_def_keys = ['Team_' + x for x in def_keys]
+            team_off_keys = ['Team_' + x for x in off_keys]
+            team_eff_keys = ['Team_' + x for x in eff_keys]
+
+            opp_def_keys = ['Opp_' + x for x in def_keys]
+            opp_off_keys = ['Opp_' + x for x in off_keys]
+            opp_eff_keys = ['Opp_' + x for x in eff_keys]
+
+            features = []
+            
+            for key in keys:
+                if key == 'year':
+                    continue
+                if key == 'team':
+                    if pos == 'RB' or pos == 'QB':
+                        features += team_run_keys
+                    if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
+                        features += team_pass_keys
+                    if pos == 'Def':
+                        features += team_def_keys
+                    else:
+                        features += team_off_keys
+                    if pos == 'PK':
+                        features += team_eff_keys
+                    continue
+                if key == 'opp':
+                    if pos == 'RB' or pos == 'QB':
+                        features += opp_run_keys
+                    if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
+                        features += opp_pass_keys
+                    if pos == 'Def':
+                        features += opp_off_keys
+                    else:
+                        features += opp_def_keys
+                    if pos == 'PK':
+                        features += opp_eff_keys
+                    continue
+                features.append(key)
+            return features            
 
     def getTeamEfficiencyData(self,team, year):
         team_eff = self.teams[team][year]['Efficiency']
@@ -218,58 +275,6 @@ class FantasyDB:
             return self.defs
         return None
     
-    def getFeatureNames(self, pos):
-        keys = self.getKeys(pos)
-
-        run_keys = self.getKeys('RUN')
-        pass_keys = self.getKeys('PASS')
-        off_keys = self.getKeys('TEAM_OFF')
-        def_keys = self.getKeys('TEAM_DEF')
-        eff_keys = self.getKeys('TEAM_EFF')
-
-        team_run_keys = ['Team_' + x for x in run_keys]
-        team_pass_keys = ['Team_' + x for x in pass_keys]
-
-        opp_run_keys = ['Opp_' + x for x in run_keys]
-        opp_pass_keys = ['Opp_' + x for x in pass_keys]
-
-        team_def_keys = ['Team_' + x for x in def_keys]
-        team_off_keys = ['Team_' + x for x in off_keys]
-        team_eff_keys = ['Team_' + x for x in eff_keys]
-
-        opp_def_keys = ['Opp_' + x for x in def_keys]
-        opp_off_keys = ['Opp_' + x for x in off_keys]
-        opp_eff_keys = ['Opp_' + x for x in eff_keys]
-
-        features = []
-        
-        for key in keys:
-            if key == 'year':
-                continue
-            if key == 'team':
-                if pos == 'RB' or pos == 'QB':
-                    features += team_run_keys
-                if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
-                    features += team_pass_keys
-                if pos == 'Def':
-                    features += team_def_keys
-                else:
-                    features += team_off_keys
-                features += team_eff_keys
-                continue
-            if key == 'opp':
-                if pos == 'RB' or pos == 'QB':
-                    features += opp_run_keys
-                if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
-                    features += opp_pass_keys
-                if pos == 'Def':
-                    features += opp_off_keys
-                else:
-                    features += opp_def_keys
-                features += opp_eff_keys
-                continue
-            features.append(key)
-        return features
 
     def getKeys(self, pos):
         RB_KEYS = ['team','year','h_a','opp','fd_pts','fd_salary','ru_attempts','ru_yards','ru_avg','ru_tds',
