@@ -24,6 +24,8 @@ class FantasyDB:
         data = []
         keys = self.getKeys(pos)
         names = []
+        salaries = []
+        teams = []
         with open(FANDUEL_DIR + FANDUEL_LIST) as fd_list:
             fd_list.next() # skip header
             fdreader = csv.reader(fd_list, delimiter=',', quotechar='"')
@@ -65,7 +67,9 @@ class FantasyDB:
                         data_point.append(salary)
                 data.append(data_point)
                 names.append(name)
-        return data, names
+                salaries.append(salary)
+                teams.append(team)
+        return data, names, salaries, teams
         
     def fetchPrevGameData(self, pos, name, game_lead, year, week):
         data = self.getData(pos)
