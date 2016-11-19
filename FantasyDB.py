@@ -2,12 +2,15 @@ import csv
 from collections import OrderedDict, defaultdict, deque
 
 YEARS = range(2011,2017)
+TRAIN_YEARS = range(2011,2016)
+
 WEEKS = range(1,18)
 NFL_DIR = 'Data/nfl_stats/'
 ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
-FANDUEL_LIST = 'FanDuel-NFL-2016-11-13-16864-players-list.csv'
+FANDUEL_LIST = 'FanDuel-NFL-2016-11-20-16939-players-list.csv'
+EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5]
 
 class FantasyDB:
 
@@ -111,8 +114,34 @@ class FantasyDB:
             return prevGameData                             
         else:
             return [0.0 for x in xrange(len(self.getFeatureNames(pos)) * game_lead)]   
+    
+    def computeExpectation(self, pred):
+        return  sum([EXPECTATION_VALUES[i]*pred[i] for i in xrange(len(pred))])
 
-    def getTrainingExamples(self,pos, game_lead):        
+    def getClassLabel(self, fd_pts):
+        fd_pts = float(fd_pts)
+        if 0 <= fd_pts and fd_pts < 5:
+            return 0
+        if 5 <= fd_pts  and fd_pts < 10:
+            return 1
+        if 10 <= fd_pts  and fd_pts < 15:
+            return 2
+        if 15 <= fd_pts and fd_pts < 20:
+            return 3
+        return 4
+    
+    def getFDPointsFromLabel(self, label):
+        if label == 0:
+            return '0-5'
+        if label == 1:
+            return '5-10'
+        if label == 2:
+            return '10-15'
+        if label == 3:
+            return '15-20'
+        return '20+'
+
+    def getTrainingExamples(self,pos, game_lead, classification):        
         data = self.getData(pos)
         keys = self.getKeys(pos)
         training_X = []
@@ -120,7 +149,7 @@ class FantasyDB:
         #iterate by player to populate a queue of games played
         for name in data:
             game_deck = deque()
-            for i in YEARS:
+            for i in TRAIN_YEARS:
                 year = str(i)
                 for j in WEEKS:
                     week = str(j)
@@ -140,6 +169,8 @@ class FantasyDB:
                 while True:
                     new_training_X = []
                     new_training_Y = game_lead_deck[-1]['fd_pts'] 
+                    if classification:
+                        new_training_Y = self.getClassLabel(new_training_Y)
                     for i in xrange(game_lead + 1):
                         game = game_lead_deck[i]
                         year = game['year']
