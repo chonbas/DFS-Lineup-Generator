@@ -10,7 +10,7 @@ ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
 FANDUEL_LIST = 'FanDuel-NFL-2016-11-20-16939-players-list.csv'
-EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5]
+EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 25.0]
 
 class FantasyDB:
 
@@ -214,7 +214,7 @@ class FantasyDB:
     def getTeamData(self,team, year, pos, side_of_ball):
         team_data = self.teams[team][year][side_of_ball]
         data = []
-        if pos =='RB' or pos == 'QB':
+        if pos =='RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
             for key in self.getKeys('RUN'):
                 data.append(float(team_data['Run'][key].strip('%')))
         if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
@@ -255,7 +255,7 @@ class FantasyDB:
                 if key == 'year':
                     continue
                 if key == 'team':
-                    if pos == 'RB' or pos == 'QB':
+                    if pos == 'RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
                         features += team_run_keys
                     if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
                         features += team_pass_keys
@@ -263,11 +263,11 @@ class FantasyDB:
                         features += team_def_keys
                     else:
                         features += team_off_keys
-                    if pos == 'PK':
-                        features += team_eff_keys
+                    # if pos == 'PK':
+                    features += team_eff_keys
                     continue
                 if key == 'opp':
-                    if pos == 'RB' or pos == 'QB':
+                    if pos == 'RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
                         features += opp_run_keys
                     if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
                         features += opp_pass_keys

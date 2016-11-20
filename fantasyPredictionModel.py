@@ -16,13 +16,13 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_selection import SelectKBest, chi2
 
+#  
+POSITIONS = ['RB', 'WR', 'TE','QB', 'PK', 'Def']
 
-POSITIONS = ['RB', 'WR', 'TE', 'QB', 'PK', 'Def']
-
-RB_PARAMS = {'n_estimators':100, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
-WR_PARAMS = {'n_estimators':50, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
+RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':2} #0.61-0.62 acc 
+WR_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':6}
 TE_PARAMS = {'n_estimators':100, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
-QB_PARAMS = {'n_estimators':100, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
+QB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':2}
 PK_PARAMS = {'n_estimators':50, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
 DEF_PARAMS = {'n_estimators':50, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
 
@@ -32,7 +32,7 @@ CURRENT_YEAR = '2016'
 
 PREDICTIONS_DIR = 'Predictions/Week'
 OUTPUT_FIELDS_REGRESSION = ['name', 'pos', 'team', 'prediction', 'salary']
-OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','prob_0_5', 'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20+', 'salary']
+OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','prob_0_5', 'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20+']
 
 
 class FantasyPredictionModel:
@@ -43,6 +43,7 @@ class FantasyPredictionModel:
         self.WEEK = target_week
         self.classification = classification
         self.models = {}
+        self.accuracies = {}
     
 
     def getLearner(self, pos):
@@ -50,12 +51,15 @@ class FantasyPredictionModel:
             return RandomForestClassifier(n_estimators = POS_PARAMS[pos]['n_estimators'],
                                         max_depth = POS_PARAMS[pos]['max_depth'],
                                         max_features= POS_PARAMS[pos]['max_features'], 
-                                        min_samples_split=POS_PARAMS[pos]['min_samples_split'])
+                                        min_samples_split=POS_PARAMS[pos]['min_samples_split'],
+                                        class_weight={0:0.7},
+                                        n_jobs=-1)
         else:
             return RandomForestRegressor(n_estimators = POS_PARAMS[pos]['n_estimators'],
                                         max_depth = POS_PARAMS[pos]['max_depth'],
                                         max_features= POS_PARAMS[pos]['max_features'], 
-                                        min_samples_split=POS_PARAMS[pos]['min_samples_split'])
+                                        min_samples_split=POS_PARAMS[pos]['min_samples_split'],
+                                        n_jobs=-1)
 
     def getTrainData(self, pos):
         raw_x,raw_y = self.db.getTrainingExamples(pos,self.GAME_LEAD, self.classification)
@@ -83,9 +87,16 @@ class FantasyPredictionModel:
             preds = learner.predict(data_test)
 
             if self.classification:
-                self.evaluateClassificationResults(target_test, preds, True)
+                self.accuracies[pos] = self.evaluateClassificationResults(target_test, preds, True)
             else:
-                self.evaluateRegressionResults(target_test, preds, True)
+                self.accuracies[pos] = self.evaluateRegressionResults(target_test, preds, True)
+        for pos in POSITIONS:
+            if self.classification:
+                print("Accuracy for %s is : %f") %(pos, self.accuracies[pos])
+            else:
+                break
+                # print("Errors for %s:") %(pos)
+                # print(self.accuracies[pos])
 
     def evaluateClassificationResults(self, target_true,target_predicted, verbose_flag):
         print("-----------------------Evaluation---------------------------")
@@ -104,6 +115,12 @@ class FantasyPredictionModel:
     
     def evaluateRegressionResults(self, target_true, target_predicted, verbose_flag):
         print("-----------------------Evaluation---------------------------")
+        errors = {'mean_absolute_error':mean_absolute_error(target_true, target_predicted, multioutput='uniform_average'),
+                  'mean_squared_error':mean_squared_error(target_true, target_predicted, multioutput='uniform_average'), 
+                  'explained_variance_score':explained_variance_score(target_true, target_predicted, multioutput='uniform_average')}
+        for key in errors:
+            print("%s : %f") %(key, errors[key])
+        return errors
 
     def predict(self):
         for pos in POSITIONS:
@@ -112,7 +129,7 @@ class FantasyPredictionModel:
                 model = self.models[pos]
                 if self.classification:
                     preds = model.predict_proba(data)
-                    results = [{'name':names[i], 'pos':pos, 'team':teams[i],
+                    results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
                                  'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
                                  'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
                                  'prob_20+':preds[i][4], 
