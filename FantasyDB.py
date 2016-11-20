@@ -263,8 +263,8 @@ class FantasyDB:
                         features += team_def_keys
                     else:
                         features += team_off_keys
-                    # if pos == 'PK':
-                    features += team_eff_keys
+                    if pos == 'PK':
+                        features += team_eff_keys
                     continue
                 if key == 'opp':
                     if pos == 'RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
