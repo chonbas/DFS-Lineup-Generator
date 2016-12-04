@@ -10,7 +10,7 @@ ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
 FANDUEL_LIST = 'FanDuel-NFL-2016-11-20-16939-players-list.csv'
-EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 25.0]
+EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5, 27.5]
 
 class FantasyDB:
 
@@ -128,7 +128,9 @@ class FantasyDB:
             return 2
         if 15 <= fd_pts and fd_pts < 20:
             return 3
-        return 4
+        if 20 <= fd_pts and fd_pts < 25:
+            return 4
+        return 5
     
     def getFDPointsFromLabel(self, label):
         if label == 0:
@@ -139,7 +141,9 @@ class FantasyDB:
             return '10-15'
         if label == 3:
             return '15-20'
-        return '20+'
+        if label == 4:
+            return '20-25'
+        return '25+'
 
     def getTrainingExamples(self,pos, game_lead, classification):        
         data = self.getData(pos)

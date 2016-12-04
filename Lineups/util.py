@@ -21,7 +21,9 @@ class ValueIteration(MDPAlgorithm):
     The ValueIteration class is a subclass of util.MDPAlgorithm (see util.py).
     '''
     def solve(self, mdp, epsilon=0.001):
+        print("Computing states...")
         mdp.computeStates()
+        print("Done computing states...")
         def computeQ(mdp, V, state, action):
             # Return Q(state, action) based on V(state).
             return sum(prob * (reward + mdp.discount() * V[newState]) \
@@ -79,13 +81,14 @@ class MDP:
         queue.append(self.startState())
         while len(queue) > 0:
             state = queue.pop()
+            # print len(self.states)
             for action in self.actions(state):
                 for newState, prob, reward in self.succAndProbReward(state, action):
                     if newState not in self.states:
                         self.states.add(newState)
                         queue.append(newState)
-        # print "%d states" % len(self.states)
-        # print self.states
+        print "%d states" % len(self.states)
+        print self.states
 
 ############################################################
 

@@ -16,10 +16,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_selection import SelectKBest, chi2
 
-#  
+
 POSITIONS = ['RB', 'WR', 'TE','QB', 'PK', 'Def']
 
-RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':2} #0.61-0.62 acc 
+RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':2} 
 WR_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':6}
 TE_PARAMS = {'n_estimators':100, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
 QB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':2}
@@ -32,7 +32,7 @@ CURRENT_YEAR = '2016'
 
 PREDICTIONS_DIR = 'Predictions/Week'
 OUTPUT_FIELDS_REGRESSION = ['name', 'pos', 'team', 'prediction', 'salary']
-OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','prob_0_5', 'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20+']
+OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','prob_0_5', 'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20_25','prob_25+']
 
 
 class FantasyPredictionModel:
@@ -132,7 +132,8 @@ class FantasyPredictionModel:
                     results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
                                  'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
                                  'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
-                                 'prob_20+':preds[i][4], 
+                                 'prob_20_25':preds[i][4],
+                                 'prob_25+':preds[i][5], 
                                  'expectation': self.db.computeExpectation(preds[i])} \
                                  for i in xrange(len(preds))]
                     
