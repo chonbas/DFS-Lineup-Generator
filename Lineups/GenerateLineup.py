@@ -1,7 +1,7 @@
 from FantasyMDP import FantasyMDP
 from FantasyCSPConstructor import FantasyCSPConstructor
 from util import ValueIteration
-from utilCSP import BacktrackingSearch
+from BacktrackingSearch import BacktrackingSearch
 
 
 # #Note: really slow. Would not recommend.
@@ -10,7 +10,7 @@ from utilCSP import BacktrackingSearch
 # alg.solve(mdp, .001)
 
 
-cspConstructor = FantasyCSPConstructor()
+cspConstructor = FantasyCSPConstructor(week=11,year=2016)
 csp = cspConstructor.get_csp()
 alg = BacktrackingSearch()
 print "---------------------- Ready to solve --------------------------\n"
