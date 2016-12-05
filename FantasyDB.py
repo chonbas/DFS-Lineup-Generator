@@ -29,30 +29,29 @@ class FantasyDB:
         names = []
         salaries = []
         teams = []
-        # "Id","Position","First Name","Last Name","FPPG","Played","Salary","Game","Team","Opponent","Injury Indicator","Injury Details","",""
+        # 0    1      2   3   4    5   6   7
+        # Year,Week,Name,Pos,Team,Opp,H_A,Salary
         with open(FANDUEL_DIR + 'FanDuel-NFL-2016-Week-' + str(week) + '.csv') as fd_list:
             fd_list.next() # skip header
             fdreader = csv.reader(fd_list, delimiter=',', quotechar='"')
             for line in fdreader:
-                position = line[1].replace('"','')
-                if position == 'D':
-                    position = 'Def'
-                if position == 'K':
-                    position = 'PK'
+                position = line[3]
                 if position != pos:
                     continue
-                name = line[2].replace('"','') + ' ' + line[3].replace('"','')
-                salary = int(line[6].replace('"',''))
-                team = self.fixTeamName(line[8].replace('"','').upper())
+                name = line[2]
+                if line[7] == '':
+                    salary = 0
+                else:
+                    salary = int(line[7])
+                team = line[4]
+                if team == '':
+                    continue
                 if pos == 'Def':
                     name = team
-                opp = self.fixTeamName(line[8].replace('"','').upper())
-                game = line[7]
-                home_team = game[game.find('@') + 1:]
-                if team == home_team:
-                    h_a = 1
-                else:
-                    h_a = 0
+                opp = line[5]
+                if opp == '-' or opp=='':
+                    continue
+                h_a = int(line[6])
                 data_point = self.fetchPrevGameData(pos, name, game_lead, year, week)
                 for key in keys:
                     if key == 'team':
