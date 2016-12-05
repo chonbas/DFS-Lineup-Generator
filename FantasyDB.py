@@ -29,6 +29,7 @@ class FantasyDB:
         names = []
         salaries = []
         teams = []
+        # "Id","Position","First Name","Last Name","FPPG","Played","Salary","Game","Team","Opponent","Injury Indicator","Injury Details","",""
         with open(FANDUEL_DIR + 'FanDuel-NFL-2016-Week-' + str(week) + '.csv') as fd_list:
             fd_list.next() # skip header
             fdreader = csv.reader(fd_list, delimiter=',', quotechar='"')
@@ -40,13 +41,13 @@ class FantasyDB:
                     position = 'PK'
                 if position != pos:
                     continue
-                name = line[2].replace('"','') + ' ' + line[4].replace('"','')
-                salary = int(line[7].replace('"',''))
-                team = self.fixTeamName(line[9].replace('"','').upper())
+                name = line[2].replace('"','') + ' ' + line[3].replace('"','')
+                salary = int(line[6].replace('"',''))
+                team = self.fixTeamName(line[8].replace('"','').upper())
                 if pos == 'Def':
                     name = team
-                opp = self.fixTeamName(line[10].replace('"','').upper())
-                game = line[8]
+                opp = self.fixTeamName(line[8].replace('"','').upper())
+                game = line[7]
                 home_team = game[game.find('@') + 1:]
                 if team == home_team:
                     h_a = 1
