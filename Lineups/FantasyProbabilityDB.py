@@ -2,20 +2,18 @@ import csv
 from collections import OrderedDict
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-MAX_POS = {'QB':2, 'WR':3, 'RB':3, 'TE':1, 'PK':1, 'Def':1}
+MAX_POS = {'QB':5, 'WR':5, 'RB':5, 'TE':5, 'PK':5, 'Def':5}
 
 POS_DIR = '../Predictions/'
 
 YEAR = 2016
-WEEK = 10
 
 class LineupProbDB:
-    def __init__(self, hashable=True):
-        print MAX_POS
+    def __init__(self, week):
         self.data = OrderedDict()
         self.teams = set()
         for pos in POSITIONS:
-            self.data[pos] = self.loadPosData(pos, hashable)
+            self.data[pos] = self.loadPosData(pos, week)
         self.teams = sorted(list(self.teams))
 
     def getPosData(self,pos):
@@ -34,9 +32,9 @@ class LineupProbDB:
         return None, None, None
 
     # name,pos,team,expectation,salary,prob_0_5,prob_5_10,prob_10_15,prob_15_20,prob_20+
-    def loadPosData(self, pos, hashable):
+    def loadPosData(self, pos, week):
         pos_data = OrderedDict()
-        file_path = POS_DIR + 'Week' + str(WEEK) + '/classification_' + pos + '_preds.csv'
+        file_path = POS_DIR + 'Week' + str(week) + '/classification_' + pos + '_preds.csv'
         with open(file_path,'rb') as data:
             data.next()
             reader = csv.reader(data, delimiter=',', quotechar='"')

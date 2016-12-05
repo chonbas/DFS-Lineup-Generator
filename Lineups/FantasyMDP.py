@@ -1,5 +1,6 @@
 from FantasyProbabilityDB import LineupProbDB
 import util
+import argparse
 from collections import defaultdict
 
 
@@ -16,10 +17,10 @@ EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22
 MAX_ONE_TEAM = 4
 
 class FantasyMDP(util.MDP):
-    def __init__(self):
-        self.db = LineupProbDB()
-        # self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
-        self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]))
+    def __init__(self, week):
+        self.db = LineupProbDB(week)
+        self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
+        # self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]))
 
     # Return the start state.
     # Look at this function to learn about the state representation.
@@ -38,20 +39,15 @@ class FantasyMDP(util.MDP):
         current_lineup = state[2]
         current_teams = state[3]
 
-        if current_salary > MAX_SALARY or (final and current_salary == 0):
+        if final and current_salary == 0:
             return ['Quit']
         
-        if final:
-            return ['End']
-        
-        actions = []
         for pos in POSITIONS:
             if len(current_lineup[POS_INDECES[pos]]) < MAX_POSITIONS[pos]:
                 full_actions = self.db.getPosData(pos)
                 current_players = current_lineup[POS_INDECES[pos]]
-                actions = [k for k in full_actions if k not in current_players]
-                break
-        return actions
+                return [k for k in full_actions if k not in current_players]
+        return ['End']
 
     def generateSuccessors(self, current_lineup):
         list_lineup = []
@@ -102,14 +98,14 @@ class FantasyMDP(util.MDP):
     # When the probability is 0 for a particular transition, don't include that 
     # in the list returned by succAndProbReward.
     def succAndProbReward(self, state, action):
-        # final, current_salary, current_lineup, current_teams, current_prod = state
-        final, current_salary, current_lineup, current_teams = state
+        final, current_salary, current_lineup, current_teams, current_prod = state
+        # final, current_salary, current_lineup, current_teams = state
         
         if action == 'Quit':
             return [(state, 1.0, 0.0)]
 
         if action == 'End':
-            return [((True, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))])), prob, prod) \
+            return [((True, MAX_SALARY, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), prod), prob, prod) \
                         for prob, prod in self.generateSuccessors(current_lineup)]
 
         team, salary, pos = self.db.getPlayerTeamSalaryPos(action)
@@ -124,9 +120,9 @@ class FantasyMDP(util.MDP):
 
         #If over salary cap or over team limit-- Lose game
         if new_salary > MAX_SALARY or current_teams[team_index] == MAX_ONE_TEAM:
-            return [ ( (True, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))])) , 1 , 0 )]
+            return [ ( (True, 0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0) , 1 , -1000 )]
 
-        return [ ( (False, new_salary, current_lineup, current_teams), 1 , 0 )]
+        return [ ( (False, new_salary, current_lineup, current_teams, 0.0), 1 , 0 )]
         
 
     def discount(self):
@@ -136,22 +132,30 @@ class FantasyMDP(util.MDP):
         roster = {'QB':[], 'RB': [], 'WR': [], 'TE': [], 'PK':[], 'Def':[]}
         state = self.start_state
         for i in xrange(9): #9 positions to assign
-            final, current_salary, current_lineup, current_teams = state
-            action = policy[old_state]
+            final, current_salary, current_lineup, current_teams, current_prod = state
+            action = policy[state]
             team, salary, pos = self.db.getPlayerTeamSalaryPos(action)
             new_salary = salary + current_salary
             current_lineup = self.addPlayerToLineUp(current_lineup, action, pos)
             current_teams = self.setTeamCount(current_teams, team)
-            roster[pos].append(action)
-            state = (False, new_salary, current_lineup, current_teams)
-        for pos, player_group in roster.iteritems:
+            roster[pos].append((action, team, salary))
+            state = (False, new_salary, current_lineup, current_teams, 0.0)
+        roster_cost = 0
+        for pos, player_group in roster.iteritems():
             print(pos)
             for player in player_group:
                 print(player)
+                roster_cost += player[2]
+        print("Total Roster Cost %d") %(roster_cost)
+                
 
 
 if __name__ == '__main__':
-    mdp = FantasyMDP()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
+    args = parser.parse_args()
+
+    mdp = FantasyMDP(args.week)
     valIter = util.ValueIteration()
     valIter.solve(mdp)
     vi_policy = valIter.pi

@@ -9,7 +9,7 @@ NFL_DIR = 'Data/nfl_stats/'
 ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
-FANDUEL_LIST = 'FanDuel-NFL-2016-11-20-16939-players-list.csv'
+
 EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5, 27.5]
 
 class FantasyDB:
@@ -29,7 +29,7 @@ class FantasyDB:
         names = []
         salaries = []
         teams = []
-        with open(FANDUEL_DIR + FANDUEL_LIST) as fd_list:
+        with open(FANDUEL_DIR + 'FanDuel-NFL-2016-Week-' + str(week) + '.csv') as fd_list:
             fd_list.next() # skip header
             fdreader = csv.reader(fd_list, delimiter=',', quotechar='"')
             for line in fdreader:
@@ -216,6 +216,7 @@ class FantasyDB:
         return training_X, training_Y
 
     def getTeamData(self,team, year, pos, side_of_ball):
+        # print(team, year, pos, side_of_ball)
         team_data = self.teams[team][year][side_of_ball]
         data = []
         if pos =='RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
