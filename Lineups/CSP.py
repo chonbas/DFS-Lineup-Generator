@@ -75,9 +75,9 @@ class CSP:
         self.maxSalaries = max_salaries
 
     def is_temp_sum_reasonable(self, assignment, prop_var, prop_val):
-        minSalary = 0;
-        maxSalary = 0;
-        unspecified = 0;
+        minSalary = 0
+        maxSalary = 0
+        unspecified = 0
         if self.verbose:
             print "---------- checking min sum so far ------------"
         for var in self.variables:
