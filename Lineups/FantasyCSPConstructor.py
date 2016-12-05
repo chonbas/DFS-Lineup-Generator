@@ -101,17 +101,6 @@ class FantasyCSPConstructor():
 
 
 
-    def print_players(self, players):
-        totalPts = 0
-        totalSalary = 0
-        for (pos, j) in players.keys():
-            (name, salary) = players[(pos,j)]
-            print name, "\t", pos, "\t", self.db.data[pos][name], "\n"
-            totalPts += self.db.data[pos][name][self.db.pts]
-            totalSalary += self.db.data[pos][name][self.db.salary]
-        print "total points expected: ", totalPts
-        print "total salary used: ", totalSalary
-
 
 
 
