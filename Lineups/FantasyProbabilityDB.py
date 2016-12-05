@@ -2,6 +2,8 @@ import csv
 from collections import OrderedDict
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
+MAX_POS = {'QB':2, 'WR':5, 'RB':4, 'TE':2, 'PK':2, 'Def':2}
+
 POS_DIR = '../Predictions/'
 
 YEAR = 2016
@@ -9,12 +11,11 @@ WEEK = 10
 
 class LineupProbDB:
     def __init__(self, hashable=True):
-        print POSITIONS
+        print MAX_POS
         self.data = OrderedDict()
         self.teams = set()
         for pos in POSITIONS:
             self.data[pos] = self.loadPosData(pos, hashable)
-            print len(self.data[pos])
         self.teams = sorted(list(self.teams))
 
     def getPosData(self,pos):
@@ -23,8 +24,14 @@ class LineupProbDB:
     def getPlayerData(self, player):
         for pos in POSITIONS:
             if player in self.data[pos]:
-                return self.data[pos][player], pos
-        return None, None
+                return self.data[pos][player]
+        return None
+
+    def getPlayerTeamSalaryPos(self, player):
+        for pos in POSITIONS:
+            if player in self.data[pos]:
+                return self.data[pos][player][0], self.data[pos][player][2], pos
+        return None, None, None
 
     # name,pos,team,expectation,salary,prob_0_5,prob_5_10,prob_10_15,prob_15_20,prob_20+
     def loadPosData(self, pos, hashable):
@@ -47,17 +54,9 @@ class LineupProbDB:
                 prob_20_25 = float(line[9])
                 prob_25 = float(line[10])
 
-                if pos == 'QB' and expected_pts < 17:
+                if len(pos_data) == MAX_POS[pos]:
                     continue
-                if (pos == 'RB' or pos == 'WR') and expected_pts < 11:
-                    continue
-                if pos == 'TE' and expected_pts < 9:
-                    continue
-                if pos == 'PK' and expected_pts < 9.4:
-                    continue
-                if pos == 'Def' and expected_pts < 11:
-                    continue
-                    
+
                 entry = (team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25)
                 pos_data[name] = entry
 

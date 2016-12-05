@@ -88,7 +88,7 @@ class MDP:
                         self.states.add(newState)
                         queue.append(newState)
         print "%d states" % len(self.states)
-        print self.states
+        # print self.states
 
 ############################################################
 
