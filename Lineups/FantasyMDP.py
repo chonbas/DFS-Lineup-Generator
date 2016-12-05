@@ -54,48 +54,30 @@ class FantasyMDP(util.MDP):
         return actions
 
     def generateSuccessors(self, current_lineup):
-        def recurse(lineup, current_prob, current_prod):
-            if len(lineup) == 0:
-                return [(current_prob, current_prod)]
-            
-            player = lineup[-1]
-
-            player_data = self.db.getPlayerData(player)
-
-            team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
-
-            results = []
-            # prob_0_10 = prob_0_5 + prob_5_10
-            # prob_10_20 = prob_10_15 + prob_15_20
-            # prob_20_30 = prob_20_25 + prob_25
-            # expected_0_10 = prob_0_5 * EXPECTED_VALUES['0_5'] + prob_5_10 * EXPECTED_VALUES['5_10']
-            # expected_10_20 = prob_10_15 * EXPECTED_VALUES['10_15'] + prob_15_20 * EXPECTED_VALUES['15_20']
-            # expected_20_30 = prob_20_25 * EXPECTED_VALUES['20_25'] + prob_25 * EXPECTED_VALUES['25+']
-
-            # results += recurse(lineup[:-1], current_prob * prob_0_10, current_prod + expected_0_10)
-            # results += recurse(lineup[:-1], current_prob * prob_10_20, current_prod + expected_10_20)
-            # results += recurse(lineup[:-1], current_prob * prob_20_30, current_prod + expected_20_30)
-
-            results += recurse(lineup[:-1], current_prob * prob_0_5, current_prod + EXPECTED_VALUES['0_5'])
-            results += recurse(lineup[:-1], current_prob * prob_5_10, current_prod + EXPECTED_VALUES['5_10'])
-            results += recurse(lineup[:-1], current_prob * prob_10_15, current_prod + EXPECTED_VALUES['10_15'])
-            results += recurse(lineup[:-1], current_prob * prob_15_20, current_prod + EXPECTED_VALUES['15_20'])
-            results += recurse(lineup[:-1], current_prob * prob_20_25, current_prod + EXPECTED_VALUES['20_25'])
-            results += recurse(lineup[:-1], current_prob * prob_25, current_prod + EXPECTED_VALUES['25+'])
-            return results
-            
         list_lineup = []
         for position_group in current_lineup:
             for player in position_group:
                 list_lineup.append(player)
         
-        results =  recurse(list_lineup, 1.0, 0.0)
-        collapsed_prods_probs = defaultdict(float)
-        for prob, prod in results:
-            collapsed_prods_probs[prod] += prob
-        
-        results = [(v,k) for k,v in collapsed_prods_probs.iteritems()]
+        partial_sum_probs = defaultdict(float)
+        for player in list_lineup:
+            player_data = self.db.getPlayerData(player)
+            team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
+            
+            next_partial_sum_probs = defaultdict(float)
+            for prob in partial_sum_probs:
+                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['0_5']] += prob * prob_0_5
+                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['5_10']] += prob * prob_5_10
+                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['10_15']] += prob * prob_10_15
+                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['15_20']] += prob * prob_15_20
+                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['20_25']] += prob * prob_20_25
+                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['25+']] += prob * prob_25
+            partial_sum_probs = next_partial_sum_probs
+
+
+        results = [(v,k) for k,v in partial_sum_probs.iteritems()]
         return results
+
 
     def addPlayerToLineUp(self, current_lineup, action, pos):
         current_lineup = list(current_lineup)
