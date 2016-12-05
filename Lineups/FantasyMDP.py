@@ -1,6 +1,5 @@
 from FantasyProbabilityDB import LineupProbDB
-import util
-import argparse
+import util, csv, argparse
 from collections import defaultdict
 
 
@@ -13,12 +12,15 @@ POS_INDECES = {'QB':0, 'WR':1, 'RB':2, 'TE':3, 'PK':4, 'Def':5}
 MAX_POSITIONS = {'QB':1, 'WR':3, 'RB':2, 'TE':1, 'PK':1, 'Def':1}
 START_LINEUP = [(), (), (), (), (), ()]
 
+
 EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25+':27.5}
 MAX_ONE_TEAM = 4
-
+OUTPATH = 'MDP/Week'
+OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
 class FantasyMDP(util.MDP):
     def __init__(self, week):
         self.db = LineupProbDB(week)
+        self.week = week
         self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
         # self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]))
 
@@ -128,8 +130,9 @@ class FantasyMDP(util.MDP):
     def discount(self):
         return 1
 
-    def rebuildRoster(self, policy):
+    def rebuildRoster(self, policy, values):
         roster = {'QB':[], 'RB': [], 'WR': [], 'TE': [], 'PK':[], 'Def':[]}
+        roster_points = 0.0
         state = self.start_state
         for i in xrange(9): #9 positions to assign
             final, current_salary, current_lineup, current_teams, current_prod = state
@@ -138,15 +141,26 @@ class FantasyMDP(util.MDP):
             new_salary = salary + current_salary
             current_lineup = self.addPlayerToLineUp(current_lineup, action, pos)
             current_teams = self.setTeamCount(current_teams, team)
-            roster[pos].append((action, team, salary))
+            player_data = self.db.getPlayerData(action)
+            team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
+            roster[pos].append((action, team, salary, expected_pts))
             state = (False, new_salary, current_lineup, current_teams, 0.0)
+
+            roster_points += expected_pts
         roster_cost = 0
-        for pos, player_group in roster.iteritems():
-            print(pos)
-            for player in player_group:
-                print(player)
-                roster_cost += player[2]
+        with open(OUTPATH+str(self.week)+'.csv','wb') as outfile:
+            writer = csv.DictWriter(outfile , fieldnames=OUTFIELDNAMES)
+            writer.writeheader()
+            for pos, player_group in roster.iteritems():
+                print(pos)
+                for i in xrange(len(player_group)):
+                    player = player_group[i]
+                    print(str(i+1) + "." + player[0] + "-" + player[1] + "-" + str(player[2]) +"-" + str(player[3]))
+                    roster_cost += player[2]
+                    row_entry = {"Year":2016, "Week":self.week, "Name":player[0], "Position":pos, "Salary":player[2], "Predicted points":player[3]}
+                    writer.writerow(row_entry)
         print("Total Roster Cost %d") %(roster_cost)
+        print("Total Roster Production %f") %(roster_points)
                 
 
 
@@ -159,4 +173,5 @@ if __name__ == '__main__':
     valIter = util.ValueIteration()
     valIter.solve(mdp)
     vi_policy = valIter.pi
-    mdp.rebuildRoster(vi_policy)
+    values = valIter.V
+    mdp.rebuildRoster(vi_policy, values)

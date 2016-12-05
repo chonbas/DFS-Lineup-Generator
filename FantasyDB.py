@@ -44,10 +44,12 @@ class FantasyDB:
                 else:
                     salary = int(line[7])
                 team = line[4]
+                if team == '':
+                    continue
                 if pos == 'Def':
                     name = team
                 opp = line[5]
-                if opp == '-':
+                if opp == '-' or opp=='':
                     continue
                 h_a = int(line[6])
                 data_point = self.fetchPrevGameData(pos, name, game_lead, year, week)

@@ -42,7 +42,6 @@ class ValueIteration(MDPAlgorithm):
             newV = {}
             for state in mdp.states:
                 newV[state] = max(computeQ(mdp, V, state, action) for action in mdp.actions(state))
-                
             numIters += 1
             if max(abs(V[state] - newV[state]) for state in mdp.states) < epsilon:
                 V = newV
@@ -54,6 +53,7 @@ class ValueIteration(MDPAlgorithm):
         print "ValueIteration: %d iterations" % numIters
         self.pi = pi
         self.V = V
+
 
 # An abstract class representing a Markov Decision Process (MDP).
 class MDP:
