@@ -168,10 +168,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
     args = parser.parse_args()
-
-    mdp = FantasyMDP(args.week)
-    valIter = util.ValueIteration()
-    valIter.solve(mdp)
-    vi_policy = valIter.pi
-    values = valIter.V
-    mdp.rebuildRoster(vi_policy, values)
+    for week in xrange(3, 14):
+        mdp = FantasyMDP(week)
+        valIter = util.ValueIteration()
+        valIter.solve(mdp)
+        vi_policy = valIter.pi
+        values = valIter.V
+        mdp.rebuildRoster(vi_policy, values)
