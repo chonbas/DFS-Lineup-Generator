@@ -2,7 +2,7 @@ import csv
 from collections import OrderedDict
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-MAX_POS = {'QB':2, 'WR':5, 'RB':4, 'TE':2, 'PK':2, 'Def':2}
+MAX_POS = {'QB':2, 'WR':3, 'RB':3, 'TE':1, 'PK':1, 'Def':1}
 
 POS_DIR = '../Predictions/'
 

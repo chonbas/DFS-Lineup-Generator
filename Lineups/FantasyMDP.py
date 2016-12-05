@@ -18,8 +18,8 @@ MAX_ONE_TEAM = 4
 class FantasyMDP(util.MDP):
     def __init__(self):
         self.db = LineupProbDB()
-        self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]))
         # self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
+        self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]))
 
     # Return the start state.
     # Look at this function to learn about the state representation.
@@ -38,9 +38,13 @@ class FantasyMDP(util.MDP):
         current_lineup = state[2]
         current_teams = state[3]
 
-        if current_salary > MAX_SALARY or final:
+        if current_salary > MAX_SALARY or (final and current_salary == 0):
+            return ['Quit']
+        
+        if final:
             return ['End']
         
+        actions = []
         for pos in POSITIONS:
             if len(current_lineup[POS_INDECES[pos]]) < MAX_POSITIONS[pos]:
                 full_actions = self.db.getPosData(pos)
@@ -61,6 +65,16 @@ class FantasyMDP(util.MDP):
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
 
             results = []
+            # prob_0_10 = prob_0_5 + prob_5_10
+            # prob_10_20 = prob_10_15 + prob_15_20
+            # prob_20_30 = prob_20_25 + prob_25
+            # expected_0_10 = prob_0_5 * EXPECTED_VALUES['0_5'] + prob_5_10 * EXPECTED_VALUES['5_10']
+            # expected_10_20 = prob_10_15 * EXPECTED_VALUES['10_15'] + prob_15_20 * EXPECTED_VALUES['15_20']
+            # expected_20_30 = prob_20_25 * EXPECTED_VALUES['20_25'] + prob_25 * EXPECTED_VALUES['25+']
+
+            # results += recurse(lineup[:-1], current_prob * prob_0_10, current_prod + expected_0_10)
+            # results += recurse(lineup[:-1], current_prob * prob_10_20, current_prod + expected_10_20)
+            # results += recurse(lineup[:-1], current_prob * prob_20_30, current_prod + expected_20_30)
 
             results += recurse(lineup[:-1], current_prob * prob_0_5, current_prod + EXPECTED_VALUES['0_5'])
             results += recurse(lineup[:-1], current_prob * prob_5_10, current_prod + EXPECTED_VALUES['5_10'])
@@ -109,8 +123,12 @@ class FantasyMDP(util.MDP):
         # final, current_salary, current_lineup, current_teams, current_prod = state
         final, current_salary, current_lineup, current_teams = state
         
-        if action == 'End':
+        if action == 'Quit':
             return [(state, 1.0, 0.0)]
+
+        if action == 'End':
+            return [((True, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))])), prob, prod) \
+                        for prob, prod in self.generateSuccessors(current_lineup)]
 
         team, salary, pos = self.db.getPlayerTeamSalaryPos(action)
         
@@ -124,18 +142,10 @@ class FantasyMDP(util.MDP):
 
         #If over salary cap or over team limit-- Lose game
         if new_salary > MAX_SALARY or current_teams[team_index] == MAX_ONE_TEAM:
-            # return [ ( (True, new_salary, current_lineup, current_teams, 0.0) , 1 , 0 )]
             return [ ( (True, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))])) , 1 , 0 )]
-        if pos != 'Def':
-            # return [ ( (False, new_salary, current_lineup, current_teams, 0.0), 1 , 0 )]
-            return [ ( (False, new_salary, current_lineup, current_teams), 1 , 0 )]
 
-        successors = [((True, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))])), prob, prod) \
-                        for prob, prod in self.generateSuccessors(current_lineup)]
+        return [ ( (False, new_salary, current_lineup, current_teams), 1 , 0 )]
         
-        # successors = [((True, new_salary, current_lineup, current_teams, prod), prob, prod) \
-        #                 for prob, prod in self.generateSuccessors(current_lineup)]
-        return successors
 
     def discount(self):
         return 1
@@ -144,14 +154,13 @@ class FantasyMDP(util.MDP):
         roster = {'QB':[], 'RB': [], 'WR': [], 'TE': [], 'PK':[], 'Def':[]}
         state = self.start_state
         for i in xrange(9): #9 positions to assign
-            final, current_salary, current_lineup, current_teams, current_prod = state
+            final, current_salary, current_lineup, current_teams = state
             action = policy[old_state]
             team, salary, pos = self.db.getPlayerTeamSalaryPos(action)
             new_salary = salary + current_salary
             current_lineup = self.addPlayerToLineUp(current_lineup, action, pos)
             current_teams = self.setTeamCount(current_teams, team)
             roster[pos].append(action)
-            # state = (False, new_salary, current_lineup, current_teams, 0.0)
             state = (False, new_salary, current_lineup, current_teams)
         for pos, player_group in roster.iteritems:
             print(pos)
