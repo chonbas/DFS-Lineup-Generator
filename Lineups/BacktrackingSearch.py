@@ -107,8 +107,8 @@ class BacktrackingSearch():
         # Perform backtracking search.
         self.backtrack({}, 0, 1)
         # Print summary of solutions.
-        self.print_stats()
-        print "players: ", self.optimalAssignment
+        # self.print_stats()
+        # print "players: ", self.optimalAssignment
         return self.optimalAssignment
 
 
@@ -133,8 +133,8 @@ class BacktrackingSearch():
         #     return
         
         self.numOperations += 1
-        if self.numOperations % 1000 == 0:
-            print "progress: ", self.numOperations, self.numAssignments
+        # if self.numOperations % 1000 == 0:
+        #     print "progress: ", self.numOperations, self.numAssignments
         assert weight > 0
         if numAssigned == self.csp.numVars:
             if weight >= self.optimalWeight * .9:
@@ -146,9 +146,9 @@ class BacktrackingSearch():
                     newAssignment[var] = assignment[var]
                 self.allAssignments.append(newAssignment)
 
-                print self.get_salary(assignment)
-                print "\n Found assignment: ", weight,  self.optimalWeight, \
-                        math.log(weight,2), self.optimalPts, newAssignment
+                # print self.get_salary(assignment)
+                # print "\n Found assignment: ", weight,  self.optimalWeight, \
+                #         math.log(weight,2), self.optimalPts, newAssignment
             
                 if len(self.optimalAssignment) == 0 or weight >= self.optimalWeight:
                     if weight == self.optimalWeight:
