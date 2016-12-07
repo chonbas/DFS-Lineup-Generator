@@ -227,7 +227,7 @@ class FantasyDB:
                 data.append(float(team_data['Pass'][key].strip('%')))
         for key in self.getKeys('TEAM_' + side_of_ball):
             data.append(float(team_data['Team'][key].strip('%')))
-        if pos == 'PK':
+        if pos == 'PK' or pos =='QB':
             data += self.getTeamEfficiencyData(team, year)
         return data
 
@@ -268,7 +268,7 @@ class FantasyDB:
                         features += team_def_keys
                     else:
                         features += team_off_keys
-                    if pos == 'PK':
+                    if pos == 'PK' or pos == 'QB':
                         features += team_eff_keys
                     continue
                 if key == 'opp':
@@ -280,7 +280,7 @@ class FantasyDB:
                         features += opp_off_keys
                     else:
                         features += opp_def_keys
-                    if pos == 'PK':
+                    if pos == 'PK' or pos == 'QB':
                         features += opp_eff_keys
                     continue
                 features.append(key)

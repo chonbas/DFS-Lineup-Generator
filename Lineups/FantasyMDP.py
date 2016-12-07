@@ -15,14 +15,14 @@ START_LINEUP = [(), (), (), (), (), ()]
 
 EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25+':27.5}
 MAX_ONE_TEAM = 4
-OUTPATH = 'MDP/Week'
+OUTPATH = 'MDP/WeekGreed'
 OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
+
 class FantasyMDP(util.MDP):
     def __init__(self, week):
         self.db = LineupProbDB(week)
         self.week = week
         self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
-        # self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]))
 
     # Return the start state.
     # Look at this function to learn about the state representation.
@@ -57,23 +57,25 @@ class FantasyMDP(util.MDP):
             for player in position_group:
                 list_lineup.append(player)
         
-        partial_sum_probs = defaultdict(float)
+        # partial_sum_probs = defaultdict(float)
+        partial_sum_probs = {0:1}
+
         for player in list_lineup:
             player_data = self.db.getPlayerData(player)
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
             
             next_partial_sum_probs = defaultdict(float)
-            for prob in partial_sum_probs:
-                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['0_5']] += prob * prob_0_5
-                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['5_10']] += prob * prob_5_10
-                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['10_15']] += prob * prob_10_15
-                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['15_20']] += prob * prob_15_20
-                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['20_25']] += prob * prob_20_25
-                next_partial_sum_probs[partial_sum_probs[prob] + EXPECTED_VALUES['25+']] += prob * prob_25
+            for prod, prob in partial_sum_probs.iteritems():
+                next_partial_sum_probs[prod + EXPECTED_VALUES['0_5']] += prob * prob_0_5
+                next_partial_sum_probs[prod + EXPECTED_VALUES['5_10']] += prob * prob_5_10
+                next_partial_sum_probs[prod + EXPECTED_VALUES['10_15']] += prob * prob_10_15
+                next_partial_sum_probs[prod + EXPECTED_VALUES['15_20']] += prob * prob_15_20
+                next_partial_sum_probs[prod + EXPECTED_VALUES['20_25']] += prob * prob_20_25
+                next_partial_sum_probs[prod + EXPECTED_VALUES['25+']] += prob * prob_25
             partial_sum_probs = next_partial_sum_probs
 
 
-        results = [(v,k) for k,v in partial_sum_probs.iteritems()]
+        results = [(prob,prod) for prod, prob in partial_sum_probs.iteritems()]
         return results
 
 
@@ -101,7 +103,6 @@ class FantasyMDP(util.MDP):
     # in the list returned by succAndProbReward.
     def succAndProbReward(self, state, action):
         final, current_salary, current_lineup, current_teams, current_prod = state
-        # final, current_salary, current_lineup, current_teams = state
         
         if action == 'Quit':
             return [(state, 1.0, 0.0)]
@@ -122,7 +123,7 @@ class FantasyMDP(util.MDP):
 
         #If over salary cap or over team limit-- Lose game
         if new_salary > MAX_SALARY or current_teams[team_index] == MAX_ONE_TEAM:
-            return [ ( (True, 0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0) , 1 , -1000 )]
+            return [ ( (True, 0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0) , 1 , -10000 )]
 
         return [ ( (False, new_salary, current_lineup, current_teams, 0.0), 1 , 0 )]
         
@@ -134,6 +135,7 @@ class FantasyMDP(util.MDP):
         roster = {'QB':[], 'RB': [], 'WR': [], 'TE': [], 'PK':[], 'Def':[]}
         roster_points = 0.0
         state = self.start_state
+        test = 0.0
         for i in xrange(9): #9 positions to assign
             final, current_salary, current_lineup, current_teams, current_prod = state
             action = policy[state]
@@ -145,9 +147,12 @@ class FantasyMDP(util.MDP):
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
             roster[pos].append((action, team, salary, expected_pts))
             state = (False, new_salary, current_lineup, current_teams, 0.0)
-
             roster_points += expected_pts
+            if i == 8:
+                test = values[state]
         roster_cost = 0
+        print "Value?" 
+        print test
         with open(OUTPATH+str(self.week)+'.csv','wb') as outfile:
             writer = csv.DictWriter(outfile , fieldnames=OUTFIELDNAMES)
             writer.writeheader()
@@ -168,10 +173,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
     args = parser.parse_args()
-    for week in xrange(3, 14):
-        mdp = FantasyMDP(week)
-        valIter = util.ValueIteration()
-        valIter.solve(mdp)
-        vi_policy = valIter.pi
-        values = valIter.V
-        mdp.rebuildRoster(vi_policy, values)
+    # for week in xrange(3,15):
+    #     print("----------WEEK %d----------") %(week)
+    mdp = FantasyMDP(args.week)
+    valIter = util.ValueIteration()
+    valIter.solve(mdp)
+    vi_policy = valIter.pi
+    values = valIter.V
+    mdp.rebuildRoster(vi_policy, values)

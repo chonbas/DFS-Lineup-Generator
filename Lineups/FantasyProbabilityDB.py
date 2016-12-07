@@ -2,7 +2,7 @@ import csv
 from collections import OrderedDict
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-MAX_POS = {'QB':5, 'WR':5, 'RB':5, 'TE':5, 'PK':5, 'Def':5}
+MAX_POS = {'QB':7, 'WR':7, 'RB':10, 'TE':7, 'PK':5, 'Def':8}
 
 POS_DIR = '../Predictions/'
 
@@ -31,7 +31,7 @@ class LineupProbDB:
                 return self.data[pos][player][0], self.data[pos][player][2], pos
         return None, None, None
 
-    # name,pos,team,expectation,salary,prob_0_5,prob_5_10,prob_10_15,prob_15_20,prob_20+
+    
     def loadPosData(self, pos, week):
         pos_data = OrderedDict()
         file_path = POS_DIR + 'Week' + str(week) + '/classification_' + pos + '_preds.csv'

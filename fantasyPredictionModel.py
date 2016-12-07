@@ -5,6 +5,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
@@ -14,17 +15,33 @@ from sklearn.metrics import explained_variance_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
-from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPercentile
 
+POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
 
-POSITIONS = ['RB', 'WR', 'TE','QB', 'PK', 'Def']
+QB_PARAMS = {'n_estimators':1000, 'max_depth':55, 'max_features':'log2',
+            'min_samples_split':2,'feature_percent':32, 'gamelead':2,
+            'class_weights':{0:7},'bootstrap':True}
 
-RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':2} 
-WR_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':6}
-TE_PARAMS = {'n_estimators':100, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
-QB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2', 'min_samples_split':2}
-PK_PARAMS = {'n_estimators':50, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
-DEF_PARAMS = {'n_estimators':50, 'max_depth':5, 'max_features':'auto', 'min_samples_split':2}
+WR_PARAMS = {'n_estimators':1000, 'max_depth':10, 'max_features':'log2', 
+            'min_samples_split':2,'feature_percent':35, 'gamelead':2,
+            'class_weights':{4:1.6, 5:2}, 'bootstrap':False}
+
+RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
+            'min_samples_split':2,'feature_percent':31, 'gamelead':2,
+            'class_weights':{4:2, 5:2}, 'bootstrap':False}
+
+TE_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
+            'min_samples_split':2,'feature_percent':30, 'gamelead':2,
+            'class_weights':{0:7,4:2,5:3}, 'bootstrap':False}
+
+PK_PARAMS = {'n_estimators':700, 'max_depth':7, 'max_features':'log2',
+            'min_samples_split':2, 'feature_percent':35, 'gamelead':2,
+            'class_weights':None, 'bootstrap':False}
+
+DEF_PARAMS = {'n_estimators':500, 'max_depth':20, 'max_features':'log2',
+            'min_samples_split':2,'feature_percent':75, 'gamelead':3,
+            'class_weights':None, 'bootstrap':True}
 
 POS_PARAMS = {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
 
@@ -32,17 +49,18 @@ CURRENT_YEAR = '2016'
 
 PREDICTIONS_DIR = 'Predictions/Week'
 OUTPUT_FIELDS_REGRESSION = ['name', 'pos', 'team', 'prediction', 'salary']
-OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','prob_0_5', 'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20_25','prob_25+']
+OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','prob_0_5',
+                                'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20_25','prob_25+']
 
 
 class FantasyPredictionModel:
 
-    def __init__(self, gameLead, target_week, classification):
+    def __init__(self, target_week, classification):
         self.db = FantasyDB()      
-        self.GAME_LEAD = gameLead 
-        self.WEEK = target_week
+        self.week = target_week
         self.classification = classification
         self.models = {}
+        self.selectors = {}
         self.accuracies = {}
     
 
@@ -52,7 +70,9 @@ class FantasyPredictionModel:
                                         max_depth = POS_PARAMS[pos]['max_depth'],
                                         max_features= POS_PARAMS[pos]['max_features'], 
                                         min_samples_split=POS_PARAMS[pos]['min_samples_split'],
-                                        class_weight={0:0.7},
+                                        random_state=42,
+                                        class_weight=POS_PARAMS[pos]['class_weights'],
+                                        bootstrap=POS_PARAMS[pos]['bootstrap'],
                                         n_jobs=-1)
         else:
             return RandomForestRegressor(n_estimators = POS_PARAMS[pos]['n_estimators'],
@@ -61,8 +81,14 @@ class FantasyPredictionModel:
                                         min_samples_split=POS_PARAMS[pos]['min_samples_split'],
                                         n_jobs=-1)
 
+    def getFeatureSelector(self, pos):
+        if pos == 'PK':
+            return SelectPercentile(f_classif, percentile=POS_PARAMS[pos]['feature_percent'])
+                
+        return SelectPercentile(mutual_info_classif, percentile=POS_PARAMS[pos]['feature_percent'])
+
     def getTrainData(self, pos):
-        raw_x,raw_y = self.db.getTrainingExamples(pos,self.GAME_LEAD, self.classification)
+        raw_x,raw_y = self.db.getTrainingExamples(pos,POS_PARAMS[pos]['gamelead'], self.classification)
         data_X = np.array(raw_x, dtype='float64')
         data_Y = np.array(raw_y, dtype='float64')
         return data_X, data_Y
@@ -70,9 +96,17 @@ class FantasyPredictionModel:
     def train(self):
         for pos in POSITIONS:
             print("-----------------------Training %s Model---------------------") %(pos)
+
             data_X, data_Y = self.getTrainData(pos)
+
+            if self.classification:
+                selector = self.getFeatureSelector(pos)
+                data_X = selector.fit_transform(data_X, data_Y)
+                self.selectors[pos] = selector
+            
             learner = self.getLearner(pos)
             learner.fit(data_X, data_Y)
+
             self.models[pos] = learner
 
     def evaluate(self):
@@ -81,7 +115,12 @@ class FantasyPredictionModel:
             data_X, data_Y = self.getTrainData(pos)
             learner = self.getLearner(pos)
             data_train, data_test, target_train, target_test = train_test_split(data_X, data_Y, test_size=0.20, random_state=42)
-           
+            
+            if self.classification:
+                selector = self.getFeatureSelector(pos)
+                data_train = selector.fit_transform(data_train, target_train)
+                data_test = selector.transform(data_test)
+            
             learner.fit(data_train, target_train)
             
             preds = learner.predict(data_test)
@@ -124,10 +163,12 @@ class FantasyPredictionModel:
 
     def predict(self):
         for pos in POSITIONS:
-            data, names, salaries, teams = self.db.getPredictionPoints(pos, self.GAME_LEAD, CURRENT_YEAR, self.WEEK)
+            data, names, salaries, teams = self.db.getPredictionPoints(pos, POS_PARAMS[pos]['gamelead'], CURRENT_YEAR, self.week)
             if pos in self.models:
                 model = self.models[pos]
                 if self.classification:
+                    selector = self.selectors[pos]
+                    data = selector.transform(data)
                     preds = model.predict_proba(data)
                     results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
                                  'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
@@ -145,9 +186,9 @@ class FantasyPredictionModel:
                             for i in xrange(len(preds))]
                     results = sorted(results, key=lambda x: x['prediction'], reverse=True)
                 if self.classification:
-                    filepath = PREDICTIONS_DIR + str(self.WEEK) +"/classification_" + pos + "_preds.csv"
+                    filepath = PREDICTIONS_DIR + str(self.week) +"/classification_" + pos + "_preds.csv"
                 else:
-                    filepath = PREDICTIONS_DIR + str(self.WEEK) +"/regression_" + pos + "_preds.csv" 
+                    filepath = PREDICTIONS_DIR + str(self.week) +"/regression_" + pos + "_preds.csv" 
                 with open(filepath,'wb') as outfile:    
                     outfile.truncate()
                     if self.classification:    
@@ -164,12 +205,11 @@ class FantasyPredictionModel:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--classification", type=str, action="store", help="Classification flag? True/False", required=True)
-    parser.add_argument("--gamelead", type=int, action="store",help="Number of games before current week to load as training sample", default=3)
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
     parser.add_argument("--eval", type=str, action="store", help="Evaluate models? True/False")
     args = parser.parse_args()
 
-    fantasyModels = FantasyPredictionModel(args.gamelead, args.week, args.classification == 'True')
+    fantasyModels = FantasyPredictionModel(args.week, args.classification == 'True')
     if args.eval == "True":
         fantasyModels.evaluate()
     else:

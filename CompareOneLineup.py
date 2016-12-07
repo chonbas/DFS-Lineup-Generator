@@ -10,8 +10,8 @@ from FantasyDB import FantasyDB
 # alg = ValueIteration()
 # alg.solve(mdp, .001)
 
-LINEUP_FILE = 'Lineups/CSPLineup.csv'
-OUTPUT_FILE = '2016_12_CSPPredictionsVsActual.csv'
+LINEUP_FILE = 'Lineups/MDP/Week12.csv'
+OUTPUT_FILE = '2016_12_MDPPredictionsVsActual.csv'
 
 WEEK = "12"
 
