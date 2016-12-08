@@ -9,7 +9,7 @@ NFL_DIR = 'Data/nfl_stats/'
 ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
-
+FINAL_WEEK = 17
 EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5, 27.5]
 
 class FantasyDB:
@@ -42,7 +42,7 @@ class FantasyDB:
                 if line[7] == '':
                     salary = 0
                 else:
-                    salary = int(line[7])
+                    salary = float(line[7])
                 team = line[4]
                 if team == '':
                     continue
@@ -51,7 +51,7 @@ class FantasyDB:
                 opp = line[5]
                 if opp == '-' or opp=='':
                     continue
-                h_a = int(line[6])
+                h_a = float(line[6])
                 data_point = self.fetchPrevGameData(pos, name, game_lead, year, week)
                 for key in keys:
                     if key == 'team':
@@ -73,44 +73,55 @@ class FantasyDB:
                 salaries.append(salary)
                 teams.append(team)
         return data, names, salaries, teams
-        
+
+    def fetchGameDataWeekRange(self, pos, name, year, week_start, week_end):
+        prevGameData = []
+        data = self.getData(pos)
+        keys = self.getKeys(pos)        
+        year_data = data[name][year]
+        for week in xrange(week_start, week_end):
+            week_data = year_data[str(week)]
+            if week_data is None:
+                prevGameData += [0.0 for x in xrange(len(self.getFeatureNames(pos)))]
+                continue
+            for key in keys:
+                if key == 'year':
+                    continue
+                if key == 'team':
+                    if pos == 'Def':
+                        prevGameData += self.getTeamData(week_data[key], year, pos, 'DEF')
+                    else:
+                        prevGameData += self.getTeamData(week_data[key], year, pos, 'OFF')
+                    continue
+                if key == 'opp':
+                    if pos == 'Def':
+                        prevGameData += self.getTeamData(week_data[key], year, pos, 'OFF')
+                    else:
+                        prevGameData += self.getTeamData(week_data[key], year, pos, 'DEF')
+                    continue
+                if key == 'h_a':
+                    if week_data[key] == 'h':
+                        prevGameData.append(1)
+                    else:
+                        prevGameData.append(0)
+                    continue
+                if week_data[key] == '':
+                    prevGameData.append(0)
+                    continue
+                prevGameData.append(float(week_data[key]))
+        return prevGameData
+
     def fetchPrevGameData(self, pos, name, game_lead, year, week):
         data = self.getData(pos)
         if name in data:
             prevGameData = []
-            keys = self.getKeys(pos)        
-            year_data = data[name][year]
             week_start = week - game_lead
-            for week in xrange(week_start, week):
-                week_data = year_data[str(week)]
-                if week_data is None:
-                    prevGameData += [0.0 for x in xrange(len(self.getFeatureNames(pos)))]
-                    continue
-                for key in keys:
-                    if key == 'year':
-                        continue
-                    if key == 'team':
-                        if pos == 'Def':
-                            prevGameData += self.getTeamData(week_data[key], year, pos, 'DEF')
-                        else:
-                            prevGameData += self.getTeamData(week_data[key], year, pos, 'OFF')
-                        continue
-                    if key == 'opp':
-                        if pos == 'Def':
-                            prevGameData += self.getTeamData(week_data[key], year, pos, 'OFF')
-                        else:
-                            prevGameData += self.getTeamData(week_data[key], year, pos, 'DEF')
-                        continue
-                    if key == 'h_a':
-                        if week_data[key] == 'h':
-                            prevGameData.append(1)
-                        else:
-                            prevGameData.append(0)
-                        continue
-                    if week_data[key] == '':
-                        prevGameData.append(0)
-                        continue
-                    prevGameData.append(float(week_data[key]))
+            if week_start <= 0:
+                prev_year_week_start = FINAL_WEEK + week - game_lead
+                prev_year = str(int(year) - 1)
+                prevGameData += self.fetchGameDataWeekRange(pos, name, prev_year, prev_year_week_start, FINAL_WEEK + 1)
+                week_start = 1
+            prevGameData += self.fetchGameDataWeekRange(pos, name, year, week_start, week)
             return prevGameData                             
         else:
             return [0.0 for x in xrange(len(self.getFeatureNames(pos)) * game_lead)]   
@@ -225,8 +236,9 @@ class FantasyDB:
         if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
             for key in self.getKeys('PASS'):
                 data.append(float(team_data['Pass'][key].strip('%')))
+        # if (pos != 'QB' and side_of_ball != 'OFF'):
         for key in self.getKeys('TEAM_' + side_of_ball):
-            data.append(float(team_data['Team'][key].strip('%')))
+                data.append(float(team_data['Team'][key].strip('%')))
         if pos == 'PK' or pos =='QB':
             data += self.getTeamEfficiencyData(team, year)
         return data

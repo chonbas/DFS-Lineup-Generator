@@ -2,7 +2,7 @@ import csv
 from collections import OrderedDict
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-MAX_POS = {'QB':7, 'WR':7, 'RB':10, 'TE':7, 'PK':5, 'Def':8}
+MAX_POS = {'QB':7, 'WR':7, 'RB':8, 'TE':7, 'PK':5, 'Def':8}
 
 POS_DIR = '../Predictions/'
 
@@ -44,7 +44,7 @@ class LineupProbDB:
                 team = line[2]
                 self.teams.add(team)
                 expected_pts = float(line[3])
-                salary = int(line[4])
+                salary = float(line[4])
                 prob_0_5 = float(line[5])
                 prob_5_10 = float(line[6])
                 prob_10_15 = float(line[7])

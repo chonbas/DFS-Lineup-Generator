@@ -11,7 +11,7 @@ from FantasyDB import FantasyDB
 # alg.solve(mdp, .001)
 
 LINEUP_FILE = 'Lineups/MDP/Week'
-OUTPUT_FILE = 'Evaluations/Evals_3_13.csv'
+OUTPUT_FILE = 'Evaluations/Evals_2_13.csv'
 
 
 
@@ -28,7 +28,7 @@ def getActualPts(player, year, week):
 with open(OUTPUT_FILE + '.csv', 'wb') as outfile:
     outfile.truncate()
     outfile.write('"Week","Predicted Points","Actual Points"\n')
-    for week in range(3,14):
+    for week in range(2,14):
         with open(LINEUP_FILE + str(week) + '.csv', 'r') as infile:
             infile.next()
             reader = csv.reader(infile, delimiter=',', quotechar='"')

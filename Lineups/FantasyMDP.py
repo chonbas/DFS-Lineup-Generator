@@ -15,13 +15,14 @@ START_LINEUP = [(), (), (), (), (), ()]
 
 EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25+':27.5}
 MAX_ONE_TEAM = 4
-OUTPATH = 'MDP/WeekGreed'
+OUTPATH = 'MDP/Week'
 OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
 
 class FantasyMDP(util.MDP):
-    def __init__(self, week):
+    def __init__(self, week, greed_flag):
         self.db = LineupProbDB(week)
         self.week = week
+        self.greed = greed_flag
         self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
 
     # Return the start state.
@@ -56,9 +57,10 @@ class FantasyMDP(util.MDP):
         for position_group in current_lineup:
             for player in position_group:
                 list_lineup.append(player)
-        
-        # partial_sum_probs = defaultdict(float)
-        partial_sum_probs = {0:1}
+        if self.greed:
+            partial_sum_probs = defaultdict(float)
+        else:
+            partial_sum_probs = {0:1}
 
         for player in list_lineup:
             player_data = self.db.getPlayerData(player)
@@ -153,14 +155,18 @@ class FantasyMDP(util.MDP):
         roster_cost = 0
         print "Value?" 
         print test
-        with open(OUTPATH+str(self.week)+'.csv','wb') as outfile:
+        if self.greed:
+            path_to_write = OUTPATH+str(self.week)+'_greed.csv'
+        else:
+            path_to_write = OUTPATH+str(self.week)+'.csv'
+        with open(path_to_write,'wb') as outfile:
             writer = csv.DictWriter(outfile , fieldnames=OUTFIELDNAMES)
             writer.writeheader()
             for pos, player_group in roster.iteritems():
                 print(pos)
                 for i in xrange(len(player_group)):
                     player = player_group[i]
-                    print(str(i+1) + "." + player[0] + "-" + player[1] + "-" + str(player[2]) +"-" + str(player[3]))
+                    print(str(i+1) + "." + player[0] + "-" + player[1] + "-" + str(int(player[2])) +"-" + str(player[3]))
                     roster_cost += player[2]
                     row_entry = {"Year":2016, "Week":self.week, "Name":player[0], "Position":pos, "Salary":player[2], "Predicted points":player[3]}
                     writer.writerow(row_entry)
@@ -172,12 +178,14 @@ class FantasyMDP(util.MDP):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
+    parser.add_argument("--greed", type=str, action="store", help="Use greedy algo or actual probabilities?", default="False")
     args = parser.parse_args()
-    # for week in xrange(3,15):
-    #     print("----------WEEK %d----------") %(week)
-    mdp = FantasyMDP(args.week)
-    valIter = util.ValueIteration()
-    valIter.solve(mdp)
-    vi_policy = valIter.pi
-    values = valIter.V
-    mdp.rebuildRoster(vi_policy, values)
+    for week in xrange(2,15):
+        print("----------WEEK %d----------") %(week)
+        mdp = FantasyMDP(week, args.greed=="True")
+        # mdp = FantasyMDP(args.week, args.greed=="True")
+        valIter = util.ValueIteration()
+        valIter.solve(mdp)
+        vi_policy = valIter.pi
+        values = valIter.V
+        mdp.rebuildRoster(vi_policy, values)

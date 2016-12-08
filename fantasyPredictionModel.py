@@ -18,14 +18,24 @@ from sklearn.metrics import confusion_matrix
 from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPercentile
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
+# POSITIONS = ['TE']
 
-QB_PARAMS = {'n_estimators':1000, 'max_depth':55, 'max_features':'log2',
-            'min_samples_split':2,'feature_percent':32, 'gamelead':2,
-            'class_weights':{0:7},'bootstrap':True}
+#n_estimators = number of trees in random forest
+#max_depth = max depth of individual trees in forest
+#max_Features = max number of features to consider for each tree
+#min_samples_split = number of sampels to see to branch a leaf in tree 
+#feature_percent top % of features to extract using automated feature extraction
+#gamelead = number of previous game data to use for feature vector
+#class_weights = regularization terms to add extra penalty for errors in certain classes
+#bootstrap = whether to build new trees using bootstrapped data from previous trees
+
+QB_PARAMS = {'n_estimators':700, 'max_depth':None, 'max_features':'log2',
+            'min_samples_split':2,'feature_percent':32, 'gamelead':13,
+            'class_weights':{4:10,5:10},'bootstrap':True}
 
 WR_PARAMS = {'n_estimators':1000, 'max_depth':10, 'max_features':'log2', 
-            'min_samples_split':2,'feature_percent':35, 'gamelead':2,
-            'class_weights':{4:1.6, 5:2}, 'bootstrap':False}
+            'min_samples_split':2,'feature_percent':35, 'gamelead':6,
+            'class_weights':{4:1.6, 5:2}, 'bootstrap':True}
 
 RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
             'min_samples_split':2,'feature_percent':31, 'gamelead':2,
@@ -33,7 +43,7 @@ RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
 
 TE_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
             'min_samples_split':2,'feature_percent':30, 'gamelead':2,
-            'class_weights':{0:7,4:2,5:3}, 'bootstrap':False}
+            'class_weights':{4:2,5:3}, 'bootstrap':False}
 
 PK_PARAMS = {'n_estimators':700, 'max_depth':7, 'max_features':'log2',
             'min_samples_split':2, 'feature_percent':35, 'gamelead':2,
@@ -93,12 +103,18 @@ class FantasyPredictionModel:
         data_Y = np.array(raw_y, dtype='float64')
         return data_X, data_Y
 
+    def getPredData(self, pos):
+        raw_data, names, salaries, teams = self.db.getPredictionPoints(pos, POS_PARAMS[pos]['gamelead'], CURRENT_YEAR, self.week)
+        for i in xrange(len(raw_data)):
+            raw_data[i] = np.array(raw_data[i], dtype='float64') 
+        data = np.array(raw_data, dtype='float64')
+        return data, names, salaries, teams  
+        
     def train(self):
         for pos in POSITIONS:
             print("-----------------------Training %s Model---------------------") %(pos)
 
             data_X, data_Y = self.getTrainData(pos)
-
             if self.classification:
                 selector = self.getFeatureSelector(pos)
                 data_X = selector.fit_transform(data_X, data_Y)
@@ -163,12 +179,13 @@ class FantasyPredictionModel:
 
     def predict(self):
         for pos in POSITIONS:
-            data, names, salaries, teams = self.db.getPredictionPoints(pos, POS_PARAMS[pos]['gamelead'], CURRENT_YEAR, self.week)
+            data, names, salaries, teams = self.getPredData(pos)
             if pos in self.models:
                 model = self.models[pos]
                 if self.classification:
                     selector = self.selectors[pos]
                     data = selector.transform(data)
+                    
                     preds = model.predict_proba(data)
                     results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
                                  'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
@@ -207,11 +224,18 @@ if __name__ == '__main__':
     parser.add_argument("--classification", type=str, action="store", help="Classification flag? True/False", required=True)
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
     parser.add_argument("--eval", type=str, action="store", help="Evaluate models? True/False")
+    parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
     args = parser.parse_args()
 
     fantasyModels = FantasyPredictionModel(args.week, args.classification == 'True')
-    if args.eval == "True":
-        fantasyModels.evaluate()
-    else:
+    if args.all == 'True':    
         fantasyModels.train()
-        fantasyModels.predict()
+        for week in xrange(1,args.week + 1):
+            fantasyModels.week = week
+            fantasyModels.predict()
+    else:
+        if args.eval == "True":
+            fantasyModels.evaluate()
+        else:
+            fantasyModels.train()
+            fantasyModels.predict()
