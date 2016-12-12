@@ -5,6 +5,7 @@ import argparse
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
@@ -20,15 +21,6 @@ from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPerc
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
 # POSITIONS = ['Def']
-
-#n_estimators = number of trees in random forest
-#max_depth = max depth of individual trees in forest
-#max_Features = max number of features to consider for each tree
-#min_samples_split = number of sampels to see to branch a leaf in tree 
-#feature_percent top % of features to extract using automated feature extraction
-#gamelead = number of previous game data to use for feature vector
-#class_weights = regularization terms to add extra penalty for errors in certain classes
-#bootstrap = whether to build new trees using bootstrapped data from previous trees
 
 CURRENT_YEAR = '2016'
 
@@ -47,19 +39,26 @@ class FantasyPredictionModel:
         self.models = {}
         self.selectors = {}
         self.accuracies = {}
+        self.algo = algo
         self.model_params = MLParams.getModelParams(algo)
     
 
     def getLearner(self, pos):
         if self.classification:
-            return RandomForestClassifier(n_estimators = self.model_params[pos]['n_estimators'],
-                                        max_depth = self.model_params[pos]['max_depth'],
-                                        max_features= self.model_params[pos]['max_features'], 
-                                        min_samples_split=self.model_params[pos]['min_samples_split'],
-                                        random_state=42,
-                                        class_weight=self.model_params[pos]['class_weights'],
-                                        bootstrap=self.model_params[pos]['bootstrap'],
-                                        n_jobs=-1)
+            if self.algo == 'RF':
+                return RandomForestClassifier(n_estimators = self.model_params[pos]['n_estimators'],
+                                            max_depth = self.model_params[pos]['max_depth'],
+                                            max_features= self.model_params[pos]['max_features'], 
+                                            min_samples_split=self.model_params[pos]['min_samples_split'],
+                                            random_state=42,
+                                            class_weight=self.model_params[pos]['class_weights'],
+                                            bootstrap=self.model_params[pos]['bootstrap'],
+                                            n_jobs=-1)
+            if self.algo == 'GDBT':
+                # {'loss':, 'learning_rate':, 'n_estimators':, 'max_depth':, 'min_samples_split':,
+                # 'max_features':,'subsample':,'gamelead':}
+                return GradientBoostingClassifier(loss = self.model_params[pos]['loss'],
+                                                  learning_rate = self.model_params[pos]['learning_rate'])
         else:
             return RandomForestRegressor(n_estimators = self.model_params[pos]['n_estimators'],
                                         max_depth = self.model_params[pos]['max_depth'],
