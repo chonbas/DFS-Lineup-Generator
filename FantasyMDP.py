@@ -1,10 +1,10 @@
-from FantasyProbabilityDB import LineupProbDB
-from ..FantasyDB import FantasyDB
 import util, csv, argparse
+from FantasyProbabilityDB import LineupProbDB
+from FantasyDB import FantasyDB
 from collections import defaultdict
 
 
-POS_DIR = '../Predictions/'
+POS_DIR = 'Predictions/'
 MAX_SALARY = 60000
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
@@ -16,7 +16,7 @@ START_LINEUP = [(), (), (), (), (), ()]
 
 EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25+':27.5}
 MAX_ONE_TEAM = 4
-OUTPATH = 'MDP/Week'
+OUTPATH = 'Lineups/MDP/Week'
 OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
 
 LINEUP_FILE = 'Lineups/MDP/Week_test'
@@ -62,28 +62,26 @@ class FantasyMDP(util.MDP):
             for player in position_group:
                 list_lineup.append(player)
         if self.greed:
-            partial_sum_probs = defaultdict(float)
+            return []
         else:
-            partial_sum_probs = {0:1, 0:1, 0:1, 0:1, 0:1, 0:1}
+            partial_sum_probs = [(0,1) for i in xrange(6)]
 
         for player in list_lineup:
             player_data, pos = self.db.getPlayerData(player)
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
             
             next_partial_sum_probs = defaultdict(float)
-            for prod, prob in partial_sum_probs.iteritems()[-6]:
-                if pos == 'RB':
-                    prod += 10
+            for prod,prob in partial_sum_probs[:-6]:
                 next_partial_sum_probs[prod + EXPECTED_VALUES['0_5']] += prob * prob_0_5
                 next_partial_sum_probs[prod + EXPECTED_VALUES['5_10']] += prob * prob_5_10
                 next_partial_sum_probs[prod + EXPECTED_VALUES['10_15']] += prob * prob_10_15
                 next_partial_sum_probs[prod + EXPECTED_VALUES['15_20']] += prob * prob_15_20
                 next_partial_sum_probs[prod + EXPECTED_VALUES['20_25']] += prob * prob_20_25
                 next_partial_sum_probs[prod + EXPECTED_VALUES['25+']] += prob * prob_25
-            partial_sum_probs = next_partial_sum_probs
+            partial_sum_probs = [prod_prob_pair for prod_prob_pair in next_partial_sum_probs.iteritems()]
 
 
-        results = [(prob,prod) for prod, prob in partial_sum_probs.iteritems()]
+        results = [(prob,prod) for prod, prob in partial_sum_probs]
         return results
 
 
@@ -229,5 +227,5 @@ if __name__ == '__main__':
             mdp = FantasyMDP(week, args.greed=="True")
             mdp.solve()
     else:
-        mdp = FantasyMDP(args.week, args.greed=="True")
+        mdp = FantasyMDP(args.week, False)
         mdp.solve()
