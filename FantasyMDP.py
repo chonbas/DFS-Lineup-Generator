@@ -4,8 +4,6 @@ from collections import defaultdict
 from Data import FantasyProbabilityDB, FantasyDB
 from Utility import util
 
-
-POS_DIR = 'Predictions/'
 MAX_SALARY = 60000
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
@@ -65,24 +63,24 @@ class FantasyMDP(util.MDP):
         if self.greed:
             return []
         else:
-            partial_sum_probs = [(0,1) for i in xrange(6)]
+            partial_sum_probs = {0:1}
 
         for player in list_lineup:
             player_data, pos = self.db.getPlayerData(player)
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
             
             next_partial_sum_probs = defaultdict(float)
-            for prod,prob in partial_sum_probs[:-6]:
+            for prod,prob in partial_sum_probs.iteritems():
                 next_partial_sum_probs[prod + EXPECTED_VALUES['0_5']] += prob * prob_0_5
                 next_partial_sum_probs[prod + EXPECTED_VALUES['5_10']] += prob * prob_5_10
                 next_partial_sum_probs[prod + EXPECTED_VALUES['10_15']] += prob * prob_10_15
                 next_partial_sum_probs[prod + EXPECTED_VALUES['15_20']] += prob * prob_15_20
                 next_partial_sum_probs[prod + EXPECTED_VALUES['20_25']] += prob * prob_20_25
                 next_partial_sum_probs[prod + EXPECTED_VALUES['25+']] += prob * prob_25
-            partial_sum_probs = [prod_prob_pair for prod_prob_pair in next_partial_sum_probs.iteritems()]
+            partial_sum_probs = next_partial_sum_probs
 
 
-        results = [(prob,prod) for prod, prob in partial_sum_probs]
+        results = [(prob,prod) for prod, prob in partial_sum_probs.iteritems()]
         return results
 
 
