@@ -4,7 +4,7 @@ from collections import OrderedDict
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
 MAX_POS = {'QB':5, 'WR':8, 'RB':10, 'TE':5, 'PK':5, 'Def':5}
 
-POS_DIR = 'Predictions/'
+POS_DIR = 'Data/Predictions/'
 
 YEAR = 2016
 

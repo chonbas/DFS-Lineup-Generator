@@ -3,7 +3,7 @@ from collections import OrderedDict, defaultdict
 
 
 POSITIONS = ['RB', 'WR', 'TE', 'QB', 'PK', 'Def']
-POS_DIR = '../Predictions/'
+POS_DIR = 'Data/Predictions/'
 TYPE = 'classification'
 MAX_PLAYERS = 5 # number of players to consider for each position group
 

@@ -1,7 +1,8 @@
-import util, csv, argparse
-from FantasyProbabilityDB import LineupProbDB
-from FantasyDB import FantasyDB
+import csv, argparse
 from collections import defaultdict
+
+from Data import FantasyProbabilityDB, FantasyDB
+from Utility import util
 
 
 POS_DIR = 'Predictions/'
@@ -14,7 +15,7 @@ MAX_POSITIONS = {'QB':1, 'WR':3, 'RB':2, 'TE':1, 'PK':1, 'Def':1}
 START_LINEUP = [(), (), (), (), (), ()]
 
 
-EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25+':27.5}
+EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25+':30}
 MAX_ONE_TEAM = 4
 OUTPATH = 'Lineups/MDP/Week'
 OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
@@ -24,7 +25,7 @@ OUTPUT_FILE = 'Evaluations/Evals_greed_2_13.csv'
 
 class FantasyMDP(util.MDP):
     def __init__(self, week, greed_flag):
-        self.db = LineupProbDB(week)
+        self.db = FantasyProbabilityDB.LineupProbDB(week)
         self.week = week
         self.greed = greed_flag
         self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
@@ -227,5 +228,5 @@ if __name__ == '__main__':
             mdp = FantasyMDP(week, args.greed=="True")
             mdp.solve()
     else:
-        mdp = FantasyMDP(args.week, False)
+        mdp = FantasyMDP(args.week, args.greed=='True')
         mdp.solve()

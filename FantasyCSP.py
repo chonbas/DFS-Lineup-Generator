@@ -1,12 +1,10 @@
 
 import csv
-# from FantasyMDP import FantasyMDP
-from FantasyCSPConstructor import FantasyCSPConstructor
-# from util import ValueIteration
-from BacktrackingSearch import BacktrackingSearch
-from LineupDB import LineupDB
+from Utility import FantasyCSPConstructor, BacktrackingSearch
+from Data import LineupDB
 
-FILENAME = 'CSPLineup.csv'
+
+FILENAME = 'Lineups/CSPLineup.csv'
 year = 2016
 
 

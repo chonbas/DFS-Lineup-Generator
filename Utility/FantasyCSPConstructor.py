@@ -1,7 +1,8 @@
-from LineupDB import LineupDB
+import sys
 from CSP import CSP
 from collections import OrderedDict
-
+sys.path.append('../')
+from Data import LineupDB
 POSITIONS = ['RB', 'WR', 'TE', 'QB', 'PK', 'Def']
 LINEUP = [2, 3, 1, 1, 1, 1]
 MAX_SALARY = 60000
@@ -16,7 +17,7 @@ class FantasyCSPConstructor():
         @param verbose: decide if print information.
         @param week, year: what data to use CSP on.
         """
-        self.db = LineupDB(week=week, year=year)
+        self.db = LineupDB.LineupDB(week=week, year=year)
         self.positions = []
         for i, pos in enumerate(POSITIONS):
             for j in range(LINEUP[i]):
