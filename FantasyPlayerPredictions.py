@@ -7,6 +7,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
@@ -40,7 +42,7 @@ class FantasyPredictionModel:
         self.selectors = {}
         self.accuracies = {}
         self.algo = algo
-        self.model_params = MLParams.getModelParams(algo)
+        self.model_params = MLParams.getModelParams(algo, self.classification)
     
 
     def getLearner(self, pos):
@@ -48,24 +50,50 @@ class FantasyPredictionModel:
             if self.algo == 'RF':
                 return RandomForestClassifier(n_estimators = self.model_params[pos]['n_estimators'],
                                             max_depth = self.model_params[pos]['max_depth'],
-                                            max_features= self.model_params[pos]['max_features'], 
-                                            min_samples_split=self.model_params[pos]['min_samples_split'],
-                                            random_state=42,
-                                            class_weight=self.model_params[pos]['class_weights'],
-                                            bootstrap=self.model_params[pos]['bootstrap'],
+                                            max_features = self.model_params[pos]['max_features'], 
+                                            min_samples_split = self.model_params[pos]['min_samples_split'],
+                                            class_weight = self.model_params[pos]['class_weights'],
+                                            bootstrap = self.model_params[pos]['bootstrap'],
                                             n_jobs=-1)
             if self.algo == 'GDBT':
-                # {'loss':, 'learning_rate':, 'n_estimators':, 'max_depth':, 'min_samples_split':,
-                # 'max_features':,'subsample':,'gamelead':}
                 return GradientBoostingClassifier(loss = self.model_params[pos]['loss'],
-                                                  learning_rate = self.model_params[pos]['learning_rate'])
+                                                  learning_rate = self.model_params[pos]['learning_rate'],
+                                                  n_estimators = self.model_params[pos]['n_estimators'],
+                                                  max_depth = self.model_params[pos]['max_depth'],
+                                                  min_samples_split = self.model_params[pos]['min_samples_split'],
+                                                  max_features = self.model_params[pos]['max_features'],
+                                                  subsample = self.model_params[pos]['subsample'])
+            if self.algo == 'LReg':
+                return LogisticRegression(fit_intercept = self.model_params[pos]['fit_intercept'],
+                                          intercept_scaling = self.model_params[pos]['intercept_scaling'],
+                                          class_weight = self.model_params[pos]['class_weight'],
+                                          max_iter = self.model_params[pos]['max_iter'],
+                                          solver = self.model_params[pos]['solver'],
+                                          tol = self.model_params[pos]['tol'],
+                                          multi_class = self.model_params[pos]['multi_class'],
+                                          n_jobs = -1)
         else:
-            return RandomForestRegressor(n_estimators = self.model_params[pos]['n_estimators'],
+            if self.algo == 'GDBT':
+                return GradientBoostingRegressor(loss = self.model_params[pos]['loss'],
+                                                  learning_rate = self.model_params[pos]['learning_rate'],
+                                                  n_estimators = self.model_params[pos]['n_estimators'],
+                                                  max_depth = self.model_params[pos]['max_depth'],
+                                                  min_samples_split = self.model_params[pos]['min_samples_split'],
+                                                  max_features = self.model_params[pos]['max_features'],
+                                                  subsample = self.model_params[pos]['subsample'])
+            if self.algo == 'RF':
+                return RandomForestRegressor(n_estimators = self.model_params[pos]['n_estimators'],
                                         max_depth = self.model_params[pos]['max_depth'],
                                         max_features= self.model_params[pos]['max_features'], 
                                         min_samples_split=self.model_params[pos]['min_samples_split'],
+                                        bootstrap = self.model_params[pos]['bootstrap'],
+                                        criterion = self.model_params[pos]['criterion'],
                                         n_jobs=-1)
-
+            if self.algo == 'LReg':
+                return LinearRegression(fit_intercept = self.model_params[pos]['fit_intercept'],
+                                        normalize = self.model_params[pos]['normalize'],
+                                        copy_X = True,
+                                        n_jobs = -1)
     def getFeatureSelector(self, pos):
         if pos == 'PK':
             return SelectPercentile(f_classif, percentile=self.model_params[pos]['feature_percent'])
