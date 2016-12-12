@@ -50,12 +50,13 @@ class LineupProbDB:
                 prob_10_15 = float(line[7])
                 prob_15_20 = float(line[8])
                 prob_20_25 = float(line[9])
-                prob_25 = float(line[10])
+                prob_25_30 = float(line[10])
+                prob_30 = float(line[11])
 
                 if len(pos_data) == MAX_POS[pos]:
                     continue
 
-                entry = (team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25)
+                entry = (team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25_30, prob_30)
                 pos_data[name] = entry
 
         return pos_data

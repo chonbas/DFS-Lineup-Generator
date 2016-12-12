@@ -10,7 +10,7 @@ ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
 FINAL_WEEK = 17
-EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5, 27.5]
+EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 35]
 
 class FantasyDB:
 
@@ -29,8 +29,6 @@ class FantasyDB:
         names = []
         salaries = []
         teams = []
-        # 0    1      2   3   4    5   6   7
-        # Year,Week,Name,Pos,Team,Opp,H_A,Salary
         with open(FANDUEL_DIR + 'FanDuel-NFL-2016-Week-' + str(week) + '.csv') as fd_list:
             fd_list.next() # skip header
             fdreader = csv.reader(fd_list, delimiter=',', quotechar='"')
@@ -124,7 +122,9 @@ class FantasyDB:
             return 3
         if 20 <= fd_pts and fd_pts < 25:
             return 4
-        return 5
+        if 25 <= fd_pts and fd_pts < 30:
+            return 5
+        return 6
     
     def getFDPointsFromLabel(self, label):
         if label == 0:
@@ -137,7 +137,9 @@ class FantasyDB:
             return '15-20'
         if label == 4:
             return '20-25'
-        return '25+'
+        if label == 5:
+            return '25-30'
+        return '30+'
 
     def getTrainingExamples(self,pos, game_lead, classification):        
         data = self.getData(pos)

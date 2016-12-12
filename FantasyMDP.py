@@ -13,7 +13,7 @@ MAX_POSITIONS = {'QB':1, 'WR':3, 'RB':2, 'TE':1, 'PK':1, 'Def':1}
 START_LINEUP = [(), (), (), (), (), ()]
 
 
-EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25+':30}
+EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25_30':27.5, '30+':35}
 MAX_ONE_TEAM = 4
 OUTPATH = 'Lineups/MDP/Week'
 OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
@@ -67,7 +67,7 @@ class FantasyMDP(util.MDP):
 
         for player in list_lineup:
             player_data, pos = self.db.getPlayerData(player)
-            team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
+            team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25_30, prob_30 = player_data
             
             next_partial_sum_probs = defaultdict(float)
             for prod,prob in partial_sum_probs.iteritems():
@@ -76,7 +76,8 @@ class FantasyMDP(util.MDP):
                 next_partial_sum_probs[prod + EXPECTED_VALUES['10_15']] += prob * prob_10_15
                 next_partial_sum_probs[prod + EXPECTED_VALUES['15_20']] += prob * prob_15_20
                 next_partial_sum_probs[prod + EXPECTED_VALUES['20_25']] += prob * prob_20_25
-                next_partial_sum_probs[prod + EXPECTED_VALUES['25+']] += prob * prob_25
+                next_partial_sum_probs[prod + EXPECTED_VALUES['25_30']] += prob * prob_25_30
+                next_partial_sum_probs[prod + EXPECTED_VALUES['30+']] += prob * prob_30
             partial_sum_probs = next_partial_sum_probs
 
 
@@ -148,7 +149,7 @@ class FantasyMDP(util.MDP):
             current_lineup = self.addPlayerToLineUp(current_lineup, action, pos)
             current_teams = self.setTeamCount(current_teams, team)
             player_data, extra_pos = self.db.getPlayerData(action)
-            team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
+            team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25_30, prob_30 = player_data
             roster[pos].append((action, team, salary, expected_pts))
             state = (False, new_salary, current_lineup, current_teams, 0.0)
             roster_points += expected_pts
@@ -186,7 +187,7 @@ class FantasyMDP(util.MDP):
         with open(OUTPUT_FILE + '.csv', 'wb') as outfile:
             outfile.truncate()
             outfile.write('"Week","Predicted Points","Actual Points"\n')
-            for week in range(2,14):
+            for week in range(1,self.week):
                 with open(LINEUP_FILE + str(week) + '.csv', 'r') as infile:
                     infile.next()
                     reader = csv.reader(infile, delimiter=',', quotechar='"')

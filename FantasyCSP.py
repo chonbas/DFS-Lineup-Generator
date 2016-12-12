@@ -34,7 +34,7 @@ def get_player_stats(players, week, year, toPrint=True):
 with open(FILENAME, 'w') as outfile:
     outfile.truncate()
     outfile.write('"Year","Week","Name","Position","Salary","Predicted points"\n')
-    for week in range(3, 14):
+    for week in range(3, 15):
         cspConstructor = FantasyCSPConstructor(verbose=False, week=week, year=year)
         csp = cspConstructor.get_csp()
         alg = BacktrackingSearch()
