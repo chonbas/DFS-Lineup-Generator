@@ -22,7 +22,7 @@ class LineupProbDB:
     def getPlayerData(self, player):
         for pos in POSITIONS:
             if player in self.data[pos]:
-                return self.data[pos][player]
+                return self.data[pos][player], pos
         return None
 
     def getPlayerTeamSalaryPos(self, player):

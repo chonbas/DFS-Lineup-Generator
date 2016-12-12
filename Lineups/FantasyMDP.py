@@ -1,4 +1,5 @@
 from FantasyProbabilityDB import LineupProbDB
+from ..FantasyDB import FantasyDB
 import util, csv, argparse
 from collections import defaultdict
 
@@ -17,6 +18,9 @@ EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22
 MAX_ONE_TEAM = 4
 OUTPATH = 'MDP/Week'
 OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
+
+LINEUP_FILE = 'Lineups/MDP/Week_test'
+OUTPUT_FILE = 'Evaluations/Evals_greed_2_13.csv'
 
 class FantasyMDP(util.MDP):
     def __init__(self, week, greed_flag):
@@ -60,14 +64,16 @@ class FantasyMDP(util.MDP):
         if self.greed:
             partial_sum_probs = defaultdict(float)
         else:
-            partial_sum_probs = {0:1}
+            partial_sum_probs = {0:1, 0:1, 0:1, 0:1, 0:1, 0:1}
 
         for player in list_lineup:
-            player_data = self.db.getPlayerData(player)
+            player_data, pos = self.db.getPlayerData(player)
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
             
             next_partial_sum_probs = defaultdict(float)
-            for prod, prob in partial_sum_probs.iteritems():
+            for prod, prob in partial_sum_probs.iteritems()[-6]:
+                if pos == 'RB':
+                    prod += 10
                 next_partial_sum_probs[prod + EXPECTED_VALUES['0_5']] += prob * prob_0_5
                 next_partial_sum_probs[prod + EXPECTED_VALUES['5_10']] += prob * prob_5_10
                 next_partial_sum_probs[prod + EXPECTED_VALUES['10_15']] += prob * prob_10_15
@@ -137,7 +143,6 @@ class FantasyMDP(util.MDP):
         roster = {'QB':[], 'RB': [], 'WR': [], 'TE': [], 'PK':[], 'Def':[]}
         roster_points = 0.0
         state = self.start_state
-        test = 0.0
         for i in xrange(9): #9 positions to assign
             final, current_salary, current_lineup, current_teams, current_prod = state
             action = policy[state]
@@ -145,18 +150,14 @@ class FantasyMDP(util.MDP):
             new_salary = salary + current_salary
             current_lineup = self.addPlayerToLineUp(current_lineup, action, pos)
             current_teams = self.setTeamCount(current_teams, team)
-            player_data = self.db.getPlayerData(action)
+            player_data, extra_pos = self.db.getPlayerData(action)
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25 = player_data
             roster[pos].append((action, team, salary, expected_pts))
             state = (False, new_salary, current_lineup, current_teams, 0.0)
             roster_points += expected_pts
-            if i == 8:
-                test = values[state]
         roster_cost = 0
-        print "Value?" 
-        print test
         if self.greed:
-            path_to_write = OUTPATH+str(self.week)+'_greed.csv'
+            path_to_write = OUTPATH+'_greed'+str(self.week)+'.csv'
         else:
             path_to_write = OUTPATH+str(self.week)+'.csv'
         with open(path_to_write,'wb') as outfile:
@@ -173,19 +174,60 @@ class FantasyMDP(util.MDP):
         print("Total Roster Cost %d") %(roster_cost)
         print("Total Roster Production %f") %(roster_points)
                 
+    
+    def evaluate(self):
+        db = FantasyDB()
+        def getActualPts(player, year, week):
+            pos_data = db.getData(pos)
+            try:
+                pts = pos_data[player][year][week]['fd_pts']
+                return pts
+            except TypeError:
+                print "Can't find player " + player + " in week " + week
+                return 0
 
+        with open(OUTPUT_FILE + '.csv', 'wb') as outfile:
+            outfile.truncate()
+            outfile.write('"Week","Predicted Points","Actual Points"\n')
+            for week in range(2,14):
+                with open(LINEUP_FILE + str(week) + '.csv', 'r') as infile:
+                    infile.next()
+                    reader = csv.reader(infile, delimiter=',', quotechar='"')
+                    prevWeek = None
+                    totalPred = 0
+                    totalActual = 0
+                    for line in reader:
+                        year, week, name, pos, sal, predPts = line
+                        actualPts = getActualPts(name, year, week)
+                        if prevWeek == None: prevWeek = week
+
+                        if week != prevWeek:
+                            outfile.write('"' + prevWeek + '","' + str(totalPred) + '","' + str(totalActual) + '"\n')
+                            prevWeek = week
+                            totalPred = 0
+                            totalActual = 0
+                        totalPred += float(predPts)
+                        totalActual += float(actualPts)
+                    outfile.write('"' + week + '","' + str(totalPred) + '","' + str(totalActual) + '"\n')
+
+    def solve(self):
+        valIter = util.ValueIteration()
+        valIter.solve(self)
+        vi_policy = valIter.pi
+        values = valIter.V
+        self.rebuildRoster(vi_policy, values)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
     parser.add_argument("--greed", type=str, action="store", help="Use greedy algo or actual probabilities?", default="False")
+    parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
     args = parser.parse_args()
-    for week in xrange(2,15):
-        print("----------WEEK %d----------") %(week)
-        mdp = FantasyMDP(week, args.greed=="True")
-        # mdp = FantasyMDP(args.week, args.greed=="True")
-        valIter = util.ValueIteration()
-        valIter.solve(mdp)
-        vi_policy = valIter.pi
-        values = valIter.V
-        mdp.rebuildRoster(vi_policy, values)
+    if args.all == 'True':
+        for week in xrange(2,args.week+1):
+            print("----------WEEK %d----------") %(week)
+            mdp = FantasyMDP(week, args.greed=="True")
+            mdp.solve()
+    else:
+        mdp = FantasyMDP(args.week, args.greed=="True")
+        mdp.solve()
