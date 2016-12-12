@@ -21,8 +21,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPercentile
 
-POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-# POSITIONS = ['Def']
+# POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
+POSITIONS = ['QB']
 
 CURRENT_YEAR = '2016'
 
@@ -71,7 +71,7 @@ class FantasyPredictionModel:
                                           solver = self.model_params[pos]['solver'],
                                           tol = self.model_params[pos]['tol'],
                                           multi_class = self.model_params[pos]['multi_class'],
-                                          n_jobs = -1)
+                                          n_jobs = 1)
         else:
             if self.algo == 'GDBT':
                 return GradientBoostingRegressor(loss = self.model_params[pos]['loss'],
@@ -130,7 +130,7 @@ class FantasyPredictionModel:
 
     def evaluate(self):
         for pos in POSITIONS:
-            print("-----------------------Training %s Model---------------------") %(pos)
+            print("-----------------------Evaluating %s Model---------------------") %(pos)
             data_X, data_Y = self.getTrainData(pos)
             learner = self.getLearner(pos)
             data_train, data_test, target_train, target_test = train_test_split(data_X, data_Y, test_size=0.20, random_state=42)
@@ -153,8 +153,7 @@ class FantasyPredictionModel:
                 print("Accuracy for %s is : %f") %(pos, self.accuracies[pos])
             else:
                 break
-                # print("Errors for %s:") %(pos)
-                # print(self.accuracies[pos])
+
 
     def evaluateClassificationResults(self, target_true,target_predicted, verbose_flag):
         print("-----------------------Evaluation---------------------------")
@@ -207,7 +206,7 @@ class FantasyPredictionModel:
                                     'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
                                     'prob_20_25':preds[i][4],
                                     'prob_25_30':preds[i][5],
-                                    'prob_30+':0.0, 
+                                    'prob_30+':0.0, #Due to training data, PK training never sees this class so set to 0
                                     'expectation': self.db.computeExpectation(preds[i])} \
                                     for i in xrange(len(preds))]
                     results = sorted(results, key=lambda x: x['expectation'], reverse=True)
@@ -240,7 +239,7 @@ if __name__ == '__main__':
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
     parser.add_argument("--eval", type=str, action="store", help="Evaluate models? True/False")
     parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
-    parser.add_argument("--algo", type=str, action="store", help="Algorithm to use", default="RF")
+    parser.add_argument("--algo", type=str, action="store", help="Algorithm to use: RF, GDBT, LReg", default="RF")
     args = parser.parse_args()
 
     fantasyModels = FantasyPredictionModel(args.week, args.classification == 'True', args.algo)
