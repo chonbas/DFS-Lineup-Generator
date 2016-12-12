@@ -55,15 +55,7 @@ class FantasyDB:
                 data_point = self.fetchPrevGameData(pos, name, game_lead, year, week)
                 for key in keys:
                     if key == 'team':
-                        if pos == 'Def':
-                            data_point += self.getTeamData(team, year, pos, 'DEF')
-                        else:
-                            data_point += self.getTeamData(team, year, pos, 'OFF')
-                    if key == 'opp':
-                        if pos == 'Def':
-                            data_point += self.getTeamData(opp, year, pos, 'OFF')
-                        else:
-                            data_point += self.getTeamData(opp, year, pos, 'DEF')
+                        data_point += self.getTeamData(team, opp, year, pos)
                     if key == 'h_a':
                         data_point.append(h_a)
                     if key == 'fd_salary':
@@ -88,16 +80,7 @@ class FantasyDB:
                 if key == 'year':
                     continue
                 if key == 'team':
-                    if pos == 'Def':
-                        prevGameData += self.getTeamData(week_data[key], year, pos, 'DEF')
-                    else:
-                        prevGameData += self.getTeamData(week_data[key], year, pos, 'OFF')
-                    continue
-                if key == 'opp':
-                    if pos == 'Def':
-                        prevGameData += self.getTeamData(week_data[key], year, pos, 'OFF')
-                    else:
-                        prevGameData += self.getTeamData(week_data[key], year, pos, 'DEF')
+                    prevGameData += self.getTeamData(week_data[key], week_data['opp'], year, pos)
                     continue
                 if key == 'h_a':
                     if week_data[key] == 'h':
@@ -197,16 +180,7 @@ class FantasyDB:
                             if key == 'year':
                                 continue
                             if key == 'team':
-                                if pos == 'Def':
-                                    new_training_X += self.getTeamData(team, year, pos, 'DEF')
-                                else:
-                                    new_training_X += self.getTeamData(team, year, pos, 'OFF')
-                                continue
-                            if key == 'opp':
-                                if pos == 'Def':
-                                    new_training_X += self.getTeamData(opp, year, pos, 'OFF')
-                                else:
-                                    new_training_X += self.getTeamData(opp, year, pos, 'DEF')
+                                new_training_X += self.getTeamData(team, opp, year, pos)
                                 continue
                             if key == 'h_a':
                                 if game[key] == 'h':
@@ -226,21 +200,44 @@ class FantasyDB:
                     game_lead_deck.append(game_deck.popleft())
         return training_X, training_Y
 
-    def getTeamData(self,team, year, pos, side_of_ball):
-        # print(team, year, pos, side_of_ball)
+    def getTeamData(self,team, opp, year, pos):
+        if pos != 'Def':
+            side_of_ball = 'OFF'
+            opp_side = 'DEF'
+        else:
+            side_of_ball = 'DEF'
+            opp_side = 'OFF'
         team_data = self.teams[team][year][side_of_ball]
+        opp_data = self.teams[opp][year][opp_side]
         data = []
         if pos =='RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
             for key in self.getKeys('RUN'):
-                data.append(float(team_data['Run'][key].strip('%')))
+                data.append(float(team_data['Run'][key].strip('%')) - float(opp_data['Run'][key].strip('%')))
         if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
             for key in self.getKeys('PASS'):
-                data.append(float(team_data['Pass'][key].strip('%')))
-        # if (pos != 'QB' and side_of_ball != 'OFF'):
-        for key in self.getKeys('TEAM_' + side_of_ball):
-                data.append(float(team_data['Team'][key].strip('%')))
+                data.append(float(team_data['Pass'][key].strip('%')) - float(opp_data['Pass'][key].strip('%')))
+        for key in self.getKeys('TEAM'):
+                data.append(float(team_data['Team'][key].strip('%')) - float(opp_data['Team'][key].strip('%')))
         if pos == 'PK' or pos =='QB':
-            data += self.getTeamEfficiencyData(team, year)
+            data += self.getTeamEfficiencyData(team, opp, year)
+        return data
+
+    def getTeamEfficiencyData(self,team, opp, year):
+        def computeWinPercentage(eff_data):
+            win_loss = eff_data['w_l'].split('-')
+            wins = float(win_loss[0])
+            losses = float(win_loss[1])
+            return wins / (wins+losses)
+        team_eff = self.teams[team][year]['Efficiency']
+        opp_eff = self.teams[opp][year]['Efficiency']
+        data = []
+        for key in self.getKeys('EFF'):
+            if key == 'w_l': #instead of using W-L string, convert to win %
+                team_win_loss = computeWinPercentage(team_eff)
+                opp_win_loss = computeWinPercentage(opp_eff)
+                data.append( team_win_loss - opp_win_loss )
+                continue
+            data.append(float(team_eff[key].strip('%')) - float(opp_eff[key].strip('%')))
         return data
 
     def getFeatureNames(self, pos):
@@ -248,23 +245,8 @@ class FantasyDB:
 
             run_keys = self.getKeys('RUN')
             pass_keys = self.getKeys('PASS')
-            off_keys = self.getKeys('TEAM_OFF')
-            def_keys = self.getKeys('TEAM_DEF')
-            eff_keys = self.getKeys('TEAM_EFF')
-
-            team_run_keys = ['Team_' + x for x in run_keys]
-            team_pass_keys = ['Team_' + x for x in pass_keys]
-
-            opp_run_keys = ['Opp_' + x for x in run_keys]
-            opp_pass_keys = ['Opp_' + x for x in pass_keys]
-
-            team_def_keys = ['Team_' + x for x in def_keys]
-            team_off_keys = ['Team_' + x for x in off_keys]
-            team_eff_keys = ['Team_' + x for x in eff_keys]
-
-            opp_def_keys = ['Opp_' + x for x in def_keys]
-            opp_off_keys = ['Opp_' + x for x in off_keys]
-            opp_eff_keys = ['Opp_' + x for x in eff_keys]
+            team_keys = self.getKeys('TEAM')
+            eff_keys = self.getKeys('EFF')
 
             features = []
             
@@ -273,44 +255,15 @@ class FantasyDB:
                     continue
                 if key == 'team':
                     if pos == 'RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
-                        features += team_run_keys
+                        features += run_keys
                     if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
-                        features += team_pass_keys
-                    if pos == 'Def':
-                        features += team_def_keys
-                    else:
-                        features += team_off_keys
+                        features += pass_keys
+                    features += team_keys
                     if pos == 'PK' or pos == 'QB':
-                        features += team_eff_keys
-                    continue
-                if key == 'opp':
-                    if pos == 'RB' or pos == 'QB' or pos == 'WR' or pos == 'TE':
-                        features += opp_run_keys
-                    if pos == 'WR' or pos == 'TE' or pos == 'QB' or pos == 'RB':
-                        features += opp_pass_keys
-                    if pos == 'Def':
-                        features += opp_off_keys
-                    else:
-                        features += opp_def_keys
-                    if pos == 'PK' or pos == 'QB':
-                        features += opp_eff_keys
+                        features += eff_keys
                     continue
                 features.append(key)
             return features            
-
-    def getTeamEfficiencyData(self,team, year):
-        team_eff = self.teams[team][year]['Efficiency']
-        data = []
-        for key in self.getKeys('TEAM_EFF'):
-            if key == 'w_l': #instead of using W-L string, convert to win %
-                win_loss = team_eff[key].split('-')
-                wins = float(win_loss[0])
-                losses = float(win_loss[1])
-                data.append( wins / (wins+losses) )
-                continue
-            data.append(float(team_eff[key].strip('%')))
-        return data
-
 
     def getData(self, pos):
         if pos == 'RB':
@@ -329,23 +282,21 @@ class FantasyDB:
     
 
     def getKeys(self, pos):
-        RB_KEYS = ['team','year','h_a','opp','fd_pts','fd_salary','ru_attempts','ru_yards','ru_avg','ru_tds',
+        RB_KEYS = ['team','year','h_a','fd_pts','fd_salary','ru_attempts','ru_yards','ru_avg','ru_tds',
                 'fum','rec_yards','rec_avg','rec_tds']
-        WR_KEYS = ['team','year','h_a','opp','fd_pts','fd_salary','fum','rec_yards','rec_avg','rec_tds']
-        TE_KEYS = ['team','year','h_a','opp','fd_pts','fd_salary','fum','rec_yards','rec_avg','rec_tds']
-        QB_KEYS = ['team','year','h_a','opp','fd_pts','fd_salary','ru_attempts','ru_yards','ru_avg','ru_tds',
+        WR_KEYS = ['team','year','h_a','fd_pts','fd_salary','fum','rec_yards','rec_avg','rec_tds']
+        TE_KEYS = ['team','year','h_a','fd_pts','fd_salary','fum','rec_yards','rec_avg','rec_tds']
+        QB_KEYS = ['team','year','h_a','fd_pts','fd_salary','ru_attempts','ru_yards','ru_avg','ru_tds',
                 'fum', 'pass_comp', 'pass_att','pass_yds','pass_tds','int','sack','qb_rating']
-        PK_KEYS = ['team','year','h_a','opp','fd_pts','fd_salary','fg-made','fg-att','xp-made','xp-att','pts']
-        DEF_KEYS = ['team', 'year', 'h_a', 'opp', 'fd_pts', 'fd_salary']
+        PK_KEYS = ['team','year','h_a','fd_pts','fd_salary','fg-made','fg-att','xp-made','xp-att','pts']
+        DEF_KEYS = ['team', 'year', 'h_a', 'fd_pts', 'fd_salary']
         RUN_KEYS = ['rank', 'adj_line_yds', 'rb_yds', 'power_success','power_rank','stuffed','stuffed_rank', 
                             'second_level_yds', 'second_level_rank','open_field_yds', 'open_field_rank']
         PASS_KEYS = ['rank', 'sacks','adj_sack_rate']
-        TEAM_OFF_KEYS = ['rank', 'off_dvoa', 'last_yr','wt_off','wt_rank','pass_off','pass_rank', 'rush_off', 'rush_rank',
-                            'non_adj_total', 'non_adj_pass', 'non_adj_rush','var', 'var_rank', 'sched', 'sched_rank']
-        TEAM_EFF_KEYS = ['rank', 'total_dvoa', 'last_yr', 'non_adj_tot_dvoa','w_l', 'off_dvoa', 'off_rank', 'def_dvoa',
+        TEAM_KEYS = ['rank', 'dvoa', 'last_yr', 'wt_dvoa', 'wt_rank','pass_dvoa', 'pass_rank', 'rush_dvoa',
+                    'rush_rank', 'non_adj_total', 'non_adj_pass', 'non_adj_rush','var', 'var_rank','sched', 'sched_rank']
+        EFF_KEYS = ['rank', 'total_dvoa', 'last_yr', 'non_adj_tot_dvoa','w_l', 'off_dvoa', 'off_rank', 'def_dvoa',
                          'def_rank','st_dvoa', 'st_rank']
-        TEAM_DEF_KEYS = ['rank', 'def_dvoa', 'last_yr','wt_def','wt_rank','pass_def','pass_rank', 'rush_def', 'rush_rank',
-                          'non_adj_total', 'non_adj_pass', 'non_adj_rush','var', 'var_rank','sched', 'sched_rank']
 
         if pos == 'RB':
             return RB_KEYS
@@ -363,12 +314,10 @@ class FantasyDB:
             return RUN_KEYS
         if pos == 'PASS':
             return PASS_KEYS
-        if pos == 'TEAM_OFF':
-            return TEAM_OFF_KEYS
-        if pos == 'TEAM_DEF':
-            return TEAM_DEF_KEYS
-        if pos == 'TEAM_EFF':
-            return TEAM_EFF_KEYS
+        if pos == 'TEAM':
+            return TEAM_KEYS
+        if pos == 'EFF':
+            return EFF_KEYS
         return None
 
     def createNewEntry(self, name):
@@ -670,8 +619,8 @@ class FantasyDB:
                 sched = line[16]
                 sched_rank = line[17]
                 # if team in roto_data:
-                entry = {'rank':rank, 'def_dvoa':def_dvoa, 'last_yr':last_yr,'wt_def':wt_def,'wt_rank':wt_rank,
-                        'pass_def':pass_def,'pass_rank':pass_rank, 'rush_def':rush_def, 'rush_rank':rush_rank,
+                entry = {'rank':rank, 'dvoa':def_dvoa, 'last_yr':last_yr,'wt_dvoa':wt_def,'wt_rank':wt_rank,
+                        'pass_dvoa':pass_def,'pass_rank':pass_rank, 'rush_dvoa':rush_def, 'rush_rank':rush_rank,
                         'non_adj_total':non_adj_total, 'non_adj_pass':non_adj_pass, 'non_adj_rush':non_adj_rush,
                         'var':var, 'var_rank':var_rank, 'sched':sched, 'sched_rank':sched_rank}
                 roto_data[team][year]['DEF']['Team'] = entry        
@@ -749,8 +698,8 @@ class FantasyDB:
                 sched = line[16]
                 sched_rank = line[17]
                 if team in roto_data:
-                    entry = {'rank':rank, 'off_dvoa':off_dvoa, 'last_yr':last_yr,'wt_off':wt_off,'wt_rank':wt_rank,
-                            'pass_off':pass_off,'pass_rank':pass_rank, 'rush_off':rush_off, 'rush_rank':rush_rank,
+                    entry = {'rank':rank, 'dvoa':off_dvoa, 'last_yr':last_yr,'wt_dvoa':wt_off,'wt_rank':wt_rank,
+                            'pass_dvoa':pass_off,'pass_rank':pass_rank, 'rush_dvoa':rush_off, 'rush_rank':rush_rank,
                             'non_adj_total':non_adj_total, 'non_adj_pass':non_adj_pass, 'non_adj_rush':non_adj_rush,
                             'var':var, 'var_rank':var_rank, 'sched':sched, 'sched_rank':sched_rank}
                     roto_data[team][year]['OFF']['Team'] = entry   

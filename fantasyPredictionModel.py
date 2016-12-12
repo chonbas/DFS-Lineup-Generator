@@ -1,4 +1,4 @@
-from FantasyDB import FantasyDB
+from Data import FantasyDB
 import csv
 import argparse
 import numpy as np
@@ -57,7 +57,7 @@ POS_PARAMS = {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, '
 
 CURRENT_YEAR = '2016'
 
-PREDICTIONS_DIR = 'Predictions/Week'
+PREDICTIONS_DIR = 'Data/Predictions/Week'
 OUTPUT_FIELDS_REGRESSION = ['name', 'pos', 'team', 'prediction', 'salary']
 OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','prob_0_5',
                                 'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20_25','prob_25+']
@@ -66,7 +66,7 @@ OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','p
 class FantasyPredictionModel:
 
     def __init__(self, target_week, classification):
-        self.db = FantasyDB()      
+        self.db = FantasyDB.FantasyDB()      
         self.week = target_week
         self.classification = classification
         self.models = {}
@@ -179,6 +179,7 @@ class FantasyPredictionModel:
 
     def predict(self):
         for pos in POSITIONS:
+            print("-----------------------Predicting %s-----------------------") %(pos)
             data, names, salaries, teams = self.getPredData(pos)
             if pos in self.models:
                 model = self.models[pos]
