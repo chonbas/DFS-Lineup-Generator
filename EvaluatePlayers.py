@@ -16,7 +16,7 @@ from sklearn.metrics import accuracy_score
 # alg = ValueIteration()
 # alg.solve(mdp, .001)
 
-TYPE = 'classification' #or TYPE == 'classification'
+TYPE = 'regression' #or TYPE == 'classification'
 ALGORITHM = 'RF'
 
 PRED_PTS_PATH = 'Data/Predictions/Week'

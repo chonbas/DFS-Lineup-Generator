@@ -5,30 +5,30 @@ from matplotlib.cbook import get_sample_data
 
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-ALGORITHMS = ['RF', 'LReg']
-TYPES = ['regression']
+ALGORITHMS = ['RF', 'LReg', 'GDBT']
+TYPES = ['classification']
 WEEKS = 12
 
-LABELS = {'RF': 'Random Forest ', 'LReg': 'Linear '}
+LABELS = {'RF': 'Random Forest ', 'LReg': 'Linear ', 'GDBT': 'Gradient Boosting '}
 
 def drawMeanSquaresError():
-    yPlotRange = range(20,71,10)
+    yPlotRange = range(20,111,10)
     yMin = 12
-    yMax = 73
+    yMax = 115
     drawErrorLineGraph(yPlotRange, yMin, yMax, "Graphs/mean_squares_error.png", "Mean Squares Error", 2)
 
 def drawAccuracyGraph():
-    yPlotRange = [i/10.0 for i in range(3, 8)]
-    yMin = .25
-    yMax = .75
+    yPlotRange = [i/10.0 for i in range(2, 8)]
+    yMin = .13
+    yMax = .73
     drawErrorLineGraph(yPlotRange, yMin, yMax, "Graphs/accuracy_score.png", "Accuracy Score", -1)
 
 def drawErrorLineGraph(yPlotRange, yMin, yMax, outputFile, title, param):
     data = {}
     categories = []
     for alg in ALGORITHMS:
-        info = []
         for t in TYPES:
+            info = []
             with open('Evaluations/' + t + '_' + alg + '_eval.csv', 'r') as infile:
                 infile.next()
                 reader = csv.reader(infile, delimiter=',', quotechar='"')
@@ -36,8 +36,8 @@ def drawErrorLineGraph(yPlotRange, yMin, yMax, outputFile, title, param):
                     pos = line[0]
                     val = float(line[param]) # -1: accuracy, 2: mean squares
                     info.append(float(val)) #assume position in correct order
-        data[(alg, t)] = info
-        categories.append((alg, t))
+            data[(alg, t)] = info
+            categories.append((alg, t))
     drawLineGraph(data, xAxis='positions', xLabels=POSITIONS, categories=categories, \
         title=title, outputFile=outputFile, yMin=yMin, yMax=yMax, yPlotRange=yPlotRange)
 
@@ -54,15 +54,19 @@ def drawLineGraph(data, xAxis='week', xLabels=range(1,13), categories=['data'], 
     # gender_degree_data = csv2rec(fname)
 
     # These are the colors that will be used in the plot
-    color_sequence = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c',
-                      '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5',
+    # color_sequence = ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c',
+    #                   '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5',
+    #                   '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f',
+    #                   '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
+    color_sequence = ['#1f77b4', '#ff7f0e', '#2ca02c',
+                      '#d62728', '#ff9896', '#9467bd', '#c5b0d5',
                       '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f',
                       '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
 
     # You typically want your plot to be ~1.33x wider than tall. This plot
     # is a rare exception because of the number of lines being plotted on it.
     # Common sizes: (10, 7.5) and (12, 9)
-    fig, ax = plt.subplots(1, 1, figsize=(12, 14))
+    fig, ax = plt.subplots(1, 1, figsize=(10, 7.5))
 
     # Remove the plot frame lines. They are unnecessary here.
     ax.spines['top'].set_visible(False)
@@ -113,13 +117,17 @@ def drawLineGraph(data, xAxis='week', xLabels=range(1,13), categories=['data'], 
     #              'Math and Statistics': 0.75, 'Architecture': -0.75,
     #              'Computer Science': 0.75, 'Engineering': -0.25}
 
-    y_offsets = {('RF', 'regression'): .5, ('LReg', 'regression'): -.5}
+    y_offsets = {}#{('RF', 'regression'): -2,
+                 # ('LReg', 'regression'): -7,
+                 # ('GDBT', 'regression'): 2,
+                 # ('GDBT', 'classification'): 7,
+                 # ('LReg', 'classification'): -2}
 
     for rank, column in enumerate(categories):
         # Plot each line separately with its own color.
         #column_rec_name = column#.replace('\n', '_').replace(' ', '_').lower()
 
-        line = plt.plot(range(len(xLabels)),
+        line = plt.plot(range(len(data[column])),
                         data[column],
                         lw=2.5,
                         color=color_sequence[rank],
@@ -135,7 +143,9 @@ def drawLineGraph(data, xAxis='week', xLabels=range(1,13), categories=['data'], 
 
         # Again, make sure that all labels are large enough to be easily read
         # by the viewer.
-        plt.text(len(xLabels)-.5, y_pos, LABELS[column[0]] + column[1], fontsize=18, color=color_sequence[rank])
+        label = LABELS[column[0]] + column[1]
+        if column == ('LReg', 'classification'): label = "Logistic Regression"
+        plt.text(len(xLabels)-.5, y_pos, label, fontsize=18, color=color_sequence[rank])
 
     # Make the title big enough so it spans the entire plot, but don't make it
     # so big that it requires two lines to show.
@@ -156,8 +166,8 @@ def drawLineGraph(data, xAxis='week', xLabels=range(1,13), categories=['data'], 
 # data={'week': range(13), 'data': [5.3 for i in range(13)]}
 # drawLineGraph(data)
 
-#drawAccuracyGraph()
-drawMeanSquaresError()
+drawAccuracyGraph()
+#drawMeanSquaresError()
 
 
 
