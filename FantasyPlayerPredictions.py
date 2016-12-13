@@ -84,8 +84,7 @@ class FantasyPredictionModel:
                                                   max_depth = self.model_params[pos]['max_depth'],
                                                   min_samples_split = self.model_params[pos]['min_samples_split'],
                                                   max_features = self.model_params[pos]['max_features'],
-                                                  subsample = self.model_params[pos]['subsample'],
-                                                  class_weight = self.model_params[pos]['class_weight'])
+                                                  subsample = self.model_params[pos]['subsample'])
             if self.algo == 'RF':
                 return RandomForestRegressor(n_estimators = self.model_params[pos]['n_estimators'],
                                         max_depth = self.model_params[pos]['max_depth'],
@@ -298,9 +297,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.testAlgos == 'True':
-        for algo in ['RF','GDBT','LReg']:
+        for algo in ['GDBT']:
             print('------------------------- Algo %s ---------------------') %(algo)
-            fantasyModels = FantasyPredictionModel(args.week, True, algo, True)
+            fantasyModels = FantasyPredictionModel(args.week, False, algo, True)
             fantasyModels.train()
             for week in xrange(1,args.week + 1):
                 fantasyModels.week = week
