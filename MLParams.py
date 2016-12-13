@@ -35,7 +35,6 @@ def getRFParams(classification):
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
     else:
         QB_PARAMS = {'n_estimators':700, 'max_depth':None, 'max_features':'log2',
-<<<<<<< HEAD
                     'min_samples_split':2,'feature_percent':32, 'gamelead':13,
                     'bootstrap':True, 'criterion':'mse'}
 
@@ -46,39 +45,18 @@ def getRFParams(classification):
         RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
                     'min_samples_split':2,'feature_percent':31, 'gamelead':3,
                     'bootstrap':False, 'criterion':'mse'}
-=======
-                    'min_samples_split':2,'feature_percent':32, 'gamelead':3,
-                    'class_weights':None,'bootstrap':True, 'criterion':'mse'}
-
-        WR_PARAMS = {'n_estimators':1000, 'max_depth':10, 'max_features':'log2', 
-                    'min_samples_split':2,'feature_percent':35, 'gamelead':5,
-                    'class_weights':None, 'bootstrap':True, 'criterion':'mse'}
-
-        RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':31, 'gamelead':5,
-                    'class_weights':None, 'bootstrap':False, 'criterion':'mse'}
->>>>>>> 48e93fb7afa32d9b46c2b9b39c2dc26d60338692
 
         TE_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
                     'min_samples_split':2,'feature_percent':30, 'gamelead':3,
                     'bootstrap':False, 'criterion':'mse'}
 
         PK_PARAMS = {'n_estimators':700, 'max_depth':7, 'max_features':'log2',
-<<<<<<< HEAD
                     'min_samples_split':2, 'feature_percent':100, 'gamelead':3,
                     'bootstrap':False, 'criterion':'mse'}
 
         DEF_PARAMS = {'n_estimators':500, 'max_depth':20, 'max_features':'log2',
                     'min_samples_split':2,'feature_percent':75, 'gamelead':6,
                     'bootstrap':True, 'criterion':'mse'}
-=======
-                    'min_samples_split':2, 'feature_percent':100, 'gamelead':8,
-                    'class_weights':None, 'bootstrap':False, 'criterion':'mse'}
-
-        DEF_PARAMS = {'n_estimators':500, 'max_depth':20, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':75, 'gamelead':4,
-                    'class_weights':None, 'bootstrap':True, 'criterion':'mse'}
->>>>>>> 48e93fb7afa32d9b46c2b9b39c2dc26d60338692
 
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
 
