@@ -143,7 +143,6 @@ class FantasyPredictionModel:
     def evaluate(self):
         for pos in POSITIONS:
             print("-----------------------Evaluating %s Model---------------------") %(pos)
-            print self.model_params[pos]
             data_X, data_Y = self.getTrainData(pos)
             learner = self.getLearner(pos)
             data_train, data_test, target_train, target_test = train_test_split(data_X, data_Y, test_size=0.20, random_state=42)
@@ -297,13 +296,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.testAlgos == 'True':
-        for algo in ['GDBT']:
+        for algo in ['RF','GDBT','LReg']:
             print('------------------------- Algo %s ---------------------') %(algo)
-            fantasyModels = FantasyPredictionModel(args.week, False, algo, True)
-            fantasyModels.train()
-            for week in xrange(1,args.week + 1):
-                fantasyModels.week = week
-                fantasyModels.predict()
+            fantasyClassificationModels = FantasyPredictionModel(args.week, True, algo, False)
+            fantasyRegressionModels = FantasyPredictionModel(args.week, False, algo, False)
+            fantasyClassificationModels.evaluate()
+            fantasyRegressionModels.evaluate()
     elif args.allGameleads == 'True':
         fantasyModels.testingGameleads = True
         for i in range(2, 13):
@@ -320,8 +318,8 @@ if __name__ == '__main__':
                 else:
                     fantasyModels.predict()
     else: 
-        fantasyModels.train()
-        if args.all == 'True':    
+        if args.all == 'True':
+            fantasyModels.train()    
             for week in xrange(1,args.week + 1):
                 fantasyModels.week = week
                 fantasyModels.predict()
