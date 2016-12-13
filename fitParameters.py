@@ -17,14 +17,19 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import explained_variance_score
+from sklearn.linear_model import LinearRegression
+from sklearn.feature_selection import f_regression, mutual_info_regression, f_classif, mutual_info_classif, SelectPercentile
+
 
 
 POSITIONS = ['RB', 'WR', 'TE', 'QB', 'PK', 'Def']
 GAME_LEAD = 3 
 WEEK = 9
 
+
 pipeline = Pipeline([
-    ('reg', RandomForestRegressor()),
+    ('fs', SelectPercentile()),
+    ('reg', LinearRegression())
 ])
 
 if __name__ == "__main__":
@@ -34,18 +39,23 @@ if __name__ == "__main__":
     # find the best parameters for both the feature extraction and the
     # classifier
     db = FantasyDB()
+
+    print('available params: ' + str(pipeline.get_params().keys()))
    
     for pos in POSITIONS:
-        raw_x,raw_y = db.getTrainingExamples(pos,GAME_LEAD)
+        print('------------- pos: ' + pos + ' -------------------')
+        raw_x,raw_y = db.getTrainingExamples(pos,GAME_LEAD, False)
 
         data_X = np.array(raw_x, dtype='float64')
         data_Y = np.array(raw_y, dtype='float64')
         parameters = {
-            'reg__n_estimators': (50,75,100,125),
-            'reg__max_features': ('auto', 'sqrt', 'log2'),
-            'reg__max_depth': (None, 5,10,15,20)
+            'fs__percentile': np.linspace(5, 100, 20).tolist(),
+            'fs__score_func': [f_regression], #mutual_info_regression],
+            'reg__fit_intercept': [True, False],
+            'reg__normalize': [True, False]
         }
-        grid_search = GridSearchCV(pipeline, parameters, n_jobs=-1, verbose=1)
+        
+        grid_search = GridSearchCV(pipeline, parameters, n_jobs=1, verbose=1)
 
         print("Performing grid search...")
         print("pipeline:", [name for name, _ in pipeline.steps])

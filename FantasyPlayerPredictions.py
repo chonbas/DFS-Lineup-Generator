@@ -24,17 +24,21 @@ from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPerc
 # POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
 POSITIONS = ['TE']
 
+
 CURRENT_YEAR = '2016'
 
 PREDICTIONS_DIR = 'Data/Predictions/Week'
 OUTPUT_FIELDS_REGRESSION = ['name', 'pos', 'team', 'prediction', 'salary']
 OUTPUT_FIELDS_CLASSIFICATION = ['name', 'pos', 'team', 'expectation','salary','prob_0_5',
                                 'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20_25','prob_25_30','prob_30+']
+OUTPUT_FIELDS_CLASSIFICATION_LABELS = ['name', 'pos', 'team', 'expectation','salary','prob_0_5',
+                                'prob_5_10', 'prob_10_15', 'prob_15_20' ,'prob_20_25','prob_25_30','prob_30+','label']
+
 
 
 class FantasyPredictionModel:
 
-    def __init__(self, target_week, classification, algo):
+    def __init__(self, target_week, classification, algo, labels):
         self.db = FantasyDB.FantasyDB()      
         self.week = target_week
         self.classification = classification
@@ -43,6 +47,9 @@ class FantasyPredictionModel:
         self.accuracies = {}
         self.algo = algo
         self.model_params = MLParams.getModelParams(algo, self.classification)
+        self.testingGameleads = False
+        self.labels = labels
+
     
 
     def getLearner(self, pos):
@@ -102,13 +109,21 @@ class FantasyPredictionModel:
         return SelectPercentile(mutual_info_classif, percentile=self.model_params[pos]['feature_percent'])
 
     def getTrainData(self, pos):
-        raw_x,raw_y = self.db.getTrainingExamples(pos,self.model_params[pos]['gamelead'], self.classification)
+        #raw_x, raw_y = None,None
+        if self.testingGameleads:
+            raw_x, raw_y = self.db.getTrainingExamples(pos,self.gamelead, self.classification)
+        else:
+            raw_x,raw_y = self.db.getTrainingExamples(pos,self.model_params[pos]['gamelead'], self.classification)
         data_X = np.array(raw_x, dtype='float64')
         data_Y = np.array(raw_y, dtype='float64')
         return data_X, data_Y
 
     def getPredData(self, pos):
-        raw_data, names, salaries, teams = self.db.getPredictionPoints(pos, self.model_params[pos]['gamelead'], CURRENT_YEAR, self.week)
+        #raw_x, raw_y = None,None
+        if self.testingGameleads:
+            raw_x, raw_y = self.db.getTrainingExamples(pos,self.gamelead, self.classification)
+        else:
+            raw_data, names, salaries, teams = self.db.getPredictionPoints(pos, self.model_params[pos]['gamelead'], CURRENT_YEAR, self.week)
         for i in xrange(len(raw_data)):
             raw_data[i] = np.array(raw_data[i], dtype='float64') 
         data = np.array(raw_data, dtype='float64')
@@ -196,30 +211,57 @@ class FantasyPredictionModel:
             if pos in self.models:
                 model = self.models[pos]
                 if self.classification:
-                    
-                    selector = self.selectors[pos]
-                    data = selector.transform(data)
-                    
-                    preds = model.predict_proba(data)
-                    if pos != 'PK':
-                        results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
-                                    'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
-                                    'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
-                                    'prob_20_25':preds[i][4],
-                                    'prob_25_30':preds[i][5],
-                                    'prob_30+':preds[i][6], 
-                                    'expectation': self.db.computeExpectation(preds[i])} \
-                                    for i in xrange(len(preds))]
-                    else:
-                        results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
-                                    'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
-                                    'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
-                                    'prob_20_25':preds[i][4],
-                                    'prob_25_30':preds[i][5],
-                                    'prob_30+':0.0, #Due to training data, PK training never sees this class so set to 0
-                                    'expectation': self.db.computeExpectation(preds[i])} \
-                                    for i in xrange(len(preds))]
-                    results = sorted(results, key=lambda x: x['expectation'], reverse=True)
+                    if self.labels:
+                        selector = self.selectors[pos]
+                        data = selector.transform(data)
+                        
+                        preds = model.predict_proba(data)
+                        labels = model.predict(data)
+                        if pos != 'PK':
+                            results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
+                                        'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
+                                        'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
+                                        'prob_20_25':preds[i][4],
+                                        'prob_25_30':preds[i][5],
+                                        'prob_30+':preds[i][6], 
+                                        'expectation': self.db.computeExpectation(preds[i]),
+                                        'label': labels[i]}\
+                                        for i in xrange(len(preds))]
+                        else:
+                            results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
+                                        'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
+                                        'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
+                                        'prob_20_25':preds[i][4],
+                                        'prob_25_30':preds[i][5],
+                                        'prob_30+':0.0, #Due to training data, PK training never sees this class so set to 0
+                                        'expectation': self.db.computeExpectation(preds[i]),
+                                        'label': labels[i]} \
+                                        for i in xrange(len(preds))]
+                        results = sorted(results, key=lambda x: x['expectation'], reverse=True)
+                    else: 
+                        selector = self.selectors[pos]
+                        data = selector.transform(data)
+                        
+                        preds = model.predict_proba(data)
+                        if pos != 'PK':
+                            results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
+                                        'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
+                                        'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
+                                        'prob_20_25':preds[i][4],
+                                        'prob_25_30':preds[i][5],
+                                        'prob_30+':preds[i][6], 
+                                        'expectation': self.db.computeExpectation(preds[i])}\
+                                        for i in xrange(len(preds))]
+                        else:
+                            results = [{'name':names[i], 'pos':pos, 'team':teams[i],'salary':salaries[i],
+                                        'prob_0_5':preds[i][0], 'prob_5_10':preds[i][1],
+                                        'prob_10_15':preds[i][2], 'prob_15_20':preds[i][3],
+                                        'prob_20_25':preds[i][4],
+                                        'prob_25_30':preds[i][5],
+                                        'prob_30+':0.0, #Due to training data, PK training never sees this class so set to 0
+                                        'expectation': self.db.computeExpectation(preds[i])} \
+                                        for i in xrange(len(preds))]
+                        results = sorted(results, key=lambda x: x['expectation'], reverse=True)
                 else:
                     preds = model.predict(data)
                     results = [{'name':names[i], 'pos':pos, 'team':teams[i], 'prediction':preds[i], 
@@ -227,13 +269,16 @@ class FantasyPredictionModel:
                             for i in xrange(len(preds))]
                     results = sorted(results, key=lambda x: x['prediction'], reverse=True)
                 if self.classification:
-                    filepath = PREDICTIONS_DIR + str(self.week) +"/classification_" + pos + "_preds.csv"
+                    filepath = PREDICTIONS_DIR + str(self.week) +"/classification_" + self.algo + "_" + pos + "_preds.csv"
                 else:
-                    filepath = PREDICTIONS_DIR + str(self.week) +"/regression_" + pos + "_preds.csv" 
+                    filepath = PREDICTIONS_DIR + str(self.week) +"/regression_" + self.algo + "_" + pos + "_preds.csv" 
                 with open(filepath,'wb') as outfile:    
                     outfile.truncate()
-                    if self.classification:    
-                        writer = csv.DictWriter(outfile, fieldnames=OUTPUT_FIELDS_CLASSIFICATION)
+                    if self.classification:
+                        if self.labels:
+                            writer = csv.DictWriter(outfile, fieldnames=OUTPUT_FIELDS_CLASSIFICATION_LABELS)
+                        else:  
+                            writer = csv.DictWriter(outfile, fieldnames=OUTPUT_FIELDS_CLASSIFICATION)
                     else:
                         writer = csv.DictWriter(outfile, fieldnames=OUTPUT_FIELDS_REGRESSION)
                     writer.writeheader()
@@ -250,16 +295,35 @@ if __name__ == '__main__':
     parser.add_argument("--eval", type=str, action="store", help="Evaluate models? True/False")
     parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
     parser.add_argument("--algo", type=str, action="store", help="Algorithm to use: RF, GDBT, LReg", default="RF")
+    parser.add_argument("--allGameleads", type=str, action="store", help="Check all gameleads? True/False", default="False")
+    parser.add_argument("--labels", type=str, action="store", help="Calculate classification labels instead of buckets? True/False", default='False')
     args = parser.parse_args()
 
-    fantasyModels = FantasyPredictionModel(args.week, args.classification == 'True', args.algo)
-    fantasyModels.train()
-    if args.all == 'True':    
-        for week in xrange(1,args.week + 1):
-            fantasyModels.week = week
-            fantasyModels.predict()
-    else:
-        if args.eval == "True":
-            fantasyModels.evaluate()
+    fantasyModels = FantasyPredictionModel(args.week, args.classification == 'True', args.algo, args.labels == 'True')
+    
+    if args.allGameleads == 'True':
+        fantasyModels.testingGameleads = True
+        for i in range(2, 14):
+            print('-------------------------- Gamelead = ' + str(i) + ' --------------------------')
+            fantasyModels.gamelead = i
+            fantasyModels.train()
+            if args.all == 'True':    
+                for week in xrange(1,args.week + 1):
+                    fantasyModels.week = week
+                    fantasyModels.predict()
+            else:
+                if args.eval == "True":
+                    fantasyModels.evaluate()
+                else:
+                    fantasyModels.predict()
+    else: 
+        fantasyModels.train()
+        if args.all == 'True':    
+            for week in xrange(1,args.week + 1):
+                fantasyModels.week = week
+                fantasyModels.predict()
         else:
-            fantasyModels.predict()
+            if args.eval == "True":
+                fantasyModels.evaluate()
+            else:
+                fantasyModels.predict()
