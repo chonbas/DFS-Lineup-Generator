@@ -135,6 +135,7 @@ class FantasyPredictionModel:
                 data_X = selector.fit_transform(data_X, data_Y)
                 self.selectors[pos] = selector
             
+            print data_X.shape
             learner = self.getLearner(pos)
             learner.fit(data_X, data_Y)
 
@@ -166,14 +167,6 @@ class FantasyPredictionModel:
             else:
                 break
 
-    def test(self):
-        for pos in POSITIONS:
-            print("-----------------------Testing %s Model---------------------") %(pos)
-            train_X, train_Y = self.getTrainData(pos)
-            learner = self.getLearner(pos)
-            if self.classification:
-                selector = self.getFeatureSelector(pos)
-                train_X = selector.fit_transform(train_X, train_Y)
                  
     def evaluateClassificationResults(self, target_true,target_predicted, verbose_flag):
         print("-----------------------Evaluation---------------------------")
@@ -287,35 +280,31 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--classification", type=str, action="store", help="Classification flag? True/False", required=True)
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
-    parser.add_argument("--eval", type=str, action="store", help="Evaluate models? True/False")
+    parser.add_argument("--eval", type=str, action="store", help="Evaluate models? True/False", default='False')
     parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
     parser.add_argument("--algo", type=str, action="store", help="Algorithm to use: RF, GDBT, LReg", default="RF")
     parser.add_argument("--allGameleads", type=str, action="store", help="Check all gameleads? True/False", default="False")
     parser.add_argument("--labels", type=str, action="store", help="Calculate classification labels instead of buckets? True/False", default='False')
-    parser.add_argument("--testAlgos",type=str, action='store', help='Run predictions with all 3 algos? True/False', default='False')
     args = parser.parse_args()
 
-    if args.testAlgos == 'True':
-        for algo in ['RF','GDBT','LReg']:
-            print('------------------------- Algo %s ---------------------') %(algo)
-            fantasyClassificationModels = FantasyPredictionModel(args.week, True, algo, False)
-            fantasyRegressionModels = FantasyPredictionModel(args.week, False, algo, False)
-            fantasyClassificationModels.evaluate()
-            fantasyRegressionModels.evaluate()
-    elif args.allGameleads == 'True':
+
+    fantasyModels = FantasyPredictionModel(args.week, args.classification == 'True', args.algo, args.labels == 'True')
+
+    if args.allGameleads == 'True':
         fantasyModels.testingGameleads = True
         for i in range(2, 13):
             print('-------------------------- Gamelead = ' + str(i) + ' --------------------------')
             fantasyModels.gamelead = i
-            fantasyModels.train()
             if args.all == 'True':    
                 for week in xrange(1,args.week + 1):
                     fantasyModels.week = week
+                    fantasyModels.train()
                     fantasyModels.predict()
             else:
                 if args.eval == "True":
                     fantasyModels.evaluate()
                 else:
+                    fantasyModels.train()
                     fantasyModels.predict()
     else: 
         if args.all == 'True':
@@ -327,4 +316,5 @@ if __name__ == '__main__':
             if args.eval == "True":
                 fantasyModels.evaluate()
             else:
+                fantasyModels.train()  
                 fantasyModels.predict()

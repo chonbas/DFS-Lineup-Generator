@@ -3,7 +3,7 @@ import csv
 # from FantasyCSPConstructor import FantasyCSPConstructor
 # from util import ValueIteration
 # from BacktrackingSearch import BacktrackingSearch
-from FantasyDB import FantasyDB
+from Data import FantasyDB
 import numpy as np
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
@@ -32,7 +32,7 @@ YEAR = '2016'
 
 
 
-db = FantasyDB()
+db = FantasyDB.FantasyDB()
 
 def getActualLabel(player, week, pos):
     return db.getClassLabel(getActualPts(player, week, pos))
@@ -66,6 +66,7 @@ def getErrorInfo(position):
                 target_true.append(getActualPts(name, week, pos))
 
     true_array = np.array(target_true, dtype='float64')
+    print len(true_array)
     pred_array = np.array(target_predicted, dtype='float64')
     mae = mean_absolute_error(true_array, pred_array, multioutput='uniform_average')
     mse = mean_squared_error(true_array, pred_array, multioutput='uniform_average')
