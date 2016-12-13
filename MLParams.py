@@ -13,15 +13,15 @@ def getRFParams(classification):
                     'class_weights':None,'bootstrap':True}
 
         WR_PARAMS = {'n_estimators':1000, 'max_depth':10, 'max_features':'log2', 
-                    'min_samples_split':2,'feature_percent':35, 'gamelead':6,
+                    'min_samples_split':2,'feature_percent':100, 'gamelead':6,
                     'class_weights':None, 'bootstrap':True}
 
         RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':31, 'gamelead':3,
+                    'min_samples_split':2,'feature_percent':100, 'gamelead':3,
                     'class_weights':None, 'bootstrap':False}
 
         TE_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':30, 'gamelead':3,
+                    'min_samples_split':2,'feature_percent':100, 'gamelead':3,
                     'class_weights':None, 'bootstrap':False}
 
         PK_PARAMS = {'n_estimators':700, 'max_depth':7, 'max_features':'log2',
@@ -66,23 +66,23 @@ def getGDBTParams(classification):
                     'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13,
                     'feature_percent':90, 'class_weight':{5:4,6:3}}
 
-        WR_PARAMS = {'loss':'deviance', 'learning_rate':0.01, 'n_estimators':500, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':6,
+        WR_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':5,
                     'feature_percent':80, 'class_weight':{5:4,6:4}}
 
         RB_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
                     'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3,
                     'feature_percent':80, 'class_weight':None}
 
-        TE_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':10,
-                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3,
-                    'feature_percent':100, 'class_weight':None}
+        TE_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':2,
+                    'feature_percent':80, 'class_weight':{0:0.7}}
 
-        PK_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':7,
+        PK_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
                     'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3,
-                    'feature_percent':100, 'class_weight':None}
+                    'feature_percent':70, 'class_weight':None}
 
-        DEF_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
+        DEF_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':200, 'max_depth':None,
                     'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':6,
                     'feature_percent':100, 'class_weight':None}
 
@@ -92,19 +92,19 @@ def getGDBTParams(classification):
                     'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
 
         WR_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':5}
 
-        RB_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
+        RB_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3}
 
-        TE_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
+        TE_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':2}
                     
-        PK_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
+        PK_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3}
                     
-        DEF_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
+        DEF_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':200, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':6}
                     
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
 
@@ -136,17 +136,17 @@ def getLRegParams(classification):
 
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
     else:
-        QB_PARAMS = {'fit_intercept':True, 'normalize':False,'gamelead':2,'feature_percent':25}
+        QB_PARAMS = {'fit_intercept':True, 'normalize':False,'gamelead':2}
 
-        WR_PARAMS = {'fit_intercept':True, 'normalize':False,'gamelead':5,'feature_percent':20}
+        WR_PARAMS = {'fit_intercept':True, 'normalize':False,'gamelead':5}
 
-        RB_PARAMS = {'fit_intercept':True, 'normalize':True,'gamelead':5,'feature_percent':15}
+        RB_PARAMS = {'fit_intercept':True, 'normalize':True,'gamelead':5}
 
-        TE_PARAMS = {'fit_intercept':False, 'normalize':False,'gamelead':3,'feature_percent':10}
+        TE_PARAMS = {'fit_intercept':False, 'normalize':False,'gamelead':3}
 
-        PK_PARAMS = {'fit_intercept':True, 'normalize':True,'gamelead':4,'feature_percent':5}
+        PK_PARAMS = {'fit_intercept':True, 'normalize':True,'gamelead':4}
 
-        DEF_PARAMS = {'fit_intercept':True, 'normalize':False,'gamelead':3,'feature_percent':10}
+        DEF_PARAMS = {'fit_intercept':True, 'normalize':False,'gamelead':3}
 
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
 

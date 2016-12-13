@@ -9,9 +9,6 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
-from sklearn.svm import SVC
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
@@ -21,8 +18,8 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPercentile
 
-# POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-POSITIONS = ['TE']
+POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
+# POSITIONS = ['WR']
 
 
 CURRENT_YEAR = '2016'
