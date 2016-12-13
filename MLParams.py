@@ -9,7 +9,7 @@ def getRFParams(classification):
     #bootstrap = whether to build new trees using bootstrapped data from previous trees
     if classification:
         QB_PARAMS = {'n_estimators':700, 'max_depth':None, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':32, 'gamelead':13,
+                    'min_samples_split':2,'feature_percent':90, 'gamelead':13,
                     'class_weights':None,'bootstrap':True}
 
         WR_PARAMS = {'n_estimators':1000, 'max_depth':10, 'max_features':'log2', 
@@ -17,128 +17,122 @@ def getRFParams(classification):
                     'class_weights':None, 'bootstrap':True}
 
         RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':31, 'gamelead':2,
+                    'min_samples_split':2,'feature_percent':31, 'gamelead':3,
                     'class_weights':None, 'bootstrap':False}
 
         TE_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':30, 'gamelead':2,
+                    'min_samples_split':2,'feature_percent':30, 'gamelead':3,
                     'class_weights':None, 'bootstrap':False}
 
         PK_PARAMS = {'n_estimators':700, 'max_depth':7, 'max_features':'log2',
-                    'min_samples_split':2, 'feature_percent':100, 'gamelead':2,
+                    'min_samples_split':2, 'feature_percent':100, 'gamelead':3,
                     'class_weights':None, 'bootstrap':False}
 
         DEF_PARAMS = {'n_estimators':500, 'max_depth':20, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':75, 'gamelead':3,
+                    'min_samples_split':2,'feature_percent':75, 'gamelead':6,
                     'class_weights':None, 'bootstrap':True}
 
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
     else:
         QB_PARAMS = {'n_estimators':700, 'max_depth':None, 'max_features':'log2',
                     'min_samples_split':2,'feature_percent':32, 'gamelead':13,
-                    'class_weights':None,'bootstrap':True, 'criterion':'mse'}
+                    'bootstrap':True, 'criterion':'mse'}
 
         WR_PARAMS = {'n_estimators':1000, 'max_depth':10, 'max_features':'log2', 
                     'min_samples_split':2,'feature_percent':35, 'gamelead':6,
-                    'class_weights':None, 'bootstrap':True, 'criterion':'mse'}
+                    'bootstrap':True, 'criterion':'mse'}
 
         RB_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':31, 'gamelead':2,
-                    'class_weights':None, 'bootstrap':False, 'criterion':'mse'}
+                    'min_samples_split':2,'feature_percent':31, 'gamelead':3,
+                    'bootstrap':False, 'criterion':'mse'}
 
         TE_PARAMS = {'n_estimators':500, 'max_depth':10, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':30, 'gamelead':2,
-                    'class_weights':None, 'bootstrap':False, 'criterion':'mse'}
+                    'min_samples_split':2,'feature_percent':30, 'gamelead':3,
+                    'bootstrap':False, 'criterion':'mse'}
 
         PK_PARAMS = {'n_estimators':700, 'max_depth':7, 'max_features':'log2',
-                    'min_samples_split':2, 'feature_percent':100, 'gamelead':2,
-                    'class_weights':None, 'bootstrap':False, 'criterion':'mse'}
+                    'min_samples_split':2, 'feature_percent':100, 'gamelead':3,
+                    'bootstrap':False, 'criterion':'mse'}
 
         DEF_PARAMS = {'n_estimators':500, 'max_depth':20, 'max_features':'log2',
-                    'min_samples_split':2,'feature_percent':75, 'gamelead':3,
-                    'class_weights':None, 'bootstrap':True, 'criterion':'mse'}
+                    'min_samples_split':2,'feature_percent':75, 'gamelead':6,
+                    'bootstrap':True, 'criterion':'mse'}
 
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
 
 def getGDBTParams(classification):
     if classification:
-        QB_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':100, 'max_depth':20,
-                    'min_samples_split':2,'max_features':'auto','subsample':0.20,'gamelead':6,
-                    'feature_percent':100}
+        QB_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13,
+                    'feature_percent':90, 'class_weight':{5:4,6:3}}
 
         WR_PARAMS = {'loss':'deviance', 'learning_rate':0.01, 'n_estimators':500, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'auto','subsample':1.0,'gamelead':6,
-                    'feature_percent':35}
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':6,
+                    'feature_percent':80, 'class_weight':{5:4,6:4}}
 
-        RB_PARAMS = {'loss':'deviance', 'learning_rate':0.01, 'n_estimators':500, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'auto','subsample':1.0,'gamelead':6,
-                    'feature_percent':35}
+        RB_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3,
+                    'feature_percent':80, 'class_weight':None}
 
-        TE_PARAMS = {'loss':'deviance', 'learning_rate':0.01, 'n_estimators':500, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'auto','subsample':1.0,'gamelead':6,
-                    'feature_percent':35}
+        TE_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':10,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3,
+                    'feature_percent':100, 'class_weight':None}
 
-        PK_PARAMS = {'loss':'deviance', 'learning_rate':0.01, 'n_estimators':500, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'auto','subsample':1.0,'gamelead':6,
-                    'feature_percent':35}
+        PK_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':7,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':3,
+                    'feature_percent':100, 'class_weight':None}
 
-        DEF_PARAMS = {'loss':'deviance', 'learning_rate':0.01, 'n_estimators':500, 'max_depth':None,
-                    'min_samples_split':2,'max_features':'auto','subsample':1.0,'gamelead':6,
-                    'feature_percent':35}
+        DEF_PARAMS = {'loss':'deviance', 'learning_rate':0.1, 'n_estimators':500, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':6,
+                    'feature_percent':100, 'class_weight':None}
 
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
     else:
-        QB_PARAMS = {'loss':None, 'learning_rate':None, 'n_estimators':None, 'max_depth':None,
-                    'min_samples_split':None,'max_features':None,'subsample':None,'gamelead':6,
-                    'feature_percent':35}
+        QB_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
 
-        WR_PARAMS = {'loss':None, 'learning_rate':None, 'n_estimators':None, 'max_depth':None,
-                    'min_samples_split':None,'max_features':None,'subsample':None,'gamelead':6,
-                    'feature_percent':35}
+        WR_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
 
-        RB_PARAMS = {'loss':None, 'learning_rate':None, 'n_estimators':None, 'max_depth':None,
-                    'min_samples_split':None,'max_features':None,'subsample':None,'gamelead':6,
-                    'feature_percent':35}
+        RB_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
 
-        TE_PARAMS = {'loss':None, 'learning_rate':None, 'n_estimators':None, 'max_depth':None,
-                    'min_samples_split':None,'max_features':None,'subsample':None,'gamelead':6,
-                    'feature_percent':35}
+        TE_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
                     
-        PK_PARAMS = {'loss':None, 'learning_rate':None, 'n_estimators':None, 'max_depth':None,
-                    'min_samples_split':None,'max_features':None,'subsample':None,'gamelead':6,
-                    'feature_percent':35}
+        PK_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
                     
-        DEF_PARAMS = {'loss':None, 'learning_rate':None, 'n_estimators':None, 'max_depth':None,
-                    'min_samples_split':None,'max_features':None,'subsample':None,'gamelead':6,
-                    'feature_percent':35}
+        DEF_PARAMS = {'loss':'ls', 'learning_rate':0.1, 'n_estimators':700, 'max_depth':None,
+                    'min_samples_split':2,'max_features':'log2','subsample':1.0,'gamelead':13}
                     
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
 
 def getLRegParams(classification):
     if classification:
         QB_PARAMS = {'fit_intercept':True, 'intercept_scaling':1, 'class_weight':None,
-                    'max_iter':1000, 'solver':'lbfgs','tol':0.001,'multi_class':'ovr','gamelead':2,
+                    'max_iter':1000, 'solver':'lbfgs','tol':0.0001,'multi_class':'multinomial','gamelead':13,
+                    'feature_percent':85}
+
+        WR_PARAMS = {'fit_intercept':True, 'intercept_scaling':1, 'class_weight':{4:2, 5:2, 6:2},
+                    'max_iter':1000, 'solver':'lbfgs','tol':0.0001,'multi_class':'multinomial','gamelead':5,
+                    'feature_percent':90}
+
+        RB_PARAMS = {'fit_intercept':True, 'intercept_scaling':1, 'class_weight':{4:2, 5:2, 6:2},
+                    'max_iter':1000, 'solver':'lbfgs','tol':0.0001,'multi_class':'multinomial','gamelead':3,
+                    'feature_percent':85}
+                    
+        TE_PARAMS = {'fit_intercept':True, 'intercept_scaling':1, 'class_weight':{4:2, 5:2, 6:2},
+                    'max_iter':1000, 'solver':'lbfgs','tol':0.0001,'multi_class':'multinomial','gamelead':3,
+                    'feature_percent':80}
+
+        PK_PARAMS = {'fit_intercept':True, 'intercept_scaling':1, 'class_weight':{3:2},
+                    'max_iter':1000, 'solver':'lbfgs','tol':0.0001,'multi_class':'multinomial','gamelead':3,
                     'feature_percent':100}
 
-        WR_PARAMS = {'fit_intercept':None, 'intercept_scaling':None, 'class_weight':None,
-                    'max_iter':None, 'solver':None,'tol':None,'multi_class':None,'gamelead':6,
-                    'feature_percent':35}
-
-        RB_PARAMS = {'fit_intercept':None, 'intercept_scaling':None, 'class_weight':None,
-                    'max_iter':None, 'solver':None,'tol':None,'multi_class':None,'gamelead':6,
-                    'feature_percent':35}
-                    
-        TE_PARAMS = {'fit_intercept':None, 'intercept_scaling':None, 'class_weight':None,
-                    'max_iter':None, 'solver':None,'tol':None,'multi_class':None,'gamelead':6,
-                    'feature_percent':35}
-
-        PK_PARAMS = {'fit_intercept':None, 'intercept_scaling':None, 'class_weight':None,
-                    'max_iter':None, 'solver':None,'tol':None,'multi_class':None,'gamelead':6,
-                    'feature_percent':35}
-
-        DEF_PARAMS ={'fit_intercept':None, 'intercept_scaling':None, 'class_weight':None,
-                    'max_iter':None, 'solver':None,'tol':None,'multi_class':None,'gamelead':6,
-                    'feature_percent':35}
+        DEF_PARAMS = {'fit_intercept':True, 'intercept_scaling':1, 'class_weight':{3:2, 4:2, 5:2, 6:2},
+                    'max_iter':1000, 'solver':'lbfgs','tol':0.0001,'multi_class':'multinomial','gamelead':4,
+                    'feature_percent':75}
 
         return {'RB':RB_PARAMS, 'WR': WR_PARAMS, 'TE':TE_PARAMS, 'QB':QB_PARAMS, 'PK':PK_PARAMS, 'Def':DEF_PARAMS}
     else:

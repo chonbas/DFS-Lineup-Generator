@@ -22,7 +22,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPercentile
 
 # POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-POSITIONS = ['QB']
+POSITIONS = ['TE']
 
 CURRENT_YEAR = '2016'
 
@@ -71,7 +71,7 @@ class FantasyPredictionModel:
                                           solver = self.model_params[pos]['solver'],
                                           tol = self.model_params[pos]['tol'],
                                           multi_class = self.model_params[pos]['multi_class'],
-                                          n_jobs = 1)
+                                          n_jobs = -1)
         else:
             if self.algo == 'GDBT':
                 return GradientBoostingRegressor(loss = self.model_params[pos]['loss'],
@@ -80,7 +80,8 @@ class FantasyPredictionModel:
                                                   max_depth = self.model_params[pos]['max_depth'],
                                                   min_samples_split = self.model_params[pos]['min_samples_split'],
                                                   max_features = self.model_params[pos]['max_features'],
-                                                  subsample = self.model_params[pos]['subsample'])
+                                                  subsample = self.model_params[pos]['subsample'],
+                                                  class_weight = self.model_params[pos]['class_weight'])
             if self.algo == 'RF':
                 return RandomForestRegressor(n_estimators = self.model_params[pos]['n_estimators'],
                                         max_depth = self.model_params[pos]['max_depth'],
@@ -131,6 +132,7 @@ class FantasyPredictionModel:
     def evaluate(self):
         for pos in POSITIONS:
             print("-----------------------Evaluating %s Model---------------------") %(pos)
+            print self.model_params[pos]
             data_X, data_Y = self.getTrainData(pos)
             learner = self.getLearner(pos)
             data_train, data_test, target_train, target_test = train_test_split(data_X, data_Y, test_size=0.20, random_state=42)
@@ -154,7 +156,15 @@ class FantasyPredictionModel:
             else:
                 break
 
-
+    def test(self):
+        for pos in POSITIONS:
+            print("-----------------------Testing %s Model---------------------") %(pos)
+            train_X, train_Y = self.getTrainData(pos)
+            learner = self.getLearner(pos)
+            if self.classification:
+                selector = self.getFeatureSelector(pos)
+                train_X = selector.fit_transform(train_X, train_Y)
+                 
     def evaluateClassificationResults(self, target_true,target_predicted, verbose_flag):
         print("-----------------------Evaluation---------------------------")
         print(classification_report(target_true,target_predicted))
