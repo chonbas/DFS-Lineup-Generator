@@ -19,7 +19,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.feature_selection import f_classif, mutual_info_classif, SelectPercentile
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-# POSITIONS = ['WR']
+# POSITIONS = ['QB']
 
 
 CURRENT_YEAR = '2016'
@@ -294,13 +294,20 @@ if __name__ == '__main__':
     parser.add_argument("--algo", type=str, action="store", help="Algorithm to use: RF, GDBT, LReg", default="RF")
     parser.add_argument("--allGameleads", type=str, action="store", help="Check all gameleads? True/False", default="False")
     parser.add_argument("--labels", type=str, action="store", help="Calculate classification labels instead of buckets? True/False", default='False')
+    parser.add_argument("--testAlgos",type=str, action='store', help='Run predictions with all 3 algos? True/False', default='False')
     args = parser.parse_args()
 
-    fantasyModels = FantasyPredictionModel(args.week, args.classification == 'True', args.algo, args.labels == 'True')
-    
-    if args.allGameleads == 'True':
+    if args.testAlgos == 'True':
+        for algo in ['RF','GDBT','LReg']:
+            print('------------------------- Algo %s ---------------------') %(algo)
+            fantasyModels = FantasyPredictionModel(args.week, True, algo, True)
+            fantasyModels.train()
+            for week in xrange(1,args.week + 1):
+                fantasyModels.week = week
+                fantasyModels.predict()
+    elif args.allGameleads == 'True':
         fantasyModels.testingGameleads = True
-        for i in range(2, 14):
+        for i in range(2, 13):
             print('-------------------------- Gamelead = ' + str(i) + ' --------------------------')
             fantasyModels.gamelead = i
             fantasyModels.train()
