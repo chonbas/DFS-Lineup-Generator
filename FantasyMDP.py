@@ -18,12 +18,13 @@ MAX_ONE_TEAM = 4
 OUTPATH = 'Lineups/MDP/Week'
 OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
 
-LINEUP_FILE = 'Lineups/MDP/Week_test'
+LINEUP_FILE = 'Lineups/MDP/Week_'
 OUTPUT_FILE = 'Evaluations/Evals_greed_2_13.csv'
 
 class FantasyMDP(util.MDP):
-    def __init__(self, week, greed_flag):
-        self.db = FantasyProbabilityDB.LineupProbDB(week)
+    def __init__(self, week, greed_flag, algo):
+        self.db = FantasyProbabilityDB.LineupProbDB(week, algo)
+        self.algo = algo
         self.week = week
         self.greed = greed_flag
         self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
@@ -155,9 +156,9 @@ class FantasyMDP(util.MDP):
             roster_points += expected_pts
         roster_cost = 0
         if self.greed:
-            path_to_write = OUTPATH+'_greed'+str(self.week)+'.csv'
+            path_to_write = OUTPATH+'_'+self.algo+'_greed_'+str(self.week)+'.csv'
         else:
-            path_to_write = OUTPATH+str(self.week)+'.csv'
+            path_to_write = OUTPATH+'_'+self.algo+'_'+str(self.week)+'.csv'
         with open(path_to_write,'wb') as outfile:
             writer = csv.DictWriter(outfile , fieldnames=OUTFIELDNAMES)
             writer.writeheader()
@@ -220,12 +221,13 @@ if __name__ == '__main__':
     parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
     parser.add_argument("--greed", type=str, action="store", help="Use greedy algo or actual probabilities?", default="False")
     parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
+    parser.add_argument("--algo", type=str, action='store', help='Algorithm that generated predictions -- RF/LReg/GDBT', default='RF')
     args = parser.parse_args()
     if args.all == 'True':
         for week in xrange(2,args.week+1):
             print("----------WEEK %d----------") %(week)
-            mdp = FantasyMDP(week, args.greed=="True")
+            mdp = FantasyMDP(week, args.greed=="True", args.algo)
             mdp.solve()
     else:
-        mdp = FantasyMDP(args.week, args.greed=='True')
+        mdp = FantasyMDP(args.week, args.greed=='True', args.algo)
         mdp.solve()

@@ -74,7 +74,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,6,Aaron Ripkowski,RB,GB,DAL,1,4500
 2016,6,Reggie Bush,RB,BUF,SF,1,4900
 2016,6,Kenjon Barner,RB,PHI,WAS,0,5000
-2016,6,Justin Forsett,RB,DET,LARM,1,4900
+2016,6,Justin Forsett,RB,DEN,SD,0,4900
 2016,6,Kenneth Farrow,RB,SD,DEN,1,4500
 2016,6,Shaun Draughn,RB,SF,BUF,0,4600
 2016,6,Alfred Morris,RB,DAL,GB,0,5000
@@ -89,7 +89,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,6,D.J. Foster,RB,NE,CIN,1,4700
 2016,6,Malcolm Brown,RB,LARM,DET,0,4500
 2016,6,Chase Reynolds,RB,LARM,DET,0,4500
-2016,6,Joique Bell,RB,CHI,JAC,1,5600
+2016,6,Joique Bell,RB,DET,LARM,1,5600
 2016,6,Antonio Andrews,RB,TEN,CLE,1,4500
 2016,6,Anthony Sherman,RB,KC,OAK,0,4500
 2016,6,Kenyan Drake,RB,MIA,PIT,1,5000
@@ -227,10 +227,10 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,6,Deonte Thompson,WR,CHI,JAC,1,4500
 2016,6,Alex Erickson,WR,CIN,NE,0,4500
 2016,6,Jordan Payton,WR,CLE,TEN,0,4500
-2016,6,Josh Huff,WR,PHI,WAS,0,4500
+2016,6,Josh Huff,WR,TB,-,1,4500
 2016,6,Jared Abbrederis,WR,GB,DAL,1,4500
 2016,6,Eric Weems,WR,ATL,SEA,0,4500
-2016,6,Griff Whalen,WR,SD,DEN,1,4500
+2016,6,Griff Whalen,WR,NE,CIN,1,4500
 2016,6,Mike Thomas,WR,LARM,DET,0,4500
 2016,6,Malcolm Mitchell,WR,NE,CIN,1,4500
 2016,6,Ryan Grant,WR,WAS,PHI,1,4600

@@ -41,7 +41,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,3,DeAngelo Williams,RB,PIT,PHI,0,8800
 2016,3,John Kuhn,RB,NO,ATL,1,4500
 2016,3,Cameron Artis-Payne,RB,CAR,MIN,1,4800
-2016,3,Justin Forsett,RB,DET,GB,0,6500
+2016,3,Justin Forsett,RB,DEN,CIN,0,6500
 2016,3,Travaris Cadet,RB,NO,ATL,1,5100
 2016,3,Lance Dunbar,RB,DAL,CHI,1,4800
 2016,3,Terrance West,RB,BAL,JAC,0,5200
@@ -194,7 +194,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,3,Brandon Marshall,WR,NYJ,KC,0,7900
 2016,3,Eli Rogers,WR,PIT,PHI,0,5500
 2016,3,Brandon LaFell,WR,CIN,DEN,1,5600
-2016,3,Josh Huff,WR,PHI,PIT,1,4600
+2016,3,Josh Huff,WR,TB,LARM,1,4600
 2016,3,Kenny Britt,WR,LARM,TB,0,5400
 2016,3,Tyreek Hill,WR,KC,NYJ,1,4500
 2016,3,Randall Cobb,WR,GB,DET,1,7100
@@ -244,7 +244,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,3,Jarius Wright,WR,MIN,CAR,0,4800
 2016,3,Eric Weems,WR,ATL,NO,0,4500
 2016,3,J.J. Nelson,WR,ARI,BUF,0,4700
-2016,3,Griff Whalen,WR,SD,IND,0,4600
+2016,3,Griff Whalen,WR,NE,HOU,1,4600
 2016,3,Mike Thomas,WR,LARM,TB,0,4500
 2016,3,Ryan Grant,WR,WAS,NYG,0,4600
 2016,3,Rashard Higgins,WR,CLE,MIA,0,4500

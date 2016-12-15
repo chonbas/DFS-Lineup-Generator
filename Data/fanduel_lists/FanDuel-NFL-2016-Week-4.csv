@@ -76,7 +76,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,4,Derrick Henry,RB,TEN,HOU,0,5000
 2016,4,Jamaal Charles,RB,KC,PIT,0,7000
 2016,4,Zach Line,RB,MIN,NYG,1,4500
-2016,4,Joique Bell,RB,CHI,DET,1,0
+2016,4,Joique Bell,RB,DET,CHI,0,0
 2016,4,Mike Tolbert,RB,CAR,ATL,0,4900
 2016,4,Rob Kelley,RB,WAS,CLE,1,4800
 2016,4,Alex Collins,RB,SEA,NYJ,0,4500
@@ -225,7 +225,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,4,Bradley Marquez,WR,LARM,ARI,0,4500
 2016,4,Alex Erickson,WR,CIN,MIA,1,4500
 2016,4,Eric Weems,WR,ATL,CAR,1,4500
-2016,4,Griff Whalen,WR,SD,NO,1,4500
+2016,4,Griff Whalen,WR,NE,BUF,1,4500
 2016,4,Mike Thomas,WR,LARM,ARI,0,4500
 2016,4,Malcolm Mitchell,WR,NE,BUF,1,4500
 2016,4,Ryan Grant,WR,WAS,CLE,1,4600

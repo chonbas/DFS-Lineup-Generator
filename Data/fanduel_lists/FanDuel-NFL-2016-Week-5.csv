@@ -79,7 +79,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,5,DeAngelo Williams,RB,PIT,NYJ,1,5700
 2016,5,Chase Reynolds,RB,LARM,BUF,1,4500
 2016,5,Kenjon Barner,RB,PHI,DET,0,5300
-2016,5,Joique Bell,RB,CHI,IND,0,5600
+2016,5,Joique Bell,RB,DET,PHI,1,5600
 2016,5,Antonio Andrews,RB,TEN,MIA,0,4500
 2016,5,Isaiah Pead,RB,MIA,TEN,1,4500
 2016,5,Ryan Hewitt,RB,CIN,DAL,0,4500
@@ -128,7 +128,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,5,Mike Wallace,WR,BAL,WAS,1,6300
 2016,5,Kelvin Benjamin,WR,CAR,TB,1,7500
 2016,5,Terrance Williams,WR,DAL,CIN,1,5500
-2016,5,Josh Huff,WR,PHI,DET,0,4500
+2016,5,Josh Huff,WR,TB,CAR,0,4500
 2016,5,Jordan Matthews,WR,PHI,DET,0,7000
 2016,5,Marquise Goodwin,WR,BUF,LARM,0,5500
 2016,5,Andre Johnson,WR,TEN,MIA,0,5200
@@ -196,7 +196,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,5,Eric Weems,WR,ATL,DEN,0,4500
 2016,5,J.J. Nelson,WR,ARI,SF,0,4500
 2016,5,Pharoh Cooper,WR,LARM,BUF,1,4500
-2016,5,Griff Whalen,WR,SD,OAK,0,4500
+2016,5,Griff Whalen,WR,NE,CLE,0,4500
 2016,5,Mike Thomas,WR,LARM,BUF,1,4500
 2016,5,Torrey Smith,WR,SF,ARI,1,5400
 2016,5,Ryan Grant,WR,WAS,BAL,0,4600

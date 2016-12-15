@@ -38,7 +38,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,7,Ka'Deem Carey,RB,CHI,GB,0,4500
 2016,7,Chris Ivory,RB,JAC,OAK,1,5500
 2016,7,Darren Sproles,RB,PHI,MIN,1,5100
-2016,7,Justin Forsett,RB,DET,WAS,1,5200
+2016,7,Justin Forsett,RB,DEN,HOU,1,5200
 2016,7,Antone Smith,RB,TB,SF,0,0
 2016,7,Jerick McKinnon,RB,MIN,PHI,0,6500
 2016,7,Duke Johnson,RB,CLE,CIN,0,5300
@@ -81,7 +81,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,7,Zach Line,RB,MIN,PHI,0,4500
 2016,7,Alex Collins,RB,SEA,ARI,0,4500
 2016,7,Troymaine Pope,RB,SEA,ARI,0,4500
-2016,7,Ronnie Hillman,RB,MIN,PHI,0,4500
+2016,7,Ronnie Hillman,RB,SD,ATL,0,4500
 2016,7,Knile Davis,RB,KC,NO,1,4500
 2016,7,James Develin,RB,NE,PIT,0,4500
 2016,7,Michael Burton,RB,DET,WAS,1,4500
@@ -92,7 +92,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,7,Malcolm Brown,RB,LARM,NYG,1,4500
 2016,7,Chase Reynolds,RB,LARM,NYG,1,4500
 2016,7,Kenjon Barner,RB,PHI,MIN,1,4900
-2016,7,Joique Bell,RB,CHI,GB,0,4600
+2016,7,Joique Bell,RB,DET,WAS,1,4600
 2016,7,Stepfan Taylor,RB,ARI,SEA,1,4500
 2016,7,Antonio Andrews,RB,TEN,IND,1,4500
 2016,7,Brandon Bolden,RB,NE,PIT,0,4500
@@ -136,7 +136,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,7,Tyreek Hill,WR,KC,NO,1,4500
 2016,7,Jarvis Landry,WR,MIA,BUF,1,7000
 2016,7,Golden Tate,WR,DET,WAS,1,6600
-2016,7,Josh Huff,WR,PHI,MIN,1,4500
+2016,7,Josh Huff,WR,TB,SF,0,4500
 2016,7,Larry Fitzgerald,WR,ARI,SEA,1,7100
 2016,7,Marvin Jones,WR,DET,WAS,1,7700
 2016,7,Brian Quick,WR,LARM,NYG,1,4500
@@ -201,7 +201,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,7,Jaelen Strong,WR,HOU,DEN,0,4900
 2016,7,Jeff Janis,WR,GB,CHI,1,4500
 2016,7,Allen Robinson,WR,JAC,OAK,1,8400
-2016,7,Griff Whalen,WR,SD,ATL,0,4500
+2016,7,Griff Whalen,WR,NE,PIT,0,4500
 2016,7,Cameron Meredith,WR,CHI,GB,0,5900
 2016,7,Breshad Perriman,WR,BAL,NYJ,0,5400
 2016,7,Justin Hardy,WR,ATL,SD,1,4500

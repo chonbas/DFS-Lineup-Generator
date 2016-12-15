@@ -28,7 +28,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,9,Bilal Powell,RB,NYJ,MIA,0,5400
 2016,9,Kenyan Drake,RB,MIA,NYJ,1,4500
 2016,9,Benny Cunningham,RB,LARM,CAR,1,4500
-2016,9,Ronnie Hillman,RB,MIN,DET,1,4500
+2016,9,Ronnie Hillman,RB,SD,TEN,1,4500
 2016,9,Patrick DiMarco,RB,ATL,TB,0,4500
 2016,9,Kenjon Barner,RB,PHI,NYG,0,4600
 2016,9,Paul Perkins,RB,NYG,PHI,1,4500
@@ -198,7 +198,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,9,Eric Weems,WR,ATL,TB,0,4500
 2016,9,Allen Hurns,WR,JAC,KC,0,5900
 2016,9,Ricardo Louis,WR,CLE,DAL,1,4500
-2016,9,Griff Whalen,WR,SD,TEN,1,4500
+2016,9,Griff Whalen,WR,NE,-,1,4500
 2016,9,De'Anthony Thomas,WR,KC,JAC,1,4500
 2016,9,Demarcus Robinson,WR,KC,JAC,1,4500
 2016,9,Chester Rogers,WR,IND,GB,0,4500

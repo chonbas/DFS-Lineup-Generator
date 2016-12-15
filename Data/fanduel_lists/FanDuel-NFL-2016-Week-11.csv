@@ -61,7 +61,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,11,Rex Burkhead,RB,CIN,BUF,1,4500
 2016,11,Kenjon Barner,RB,PHI,SEA,0,4700
 2016,11,Benny Cunningham,RB,LARM,MIA,1,4500
-2016,11,Ronnie Hillman,RB,MIN,ARI,1,4600
+2016,11,Ronnie Hillman,RB,SD,-,1,4600
 2016,11,Aaron Ripkowski,RB,GB,WAS,0,4600
 2016,11,Mike James,RB,TB,KC,0,4600
 2016,11,Marcus Murphy,RB,NO,CAR,0,4500
@@ -190,7 +190,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,11,Michael Crabtree,WR,OAK,HOU,1,6600
 2016,11,Nelson Agholor,WR,PHI,SEA,0,5200
 2016,11,Marvin Jones,WR,DET,JAC,1,6500
-2016,11,Maurice Harris,WR,WAS,GB,1,
+2016,11,Maurice Harris,WR,WAS,GB,1,0
 2016,11,Golden Tate,WR,DET,JAC,1,6600
 2016,11,Terrance Williams,WR,DAL,BAL,1,5300
 2016,11,Deonte Thompson,WR,CHI,NYG,0,4500

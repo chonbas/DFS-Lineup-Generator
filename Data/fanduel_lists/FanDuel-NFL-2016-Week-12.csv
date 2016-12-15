@@ -74,7 +74,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,12,Alfred Morris,RB,DAL,WAS,1,4700
 2016,12,James Develin,RB,NE,NYJ,0,4500
 2016,12,Ryan Hewitt,RB,CIN,BAL,0,4500
-2016,12,George Farmer,RB,SEA,TB,0,
+2016,12,George Farmer,RB,SEA,TB,0,0
 2016,12,Malcolm Brown,RB,LARM,NO,0,4500
 2016,12,Kenyan Drake,RB,MIA,SF,1,4500
 2016,12,Charcandrick West,RB,KC,DEN,0,5200
@@ -153,7 +153,6 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,12,Mohamed Sanu,WR,ATL,ARI,1,5900
 2016,12,Golden Tate,WR,DET,MIN,1,6000
 2016,12,Torrey Smith,WR,SF,MIA,0,4700
-2016,12,Daniel Brown,WR,CHI,TEN,1,0
 2016,12,Dez Bryant,WR,DAL,WAS,1,8000
 2016,12,Sammy Watkins,WR,BUF,JAC,1,5700
 2016,12,DeAndre Hopkins,WR,HOU,SD,1,7000
@@ -217,7 +216,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,12,Paul Richardson,WR,SEA,TB,0,4500
 2016,12,Charles Johnson,WR,MIN,DET,0,4500
 2016,12,Tajae Sharpe,WR,TEN,CHI,0,5500
-2016,12,Maurice Harris,WR,WAS,DAL,0,
+2016,12,Maurice Harris,WR,WAS,DAL,0,0
 2016,12,Bryce Treggs,WR,PHI,GB,1,4500
 2016,12,Braxton Miller,WR,HOU,SD,1,4500
 2016,12,Bradley Marquez,WR,LARM,NO,0,4500
@@ -283,6 +282,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,12,Clive Walford,TE,OAK,CAR,1,4500
 2016,12,Kyle Rudolph,TE,MIN,DET,0,5300
 2016,12,Josh Hill,TE,NO,LARM,1,4500
+2016,12,Daniel Brown,TE,CHI,TEN,1,0
 2016,12,Vernon Davis,TE,WAS,DAL,0,4600
 2016,12,Hunter Henry,TE,SD,HOU,0,5600
 2016,12,Vance McDonald,TE,SF,MIA,0,4800

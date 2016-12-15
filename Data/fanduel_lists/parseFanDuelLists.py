@@ -28,7 +28,7 @@ def fixTeamName(team):
         team = 'KC'
     return team
 
-for week in xrange(13,15):
+for week in xrange(13,16):
     with open(FANDUEL_LIST_DIR + str(week)+'.csv','rb') as infile:
         with open(OUTPATH + str(week) +'.csv', 'wb') as outfile:
             writer = csv.DictWriter(outfile , fieldnames=FIELDNAMES)

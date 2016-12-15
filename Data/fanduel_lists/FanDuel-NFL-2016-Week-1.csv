@@ -36,7 +36,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,1,Christine Michael,RB,GB,JAC,0,4800
 2016,1,Shane Vereen,RB,NYG,DAL,0,5300
 2016,1,Thomas Rawls,RB,SEA,MIA,1,7400
-2016,1,Justin Forsett,RB,DET,IND,0,6900
+2016,1,Justin Forsett,RB,DEN,CAR,1,6900
 2016,1,James White,RB,NE,ARI,0,4900
 2016,1,Duke Johnson,RB,CLE,PHI,0,5600
 2016,1,Jonathan Stewart,RB,CAR,DEN,0,6400
@@ -225,7 +225,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,1,Darrius Heyward-Bey,WR,PIT,WAS,0,4500
 2016,1,Bradley Marquez,WR,LARM,SF,0,4500
 2016,1,Chris Harper,WR,SF,LARM,1,4500
-2016,1,Josh Huff,WR,PHI,CLE,1,4700
+2016,1,Josh Huff,WR,TB,ATL,0,4700
 2016,1,Eric Weems,WR,ATL,TB,1,4500
 2016,1,Jaelen Strong,WR,HOU,CHI,1,4900
 2016,1,Lucky Whitehead,WR,DAL,NYG,1,4500
@@ -389,7 +389,7 @@ Year,Week,Name,Pos,Team,Opp,H_A,Salary
 2016,1,Brandon McManus,PK,DEN,CAR,1,4700
 2016,1,Chandler Catanzaro,PK,ARI,NE,1,4900
 2016,1,Connor Barth,PK,CHI,HOU,0,4600
-2016,1,Randy Bullock,PK,NYG,DAL,0,4800
+2016,1,Randy Bullock,PK,PIT,WAS,0,4800
 2016,1,Dan Carpenter,PK,BUF,BAL,0,4600
 2016,1,Greg Zuerlein,PK,LARM,SF,0,4500
 2016,1,MIN,Def,MIN,TEN,0,4600
