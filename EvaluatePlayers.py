@@ -24,7 +24,7 @@ PRED_PTS_FILE_END = '_preds.csv'
 OUTPUT_FILE_PATH = 'Evaluations/'
 OUTPUT_FILE_END = '_eval.csv'
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-WEEKS = 12
+WEEKS = 14
 YEAR = '2016'
 
 
