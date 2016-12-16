@@ -15,7 +15,7 @@ def scrapeQBs():
         writer.writeheader()
         for year in YEARS:
             for week in xrange(1,NUM_WEEKS+1):
-                url_to_open = "http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Passing" %(week, year)
+                url_to_open = 'http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Passing' %(week, year)
                 print url_to_open
                 page = urllib2.urlopen(url_to_open)
                 soup = bs(page, 'html.parser')
@@ -43,7 +43,7 @@ def scrapeSacks():
         writer.writeheader()
         for year in YEARS:
             for week in xrange(1,NUM_WEEKS+1):
-                url_to_open = "http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Defensive" %(week, year)
+                url_to_open = 'http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Defensive' %(week, year)
                 print url_to_open
                 page = urllib2.urlopen(url_to_open)
                 soup = bs(page, 'html.parser')
@@ -72,7 +72,7 @@ def scrapeReceivers():
         writer.writeheader()
         for year in YEARS:
             for week in xrange(1,NUM_WEEKS+1):
-                url_to_open = "http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Receiving" %(week, year)
+                url_to_open = 'http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Receiving' %(week, year)
                 print url_to_open
                 page = urllib2.urlopen(url_to_open)
                 soup = bs(page, 'html.parser')
@@ -101,7 +101,7 @@ def scraperRushers():
         writer.writeheader()
         for year in YEARS:
             for week in xrange(1,NUM_WEEKS+1):
-                url_to_open = "http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Rushing" %(week, year)
+                url_to_open = 'http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Rushing' %(week, year)
                 print url_to_open
                 page = urllib2.urlopen(url_to_open)
                 soup = bs(page, 'html.parser')
@@ -130,7 +130,7 @@ def scrapeKickers():
         writer.writeheader()
         for year in YEARS:
             for week in xrange(1,NUM_WEEKS+1):
-                url_to_open = "http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Placekick" %(week, year)
+                url_to_open = 'http://www.nfl.com/stats/weeklyleaders?week=%d&season=20%d&showCategory=Placekick' %(week, year)
                 print url_to_open
                 page = urllib2.urlopen(url_to_open)
                 soup = bs(page, 'html.parser')

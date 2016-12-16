@@ -28,8 +28,8 @@ def get_player_stats(players, week, year, toPrint=True):
         totalSalary += sal
         playerList.append('"' + name + '","' + pos + '","' + str(sal) + '","' + str(pts) + '"')
     if toPrint:
-        print "total points expected: ", totalPts
-        print "total salary used: ", totalSalary
+        print 'total points expected: ', totalPts
+        print 'total salary used: ', totalSalary
     return playerList
 
 
@@ -40,9 +40,9 @@ with open(FILENAME, 'w') as outfile:
         cspConstructor = FantasyCSPConstructor(verbose=False, week=week, year=year, model=MODEL)
         csp = cspConstructor.get_csp()
         alg = BacktrackingSearch()
-        print "---------------------- Ready to solve week " + str(week) + "--------------------------\n"
+        print '---------------------- Ready to solve week ' + str(week) + '--------------------------\n'
         players = alg.solve(csp, mcv=True, ac3=True)
-        print "Solved!\n"
+        print 'Solved!\n'
 
 
         playerList = get_player_stats(players, week, year)

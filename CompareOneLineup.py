@@ -13,7 +13,7 @@ from FantasyDB import FantasyDB
 LINEUP_FILE = 'Lineups/MDP/Week12.csv'
 OUTPUT_FILE = '2016_12_MDPPredictionsVsActual.csv'
 
-WEEK = "12"
+WEEK = '12'
 
 db = FantasyDB()
 def getActualPts(player, year, week):
@@ -22,7 +22,7 @@ def getActualPts(player, year, week):
         pts = pos_data[player][year][week]['fd_pts']
         return pts
     except TypeError:
-        print "Can't find player " + player + " in week " + week
+        print 'Can\'t find player ' + player + ' in week ' + week
         return 0
 
 with open(LINEUP_FILE, 'r') as infile:

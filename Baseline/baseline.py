@@ -46,8 +46,8 @@ for pos in lineup:
         if(num == pos[1]):
             break
 
-print "Budget remaining: " + str(budget)
-print "Team: "
+print 'Budget remaining: ' + str(budget)
+print 'Team: '
 for player in team:
     print player
 

@@ -22,7 +22,7 @@ def scrapeDLine():
             writer_pass.writeheader()
 
             for year in YEARS:
-                url_to_open = "http://www.footballoutsiders.com/stats/dl20%d" %(year)
+                url_to_open = 'http://www.footballoutsiders.com/stats/dl20%d' %(year)
                 print url_to_open
                 page = urllib2.urlopen(url_to_open)
                 soup = bs(page, 'html.parser')
@@ -63,7 +63,7 @@ def scrapeTeamD():
         writer = csv.DictWriter(outfile , fieldnames=fieldnames)
         writer.writeheader()
         for year in YEARS:
-            url_to_open = "http://www.footballoutsiders.com/stats/teamdef20%d" %(year)
+            url_to_open = 'http://www.footballoutsiders.com/stats/teamdef20%d' %(year)
             print url_to_open
             page = urllib2.urlopen(url_to_open)
             soup = bs(page, 'html.parser')
@@ -98,7 +98,7 @@ def scrapeTeamEff():
         writer = csv.DictWriter(outfile , fieldnames=fieldnames)
         writer.writeheader()
         for year in YEARS:
-            url_to_open = "http://www.footballoutsiders.com/stats/teameff20%d" %(year)
+            url_to_open = 'http://www.footballoutsiders.com/stats/teameff20%d' %(year)
             print url_to_open
             page = urllib2.urlopen(url_to_open)
             soup = bs(page, 'html.parser')
@@ -135,7 +135,7 @@ def scrapeTeamOff():
         writer = csv.DictWriter(outfile , fieldnames=fieldnames)
         writer.writeheader()
         for year in YEARS:
-            url_to_open = "http://www.footballoutsiders.com/stats/teamoff20%d" %(year)
+            url_to_open = 'http://www.footballoutsiders.com/stats/teamoff20%d' %(year)
             print url_to_open
             page = urllib2.urlopen(url_to_open)
             soup = bs(page, 'html.parser')
@@ -175,7 +175,7 @@ def scrapeOLine():
             writer_pass.writeheader()
 
             for year in YEARS:
-                url_to_open = "http://www.footballoutsiders.com/stats/ol20%d" %(year)
+                url_to_open = 'http://www.footballoutsiders.com/stats/ol20%d' %(year)
                 print url_to_open
                 page = urllib2.urlopen(url_to_open)
                 soup = bs(page, 'html.parser')

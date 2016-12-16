@@ -41,7 +41,7 @@ for week in xrange(13,16):
                     position = 'Def'
                 if position == 'K':
                     position = 'PK'
-                name = (line[2] + " " + line[4]).replace('"','')
+                name = (line[2] + ' ' + line[4]).replace('"','')
                 year = 2016
                 team = fixTeamName(line[9].upper().replace('"',''))
                 salary = int(line[7].replace('"',''))

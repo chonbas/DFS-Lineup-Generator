@@ -127,7 +127,7 @@ class FantasyPredictionModel:
         
     def train(self):
         for pos in POSITIONS:
-            print("-----------------------Training %s Model---------------------") %(pos)
+            print('-----------------------Training %s Model---------------------') %(pos)
 
             data_X, data_Y = self.getTrainData(pos)
             if self.classification:
@@ -143,7 +143,7 @@ class FantasyPredictionModel:
 
     def evaluate(self):
         for pos in POSITIONS:
-            print("-----------------------Evaluating %s Model---------------------") %(pos)
+            print('-----------------------Evaluating %s Model---------------------') %(pos)
             data_X, data_Y = self.getTrainData(pos)
             learner = self.getLearner(pos)
             data_train, data_test, target_train, target_test = train_test_split(data_X, data_Y, test_size=0.20, random_state=42)
@@ -163,15 +163,15 @@ class FantasyPredictionModel:
                 self.accuracies[pos] = self.evaluateRegressionResults(target_test, preds, True)
         for pos in POSITIONS:
             if self.classification:
-                print("Accuracy for %s is : %f") %(pos, self.accuracies[pos])
+                print('Accuracy for %s is : %f') %(pos, self.accuracies[pos])
             else:
                 break
 
                  
     def evaluateClassificationResults(self, target_true,target_predicted, verbose_flag):
-        print("-----------------------Evaluation---------------------------")
+        print('-----------------------Evaluation---------------------------')
         print(classification_report(target_true,target_predicted))
-        print("The accuracy score is {:.2%}".format(accuracy_score(target_true,target_predicted)))
+        print('The accuracy score is {:.2%}'.format(accuracy_score(target_true,target_predicted)))
         if verbose_flag:
             cm = confusion_matrix(target_true,target_predicted)
             np.set_printoptions(precision=2)
@@ -180,21 +180,21 @@ class FantasyPredictionModel:
             cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
             print('Normalized confusion matrix')
             print(cm_normalized)
-            print("\n\n")
+            print('\n\n')
         return accuracy_score(target_true, target_predicted)
     
     def evaluateRegressionResults(self, target_true, target_predicted, verbose_flag):
-        print("-----------------------Evaluation---------------------------")
+        print('-----------------------Evaluation---------------------------')
         errors = {'mean_absolute_error':mean_absolute_error(target_true, target_predicted, multioutput='uniform_average'),
                   'mean_squared_error':mean_squared_error(target_true, target_predicted, multioutput='uniform_average'), 
                   'explained_variance_score':explained_variance_score(target_true, target_predicted, multioutput='uniform_average')}
         for key in errors:
-            print("%s : %f") %(key, errors[key])
+            print('%s : %f') %(key, errors[key])
         return errors
 
     def predict(self):
         for pos in POSITIONS:
-            print("-----------------------Predicting %s-----------------------") %(pos)
+            print('-----------------------Predicting %s-----------------------') %(pos)
             data, names, salaries, teams = self.getPredData(pos)
             if pos in self.models:
                 model = self.models[pos]
@@ -257,9 +257,9 @@ class FantasyPredictionModel:
                             for i in xrange(len(preds))]
                     results = sorted(results, key=lambda x: x['prediction'], reverse=True)
                 if self.classification:
-                    filepath = PREDICTIONS_DIR + str(self.week) +"/classification_" + self.algo + "_" + pos + "_preds.csv"
+                    filepath = PREDICTIONS_DIR + str(self.week) +'/classification_' + self.algo + '_' + pos + '_preds.csv'
                 else:
-                    filepath = PREDICTIONS_DIR + str(self.week) +"/regression_" + self.algo + "_" + pos + "_preds.csv" 
+                    filepath = PREDICTIONS_DIR + str(self.week) +'/regression_' + self.algo + '_' + pos + '_preds.csv' 
                 with open(filepath,'wb') as outfile:    
                     outfile.truncate()
                     if self.classification:
@@ -273,18 +273,18 @@ class FantasyPredictionModel:
                     for result in results:
                         writer.writerow(result)
             else:
-                print("Models must be trained prior to running predictions.")
+                print('Models must be trained prior to running predictions.')
                 return
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--classification", type=str, action="store", help="Classification flag? True/False", required=True)
-    parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
-    parser.add_argument("--eval", type=str, action="store", help="Evaluate models? True/False", default='False')
-    parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
-    parser.add_argument("--algo", type=str, action="store", help="Algorithm to use: RF, GDBT, LReg", default="RF")
-    parser.add_argument("--allGameleads", type=str, action="store", help="Check all gameleads? True/False", default="False")
-    parser.add_argument("--labels", type=str, action="store", help="Calculate classification labels instead of buckets? True/False", default='False')
+    parser.add_argument('--classification', type=str, action='store', help='Classification flag? True/False', required=True)
+    parser.add_argument('--week', type=int, action='store',help='Week number for predictions', required=True)
+    parser.add_argument('--eval', type=str, action='store', help='Evaluate models? True/False', default='False')
+    parser.add_argument('--all', type=str, action='store', help='Run preds on all weeks up to --week', default='False')
+    parser.add_argument('--algo', type=str, action='store', help='Algorithm to use: RF, GDBT, LReg', default='RF')
+    parser.add_argument('--allGameleads', type=str, action='store', help='Check all gameleads? True/False', default='False')
+    parser.add_argument('--labels', type=str, action='store', help='Calculate classification labels instead of buckets? True/False', default='False')
     args = parser.parse_args()
 
 
@@ -301,7 +301,7 @@ if __name__ == '__main__':
                     fantasyModels.train()
                     fantasyModels.predict()
             else:
-                if args.eval == "True":
+                if args.eval == 'True':
                     fantasyModels.evaluate()
                 else:
                     fantasyModels.train()
@@ -313,7 +313,7 @@ if __name__ == '__main__':
                 fantasyModels.week = week
                 fantasyModels.predict()
         else:
-            if args.eval == "True":
+            if args.eval == 'True':
                 fantasyModels.evaluate()
             else:
                 fantasyModels.train()  

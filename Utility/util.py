@@ -8,7 +8,7 @@ class MDPAlgorithm:
     # Set:
     # - self.pi: optimal policy (mapping from state to action)
     # - self.V: values (mapping from state to best values)
-    def solve(self, mdp): raise NotImplementedError("Override me")
+    def solve(self, mdp): raise NotImplementedError('Override me')
 
 ############################################################
 class ValueIteration(MDPAlgorithm):
@@ -21,9 +21,9 @@ class ValueIteration(MDPAlgorithm):
     The ValueIteration class is a subclass of util.MDPAlgorithm (see util.py).
     '''
     def solve(self, mdp, epsilon=0.001):
-        print("Computing states...")
+        print('Computing states...')
         mdp.computeStates()
-        print("Done computing states...")
+        print('Done computing states...')
         def computeQ(mdp, V, state, action):
             # Return Q(state, action) based on V(state).
             return sum(prob * (reward + mdp.discount() * V[newState]) \
@@ -50,7 +50,7 @@ class ValueIteration(MDPAlgorithm):
 
         # Compute the optimal policy now
         pi = computeOptimalPolicy(mdp, V)
-        print "ValueIteration: %d iterations" % numIters
+        print 'ValueIteration: %d iterations' % numIters
         self.pi = pi
         self.V = V
 
@@ -58,19 +58,19 @@ class ValueIteration(MDPAlgorithm):
 # An abstract class representing a Markov Decision Process (MDP).
 class MDP:
     # Return the start state.
-    def startState(self): raise NotImplementedError("Override me")
+    def startState(self): raise NotImplementedError('Override me')
 
     # Return set of actions possible from |state|.
-    def actions(self, state): raise NotImplementedError("Override me")
+    def actions(self, state): raise NotImplementedError('Override me')
 
     # Return a list of (newState, prob, reward) tuples corresponding to edges
     # coming out of |state|.
     # Mapping to notation from class:
     #   state = s, action = a, newState = s', prob = T(s, a, s'), reward = Reward(s, a, s')
     # If IsEnd(state), return the empty list.
-    def succAndProbReward(self, state, action): raise NotImplementedError("Override me")
+    def succAndProbReward(self, state, action): raise NotImplementedError('Override me')
 
-    def discount(self): raise NotImplementedError("Override me")
+    def discount(self): raise NotImplementedError('Override me')
 
     # Compute set of states reachable from startState.  Helper function for
     # MDPAlgorithms to know which states to compute values and policies for.
@@ -88,7 +88,7 @@ class MDP:
                     if newState not in self.states:
                         self.states.add(newState)
                         queue.append(newState)
-        print "%d states" % len(self.states)
+        print '%d states' % len(self.states)
         # print self.states
 
 ############################################################
@@ -119,7 +119,7 @@ class NumberLineMDP(MDP):
 # its parameters.
 class RLAlgorithm:
     # Your algorithm will be asked to produce an action given a state.
-    def getAction(self, state): raise NotImplementedError("Override me")
+    def getAction(self, state): raise NotImplementedError('Override me')
 
     # We will call this function when simulating an MDP, and you should update
     # parameters.
@@ -127,7 +127,7 @@ class RLAlgorithm:
     # 0, None). When this function is called, it indicates that taking action
     # |action| in state |state| resulted in reward |reward| and a transition to state
     # |newState|.
-    def incorporateFeedback(self, state, action, reward, newState): raise NotImplementedError("Override me")
+    def incorporateFeedback(self, state, action, reward, newState): raise NotImplementedError('Override me')
 
 # An RL algorithm that acts according to a fixed policy |pi| and doesn't
 # actually do any learning.
@@ -156,7 +156,7 @@ def simulate(mdp, rl, numTrials=10, maxIterations=1000, verbose=False,
         for i, prob in enumerate(probs):
             accum += prob
             if accum >= target: return i
-        raise Exception("Invalid probs: %s" % probs)
+        raise Exception('Invalid probs: %s' % probs)
 
     totalRewards = []  # The rewards we get on each trial
     for trial in range(numTrials):
@@ -184,6 +184,6 @@ def simulate(mdp, rl, numTrials=10, maxIterations=1000, verbose=False,
             totalDiscount *= mdp.discount()
             state = newState
         if verbose:
-            print "Trial %d (totalReward = %s): %s" % (trial, totalReward, sequence)
+            print 'Trial %d (totalReward = %s): %s' % (trial, totalReward, sequence)
         totalRewards.append(totalReward)
     return totalRewards

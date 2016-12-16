@@ -55,11 +55,11 @@ class CSP:
         self.checkMin = True
 
     def add_variable(self, var, domain):
-        """
+        '''
         Add a new variable to the CSP.
-        """
+        '''
         if var in self.variables:
-            raise Exception("Variable name already exists: %s" % str(var))
+            raise Exception('Variable name already exists: %s' % str(var))
 
         self.numVars += 1
         self.variables.append(var)
@@ -79,28 +79,28 @@ class CSP:
         maxSalary = 0
         unspecified = 0
         if self.verbose:
-            print "---------- checking min sum so far ------------"
+            print '---------- checking min sum so far ------------'
         for var in self.variables:
             if var == prop_var:
                 minSalary += prop_val[1]
                 maxSalary += prop_val[1]
                 if self.verbose:
-                    print var, " has salary ", prop_val[1]
+                    print var, ' has salary ', prop_val[1]
             elif var in assignment:
                 minSalary += assignment[var][1]
                 maxSalary += assignment[var][1]
                 if self.verbose:
-                    print var, " has salary ", assignment[var][1]
+                    print var, ' has salary ', assignment[var][1]
             else:
                 minSalary += self.minSalaries[var]
                 unspecified += 1
                 if self.verbose:
-                    print var, " has  min salary ", self.minSalaries[var]
-                    print var, " has  max salary ", self.maxSalaries[var]
+                    print var, ' has  min salary ', self.minSalaries[var]
+                    print var, ' has  max salary ', self.maxSalaries[var]
                 maxSalary += self.maxSalaries[var]
 
         if self.verbose:
-            print "Total max: ", maxSalary, "\nTotal min: ", minSalary, "\n"
+            print 'Total max: ', maxSalary, '\nTotal min: ', minSalary, '\n'
 
         if minSalary > self.sumTotal:
             return False
@@ -112,13 +112,13 @@ class CSP:
 
 
     def get_neighbor_vars(self, var):
-        """
+        '''
         Returns a list of variables which are neighbors of |var|.
-        """
+        '''
         return self.binaryFactors[var].keys()
 
     def add_unary_factor(self, var, factorFunc):
-        """
+        '''
         Add a unary factor function for a variable. Its factor
         value across the domain will be *merged* with any previously added
         unary factor functions through elementwise multiplication.
@@ -126,7 +126,7 @@ class CSP:
         How to get unary factor value given a variable |var| and
         value |val|?
         => csp.unaryFactors[var][val]
-        """
+        '''
         factor = {val:float(factorFunc(val)) for val in self.values[var]}
         if self.unaryFactors[var] is not None:
             assert len(self.unaryFactors[var]) == len(factor)
@@ -136,7 +136,7 @@ class CSP:
             self.unaryFactors[var] = factor
 
     def add_binary_factor(self, var1, var2, factor_func):
-        """
+        '''
         Takes two variable names and a binary factor function
         |factorFunc|, add to binaryFactors. If the two variables already
         had binaryFactors added earlier, they will be *merged* through element
@@ -145,7 +145,7 @@ class CSP:
         How to get binary factor value given a variable |var1| with value |val1| 
         and variable |var2| with value |val2|?
         => csp.binaryFactors[var1][var2][val1][val2]
-        """
+        '''
         # never shall a binary factor be added over a single variable
         try:
             assert var1 != var2
@@ -165,12 +165,12 @@ class CSP:
                 for val1 in self.values[var1]} for val2 in self.values[var2]})
 
     def update_binary_factor_table(self, var1, var2, table):
-        """
+        '''
         Private method you can skip for 0c, might be useful for 1c though.
         Update the binary factor table for binaryFactors[var1][var2].
         If it exists, element-wise multiplications will be performed to merge
         them together.
-        """
+        '''
         if var2 not in self.binaryFactors[var1]:
             self.binaryFactors[var1][var2] = table
         else:

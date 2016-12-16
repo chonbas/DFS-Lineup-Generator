@@ -16,7 +16,7 @@ START_LINEUP = [(), (), (), (), (), ()]
 EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25_30':27.5, '30+':35}
 MAX_ONE_TEAM = 4
 OUTPATH = 'Lineups/MDP/Week'
-OUTFIELDNAMES = ["Year","Week","Name","Position","Salary","Predicted points"]
+OUTFIELDNAMES = ['Year','Week','Name','Position','Salary','Predicted points']
 
 LINEUP_FILE = 'Lineups/MDP/Week_'
 OUTPUT_FILE = 'Evaluations/Evals_greed_2_13.csv'
@@ -166,12 +166,12 @@ class FantasyMDP(util.MDP):
                 print(pos)
                 for i in xrange(len(player_group)):
                     player = player_group[i]
-                    print(str(i+1) + "." + player[0] + "-" + player[1] + "-" + str(int(player[2])) +"-" + str(player[3]))
+                    print(str(i+1) + '.' + player[0] + '-' + player[1] + '-' + str(int(player[2])) + '-' + str(player[3]))
                     roster_cost += player[2]
-                    row_entry = {"Year":2016, "Week":self.week, "Name":player[0], "Position":pos, "Salary":player[2], "Predicted points":player[3]}
+                    row_entry = {'Year':2016, 'Week':self.week, 'Name':player[0], 'Position':pos, 'Salary':player[2], 'Predicted points':player[3]}
                     writer.writerow(row_entry)
-        print("Total Roster Cost %d") %(roster_cost)
-        print("Total Roster Production %f") %(roster_points)
+        print('Total Roster Cost %d') %(roster_cost)
+        print('Total Roster Production %f') %(roster_points)
                 
     
     def evaluate(self):
@@ -182,7 +182,7 @@ class FantasyMDP(util.MDP):
                 pts = pos_data[player][year][week]['fd_pts']
                 return pts
             except TypeError:
-                print "Can't find player " + player + " in week " + week
+                print 'Can\'t find player ' + player + ' in week ' + week
                 return 0
 
         with open(OUTPUT_FILE + '.csv', 'wb') as outfile:
@@ -218,15 +218,15 @@ class FantasyMDP(util.MDP):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--week", type=int, action="store",help="Week number for predictions", required=True)
-    parser.add_argument("--greed", type=str, action="store", help="Use greedy algo or actual probabilities?", default="False")
-    parser.add_argument("--all", type=str, action="store", help="Run preds on all weeks up to --week", default='False')
-    parser.add_argument("--algo", type=str, action='store', help='Algorithm that generated predictions -- RF/LReg/GDBT', default='RF')
+    parser.add_argument('--week', type=int, action='store',help='Week number for predictions', required=True)
+    parser.add_argument('--greed', type=str, action='store', help='Use greedy algo or actual probabilities?', default='False')
+    parser.add_argument('--all', type=str, action='store', help='Run preds on all weeks up to --week', default='False')
+    parser.add_argument('--algo', type=str, action='store', help='Algorithm that generated predictions -- RF/LReg/GDBT', default='RF')
     args = parser.parse_args()
     if args.all == 'True':
         for week in xrange(2,args.week+1):
-            print("----------WEEK %d----------") %(week)
-            mdp = FantasyMDP(week, args.greed=="True", args.algo)
+            print('----------WEEK %d----------') %(week)
+            mdp = FantasyMDP(week, args.greed=='True', args.algo)
             mdp.solve()
     else:
         mdp = FantasyMDP(args.week, args.greed=='True', args.algo)

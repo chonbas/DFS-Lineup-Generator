@@ -8,11 +8,11 @@ import collections, copy, math
 class BacktrackingSearch():
 
     def reset_results(self):
-        """
+        '''
         This function resets the statistics of the different aspects of the
         CSP solver. We will be using the values here for grading, so please
         do not make any modification to these variables.
-        """
+        '''
         # Keep track of the best assignment and weight found.
         self.optimalAssignment = {}
         self.optimalWeight = 0
@@ -35,18 +35,18 @@ class BacktrackingSearch():
         self.allAssignments = []
 
     def print_stats(self):
-        """
+        '''
         Prints a message summarizing the outcome of the solver.
-        """
+        '''
         if self.optimalAssignment:
-            print "Found %d optimal assignments with weight %f in %d operations" % \
+            print 'Found %d optimal assignments with weight %f in %d operations' % \
                 (self.numOptimalAssignments, self.optimalWeight, self.numOperations)
-            print "First assignment took %d operations" % self.firstAssignmentNumOperations
+            print 'First assignment took %d operations' % self.firstAssignmentNumOperations
         else:
-            print "No solution was found."
+            print 'No solution was found.'
 
     def get_delta_weight(self, assignment, var, val):
-        """
+        '''
         Given a CSP, a partial assignment, and a proposed new value for a variable,
         return the change of weights after assigning the variable with the proposed
         value.
@@ -60,7 +60,7 @@ class BacktrackingSearch():
 
         @return w: Change in weights as a result of the proposed assignment. This
             will be used as a multiplier on the current weight.
-        """
+        '''
         assert var not in assignment
         w = 1.0
         if self.csp.unaryFactors[var]:
@@ -79,7 +79,7 @@ class BacktrackingSearch():
     
 
     def solve(self, csp, mcv = False, ac3 = False):
-        """
+        '''
         Solves the given weighted CSP using heuristics as specified in the
         parameter. Note that we want search to be terminated when one CSP is found,
         (since there are many poor solutions available), and we want to make sure
@@ -90,7 +90,7 @@ class BacktrackingSearch():
         @param mcv: When enabled, Most Constrained Variable heuristics is used.
         @param ac3: When enabled, AC-3 will be used after each assignment of an
             variable is made.
-        """
+        '''
         # CSP to be solved.
         self.csp = csp
 
@@ -108,7 +108,7 @@ class BacktrackingSearch():
         self.backtrack({}, 0, 1)
         # Print summary of solutions.
         # self.print_stats()
-        # print "players: ", self.optimalAssignment
+        # print 'players: ', self.optimalAssignment
         return self.optimalAssignment
 
 
@@ -117,7 +117,7 @@ class BacktrackingSearch():
         return sum([salary for (name, salary) in assignment.values()])
 
     def backtrack(self, assignment, numAssigned, weight):
-        """
+        '''
         Perform the back-tracking algorithms to find all possible solutions to
         the CSP.
 
@@ -127,14 +127,14 @@ class BacktrackingSearch():
             and 6 was assigned to it, then assignment[A] == 6.
         @param numAssigned: Number of currently assigned variables
         @param weight: The weight of the current partial assignment.
-        """
+        '''
 
         # if self.numOperations >= 1000000:
         #     return
         
         self.numOperations += 1
         # if self.numOperations % 1000 == 0:
-        #     print "progress: ", self.numOperations, self.numAssignments
+        #     print 'progress: ', self.numOperations, self.numAssignments
         assert weight > 0
         if numAssigned == self.csp.numVars:
             if weight >= self.optimalWeight * .9:
@@ -147,7 +147,7 @@ class BacktrackingSearch():
                 self.allAssignments.append(newAssignment)
 
                 # print self.get_salary(assignment)
-                # print "\n Found assignment: ", weight,  self.optimalWeight, \
+                # print '\n Found assignment: ', weight,  self.optimalWeight, \
                 #         math.log(weight,2), self.optimalPts, newAssignment
             
                 if len(self.optimalAssignment) == 0 or weight >= self.optimalWeight:
@@ -201,14 +201,14 @@ class BacktrackingSearch():
                     del assignment[var]
 
     def get_unassigned_variable(self, assignment):
-        """
+        '''
         Given a partial assignment, return a currently unassigned variable.
 
         @param assignment: A dictionary of current assignment. This is the same as
             what you've seen so far.
 
         @return var: a currently unassigned variable.
-        """
+        '''
 
         if not self.mcv:
             # Select a variable without any heuristics.
@@ -229,12 +229,12 @@ class BacktrackingSearch():
             return mcv
 
     def arc_consistency_check(self, var):
-        """
+        '''
         Perform the AC-3 algorithm. The goal is to reduce the size of the
         domain values for the unassigned variables based on arc consistency.
 
         @param var: The variable whose value has just been set.
-        """
+        '''
         toUpdate = [var]
         while len(toUpdate) > 0:
             var1 = toUpdate.pop(0)
