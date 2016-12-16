@@ -36,8 +36,8 @@ class LineupDB:
                 pos_data[name] = entry
 
 
-                if i > MAX_PLAYERS: break
-                i += 1
+                # if i > MAX_PLAYERS: break
+                # i += 1
         return pos_data
 
 

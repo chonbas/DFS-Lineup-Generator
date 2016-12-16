@@ -13,7 +13,7 @@ def getActualPts(player, year, week):
         pts = pos_data[player][year][week]['fd_pts']
         return pts
     except TypeError:
-        print 'Can\'t find player ' + player + '' in week '' + week
+        print 'Can\'t find player ' + player + ' in week ' + week
         return 0
 
 with open(OUTPUT_FILE + '.csv', 'wb') as outfile:
