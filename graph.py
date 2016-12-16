@@ -15,13 +15,13 @@ def drawMeanSquaresError():
     yPlotRange = range(20,111,10)
     yMin = 12
     yMax = 115
-    drawErrorLineGraph(yPlotRange, yMin, yMax, "Graphs/mean_squares_error.png", "Mean Squares Error", 2)
+    drawErrorLineGraph(yPlotRange, yMin, yMax, 'Graphs/mean_squares_error.png', 'Mean Squares Error', 2)
 
 def drawAccuracyGraph():
     yPlotRange = [i/10.0 for i in range(2, 8)]
     yMin = .13
     yMax = .73
-    drawErrorLineGraph(yPlotRange, yMin, yMax, "Graphs/accuracy_score.png", "Accuracy Score", -1)
+    drawErrorLineGraph(yPlotRange, yMin, yMax, 'Graphs/accuracy_score.png', 'Accuracy Score', -1)
 
 def drawErrorLineGraph(yPlotRange, yMin, yMax, outputFile, title, param):
     data = {}
@@ -144,7 +144,7 @@ def drawLineGraph(data, xAxis='week', xLabels=range(1,13), categories=['data'], 
         # Again, make sure that all labels are large enough to be easily read
         # by the viewer.
         label = LABELS[column[0]] + column[1]
-        if column == ('LReg', 'classification'): label = "Logistic Regression"
+        if column == ('LReg', 'classification'): label = 'Logistic Regression'
         plt.text(len(xLabels)-.5, y_pos, label, fontsize=18, color=color_sequence[rank])
 
     # Make the title big enough so it spans the entire plot, but don't make it

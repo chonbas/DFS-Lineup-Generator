@@ -43,7 +43,7 @@ def getActualPts(player, week, pos):
         pts = pos_data[player][YEAR][str(week)]['fd_pts']
         return pts
     except TypeError:
-        print "Can't find player " + player + " in week " + str(week)
+        print 'Can\'t find player ' + player + ' in week ' + str(week)
         return 0
 
 def getErrorInfo(position):

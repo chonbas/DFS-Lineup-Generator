@@ -1,17 +1,19 @@
 
 import csv
-from Utility import FantasyCSPConstructor, BacktrackingSearch
-from Data import LineupDB
+from Utility.FantasyCSPConstructor import FantasyCSPConstructor
+from Utility.BacktrackingSearch import BacktrackingSearch
+from Data.LineupDB import LineupDB
 
 
-FILENAME = 'Lineups/CSPLineup.csv'
+FILENAME = 'Lineups/CSP_regression_lineup.csv'
+MODEL = 'regression'
 year = 2016
 
 
 
 #Returns list of tuples of (pos, player name) as well as total pts & salary
 def get_player_stats(players, week, year, toPrint=True):
-    db = LineupDB(week=week, year=year)
+    db = LineupDB(week=week, year=year, model=MODEL)
 
     totalPts = 0
     totalSalary = 0
@@ -34,8 +36,8 @@ def get_player_stats(players, week, year, toPrint=True):
 with open(FILENAME, 'w') as outfile:
     outfile.truncate()
     outfile.write('"Year","Week","Name","Position","Salary","Predicted points"\n')
-    for week in range(3, 15):
-        cspConstructor = FantasyCSPConstructor(verbose=False, week=week, year=year)
+    for week in range(2, 15):
+        cspConstructor = FantasyCSPConstructor(verbose=False, week=week, year=year, model=MODEL)
         csp = cspConstructor.get_csp()
         alg = BacktrackingSearch()
         print "---------------------- Ready to solve week " + str(week) + "--------------------------\n"
