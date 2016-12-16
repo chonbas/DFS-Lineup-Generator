@@ -5,7 +5,7 @@ from Utility.BacktrackingSearch import BacktrackingSearch
 from Data.LineupDB import LineupDB
 
 
-FILENAME = 'Lineups/CSP_regression_lineup.csv'
+FILENAME = 'Lineups/CSP_week12/regression_minSal590.csv'
 MODEL = 'regression'
 year = 2016
 
@@ -33,10 +33,10 @@ def get_player_stats(players, week, year, toPrint=True):
     return playerList
 
 
-with open(FILENAME, 'w') as outfile:
+with open(FILENAME, 'wb') as outfile:
     outfile.truncate()
     outfile.write('"Year","Week","Name","Position","Salary","Predicted points"\n')
-    for week in range(2, 15):
+    for week in range(12, 13):
         cspConstructor = FantasyCSPConstructor(verbose=False, week=week, year=year, model=MODEL)
         csp = cspConstructor.get_csp()
         alg = BacktrackingSearch()
