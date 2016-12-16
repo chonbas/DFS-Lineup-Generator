@@ -1,14 +1,5 @@
 import csv
-# from FantasyMDP import FantasyMDP
-# from FantasyCSPConstructor import FantasyCSPConstructor
-# from util import ValueIteration
-# from BacktrackingSearch import BacktrackingSearch
 from Data.FantasyDB import FantasyDB
-
-# #Note: really slow. Would not recommend.
-# mdp = FantasyMDP()
-# alg = ValueIteration()
-# alg.solve(mdp, .001)
 
 LINEUP_FILE = 'Lineups/CSP_oracle_lineup'
 OUTPUT_FILE = 'Evaluations/Evals_CSP_oracle_2_14'

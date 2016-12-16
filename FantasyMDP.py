@@ -31,9 +31,10 @@ class FantasyMDP(util.MDP):
 
     # Return the start state.
     # Look at this function to learn about the state representation.
-    # The state is : ( [Current Salary Cost]  , 
+    # The state is : ( [Is Final State?], [Salary],
     # [QB:[], WR:[], RB:[], TE:[], PK:[], Def:[]], 
-    # {[Key = Team] : [Value:Count of Players with this Team]})
+    # [Players taken from each team],
+    # [Total Production])
     def startState(self):
         return self.start_state 
 
