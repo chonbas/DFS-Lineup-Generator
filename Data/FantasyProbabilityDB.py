@@ -2,14 +2,15 @@ import csv
 from collections import OrderedDict
 
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
-MAX_POS = {'QB':10, 'WR':10, 'RB':10, 'TE':6, 'PK':6, 'Def':10}
+
 
 POS_DIR = 'Data/Predictions/'
 
 YEAR = 2016
 
 class LineupProbDB:
-    def __init__(self, week, algo):
+    def __init__(self, week, algo, max_pos):
+        self.MAX_POS = max_pos
         self.algo = algo
         self.data = OrderedDict()
         self.teams = set()
@@ -55,7 +56,7 @@ class LineupProbDB:
                 prob_25_30 = float(line[10])
                 prob_30 = float(line[11])
 
-                if len(pos_data) == MAX_POS[pos]:
+                if len(pos_data) == self.MAX_POS[pos]:
                     continue
 
                 entry = (team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25_30, prob_30)
