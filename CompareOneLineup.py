@@ -1,14 +1,5 @@
 import csv
-# from FantasyMDP import FantasyMDP
-# from FantasyCSPConstructor import FantasyCSPConstructor
-# from util import ValueIteration
-# from BacktrackingSearch import BacktrackingSearch
 from FantasyDB import FantasyDB
-
-# #Note: really slow. Would not recommend.
-# mdp = FantasyMDP()
-# alg = ValueIteration()
-# alg.solve(mdp, .001)
 
 LINEUP_FILE = 'Lineups/MDP/Week12.csv'
 OUTPUT_FILE = '2016_12_MDPPredictionsVsActual.csv'

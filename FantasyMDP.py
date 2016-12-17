@@ -1,29 +1,31 @@
 import csv, argparse
 from collections import defaultdict
-
 from Data import FantasyProbabilityDB, FantasyDB
 from Utility import util
 
+#Number of players to look at
+MAX_DB_POS = {'QB':5, 'WR':10, 'RB':10, 'TE':5, 'PK':5, 'Def':5}
+#Constraints
 MAX_SALARY = 60000
-
+MAX_ONE_TEAM = 4
+#Used to manage states
 POSITIONS = ['QB', 'WR', 'RB', 'TE', 'PK', 'Def']
 POS_INDECES = {'QB':0, 'WR':1, 'RB':2, 'TE':3, 'PK':4, 'Def':5}
-
 MAX_POSITIONS = {'QB':1, 'WR':3, 'RB':2, 'TE':1, 'PK':1, 'Def':1}
-START_LINEUP = [(), (), (), (), (), ()]
-
-
+#Used to calculate expectation
 EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20_25':22.5, '25_30':27.5, '30+':35}
-MAX_ONE_TEAM = 4
+
+#Output path and fields
 OUTPATH = 'Lineups/MDP/Week'
 OUTFIELDNAMES = ['Year','Week','Name','Position','Salary','Predicted points']
-
 LINEUP_FILE = 'Lineups/MDP/Week_'
-OUTPUT_FILE = 'Evaluations/Evals_greed_2_13.csv'
+OUTPUT_FILE = 'Evaluations/Evals_'
+
+START_LINEUP = [(), (), (), (), (), ()]
 
 class FantasyMDP(util.MDP):
     def __init__(self, week, greed_flag, algo):
-        self.db = FantasyProbabilityDB.LineupProbDB(week, algo)
+        self.db = FantasyProbabilityDB.LineupProbDB(week, algo, MAX_DB_POS)
         self.algo = algo
         self.week = week
         self.greed = greed_flag
@@ -39,8 +41,6 @@ class FantasyMDP(util.MDP):
         return self.start_state 
 
     # Return set of actions possible from |state|.
-    # You do not need to modify this function.
-    # All logic for dealing with end states should be done in succAndProbReward
     def actions(self, state):
         final = state[0]
         current_salary = state[1]
@@ -70,7 +70,7 @@ class FantasyMDP(util.MDP):
         for player in list_lineup:
             player_data, pos = self.db.getPlayerData(player)
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25_30, prob_30 = player_data
-            
+
             next_partial_sum_probs = defaultdict(float)
             for prod,prob in partial_sum_probs.iteritems():
                 next_partial_sum_probs[prod + EXPECTED_VALUES['0_5']] += prob * prob_0_5
@@ -106,9 +106,7 @@ class FantasyMDP(util.MDP):
 
     # Return a list of (newState, prob, reward) tuples corresponding to edges
     # coming out of |state|.  Indicate a terminal state (after quitting or
-    # busting) by setting the deck to None. 
-    # When the probability is 0 for a particular transition, don't include that 
-    # in the list returned by succAndProbReward.
+    # busting) by setting the deck to Final state flag to True.
     def succAndProbReward(self, state, action):
         final, current_salary, current_lineup, current_teams, current_prod = state
         
@@ -138,7 +136,8 @@ class FantasyMDP(util.MDP):
 
     def discount(self):
         return 1
-
+    
+    #Gives predicted roster by following the learned policy
     def rebuildRoster(self, policy, values):
         roster = {'QB':[], 'RB': [], 'WR': [], 'TE': [], 'PK':[], 'Def':[]}
         roster_points = 0.0
@@ -185,11 +184,14 @@ class FantasyMDP(util.MDP):
             except TypeError:
                 print 'Can\'t find player ' + player + ' in week ' + week
                 return 0
-
-        with open(OUTPUT_FILE + '.csv', 'wb') as outfile:
+        if self.greed:
+            eval_path = OUTPUT_FILE + '_greed_' + '2_' + str(self.week)+'.csv'
+        else:
+            eval_path = OUTPUT_FILE + '_2_' + str(self.week)+'.csv'
+        with open(eval_path, 'wb') as outfile:
             outfile.truncate()
             outfile.write('"Week","Predicted Points","Actual Points"\n')
-            for week in range(1,self.week):
+            for week in range(2,self.week+1):
                 with open(LINEUP_FILE + str(week) + '.csv', 'r') as infile:
                     infile.next()
                     reader = csv.reader(infile, delimiter=',', quotechar='"')
