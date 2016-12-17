@@ -10,14 +10,14 @@ MAX_SALARY = 60000
 
 class FantasyCSPConstructor():
 
-    def __init__(self, verbose=True, week=10, year=2016, model='classification'):
+    def __init__(self, week, year, model, algo, max_players, verbose=True):
         '''
         Saves the necessary data.
 
         @param verbose: decide if print information.
         @param week, year: what data to use CSP on.
         '''
-        self.db = LineupDB.LineupDB(week=week, year=year, model=model)
+        self.db = LineupDB.LineupDB(week, year, model, algo, max_players)
         self.positions = []
         for i, pos in enumerate(POSITIONS):
             for j in range(LINEUP[i]):

@@ -4,23 +4,26 @@ from collections import OrderedDict, defaultdict
 
 POSITIONS = ['RB', 'WR', 'TE', 'QB', 'PK', 'Def']
 POS_DIR = 'Data/Predictions/'
-TYPE = 'oracle'
-MAX_PLAYERS = 5 # number of players to consider for each position group
+
 
 
 class LineupDB:
-    def __init__(self, week=10, year=2016, model=TYPE):
-        print model
+    def __init__(self, week, year, model, algo, max_players):
+        self.max_players = max_players
         self.data = defaultdict(str)
         for pos in POSITIONS:
-            self.data[pos] = self.loadPosData(pos, week, model)
+            self.data[pos] = self.loadPosData(pos, week, model, algo)
         self.team = 0
         self.pts = 1
         self.salary = 2
 
-    def loadPosData(self, pos, week, model):
+    def loadPosData(self, pos, week, model, algo):
         pos_data = OrderedDict()
-        file_path = POS_DIR + 'Week' + str(week) + '/' + model + '_RF_' + pos + '_preds.csv'
+        if algo == '':
+            algo_formatted = ''
+        else:
+            algo_formatted = algo + '_'
+        file_path = POS_DIR + 'Week' + str(week) + '/' + model + '_' + algo_formatted + pos + '_preds.csv'
         with open(file_path,'rb') as data:
             data.next()
             reader = csv.reader(data, delimiter=',', quotechar='"')
@@ -36,8 +39,8 @@ class LineupDB:
                 pos_data[name] = entry
 
 
-                # if i > MAX_PLAYERS: break
-                # i += 1
+                i += 1
+                if i > self.max_players: break
         return pos_data
 
 
