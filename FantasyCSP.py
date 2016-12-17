@@ -8,7 +8,8 @@ from Data.LineupDB import LineupDB
 FILENAME = 'Lineups/CSP_week12/regression_minSal590.csv'
 MODEL = 'regression'
 year = 2016
-
+START_WEEK = 2
+END_WEEK = 14
 
 
 #Returns list of tuples of (pos, player name) as well as total pts & salary
@@ -36,7 +37,7 @@ def get_player_stats(players, week, year, toPrint=True):
 with open(FILENAME, 'wb') as outfile:
     outfile.truncate()
     outfile.write('"Year","Week","Name","Position","Salary","Predicted points"\n')
-    for week in range(12, 13):
+    for week in range(START_WEEK, END_WEEK + 1):
         cspConstructor = FantasyCSPConstructor(verbose=False, week=week, year=year, model=MODEL)
         csp = cspConstructor.get_csp()
         alg = BacktrackingSearch()
