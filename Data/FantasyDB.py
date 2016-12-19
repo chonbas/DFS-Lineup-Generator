@@ -1,16 +1,18 @@
 import csv
 from collections import OrderedDict, defaultdict, deque
 
-YEARS = range(2011,2017)
-TRAIN_YEARS = range(2011,2016)
 
-WEEKS = range(1,18)
+CURRENT_YEAR = 2016
+YEARS = range(2011,CURRENT_YEAR + 1)
+TRAIN_YEARS = range(2011,CURRENT_YEAR)
+FINAL_WEEK = 17
+WEEKS = range(1,FINAL_WEEK+1)
 NFL_DIR = 'Data/nfl_stats/'
 ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
-FINAL_WEEK = 17
-EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 22.5, 27.5, 35]
+
+EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 30]
 
 class FantasyDB:
 
@@ -112,7 +114,7 @@ class FantasyDB:
 
     def getClassLabel(self, fd_pts):
         fd_pts = float(fd_pts)
-        if 0 <= fd_pts and fd_pts < 5:
+        if fd_pts < 5:
             return 0
         if 5 <= fd_pts  and fd_pts < 10:
             return 1
@@ -120,11 +122,8 @@ class FantasyDB:
             return 2
         if 15 <= fd_pts and fd_pts < 20:
             return 3
-        if 20 <= fd_pts and fd_pts < 25:
+        if fd_pts >= 20:
             return 4
-        if 25 <= fd_pts and fd_pts < 30:
-            return 5
-        return 6
     
     def getFDPointsFromLabel(self, label):
         if label == 0:
@@ -136,12 +135,10 @@ class FantasyDB:
         if label == 3:
             return '15-20'
         if label == 4:
-            return '20-25'
-        if label == 5:
-            return '25-30'
-        return '30+'
+            return '20+'
+        return ''
 
-    def getTrainingExamples(self,pos, game_lead, classification):        
+    def getTrainingExamples(self,pos, game_lead, current_week):        
         data = self.getData(pos)
         keys = self.getKeys(pos)
         training_X = []
@@ -155,6 +152,10 @@ class FantasyDB:
                     week = str(j)
                     if data[name][year][week] is not None:
                         game_deck.append(data[name][year][week])
+            for i in xrange(1, current_week):
+                week = str(i)
+                if data[name][str(CURRENT_YEAR)][week] is not None:
+                    game_deck.append(data[name][str(CURRENT_YEAR)][week])
             #once queue of games played is created
             #pop off game_lead games for first training example
             #and put them in a new training lead queue
@@ -168,9 +169,8 @@ class FantasyDB:
                 #continue to do this until we run out of games played 
                 while True:
                     new_training_X = []
-                    new_training_Y = game_lead_deck[-1]['fd_pts'] 
-                    if classification:
-                        new_training_Y = self.getClassLabel(new_training_Y)
+                    fd_pts = game_lead_deck[-1]['fd_pts']
+                    new_training_Y = (self.getClassLabel(fd_pts), fd_pts) 
                     for i in xrange(game_lead + 1):
                         game = game_lead_deck[i]
                         year = game['year']

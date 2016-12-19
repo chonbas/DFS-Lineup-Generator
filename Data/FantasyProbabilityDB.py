@@ -9,9 +9,8 @@ POS_DIR = 'Data/Predictions/'
 YEAR = 2016
 
 class LineupProbDB:
-    def __init__(self, week, algo, max_pos):
+    def __init__(self, week, max_pos):
         self.MAX_POS = max_pos
-        self.algo = algo
         self.data = OrderedDict()
         self.teams = set()
         for pos in POSITIONS:
@@ -37,7 +36,7 @@ class LineupProbDB:
     
     def loadPosData(self, pos, week):
         pos_data = OrderedDict()
-        file_path = POS_DIR + 'Week' + str(week) + '/classification_' + self.algo + '_'+pos + '_preds.csv'
+        file_path = POS_DIR + 'Week' + str(week) + '/' +pos + '_preds.csv'
         with open(file_path,'rb') as data:
             data.next()
             reader = csv.reader(data, delimiter=',', quotechar='"')
@@ -52,14 +51,12 @@ class LineupProbDB:
                 prob_5_10 = float(line[6])
                 prob_10_15 = float(line[7])
                 prob_15_20 = float(line[8])
-                prob_20_25 = float(line[9])
-                prob_25_30 = float(line[10])
-                prob_30 = float(line[11])
+                prob_20 = float(line[9])
 
                 if len(pos_data) == self.MAX_POS[pos]:
                     continue
 
-                entry = (team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20_25, prob_25_30, prob_30)
+                entry = (team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20)
                 pos_data[name] = entry
 
         return pos_data
