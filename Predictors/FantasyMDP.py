@@ -5,33 +5,32 @@ from Utility import util
 
 CURRENT_YEAR = '2016'
 #Number of players to look at
-MAX_DB_POS = {'QB':6, 'WR':10, 'RB':5, 'TE':5, 'PK':5, 'Def':5}
-# MAX_DB_POS = {'QB':7, 'WR':8, 'RB':4, 'TE':5, 'PK':5, 'Def':5}
+# MAX_DB_POS = {'QB':6, 'WR':8, 'RB':3, 'TE':6, 'PK':5, 'Def':6} #decent boom
+MAX_DB_POS = {'QB':7, 'WR':9, 'RB':6, 'TE':3, 'PK':3, 'Def':3} # Pretty good boom
+# MAX_DB_POS = {'QB':6, 'WR':9, 'RB':7, 'TE':4, 'PK':3, 'Def':3} # Pretty good boom
 #Constraints
 MAX_SALARY = 60000
 MAX_ONE_TEAM = 4
+LOSE_PENALTY = -10000
 #Used to manage states
-POSITIONS = ['QB', 'RB','WR' , 'TE', 'PK', 'Def']
+POSITIONS = ['QB', 'RB' , 'TE', 'PK', 'Def', 'WR']
 POS_INDECES = {'QB':0, 'WR':1, 'RB':2, 'TE':3, 'PK':4, 'Def':5}
 MAX_POSITIONS = {'QB':1, 'WR':3, 'RB':2, 'TE':1, 'PK':1, 'Def':1}
-#Used to calculate expectation
-EXPECTED_VALUES = {'0_5':2.5, '5_10':7.5, '10_15':12.5, '15_20':17.5, '20+':30}
-
 #Output path and fields
 OUTPATH = 'Lineups/MDP/Week'
 OUTFIELDNAMES = ['Year','Week','Name','Position','Salary','Predicted points']
+
 LINEUP_FILE = 'Lineups/MDP/Week_'
 OUTPUT_FILE = 'Evaluations/Evals_'
 
 START_LINEUP = [(), (), (), (), (), ()]
 
 class FantasyMDP(util.MDP):
-    def __init__(self, week, greed_flag, eval_flag):
-        self.db = FantasyProbabilityDB.LineupProbDB(week, MAX_DB_POS)
+    def __init__(self, week, eval_flag):
         self.actual_db = FantasyDB.FantasyDB()
         self.week = week
-        self.greed = greed_flag
         self.eval = eval_flag
+        self.db = FantasyProbabilityDB.LineupProbDB(week, MAX_DB_POS)
         self.start_state = (False, 0.0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0)
 
     # Return the start state.
@@ -65,28 +64,13 @@ class FantasyMDP(util.MDP):
         for position_group in current_lineup:
             for player in position_group:
                 list_lineup.append(player)
-        if self.greed:
-            return []
-        else:
-            partial_sum_probs = {0:1}
-
+        # if self.greed:
+        reward = 0.0
         for player in list_lineup:
-            player_data, pos = self.db.getPlayerData(player)
+            player_data, extra_pos = self.db.getPlayerData(player)
             team, expected_pts, salary, prob_0_5, prob_5_10, prob_10_15, prob_15_20, prob_20 = player_data
-
-            next_partial_sum_probs = defaultdict(float)
-            for prod,prob in partial_sum_probs.iteritems():
-                next_partial_sum_probs[prod + EXPECTED_VALUES['0_5']] += prob * prob_0_5
-                next_partial_sum_probs[prod + EXPECTED_VALUES['5_10']] += prob * prob_5_10
-                next_partial_sum_probs[prod + EXPECTED_VALUES['10_15']] += prob * prob_10_15
-                next_partial_sum_probs[prod + EXPECTED_VALUES['15_20']] += prob * prob_15_20
-                next_partial_sum_probs[prod + EXPECTED_VALUES['20+']] += prob * prob_20
-            partial_sum_probs = next_partial_sum_probs
-
-
-        results = [(prob,prod) for prod, prob in partial_sum_probs.iteritems()]
-        return results
-
+            reward += expected_pts
+        return [(1.0,reward)]
 
     def addPlayerToLineUp(self, current_lineup, action, pos):
         current_lineup = list(current_lineup)
@@ -112,7 +96,7 @@ class FantasyMDP(util.MDP):
         final, current_salary, current_lineup, current_teams, current_prod = state
         
         if action == 'Quit':
-            return [(state, 1.0, 0.0)]
+            return [(state, 1.0, 0)]
 
         if action == 'End':
             return [((True, MAX_SALARY, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), prod), prob, prod) \
@@ -130,9 +114,9 @@ class FantasyMDP(util.MDP):
 
         #If over salary cap or over team limit-- Lose game
         if new_salary > MAX_SALARY or current_teams[team_index] == MAX_ONE_TEAM:
-            return [ ( (True, 0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0) , 1 , -10000 )]
+            return [ ( (True, 0, tuple(START_LINEUP), tuple([0 for i in xrange(len(self.db.teams))]), 0.0) , 1.0 , LOSE_PENALTY )]
 
-        return [ ( (False, new_salary, current_lineup, current_teams, 0.0), 1 , 0 )]
+        return [ ( (False, new_salary, current_lineup, current_teams, 0.0), 1.0 , 0.0 )]
         
 
     def discount(self):
@@ -169,10 +153,7 @@ class FantasyMDP(util.MDP):
             if self.eval:
                 actual_pts += float(self.getActualPts(action, pos))
         roster_cost = 0
-        if self.greed:
-            path_to_write = OUTPATH+'_greed_'+str(self.week)+'.csv'
-        else:
-            path_to_write = OUTPATH+'_'+str(self.week)+'.csv'
+        path_to_write = OUTPATH+'_'+str(self.week)+'.csv'
         with open(path_to_write,'wb') as outfile:
             writer = csv.DictWriter(outfile , fieldnames=OUTFIELDNAMES)
             writer.writeheader()

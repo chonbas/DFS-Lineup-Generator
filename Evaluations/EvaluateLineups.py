@@ -6,7 +6,7 @@ MDP_OUTPUT_FILE = 'Evaluations/Lineups/Evals_MDP_'
 
 db = FantasyDB()
 
-FIELDNAMES = ['Week','Greed','Predicted Points', 'Actual Points']
+FIELDNAMES = ['Week','Predicted Points', 'Actual Points']
 
 def getActualPts(player, year, week, pos):
     pos_data = db.getData(pos)
@@ -18,20 +18,14 @@ def getActualPts(player, year, week, pos):
         return 0
 
 
-def evaluateMDP(start_week, end_week, greed):
-    if greed:
-        outputpath = MDP_OUTPUT_FILE + '_greed_' + str(start_week)+'_'+str(end_week) + '.csv'
-    else:
-        outputpath = MDP_OUTPUT_FILE + str(start_week)+'_'+ str(end_week) + '.csv' 
+def evaluateMDP(start_week, end_week):
+    outputpath = MDP_OUTPUT_FILE + str(start_week)+'_'+ str(end_week) + '.csv' 
     with open(outputpath, 'wb') as outfile:
         outfile.truncate()
         writer = csv.DictWriter(outfile, fieldnames=FIELDNAMES)
         writer.writeheader()
         for week in range(start_week, end_week + 1):
-            if greed:
-                inpath = MDP_LINEUP_FILE + 'greed_' + str(week) + '.csv'  
-            else:
-                inpath = MDP_LINEUP_FILE + str(week) + '.csv'  
+            inpath = MDP_LINEUP_FILE + str(week) + '.csv'  
             with open(inpath, 'r') as infile:
                 infile.next()
                 reader = csv.reader(infile, delimiter=',', quotechar='"')
@@ -42,7 +36,7 @@ def evaluateMDP(start_week, end_week, greed):
                     actualPts = getActualPts(name, year, week, pos)
                     totalPred += float(predPts)
                     totalActual += float(actualPts)
-                writer.writerow({'Week':week, 'Greed':greed,
+                writer.writerow({'Week':week,
                                 'Predicted Points':totalPred, 'Actual Points':totalActual})
 
 

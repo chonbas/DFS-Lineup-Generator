@@ -24,21 +24,20 @@ POSITIONS = ['PK']
 MIN_GAME_LEAD = 3
 MAX_GAME_LEAD = 3
 
-db = FantasyDB.FantasyDB()
 
-pipeline = Pipeline([
-    ('fs', SelectPercentile()),
-    ('clf', RandomForestClassifier())
-])
+
+
 
 best_params = {'QB':None, 'WR':None, 'RB':None, 'TE':None, 'PK':None, 'Def':None }
 
 def getTrainData(pos, game_lead):
     raw_x,raw_y_values = db.getTrainingExamples(pos,game_lead, CURRENT_WEEK)
     raw_y = [value[0] for value in raw_y_values]
+    raw_y_reg = [value[1] for value in raw_y_values]
     data_X = np.array(raw_x, dtype='float64')
     data_Y = np.array(raw_y, dtype='float64')
-    return data_X, data_Y
+    data_Y_reg = np.array(raw_y_reg, dtype='float64')    
+    return data_X, data_Y, data_Y_reg
 
 def binaryRocAucScore(y_true, y_pred):
     bin_true = label_binarize(y_true,[0,1,2,3,4])
@@ -50,20 +49,25 @@ def avgPrecision(y_true, y_pred):
     bin_pred = label_binarize(y_pred,[0,1,2,3,4])
     return average_precision_score(bin_true, bin_pred)
 
-if __name__ == '__main__':
+def fitMLParams():
+    db = FantasyDB.FantasyDB()
+    pipeline = Pipeline([
+                ('fs', SelectPercentile()),
+                ('clf', RandomForestClassifier())
+    ])
+    parameters = {
+                'fs__percentile': range(10,110,10),
+                'fs__score_func': [f_classif],
+                'clf__n_estimators': range(100,600,100),
+                'clf__max_depth': range(5,30,5),
+                'clf__max_features': ['log2'],
+                'clf__min_samples_split': [2],
+                'clf__bootstrap': [True],
+                'clf__class_weight':['balanced'],
+                'clf__n_jobs' :[-1]
+    }
     rocauc_scorer = make_scorer(binaryRocAucScore, needs_proba=False)
     avgprecision_scorer = make_scorer(avgPrecision, needs_proba=False)
-    parameters = {
-            'fs__percentile': range(10,110,10),
-            'fs__score_func': [f_classif],
-            'clf__n_estimators': range(100,600,100),
-            'clf__max_depth': range(5,30,5),
-            'clf__max_features': ['log2'],
-            'clf__min_samples_split': [2],
-            'clf__bootstrap': [True],
-            'clf__class_weight':['balanced'],
-            'clf__n_jobs' :[-1]
-    }
     for pos in POSITIONS:
         current_lead = 0
         current_best = 0

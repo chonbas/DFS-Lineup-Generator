@@ -4,6 +4,7 @@ import csv
 import argparse
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
@@ -88,17 +89,31 @@ class FantasyPredictionModel:
         for pos in POSITIONS:
             print('-----------------------Evaluating %s Model---------------------') %(pos)
             data_X, data_Y_labels, data_Y_values = self.getTrainData(pos)
+
+            data_Y = [(data_Y_labels[i], data_Y_values[i]) for i in xrange(len(data_Y_labels))]
+
             learner = self.getLearner(pos)
-            data_train, data_test, target_train, target_test = train_test_split(data_X, data_Y_labels, test_size=0.20, random_state=42)
+            data_train, data_test, target_train, target_test = train_test_split(data_X, data_Y, test_size=0.20, random_state=42)
             
+            data_Y_labels_train =  [k[0] for k in target_train]
+            data_Y_labels_test = [k[0] for k in target_test]
+            data_Y_vals_train = [k[1] for k in target_train]
+            data_Y_vals_test = [k[1] for k in target_test]
+
+
             selector = self.getFeatureSelector(pos)
-            data_train = selector.fit_transform(data_train, target_train)
+            data_train = selector.fit_transform(data_train, data_Y_labels_train)
             data_test = selector.transform(data_test)
-            learner.fit(data_train, target_train)
+            learner.fit(data_train, data_Y_labels_train)
 
             preds = learner.predict(data_test)
-            
-            self.accuracies[pos] = self.evaluateClassificationResults(target_test, preds)
+            proba_preds = learner.predict_proba(data_test)
+
+            expectator = LinearRegression(normalize=False, fit_intercept=False, copy_X=True, n_jobs=-1)
+
+            expectator.fit(proba_preds, data_Y_vals_test)
+            print(expectator.coef_)
+            self.accuracies[pos] = self.evaluateClassificationResults(data_Y_labels_test, preds)
         for pos in POSITIONS:
             print('Roc-Auc Score for %s is : %f') %(pos, self.accuracies[pos])
 
@@ -121,16 +136,16 @@ class FantasyPredictionModel:
         # print(cm_normalized)
         # print('\n\n')
         return roc_auc_score(bin_true, bin_preds)
-    
+
     def evaluateRegressionResults(self, target_true, target_predicted, verbose_flag):
         print('-----------------------Evaluation---------------------------')
         errors = {'mean_absolute_error':mean_absolute_error(target_true, target_predicted, multioutput='uniform_average'),
-                  'mean_squared_error':mean_squared_error(target_true, target_predicted, multioutput='uniform_average'), 
-                  'explained_variance_score':explained_variance_score(target_true, target_predicted, multioutput='uniform_average')}
+                    'mean_squared_error':mean_squared_error(target_true, target_predicted, multioutput='uniform_average'), 
+                    'explained_variance_score':explained_variance_score(target_true, target_predicted, multioutput='uniform_average')}
         for key in errors:
             print('%s : %f') %(key, errors[key])
         return errors
-
+        
     def predict(self):
         for pos in POSITIONS:
             print('-----------------------Predicting %s-----------------------') %(pos)

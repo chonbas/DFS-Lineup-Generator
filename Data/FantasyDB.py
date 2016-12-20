@@ -12,7 +12,7 @@ ROTO_DIR = 'Data/rotoguru_stats/'
 FO_DIR = 'Data/fo_stats/'
 FANDUEL_DIR = 'Data/fanduel_lists/'
 
-EXPECTATION_VALUES = [2.5, 7.5, 12.5, 17.5, 30]
+EXPECTATION_VALUES = [1, 5, 10, 15, 30]
 
 class FantasyDB:
 
